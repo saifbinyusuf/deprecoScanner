@@ -1,0 +1,9 @@
+mypy>=1.13
+pyright
+jedi
+libcst
+griffe-warnings-deprecated
+anthropic
+scikit-learn
+statsmodels
+pandas
