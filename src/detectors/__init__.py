@@ -9,6 +9,10 @@ from src.detectors.comment_detector import (
     detect_comment_deprecations,
     detect_comment_deprecations_from_file,
 )
+from src.detectors.parameter_detector import (
+    detect_parameter_deprecations,
+    detect_parameter_deprecations_from_file,
+)
 
 __all__ = [
     "DeprecationCandidate",
@@ -16,5 +20,7 @@ __all__ = [
     "detect_legacy_deprecations_from_file",
     "detect_comment_deprecations",
     "detect_comment_deprecations_from_file",
+    "detect_parameter_deprecations",
+    "detect_parameter_deprecations_from_file",
 ]
 
