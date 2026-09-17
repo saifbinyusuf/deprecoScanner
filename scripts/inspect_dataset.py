@@ -185,7 +185,14 @@ def main() -> None:
 
         print(formatter(detail_headers, detail_rows))
         if info.get("composite_samples_count", 0) > 0:
-            print(f"* Note: {info['composite_samples_count']} up-to-date samples use replacement APIs (e.g. 'DataFrame.loc') that map to multiple deprecated APIs (e.g. 'first', 'last', 'select'). These samples are multi-attributed to each corresponding API.")
+            comp_n = info["composite_samples_count"]
+            assoc_sum = sum(info["mappings"].values())
+            print(f"* Accounting & Sampling Note for Many-to-One Mappings:")
+            print(f"  - Physical samples in file: {total_lib} (Outdated: {info['categories'].get('outdated', 0)}, Up-to-date: {info['categories'].get('up-to-dated', 0)})")
+            print(f"  - 10 distinct deprecated APIs represented on the Outdated side (1-to-1 mapped).")
+            print(f"  - {comp_n} up-to-date samples invoke 'DataFrame.loc' (common replacement for 'first', 'last', and 'select').")
+            print(f"  - Table sums to {assoc_sum} associations because the {comp_n} shared samples appear across 3 API rows (+{comp_n * 2} associations).")
+            print(f"  - Task 5.2 Sampling Guidance: Treat 'DataFrame.loc' as a single shared replacement stratum with a global sample ID dedup guard to avoid pseudo-replication.")
         print()
 
 
