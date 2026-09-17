@@ -34,31 +34,38 @@ def analyze_library(samples: List[Dict[str, Any]]) -> Dict[str, Any]:
     source_dist = Counter(s.get("source", "UNKNOWN") for s in samples)
     category_dist = Counter(s.get("category", "UNKNOWN") for s in samples)
 
-    # Count by exact deprecated API mapping (as tuple/string)
+    # Track individual canonical deprecated APIs
+    unique_apis = set()
     mapping_dist = Counter()
-    # Also track per-API category breakdown
     api_by_cat: Dict[str, Counter] = {}
+    composite_samples_count = 0
 
     for s in samples:
         dep_api = s.get("deprecated api")
         if isinstance(dep_api, list):
-            api_key = ", ".join(dep_api)
+            apis = dep_api
         else:
-            api_key = str(dep_api)
+            apis = [str(dep_api)]
 
-        mapping_dist[api_key] += 1
+        if len(apis) > 1:
+            composite_samples_count += 1
 
         cat = s.get("category", "UNKNOWN")
-        if api_key not in api_by_cat:
-            api_by_cat[api_key] = Counter()
-        api_by_cat[api_key][cat] += 1
+        for api in apis:
+            unique_apis.add(api)
+            mapping_dist[api] += 1
+            if api not in api_by_cat:
+                api_by_cat[api] = Counter()
+            api_by_cat[api][cat] += 1
 
     return {
         "total": total_count,
         "sources": dict(source_dist),
         "categories": dict(category_dist),
+        "unique_apis_count": len(unique_apis),
         "mappings": mapping_dist,
         "api_by_cat": api_by_cat,
+        "composite_samples_count": composite_samples_count,
     }
 
 
@@ -177,6 +184,8 @@ def main() -> None:
             detail_rows.append([api, count, outdated, uptodate, share])
 
         print(formatter(detail_headers, detail_rows))
+        if info.get("composite_samples_count", 0) > 0:
+            print(f"* Note: {info['composite_samples_count']} up-to-date samples use replacement APIs (e.g. 'DataFrame.loc') that map to multiple deprecated APIs (e.g. 'first', 'last', 'select'). These samples are multi-attributed to each corresponding API.")
         print()
 
 
