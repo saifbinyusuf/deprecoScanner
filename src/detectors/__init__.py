@@ -1,4 +1,4 @@
-"""Detection modules for legacy heuristics, hardening fixes, and PEP 702."""
+"""Detection modules for legacy heuristics, hardening fixes, PEP 702, and union/dedup."""
 
 from src.detectors.legacy_heuristics import (
     DeprecationCandidate,
@@ -20,9 +20,15 @@ from src.detectors.pep702_detector import (
     detect_pep702_via_typechecker,
     detect_pep702_deprecations,
 )
+from src.detectors.union_dedup import (
+    ClientInvocation,
+    union_stage1_candidates,
+    reconcile_client_invocations,
+)
 
 __all__ = [
     "DeprecationCandidate",
+    "ClientInvocation",
     "detect_legacy_deprecations",
     "detect_legacy_deprecations_from_file",
     "detect_comment_deprecations",
@@ -34,4 +40,6 @@ __all__ = [
     "detect_pep702_via_pyright",
     "detect_pep702_via_typechecker",
     "detect_pep702_deprecations",
+    "union_stage1_candidates",
+    "reconcile_client_invocations",
 ]
