@@ -206,31 +206,89 @@ def query(table, fast=False):
     assert len(function_cands) == 0
 
 
-def test_multi_parameter_condition():
+def test_multi_parameter_condition_and_vs_or():
     """
-    Verify warnings conditioned on multiple parameters (e.g. if p1 and p2)
-    implicate each referenced parameter without silently picking only one or
-    collapsing into a whole-function deprecation.
+    Verify AND vs. OR condition differentiation:
+    - `if flag1 and flag2:` requires both arguments, emitting a joint candidate
+      `combine_and::flag1+flag2` so client calls passing only one flag are not falsely flagged.
+    - `if old_a or old_b:` triggers if either argument is supplied, emitting independent candidates
+      for `old_a` and `old_b`.
     """
-    code = """
+    code_and = """
 import warnings
 
-def combine(a, b, flag1=False, flag2=False):
+def combine_and(a, b, flag1=False, flag2=False):
     if flag1 and flag2:
         warnings.warn("Combining flag1 and flag2 is deprecated", DeprecationWarning)
     return a + b
 """
-    all_candidates = detect_legacy_deprecations(code, filename="test_multi.py")
-    assert len(all_candidates) == 2, f"Expected 2 candidates, got {len(all_candidates)}"
+    cands_and = detect_legacy_deprecations(code_and, filename="test_and.py")
+    assert len(cands_and) == 1, f"Expected 1 joint candidate for AND, got {len(cands_and)}: {cands_and}"
+    assert cands_and[0].scope == "parameter"
+    assert cands_and[0].param_name == "flag1+flag2"
+    assert cands_and[0].qualified_name == "combine_and::flag1+flag2"
 
-    params = {c.param_name for c in all_candidates}
-    assert params == {"flag1", "flag2"}
-    for c in all_candidates:
+    code_or = """
+import warnings
+
+def combine_or(a, b, old_a=None, old_b=None):
+    if old_a or old_b:
+        warnings.warn("Either old_a or old_b is deprecated", DeprecationWarning)
+    return a + b
+"""
+    cands_or = detect_legacy_deprecations(code_or, filename="test_or.py")
+    assert len(cands_or) == 2, f"Expected 2 independent candidates for OR, got {len(cands_or)}"
+    params = {c.param_name for c in cands_or}
+    assert params == {"old_a", "old_b"}
+    for c in cands_or:
         assert c.scope == "parameter"
-        assert c.function_name == "combine"
+        assert c.function_name == "combine_or"
 
-    function_cands = [c for c in all_candidates if c.scope == "function"]
-    assert len(function_cands) == 0
+
+def test_deprecated_message_with_argument_words_remains_function_scoped():
+    """
+    Verification required by human review:
+    A whole-function @deprecated(...) decorator whose message text happens to mention
+    'argument', 'param', or 'kwarg' must NEVER be misclassified as a parameter-scoped deprecation.
+    It must stay strictly whole-function scoped.
+    """
+    code = """
+@deprecated("the argument handling has changed, use new_func() instead")
+def whole_func_arg_message(x):
+    return x
+"""
+    candidates = detect_legacy_deprecations(code, filename="test_msg.py")
+    assert len(candidates) == 1
+
+    cand = candidates[0]
+    assert cand.scope == "function", f"Expected 'function' scope, got '{cand.scope}'"
+    assert cand.param_name is None, f"Expected None param_name, got '{cand.param_name}'"
+    assert cand.qualified_name == "whole_func_arg_message"
+    assert cand.origin == "decorator"
+
+
+def test_unconditional_pandas4warning_detected_by_warning_heuristic():
+    """
+    Verification required by human review:
+    Subclasses of DeprecationWarning (such as Pandas4Warning) used unconditionally
+    in warnings.warn must be detected by Task 2.1's whole-function warning heuristic,
+    even when the warning message does not contain the word 'deprecat'.
+    """
+    code = """
+import warnings
+
+def legacy_pandas_api(df):
+    warnings.warn("legacy_pandas_api is obsolete", Pandas4Warning)
+    return df
+"""
+    candidates = detect_legacy_deprecations(code, filename="test_pandas4.py")
+    assert len(candidates) == 1, f"Expected 1 candidate, got {len(candidates)}: {candidates}"
+
+    cand = candidates[0]
+    assert cand.scope == "function"
+    assert cand.origin == "warning"
+    assert cand.qualified_name == "legacy_pandas_api"
+    assert "Pandas4Warning" in cand.raw_evidence
 
 
 def test_real_pandas_file_spot_check():

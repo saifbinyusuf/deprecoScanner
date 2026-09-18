@@ -82,7 +82,15 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
 
     DEPRECATION_PATTERN = re.compile(r"(?i)deprecat")
     PARAM_DECORATOR_PATTERN = re.compile(r"(?i)(deprecat.*(kwarg|param|arg)|(kwarg|param|arg).*deprecat)")
+    WARNING_CATEGORY_PATTERN = re.compile(r"(?i)(deprecat|future|pendingdeprecat|pandas\d*warning)")
     WARNING_CATEGORIES = {"DeprecationWarning", "PendingDeprecationWarning", "FutureWarning"}
+
+    @classmethod
+    def is_deprecation_warning_category(cls, cat_name: str) -> bool:
+        """Checks if a warning category name matches known deprecation warning categories or patterns."""
+        if not cat_name:
+            return False
+        return bool(cls.WARNING_CATEGORY_PATTERN.search(cat_name))
 
     def __init__(self, filename: str = "<string>", package_prefix: str = "") -> None:
         self.filename = filename
@@ -156,33 +164,40 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
                 dec_id = _flatten_ast_attr(dec)
             elif isinstance(dec, ast.Call):
                 dec_id = _flatten_ast_attr(dec.func)
-                # 1. Check keyword arguments for parameter name
-                for kw in dec.keywords:
-                    if kw.arg in ("old_arg_name", "old_arg", "old_name", "param", "param_name", "arg_name", "name", "kwarg"):
-                        val = _extract_string_value(kw.value)
-                        if val:
-                            dec_param = val
-                            args_repr = f"({kw.arg}={val!r})"
-                            break
-
-                # 2. Check positional arguments for parameter name or message
-                if not dec_param:
-                    for arg in dec.args:
-                        val = _extract_string_value(arg)
-                        if val:
-                            args_repr = f"({val!r})"
-                            dec_param = val
-                            break
+                # First string argument for representation display
+                for arg in dec.args:
+                    val = _extract_string_value(arg)
+                    if val:
+                        args_repr = f"({val!r})"
+                        break
 
             if not dec_id:
                 continue
 
+            # Scope determination is strictly bound to the decorator's symbol/name (dec_id).
+            # Reason messages passed as arguments (e.g. @deprecated("argument x is obsolete"))
+            # must NEVER convert a whole-function decorator into a parameter decorator.
             is_param_dec = bool(self.PARAM_DECORATOR_PATTERN.search(dec_id))
             is_func_dec = bool(self.DEPRECATION_PATTERN.search(dec_id))
 
             if is_param_dec:
-                # This decorator specifically deprecates a parameter or kwarg.
-                # It MUST NEVER be emitted as a whole-function deprecation.
+                # Inspect arguments/keywords to identify the targeted parameter
+                if isinstance(dec, ast.Call):
+                    for kw in dec.keywords:
+                        if kw.arg in ("old_arg_name", "old_arg", "old_name", "param", "param_name", "arg_name", "name", "kwarg"):
+                            val = _extract_string_value(kw.value)
+                            if val:
+                                dec_param = val
+                                args_repr = f"({kw.arg}={val!r})"
+                                break
+                    if not dec_param:
+                        for arg in dec.args:
+                            val = _extract_string_value(arg)
+                            if val:
+                                dec_param = val
+                                args_repr = f"({val!r})"
+                                break
+
                 evidence = f"@{dec_id}{args_repr}"
                 target_param = dec_param or "kwarg"
                 evidence += f" (parameter: '{target_param}')"
@@ -199,7 +214,9 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
                     )
                 )
             elif is_func_dec:
-                # Whole-function deprecation decorator (e.g. @deprecated, @deprecate)
+                # Whole-function deprecation decorator (e.g. @deprecated, @deprecate).
+                # Even if the reason message contains words like 'argument', 'param', or 'kwarg',
+                # it stays strictly function-scoped.
                 evidence = f"@{dec_id}{args_repr}"
                 self.candidates.append(
                     DeprecationCandidate(
@@ -294,7 +311,7 @@ class FunctionWarningVisitor(ast.NodeVisitor):
     Walks a function's body statements while tracking enclosing `ast.If` conditions.
     Determines if a warnings.warn call is conditioned on a parameter (parameter-level)
     or unconditional (function-level). Handles both if-branches and else-branches,
-    as well as multi-parameter conditions.
+    and differentiates AND vs OR conditions.
     """
 
     def __init__(self, param_names: Set[str], kwarg_names: Set[str]) -> None:
@@ -336,9 +353,9 @@ class FunctionWarningVisitor(ast.NodeVisitor):
         warning_cat = ""
         warn_msg = ""
         for arg_child in ast.walk(node):
-            if isinstance(arg_child, ast.Name) and arg_child.id in LegacyHeuristicsVisitor.WARNING_CATEGORIES:
+            if isinstance(arg_child, ast.Name) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.id):
                 warning_cat = arg_child.id
-            elif isinstance(arg_child, ast.Attribute) and arg_child.attr in LegacyHeuristicsVisitor.WARNING_CATEGORIES:
+            elif isinstance(arg_child, ast.Attribute) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.attr):
                 warning_cat = arg_child.attr
 
         if node.args:
@@ -348,10 +365,10 @@ class FunctionWarningVisitor(ast.NodeVisitor):
                 warn_msg = _extract_string_value(kw.value)
             elif kw.arg == "category":
                 cat_val = _flatten_ast_attr(kw.value)
-                if any(c in cat_val for c in LegacyHeuristicsVisitor.WARNING_CATEGORIES):
+                if LegacyHeuristicsVisitor.is_deprecation_warning_category(cat_val):
                     warning_cat = cat_val
 
-        is_dep_warning = bool(warning_cat and any(c in warning_cat for c in LegacyHeuristicsVisitor.WARNING_CATEGORIES))
+        is_dep_warning = bool(warning_cat and LegacyHeuristicsVisitor.is_deprecation_warning_category(warning_cat))
         is_dep_message = bool(warn_msg and LegacyHeuristicsVisitor.DEPRECATION_PATTERN.search(warn_msg))
 
         if is_dep_warning or is_dep_message:
@@ -385,7 +402,24 @@ class FunctionWarningVisitor(ast.NodeVisitor):
                             params_in_cond.append(child.value)
 
                 if params_in_cond:
-                    conditioned_params = params_in_cond
+                    # Differentiate AND vs OR conditions:
+                    # - If condition requires multiple parameters simultaneously (AND), emit a joint parameter candidate
+                    #   to avoid falsely flagging client calls that only supply one of the parameters.
+                    # - If condition triggers on any parameter independently (OR) or has a single parameter,
+                    #   emit independent parameter candidates.
+                    is_conjunction = False
+                    if len(params_in_cond) > 1:
+                        if isinstance(cond_expr, ast.BoolOp) and isinstance(cond_expr.op, ast.And):
+                            is_conjunction = True
+                        elif any(isinstance(n, ast.And) for n in ast.walk(cond_expr)) and not any(isinstance(n, ast.Or) for n in ast.walk(cond_expr)):
+                            is_conjunction = True
+
+                    if is_conjunction:
+                        joint_param = "+".join(sorted(params_in_cond))
+                        conditioned_params = [joint_param]
+                    else:
+                        conditioned_params = params_in_cond
+
                     condition_repr = branch_repr
                     break
 
