@@ -178,6 +178,9 @@ def scan_library_historical(lib_name: str, base_dir: Path) -> Dict[str, Any]:
     # Accounting
     origin_frequencies: Dict[str, int] = {}
     multi_origin_counts: Dict[int, int] = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    param_candidates = [c for c in surviving_candidates if c.scope == "parameter"]
+    func_candidates = [c for c in surviving_candidates if c.scope == "function"]
+    param_origins: Dict[str, int] = {}
 
     for c in surviving_candidates:
         active_origins = {o for o in c.origins if o != "pep702"}
@@ -185,6 +188,13 @@ def scan_library_historical(lib_name: str, base_dir: Path) -> Dict[str, Any]:
         multi_origin_counts[k] = multi_origin_counts.get(k, 0) + 1
         for o in active_origins:
             origin_frequencies[o] = origin_frequencies.get(o, 0) + 1
+
+    for c in param_candidates:
+        for o in c.origins:
+            if o != "pep702":
+                param_origins[o] = param_origins.get(o, 0) + 1
+
+    origin_frequencies["parameter"] = len(param_candidates)
 
     # Cross-reference benchmark target APIs
     targets = BENCHMARK_TARGET_APIS.get(lib_name, [])
@@ -236,6 +246,9 @@ def scan_library_historical(lib_name: str, base_dir: Path) -> Dict[str, Any]:
         "snapshot_stats": snapshot_stats,
         "total_raw_hits": len(all_raw_candidates),
         "surviving_unique_candidates": len(surviving_candidates),
+        "parameter_scoped_candidates": len(param_candidates),
+        "function_scoped_candidates": len(func_candidates),
+        "parameter_origins": param_origins,
         "origin_frequencies_in_catalog": origin_frequencies,
         "multi_origin_overlap_distribution": multi_origin_counts,
         "benchmark_targets_detected": detected_count,
@@ -287,6 +300,9 @@ def main() -> None:
         "total_targets": total_targets,
         "total_detected": total_detected,
         "coverage_pct": round((total_detected / total_targets) * 100, 1) if total_targets else 0,
+        "total_unique_candidates": sum(summary_report[l]["surviving_unique_candidates"] for l in ["numpy", "pandas", "scipy"]),
+        "total_function_scoped_candidates": sum(summary_report[l]["function_scoped_candidates"] for l in ["numpy", "pandas", "scipy"]),
+        "total_parameter_scoped_candidates": sum(summary_report[l]["parameter_scoped_candidates"] for l in ["numpy", "pandas", "scipy"]),
     }
     summary_file.write_text(json.dumps(summary_report, indent=2), encoding="utf-8")
     print(f"\n======================================================================")

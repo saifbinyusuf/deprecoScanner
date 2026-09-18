@@ -17,7 +17,8 @@
       "warning": 138,
       "docstring": 52,
       "comment": 55,
-      "decorator": 49
+      "decorator": 49,
+      "parameter": 25
     },
     "multi_origin_overlap_distribution": {
       "1": 252,
@@ -62,7 +63,12 @@
         "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
         "evidence_snippet": ".. deprecated:: 1.25.0 ``cumproduct`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `cumprod` instead."
       }
-    ]
+    ],
+    "parameter_scoped_candidates": 25,
+    "function_scoped_candidates": 248,
+    "parameter_origins": {
+      "warning": 25
+    }
   },
   "pandas": {
     "library": "pandas",
@@ -92,7 +98,8 @@
       "decorator": 230,
       "docstring": 300,
       "warning": 2396,
-      "comment": 130
+      "comment": 130,
+      "parameter": 575
     },
     "multi_origin_overlap_distribution": {
       "1": 2768,
@@ -223,7 +230,13 @@
         "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:7610",
         "evidence_snippet": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffi"
       }
-    ]
+    ],
+    "parameter_scoped_candidates": 575,
+    "function_scoped_candidates": 2337,
+    "parameter_origins": {
+      "decorator": 165,
+      "warning": 410
+    }
   },
   "scipy": {
     "library": "scipy",
@@ -258,7 +271,8 @@
       "docstring": 149,
       "warning": 231,
       "decorator": 201,
-      "comment": 28
+      "comment": 28,
+      "parameter": 109
     },
     "multi_origin_overlap_distribution": {
       "1": 514,
@@ -470,11 +484,20 @@
         "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/stats/_rvs_sampling.py:4",
         "evidence_snippet": ".. deprecated:: 1.12.0 `rvs_ratio_uniforms` is deprecated in favour of `scipy.stats.sampling.RatioUniforms` from version 1.12.0 and will be removed in"
       }
-    ]
+    ],
+    "parameter_scoped_candidates": 109,
+    "function_scoped_candidates": 452,
+    "parameter_origins": {
+      "warning": 89,
+      "decorator": 20
+    }
   },
   "overall": {
     "total_targets": 31,
     "total_detected": 30,
-    "coverage_pct": 96.8
+    "coverage_pct": 96.8,
+    "total_unique_candidates": 3746,
+    "total_function_scoped_candidates": 3037,
+    "total_parameter_scoped_candidates": 709
   }
 }
