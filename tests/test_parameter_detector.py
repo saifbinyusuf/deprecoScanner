@@ -245,6 +245,42 @@ def combine_or(a, b, old_a=None, old_b=None):
         assert c.function_name == "combine_or"
 
 
+def test_and_condition_order_independence():
+    """
+    Verification required by human review:
+    `if flag1 and flag2:` and `if flag2 and flag1:` must produce identical, canonically
+    sorted keys (e.g. 'flag1+flag2') and identical param_tuple ('flag1', 'flag2')
+    to eliminate order-dependent deduplication bugs in Task 2.5.
+    """
+    code_12 = """
+import warnings
+def func_12(x, flag1=False, flag2=False):
+    if flag1 and flag2:
+        warnings.warn("both flags deprecated", DeprecationWarning)
+    return x
+"""
+    code_21 = """
+import warnings
+def func_21(x, flag1=False, flag2=False):
+    if flag2 and flag1:
+        warnings.warn("both flags deprecated", DeprecationWarning)
+    return x
+"""
+    cands_12 = detect_legacy_deprecations(code_12, filename="test_12.py")
+    cands_21 = detect_legacy_deprecations(code_21, filename="test_21.py")
+
+    assert len(cands_12) == 1
+    assert len(cands_21) == 1
+
+    c12 = cands_12[0]
+    c21 = cands_21[0]
+
+    assert c12.param_name == "flag1+flag2"
+    assert c21.param_name == "flag1+flag2"
+    assert c12.param_tuple == ("flag1", "flag2")
+    assert c21.param_tuple == ("flag1", "flag2")
+
+
 def test_deprecated_message_with_argument_words_remains_function_scoped():
     """
     Verification required by human review:

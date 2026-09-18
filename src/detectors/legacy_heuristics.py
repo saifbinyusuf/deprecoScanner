@@ -40,6 +40,15 @@ class DeprecationCandidate:
                 self.function_name = self.qualified_name
 
     @property
+    def param_tuple(self) -> Tuple[str, ...]:
+        """Returns canonically sorted tuple of all parameter names implicated in this deprecation."""
+        if not self.param_name:
+            return ()
+        if "+" in self.param_name:
+            return tuple(sorted(self.param_name.split("+")))
+        return (self.param_name,)
+
+    @property
     def scoped_key(self) -> Tuple[str, Optional[str]]:
         """Returns (function_name, param_name) tuple for call-site resolution."""
         return (self.function_name or self.qualified_name, self.param_name)
@@ -83,25 +92,17 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
     DEPRECATION_PATTERN = re.compile(r"(?i)deprecat")
     PARAM_DECORATOR_PATTERN = re.compile(r"(?i)(deprecat.*(kwarg|param|arg)|(kwarg|param|arg).*deprecat)")
     STD_DEPRECATION_WARNINGS = {"DeprecationWarning", "PendingDeprecationWarning", "FutureWarning"}
-    WARNING_CATEGORY_PATTERN = re.compile(r"(?i)(deprecat|future|pendingdeprecat)")
-
-    COMMON_WARNING_MODULES = (
-        "pandas.errors",
-        "pandas",
-        "scipy",
-        "scipy._lib.deprecation",
-        "numpy.exceptions",
-        "numpy",
-    )
+    WARNING_CATEGORY_PATTERN = re.compile(r"(?i)(deprecat|future|pendingdeprecat|pandas\d*warning)")
 
     @classmethod
     def is_deprecation_warning_category(cls, cat_name: str, local_warning_classes: Optional[Set[str]] = None) -> bool:
         """
-        Universally checks if a warning category is or subclasses a deprecation warning:
+        Pure static determination of whether a warning category is or subclasses a deprecation warning:
         1. Exact match against standard library deprecation warnings.
         2. Local AST-defined warning class inheriting directly/transitively from DeprecationWarning/FutureWarning.
-        3. Dynamic runtime introspection: issubclass(cls, (DeprecationWarning, FutureWarning)) for imported symbols.
-        4. Name-based lexical fallback for unimported external classes: matches 'deprecat' or 'future'.
+        3. Static lexical pattern matching on category name (e.g. ScipyDeprecationWarning, Pandas4Warning).
+
+        Zero runtime imports or dynamic introspection are executed, preserving 100% static analysis safety.
         """
         if not cat_name:
             return False
@@ -114,32 +115,7 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
         if local_warning_classes and cat_name in local_warning_classes:
             return True
 
-        # 3. Dynamic runtime subclass check if symbol is in sys.modules, common libraries, or builtins
-        try:
-            import sys
-            import importlib
-
-            # Check already loaded modules
-            for mod in list(sys.modules.values()):
-                if mod and hasattr(mod, cat_name):
-                    obj = getattr(mod, cat_name)
-                    if isinstance(obj, type) and issubclass(obj, (DeprecationWarning, FutureWarning)):
-                        return True
-
-            # Check known library exception modules if available
-            for mod_name in cls.COMMON_WARNING_MODULES:
-                try:
-                    mod = importlib.import_module(mod_name)
-                    if hasattr(mod, cat_name):
-                        obj = getattr(mod, cat_name)
-                        if isinstance(obj, type) and issubclass(obj, (DeprecationWarning, FutureWarning)):
-                            return True
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
-        # 4. Lexical pattern fallback (e.g. ScipyDeprecationWarning, PytestDeprecationWarning)
+        # 3. Static lexical pattern fallback
         return bool(cls.WARNING_CATEGORY_PATTERN.search(cat_name))
 
     def __init__(self, filename: str = "<string>", package_prefix: str = "") -> None:
