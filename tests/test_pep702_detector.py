@@ -216,3 +216,25 @@ def test_syntax_error_resilience():
     assert detect_pep702_via_griffe(bad_code) == []
     assert detect_pep702_via_mypy(bad_code) == []
     assert detect_pep702_via_pyright(bad_code) == []
+
+
+def test_griffe_category_none_extraction():
+    """
+    Verify Griffe correctly extracts deprecation message when category=None,
+    matching the real-world Pydantic BaseModel.dict pattern.
+    """
+    code = '''
+from typing_extensions import deprecated
+
+@deprecated("The `dict` method is deprecated; use `model_dump` instead.", category=None)
+def dict_method():
+    pass
+'''
+    candidates = detect_pep702_via_griffe(code, filename="models.py")
+    assert len(candidates) == 1
+    c = candidates[0]
+    assert c.qualified_name == "dict_method"
+    assert c.origin == "pep702:griffe"
+    assert "pep702" in c.origins
+    assert c.message == "The `dict` method is deprecated; use `model_dump` instead."
+
