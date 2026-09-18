@@ -66,3 +66,8 @@ data/benchmark_libs/*
 !data/benchmark_libs/.gitkeep
 !data/benchmark_libs/stubs/
 !data/benchmark_libs/stubs/**
+
+# APIScanner baseline downloads
+data/apiscanner_baseline/*
+!data/apiscanner_baseline/.gitkeep
+

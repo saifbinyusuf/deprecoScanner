@@ -1,0 +1,78 @@
+{
+  "numpy-1.20.0": {
+    "library": "numpy",
+    "version": "1.20.0",
+    "files_scanned": 440,
+    "scan_time_sec": 5.57,
+    "raw_candidates": 372,
+    "unique_candidates": 258,
+    "function_scoped": 229,
+    "parameter_scoped": 29,
+    "origin_frequencies": {
+      "warning": 146,
+      "docstring": 47,
+      "comment": 29,
+      "decorator": 56
+    },
+    "apiscanner_paper_table1_detected": 39,
+    "apiscanner_paper_table1_manual": 36,
+    "apiscanner_bundled_elements": 40
+  },
+  "pandas-1.2.0": {
+    "library": "pandas",
+    "version": "1.2.0",
+    "files_scanned": 1128,
+    "scan_time_sec": 11.78,
+    "raw_candidates": 603,
+    "unique_candidates": 393,
+    "function_scoped": 312,
+    "parameter_scoped": 81,
+    "origin_frequencies": {
+      "warning": 302,
+      "docstring": 64,
+      "decorator": 25,
+      "comment": 29
+    },
+    "apiscanner_paper_table1_detected": 66,
+    "apiscanner_paper_table1_manual": 59,
+    "apiscanner_bundled_elements": 67
+  },
+  "scipy-1.6.0": {
+    "library": "scipy",
+    "version": "1.6.0",
+    "files_scanned": 654,
+    "scan_time_sec": 8.31,
+    "raw_candidates": 130,
+    "unique_candidates": 99,
+    "function_scoped": 75,
+    "parameter_scoped": 24,
+    "origin_frequencies": {
+      "decorator": 27,
+      "docstring": 30,
+      "warning": 38,
+      "comment": 7
+    },
+    "apiscanner_paper_table1_detected": 46,
+    "apiscanner_paper_table1_manual": 49,
+    "apiscanner_bundled_elements": 49
+  },
+  "scipy-1.5.4": {
+    "library": "scipy",
+    "version": "1.5.4",
+    "files_scanned": 643,
+    "scan_time_sec": 8.21,
+    "raw_candidates": 179,
+    "unique_candidates": 146,
+    "function_scoped": 122,
+    "parameter_scoped": 24,
+    "origin_frequencies": {
+      "decorator": 77,
+      "docstring": 32,
+      "warning": 36,
+      "comment": 6
+    },
+    "apiscanner_paper_table1_detected": 46,
+    "apiscanner_paper_table1_manual": 49,
+    "apiscanner_bundled_elements": 49
+  }
+}
