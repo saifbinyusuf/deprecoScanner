@@ -1,0 +1,3299 @@
+[
+  {
+    "qualified_name": "numpy.__getattr__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:300",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.__getattr__::attr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:319",
+    "scope": "parameter",
+    "param_name": "attr",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future `np.{...}` will be defined as the corresponding NumPy scalar.', category=FutureWarning) conditioned on param 'attr' (if attr in __future_scalars__)"
+  },
+  {
+    "qualified_name": "numpy._globals._NoValueType",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/_globals.py:32",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "- A new keyword is added to a function, and that function forwards its inputs to another function or method which can be defined outside of NumPy. For example, ``np.std(x)`` calls ``x.std``, so when a ``keepdims`` keyword was added that could only be forwarded if the user explicitly specified ``keepdims``; downstream array libraries may not have added the same keyword, so adding ``x.std(..., keepdims=keepdims)`` unconditionally could have broken previously working code. - A keyword is being deprecated, and a deprecation warning must only be emitted when the keyword is used."
+  },
+  {
+    "qualified_name": "numpy.compat.py3k.npy_load_module",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/compat/py3k.py:116",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Load a module. Uses ``load_module`` which will be deprecated in python 3.12. An alternative that uses ``exec_module`` is in numpy.distutils.misc_util.exec_mod_from_location"
+  },
+  {
+    "qualified_name": "numpy.core.__getattr__::name",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:160",
+    "scope": "parameter",
+    "param_name": "name",
+    "message": null,
+    "raw_evidence": "warnings.warn('The `np.core.MachAr` is considered private API (NumPy 1.24)', category=DeprecationWarning) conditioned on param 'name' (if name == 'MachAr')"
+  },
+  {
+    "qualified_name": "numpy.core.__getattr__",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:158",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-11-22, NumPy 1.25."
+  },
+  {
+    "qualified_name": "numpy.core._exceptions._display_as_base",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_exceptions.py:17",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Classes decorated with this decorator are subject to removal without a deprecation warning."
+  },
+  {
+    "qualified_name": "numpy.core._internal._ctypes.get_data",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:356",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecated getter for the `_ctypes.data` property. ~ .. deprecated:: 1.21 | warnings.warn('\"get_data\" is deprecated. Use \"data\" instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core._internal._ctypes.get_shape",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:365",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecated getter for the `_ctypes.shape` property. ~ .. deprecated:: 1.21 | warnings.warn('\"get_shape\" is deprecated. Use \"shape\" instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core._internal._ctypes.get_strides",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:374",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecated getter for the `_ctypes.strides` property. ~ .. deprecated:: 1.21 | warnings.warn('\"get_strides\" is deprecated. Use \"strides\" instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core._internal._ctypes.get_as_parameter",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:383",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecated getter for the `_ctypes._as_parameter_` property. ~ .. deprecated:: 1.21 | warnings.warn('\"get_as_parameter\" is deprecated. Use \"_as_parameter_\" instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core._machar.MachAr",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_machar.py:16",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-10-20, NumPy 1.22"
+  },
+  {
+    "qualified_name": "numpy.core.arrayprint.array2string",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:562",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.14.0 formatter : dict of callables, optional If not None, the keys should indicate the type(s) that the respective formatting function applies to. Callables should return a string. Types that are not specified (by their corresponding keys) are handled by the default formatters. Individual types for which a formatter can be set are:"
+  },
+  {
+    "qualified_name": "numpy.core.arrayprint.array2string::style",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:725",
+    "scope": "parameter",
+    "param_name": "style",
+    "message": null,
+    "raw_evidence": "warnings.warn(\"'style' argument is deprecated and no longer functional except in 1.13 'legacy' mode\", category=DeprecationWarning) conditioned on param 'style' (if style is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.partition",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:663",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.22.0 Passing booleans as index is deprecated. axis : int or None, optional Axis along which to sort. If None, the array is flattened before sorting. The default is -1, which sorts along the last axis. kind : {'introselect'}, optional Selection algorithm. Default is 'introselect'. order : str or list of str, optional When `a` is an array with fields defined, this argument specifies which fields to compare first, second, etc. A single field can be specified as a string. Not all fields need be specified, but unspecified fields will still be used, in the order in which they come up in the dtype, to break ties."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.argpartition",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:780",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.22.0 Passing booleans as index is deprecated. axis : int or None, optional Axis along which to sort. The default is -1 (the last axis). If None, the flattened array is used. kind : {'introselect'}, optional Selection algorithm. Default is 'introselect' order : str or list of str, optional When `a` is an array with fields defined, this argument specifies which fields to compare first, second, etc. A single field can be specified as a string, and not all fields need be specified, but unspecified fields will still be used, in the order in which they come up in the dtype, to break ties."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.diagonal",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1566",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "In NumPy 1.7 and 1.8, it continues to return a copy of the diagonal, but depending on this fact is deprecated. Writing to the resulting array continues to work as it used to, but a FutureWarning is issued."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.nonzero",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1882",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.sum::a",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:2302",
+    "scope": "parameter",
+    "param_name": "a",
+    "message": null,
+    "raw_evidence": "warnings.warn('Calling np.sum(generator) is deprecated, and in the future will give a different result. Use np.sum(np.fromiter(generator)) or the python sum builtin instead.', category=DeprecationWarning) conditioned on param 'a' (if isinstance(a, _gentype))"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric._round__dispatcher",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3798",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('`round_` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `round` instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.round_",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3805",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.25.0 ``round_`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `round` instead."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric._product_dispatcher",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3826",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('`product` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `prod` instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.product",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3833",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.25.0 ``product`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `prod` instead."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric._cumproduct_dispatcher",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3850",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('`cumproduct` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `cumprod` instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.cumproduct",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.25.0 ``cumproduct`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `cumprod` instead."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric._sometrue_dispatcher",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3875",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('`sometrue` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `any` instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.sometrue",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3882",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.25.0 ``sometrue`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `any` instead."
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric._alltrue_dispatcher",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3901",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('`alltrue` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `all` instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.fromnumeric.alltrue",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3908",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.25.0 ``alltrue`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `all` instead."
+  },
+  {
+    "qualified_name": "numpy.core.getlimits.finfo.__new__::dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/getlimits.py:494",
+    "scope": "parameter",
+    "param_name": "dtype",
+    "message": null,
+    "raw_evidence": "warnings.warn('finfo() dtype cannot be None. This behavior will raise an error in the future. (Deprecated in NumPy 1.25)', category=DeprecationWarning) conditioned on param 'dtype' (if dtype is None)"
+  },
+  {
+    "qualified_name": "numpy.core.numeric.binary_repr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:1937",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "If the `width` value is insufficient, it will be ignored, and `num` will be returned in binary (`num` > 0) or two's complement (`num` < 0) form with its width equal to the minimum number of bits needed to represent the number in the designated form. This behavior is deprecated and will later raise an error. ~ .. deprecated:: 1.12.0"
+  },
+  {
+    "qualified_name": "numpy.core.numeric.binary_repr.warn_if_insufficient::binwidth+width",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:2010",
+    "scope": "parameter",
+    "param_name": "binwidth+width",
+    "message": null,
+    "raw_evidence": "warnings.warn('Insufficient bit width provided. This behavior will raise an error in the future.', category=DeprecationWarning) conditioned on param 'binwidth+width' (if width is not None and width < binwidth)"
+  },
+  {
+    "qualified_name": "numpy.core.numerictypes.find_common_type",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numerictypes.py:599",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: NumPy 1.25 ~ This function is deprecated, use `numpy.promote_types` or `numpy.result_type` instead. To achieve semantics for the `scalar_types` argument, use `numpy.result_type` and pass the Python values `0`, `0.0`, or `0j`. This will give the same results in almost all cases. More information and rare exception can be found in the `NumPy 1.25 release notes <https://numpy.org/devdocs/release/1.25.0-notes.html>`_. | warnings.warn('np.find_common_type is deprecated.  Please use `np.result_type` or `np.promote_types`.\\nSee https://numpy.org/devdocs/release/1.25.0-notes.html and the docs for more information.  (Deprecated NumPy 1.25)', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.records._deprecate_shape_0_as_None::shape",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:578",
+    "scope": "parameter",
+    "param_name": "shape",
+    "message": null,
+    "raw_evidence": "warnings.warn('Passing `shape=0` to have the shape be inferred is deprecated, and in future will be equivalent to `shape=(0,)`. To infer the shape and suppress this warning, pass `shape=None` instead.', category=FutureWarning) conditioned on param 'shape' (if shape == 0)"
+  },
+  {
+    "qualified_name": "numpy.core.records.fromarrays.shape",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:640",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "shape = _deprecate_shape_0_as_None(...)"
+  },
+  {
+    "qualified_name": "numpy.core.records.fromrecords",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:754",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('fromrecords expected a list of tuples, may have received a list of lists instead. In the future that will raise an error', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.records.fromrecords.shape",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:742",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "shape = _deprecate_shape_0_as_None(...)"
+  },
+  {
+    "qualified_name": "numpy.core.records.fromstring.shape",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:835",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "shape = _deprecate_shape_0_as_None(...)"
+  },
+  {
+    "qualified_name": "numpy.core.records.fromfile.shape",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:902",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "shape = _deprecate_shape_0_as_None(...)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_api.test_string_to_boolean_cast",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:328",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Currently, for `astype` strings are cast to booleans effectively by calling `bool(int(string)`. This is not consistent (see gh-9875) and will eventually be deprecated."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_api.test_fastCopyAndTranspose",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:163",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# TODO: remove when fastCopyAndTranspose deprecation expires"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_array_coercion.TestScalarDiscovery.test_pyscalar_subclasses",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:350",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "NumPy arrays are read/write which means that anything but invariant behaviour is on thin ice. However, we currently are happy to discover subclasses of Python float, int, complex the same as the base classes. This should potentially be deprecated."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_array_coercion.TestTimeScalars.test_coercion_assignment_datetime",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:453",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "#       cast, or by deprecating the first part."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_array_coercion.TestArrayLikes.test_bad_array_like_attributes",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# but shapely made use of it, so it will require a deprecation."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_array_coercion.TestArrayLikes.test_bad_array_like_attributes.BadInterface",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# but shapely made use of it, so it will require a deprecation."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_arrayprint.TestPrintOptions.test_0d_arrays",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_arrayprint.py:604",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_conversion_utils.StringConverterTestCase._check_conv_assert_warn::self",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:27",
+    "scope": "parameter",
+    "param_name": "self",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'self' (if self.warn)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_conversion_utils.StringConverterTestCase._check",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:32",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Takes valid non-deprecated inputs for converters, runs converters on inputs, checks correctness of outputs, warnings and errors"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_conversion_utils.TestIntpConverter.test_none",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:190",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_datetime.TestDateTime.test_datetime_scalar_construction_timezone",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:306",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # verify that supplying an explicit timezone works, but is deprecated"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_datetime.TestDateTime.test_string_parser_variants",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1612",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_datetime.TestDateTime.test_string_parser_error_check",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1704",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_datetime.TestDateTime.test_datetime_y2038",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:2399",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations._DeprecationTestCase.assert_deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:52",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Test if DeprecationWarnings are given and raised. ~ This first checks if the function when called gives `num` DeprecationWarnings, after that it tries to raise these DeprecationWarnings and compares them with `exceptions`. The exceptions can be different for cases where this code path is simply not anticipated and the exception is replaced. ~ Parameters ---------- function : callable The function to test num : int Number of DeprecationWarnings to expect. This should normally be 1. ignore_others : bool Whether warnings of the wrong type should be ignored (note that the message is not checked) function_fails : bool If the function would normally fail, setting this will check for warnings inside a try/except block. exceptions : Exception or tuple of Exceptions Exception to expect when turning the warnings into an error. The default checks for DeprecationWarnings. If exceptions is empty the function is expected to run successfully. args : tuple Arguments for `function` kwargs : dict Keyword arguments for `function`"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations._DeprecationTestCase.assert_not_deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:125",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "self.assert_deprecated(function, num=0, ignore_others=True, exceptions=tuple(), args=args, kwargs=kwargs)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDatetime64Timezone",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:141",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Parsing of datetime64 with timezones deprecated in 1.11.0, because datetime64 is now timezone naive rather than UTC only."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestArrayDataAttributeAssignmentDeprecation",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:162",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Assigning the 'data' attribute of an ndarray is unsafe as pointed out in gh-7093. Eventually, such assignment should NOT be allowed, but in the interests of maintaining backwards compatibility, only a Deprecation- Warning will be raised instead for the time being to give developers time to refactor relevant code."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestTestDeprecated.test_assert_deprecated.test_case_instance",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:225",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "test_case_instance = _DeprecationTestCase(...)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestTestDeprecated.test_assert_deprecated.foo",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:232",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('foo', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestNonNumericConjugate",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:238",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecate no-op behavior of ndarray.conjugate on non-numeric dtypes, which conflicts with the error behavior of np.conjugate."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestFromStringAndFileInvalidData.test_deprecate_unparsable_data_file",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:338",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestFromStringAndFileInvalidData.test_deprecate_unparsable_string",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:356",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestToString.test_tostring_matches_tobytes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:409",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestQuantileInterpolationDeprecation.test_both_passed",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:629",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestMemEventHook.test_mem_seteventhook",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # Deprecated 2021-11-18, NumPy 1.23"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestLoadtxtParseIntsViaFloat.test_deprecated_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:683",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestLoadtxtParseIntsViaFloat.test_deprecated_raised",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:688",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning) | # The DeprecationWarning is chained when raised, so test manually:"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestScalarConversion.test_behaviour",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:705",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.test_future_scalar_attributes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:760",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDTypeAttributeIsDTypeDeprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:207",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-01-05, NumPy 1.21"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestFromStringAndFileInvalidData",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:321",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Tests should be moved to real tests when deprecation is done."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDeprecatedUnpickleObjectScalar",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:542",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2020-11-24, NumPy 1.20"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestSingleElementSignature",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:556",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-04-01, NumPy 1.21"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestCtypesGetter",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:565",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-05-18, Numpy 1.21.0"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestPartitionBoolIndex",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:593",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-09-29, NumPy 1.22"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestMachAr",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:607",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-11-22, NumPy 1.25"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestQuantileInterpolationDeprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-11-08, NumPy 1.22"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestQuantileInterpolationDeprecation.test_deprecated",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-11-08, NumPy 1.22"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestMemEventHook",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2021-11-18, NumPy 1.23"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestArrayFinalizeNone.test_use_none_is_deprecated",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated way that ndarray itself showed nothing needs finalizing."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestArrayFinalizeNone.test_use_none_is_deprecated.NoFinalize",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated way that ndarray itself showed nothing needs finalizing."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestAxisNotMAXDIMS",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:664",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-01-08, NumPy 1.23"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestLoadtxtParseIntsViaFloat",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:673",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-07-03, NumPy 1.23 ; # This test can be removed without replacement after the deprecation."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDeprecatedGlobals",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-11-17, NumPy 1.24"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDeprecatedGlobals.test_type_aliases",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated 2022-11-17, NumPy 1.24"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestRemovedGlobals",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:773",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Not a deprecation, but the large error was added to aid those who missed ; # the previous deprecation, and should be removed similarly to one"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestRemovedGlobals.test_attributeerror_includes_info",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:774",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# the previous deprecation, and should be removed similarly to one ; # Not a deprecation, but the large error was added to aid those who missed"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDeprecatedFinfo",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in NumPy 1.25, 2023-01-16"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestDeprecatedFinfo.test_deprecated_none",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in NumPy 1.25, 2023-01-16"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestMathAlias",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 1.25, 2023-04-06"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_deprecations.TestMathAlias.test_deprecated_np_math",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 1.25, 2023-04-06"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_dtype.TestSubarray.test_shape_equal",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:598",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_dtype.TestBuiltin.test_remaining_dtypes_with_bad_bytesize",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:131",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# The np.<name> aliases were deprecated, these probably should be too"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_dtype.TestRecord.test_mutate",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:265",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# NOTE: Mutating should be deprecated, but new API added to replace it."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_dtype.TestRecord.test_mutate_error",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:280",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# NOTE: Mutating should be deprecated, but new API added to replace it."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_indexing.TestMultiIndexingAutomated.test_multidim",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1201",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning) | warnings.warn('error', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_indexing.TestBooleanIndexing.test_bool_as_int_argument_errors",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1295",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_indexing.TestIndexing.test_character_assignment",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:546",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# (the character special dtype case, should be deprecated probably)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.test_fromstring_complex",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:104",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.test_fromstring_bogus",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:125",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.test_fromstring_empty",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:131",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.test_fromstring_missing",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:137",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.TestFileBased.test_fromfile_bogus",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:153",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.TestFileBased.test_fromfile_complex",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:188",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.TestCommaDecimalPointLocale.test_fromstring_best_effort_float",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:327",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.TestCommaDecimalPointLocale.test_fromstring_best_effort",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:332",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_longdouble.TestCommaDecimalPointLocale.test_fromstring_foreign_value",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:347",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestFlags.test_writeable_from_c_data",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:175",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning) | warnings.warn('', category=DeprecationWarning) | # Also see that this is deprecated to change from python."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestMethods.test__complex__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3655",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestMethods.test__complex__should_not_work",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3683",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestIO.test_malformed",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5615",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestIO.test_fromfile_subarray_binary",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5674",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestIO.test_read_shorter_than_count_subarray",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5699",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestConversion.test_to_int_scalar",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:8772",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestFlags.test_readonly_flag_protocols",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:224",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Delete _warn_on_write after deprecation and simplify"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_multiarray.TestArange.test_arange_booleans",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:9449",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Arguably, much or all of this could be deprecated/removed."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_nditer.test_iter_writemasked_broadcast_error",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nditer.py:2863",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# case and should simply be deprecated."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_nep50_promotions.test_nep50_with_axisconcatenator",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nep50_promotions.py:187",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# release notes;  test this (NEP 50 opt-in makes the deprecation an error)."
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numeric.TestNonarrayArgs.test_cumproduct",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:117",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numeric.TestNonzero.test_nonzero_zerod",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:1309",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numeric.TestCorrelate.test_mode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3011",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numeric.TestConvolve.test_mode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3040",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestCommonType.test_scalar_loses1",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:342",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestCommonType.test_scalar_loses2",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:347",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestCommonType.test_scalar_wins",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:352",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestCommonType.test_scalar_wins2",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:357",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestCommonType.test_scalar_wins3",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:362",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestSctypeDict.test_ulong",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:451",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_numerictypes.TestIsSubDType.test_nondtype_nonscalartype",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:412",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# See gh-14619 and gh-9505 which introduced the deprecation to fix"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_records.TestRecord.test_pickle_void",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_records.py:435",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_regression.TestRegression.test_fromstring_crash",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1520",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_regression.TestRegression.test_find_common_type_boolean",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1674",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_scalar_ctors.TestFromInt.test_uint64_from_negative",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalar_ctors.py:81",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_scalarmath.check_ufunc_scalar_equivalence",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:103",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_scalarmath.TestConversion.test_iinfo_long_values",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:487",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_scalarmath.TestConversion.test_scalar_comparison_to_none",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:593",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_scalarmath.TestMultiply.test_seq_repeat",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:689",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_shape_base.TestConcatenate.test_dtype_with_promotion",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_shape_base.py:404",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Note that U0 and S0 should be deprecated eventually and changed to"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_ufunc.TestUfunc.test_forced_sig",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:436",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core.tests.test_ufunc.TestUfunc.test_scalar_equal",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:2342",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Scalar comparisons should always work, without deprecation warnings."
+  },
+  {
+    "qualified_name": "numpy.distutils.command.config.config.get_output",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/command/config.py:448",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('\\n+++++++++++++++++++++++++++++++++++++++++++++++++\\nUsage of get_output is deprecated: please do not \\nuse it anymore, and avoid configuration checks \\ninvolving running executable on the target machine.\\n+++++++++++++++++++++++++++++++++++++++++++++++++\\n', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.exec_command.temp_file_name",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:101",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('temp_file_name is deprecated since NumPy v1.17, use tempfile.mkstemp instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.exec_command.exec_command",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:177",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17 Use subprocess.Popen instead | warnings.warn('exec_command is deprecated since NumPy v1.17, use subprocess.Popen instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.misc_util.quote_args",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/misc_util.py:112",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.22. | warnings.warn('\"quote_args\" is deprecated.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.system_info.lapack_src_info",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:1648",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# LAPACK_SRC is deprecated, please do not use this!"
+  },
+  {
+    "qualified_name": "numpy.distutils.system_info.blas_src_info",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:2658",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# BLAS_SRC is deprecated, please do not use this!"
+  },
+  {
+    "qualified_name": "numpy.distutils.tests.test_exec_command.test_exec_command_stdout",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:71",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.tests.test_exec_command.test_exec_command_stderr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:86",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.distutils.tests.test_exec_command.TestExecCommand.test_basic",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:209",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.exceptions.ModuleDeprecationWarning",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:58",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Module deprecation warning. ~ The nose tester turns ordinary Deprecation warnings into test failures. That makes it hard to deprecate whole modules, because they get imported by default. So this is a special Deprecation warning that the nose tester will let pass without making tests fail."
+  },
+  {
+    "qualified_name": "numpy.exceptions.VisibleDeprecationWarning",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:74",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Visible deprecation warning. ~ By default, python will not show deprecation warnings, so this class can be used when a very visible warning is helpful, for example because the usage is most likely a user bug."
+  },
+  {
+    "qualified_name": "numpy.f2py._backends._distutils.DistutilsBackend.__init__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/f2py/_backends/_distutils.py:15",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('distutils has been deprecated since NumPy 1.26.xUse the Meson backend instead, or generate wrapperswithout -c and use a custom build script', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.__getattr__::attr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/__init__.py:84",
+    "scope": "parameter",
+    "param_name": "attr",
+    "message": null,
+    "raw_evidence": "warnings.warn('`np.lib.math` is a deprecated alias for the standard library `math` module (Deprecated Numpy 1.25). Replace usages of `numpy.lib.math` with `math`', category=DeprecationWarning) conditioned on param 'attr' (if attr == 'math')"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.corrcoef",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2758",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.10.0 ddof : _NoValue, optional Has no effect, do not use. ~ .. deprecated:: 1.10.0 dtype : data-type, optional Data-type of the result. By default, the return data-type will have at least `numpy.float64` precision."
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.corrcoef::bias",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
+    "scope": "parameter",
+    "param_name": "bias",
+    "message": null,
+    "raw_evidence": "warnings.warn('bias and ddof have no effect and are deprecated', category=DeprecationWarning) conditioned on param 'bias' (if bias is not np._NoValue or ddof is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.corrcoef::ddof",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
+    "scope": "parameter",
+    "param_name": "ddof",
+    "message": null,
+    "raw_evidence": "warnings.warn('bias and ddof have no effect and are deprecated', category=DeprecationWarning) conditioned on param 'ddof' (if bias is not np._NoValue or ddof is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.msort",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3718",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.24 ~ msort is deprecated, use ``np.sort(a, axis=0)`` instead. | warnings.warn('msort is deprecated, use np.sort(a, axis=0) instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.percentile",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3993",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "interpolation : str, optional Deprecated name for the method keyword argument. ~ .. deprecated:: 1.22.0"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.quantile",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4293",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "interpolation : str, optional Deprecated name for the method keyword argument. ~ .. deprecated:: 1.22.0"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base._check_interpolation_as_method",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4578",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn(\"the `interpolation=` argument to {...} was renamed to `method=`, which has additional options.\\nUsers of the modes 'nearest', 'lower', 'higher', or 'midpoint' are encouraged to review the method they used. (Deprecated NumPy 1.22)\", category=DeprecationWarning) | # Deprecated NumPy 1.22, 2021-11-08"
+  },
+  {
+    "qualified_name": "numpy.lib.function_base.insert::obj",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:5489",
+    "scope": "parameter",
+    "param_name": "obj",
+    "message": null,
+    "raw_evidence": "warnings.warn('in the future insert will treat boolean arrays and array-likes as a boolean index instead of casting it to integer', category=FutureWarning) conditioned on param 'obj' (if else: not (isinstance(obj, slice)))"
+  },
+  {
+    "qualified_name": "numpy.lib.index_tricks.ndindex.ndincr",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/index_tricks.py:674",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.20.0 This method has been advised against since numpy 1.8.0, but only started emitting DeprecationWarning as of this version. | warnings.warn('`ndindex.ndincr()` is deprecated, use `next(ndindex)` instead', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.nanfunctions.nanpercentile",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1229",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "interpolation : str, optional Deprecated name for the method keyword argument. ~ .. deprecated:: 1.22.0"
+  },
+  {
+    "qualified_name": "numpy.lib.nanfunctions.nanquantile",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1394",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "interpolation : str, optional Deprecated name for the method keyword argument. ~ .. deprecated:: 1.22.0"
+  },
+  {
+    "qualified_name": "numpy.lib.npyio.genfromtxt::dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/npyio.py:2345",
+    "scope": "parameter",
+    "param_name": "dtype",
+    "message": null,
+    "raw_evidence": "warnings.warn('Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.', category=VisibleDeprecationWarning) conditioned on param 'dtype' (if dtype is None)"
+  },
+  {
+    "qualified_name": "numpy.lib.polynomial.poly1d.__init__::c_or_r",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
+    "scope": "parameter",
+    "param_name": "c_or_r",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'c_or_r' (if set(c_or_r.__dict__) - set(self.__dict__))"
+  },
+  {
+    "qualified_name": "numpy.lib.polynomial.poly1d.__init__::self",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
+    "scope": "parameter",
+    "param_name": "self",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'self' (if set(c_or_r.__dict__) - set(self.__dict__))"
+  },
+  {
+    "qualified_name": "numpy.lib.shape_base.expand_dims",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/shape_base.py:513",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.13.0 Passing an axis where ``axis > a.ndim`` will be treated as ``axis == a.ndim``, and passing ``axis < -a.ndim - 1`` will be treated as ``axis == 0``. This behavior is deprecated."
+  },
+  {
+    "qualified_name": "numpy.lib.stride_tricks.broadcast_arrays",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/stride_tricks.py:481",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17 The output is currently marked so that if written to, a deprecation warning will be emitted. A future version will set the ``writable`` flag False so writing to it will raise an error."
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_financial_expired.test_financial_expired",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_financial_expired.py:8",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_function_base.TestInsert.test_basic",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:509",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_function_base.TestCorrCoef.test_ddof",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2263",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # ddof raises DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_function_base.TestCorrCoef.test_bias",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2275",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # bias raises DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_function_base.TestMsort.test_simple",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2502",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_header",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1447",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_auto_dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1461",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_commented_header",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1514",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_autonames_and_usecols",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1557",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_converters_with_usecols_and_names",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1578",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_autostrip",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2047",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_comments_is_none",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2177",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_latin1",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2195",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_utf8_byte_encoding",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2228",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_utf8_file_nodtype_unicode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2281",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_stride_tricks.test_writeable",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_stride_tricks.py:586",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.old_func",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:28",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@deprecate"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.old_func2",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:33",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@deprecate"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.new_func3",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:39",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "new_func3 = deprecate(...)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.new_func4",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:48",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "new_func4 = deprecate(...)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.new_func5",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:57",
+    "scope": "function",
+    "param_name": null,
+    "message": "This function is\ndeprecated.",
+    "raw_evidence": "new_func5 = deprecate(...)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.new_func6",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:65",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "new_func6 = deprecate(...)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_utils.old_func7",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:69",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@deprecate_with_doc"
+  },
+  {
+    "qualified_name": "numpy.lib.utils._Deprecate",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:104",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Decorator class to deprecate old functions. ~ Refer to `deprecate` for details. ~ See Also -------- deprecate"
+  },
+  {
+    "qualified_name": "numpy.lib.utils._Deprecate.__call__.newfunc",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:143",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.utils.deprecate",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:186",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Issues a DeprecationWarning, adds warning to `old_name`'s docstring, rebinds ``old_name.__name__`` and returns the new function object. ~ Parameters ---------- func : function The function to be deprecated. old_name : str, optional The name of the function to be deprecated. Default is None, in which case the name of `func` is used. new_name : str, optional The new name for the function. Default is None, in which case the deprecation message is that `old_name` is deprecated. If given, the deprecation message is that `old_name` is deprecated and `new_name` should be used instead. message : str, optional Additional explanation of the deprecation. Displayed in the docstring after the warning. ~ Returns ------- old_func : function The deprecated function. ~ Examples -------- Note that ``olduint`` returns a value after printing Deprecation Warning: ~ >>> olduint = np.deprecate(np.uint) DeprecationWarning: `uint64` is deprecated! # may vary >>> olduint(6) 6"
+  },
+  {
+    "qualified_name": "numpy.lib.utils.deprecate_with_doc",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:239",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecates a function and includes the deprecation in its docstring. ~ This function is used as a decorator. It returns an object that can be used to issue a DeprecationWarning, by passing the to-be decorated function as argument, this adds warning to the to-be decorated function's docstring and returns the new function object. ~ See Also -------- deprecate : Decorate a function such that it issues a `DeprecationWarning` ~ Parameters ---------- msg : str Additional explanation of the deprecation. Displayed in the docstring after the warning."
+  },
+  {
+    "qualified_name": "numpy.linalg.linalg.qr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:790",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "The options 'reduced', 'complete, and 'raw' are new in numpy 1.8, see the notes for more information. The default is 'reduced', and to maintain backward compatibility with earlier versions of numpy both it and the old default 'full' can be omitted. Note that array h returned in 'raw' mode is transposed for calling Fortran. The 'economic' mode is deprecated. The modes 'full' and 'economic' may be passed using only the first letter for backwards compatibility, but all others must be spelled out. See the Notes for more explanation. ~ Q : ndarray of float or complex, optional A matrix with orthonormal columns. When mode = 'complete' the result is an orthogonal/unitary matrix depending on whether or not a is real/complex. The determinant may be either +/- 1 in that case. In case the number of dimensions in the input array is greater than 2 then a stack of the matrices with above properties is returned. R : ndarray of float or complex, optional The upper-triangular matrix or a stack of upper-triangular matrices if the number of dimensions in the input array is greater than 2. (h, tau) : ndarrays of np.double or np.cdouble, optional The array h contains the Householder reflectors that generate q along with r. The tau array contains scaling factors for the reflectors. In the deprecated 'economic' mode only h is returned. ~ New 'reduced', 'complete', and 'raw' options for mode were added in NumPy 1.8.0 and the old option 'full' was made an alias of 'reduced'. In addition the options 'full' and 'economic' were deprecated. Because 'full' was the previous default and 'reduced' is the new default, backward compatibility can be maintained by letting `mode` default. The 'raw' option was added so that LAPACK routines that can multiply arrays by q using the Householder reflectors can be used. Note that in this case the returned arrays are of type np.double or np.cdouble and the h array is transposed to be FORTRAN compatible. No routines using the 'raw' return are currently exposed by numpy, but some are available in lapack_lite and just await the necessary work."
+  },
+  {
+    "qualified_name": "numpy.linalg.linalg.qr::mode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:927",
+    "scope": "parameter",
+    "param_name": "mode",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'mode' (if mode in ('f', 'full')) | warnings.warn('', category=DeprecationWarning) conditioned on param 'mode' (if mode in ('e', 'economic'))"
+  },
+  {
+    "qualified_name": "numpy.linalg.linalg.lstsq::rcond",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:2305",
+    "scope": "parameter",
+    "param_name": "rcond",
+    "message": null,
+    "raw_evidence": "warnings.warn('`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.\\nTo use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.', category=FutureWarning) conditioned on param 'rcond' (if rcond == 'warn')"
+  },
+  {
+    "qualified_name": "numpy.linalg.tests.test_deprecations.test_qr_mode_full_future_warning",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/tests/test_deprecations.py:8",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "In numpy 1.8 the mode options 'full' and 'economic' in linalg.qr were deprecated. The release date will probably be sometime in the summer of 2013. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core._deprecate_argsort_axis::arr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:107",
+    "scope": "parameter",
+    "param_name": "arr",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future the default for argsort will be axis=-1, not the current None, to match its documentation and np.argsort. Explicitly pass -1 or None to silence this warning.', category=MaskedArrayFutureWarning) conditioned on param 'arr' (if else: not (arr.ndim <= 1))"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.fill_value",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:3768",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Non-scalar arrays for the fill value are deprecated. Use arrays with scalar values instead. The filled function still supports any array as `fill_value`.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.resize",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:4752",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "This method is difficult to implement safely and may be deprecated in future releases of NumPy."
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.argsort.axis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:5576",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "axis = _deprecate_argsort_axis(...)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.tostring",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6153",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.19.0 | warnings.warn('tostring() is deprecated. Use tobytes() instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedConstant.__format__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6606",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Format strings passed to MaskedConstant are ignored, but in future may error or produce different behavior', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core._extrema_operation.reduce::axis+target",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6761",
+    "scope": "parameter",
+    "param_name": "axis+target",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future the default for ma.{...}.reduce will be axis=0, not the current None, to match np.{...}.reduce. Explicitly pass 0 or None to silence this warning.', category=MaskedArrayFutureWarning) conditioned on param 'axis+target' (if axis is np._NoValue and target.ndim > 1)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.argsort.axis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:7007",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "axis = _deprecate_argsort_axis(...)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.mask_rows::axis",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1091",
+    "scope": "parameter",
+    "param_name": "axis",
+    "message": null,
+    "raw_evidence": "warnings.warn('The axis argument has always been ignored, in future passing it will raise TypeError', category=DeprecationWarning) conditioned on param 'axis' (if axis is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.mask_cols::axis",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1141",
+    "scope": "parameter",
+    "param_name": "axis",
+    "message": null,
+    "raw_evidence": "warnings.warn('The axis argument has always been ignored, in future passing it will raise TypeError', category=DeprecationWarning) conditioned on param 'axis' (if axis is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.corrcoef",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1517",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.10.0 allow_masked : bool, optional If True, masked values are propagated pair-wise: if a value is masked in `x`, the corresponding value is masked in `y`. If False, raises an exception. Because `bias` is deprecated, this argument needs to be treated as keyword only to avoid a warning. ddof : _NoValue, optional Has no effect, do not use. ~ .. deprecated:: 1.10.0"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.corrcoef::bias",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
+    "scope": "parameter",
+    "param_name": "bias",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'bias' (if bias is not np._NoValue or ddof is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.corrcoef::ddof",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
+    "scope": "parameter",
+    "param_name": "ddof",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'ddof' (if bias is not np._NoValue or ddof is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.MAxisConcatenator.makemat",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1623",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# deprecate that class. In preparation, we use the unmasked version"
+  },
+  {
+    "qualified_name": "numpy.ma.mrecords.fromtextfile::delimitor",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/mrecords.py:700",
+    "scope": "parameter",
+    "param_name": "delimitor",
+    "message": null,
+    "raw_evidence": "warnings.warn(\"The 'delimitor' keyword argument of numpy.ma.mrecords.fromtextfile() is deprecated since NumPy 1.22.0, use 'delimiter' instead.\", category=DeprecationWarning) conditioned on param 'delimitor' (if delimitor is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArray.test_format",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:518",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayArithmetic.test_eq_with_None",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:1864",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation is in place for arrays, and when it happens this"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestArgsort._test_base",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:23",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=MaskedArrayFutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestMinimumMaximum.test_axis_default",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:53",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=MaskedArrayFutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestFromtextfile.test_fromtextfile_delimitor",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:83",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_extras.TestCompressFunctions.test_mask_row_cols_axis_deprecation",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:656",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # Test deprecation of the axis argument to `mask_rows` and `mask_cols`"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_extras.TestCorrcoef.test_ddof",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1308",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # ddof raises DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_extras.TestCorrcoef.test_bias",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1329",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.matrixlib.defmatrix.matrix.__new__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/defmatrix.py:117",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.matrixlib.tests.test_masked_matrix.TestSubclassing.test_masked_binary_operations",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:202",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.matrixlib.tests.test_masked_matrix.TestConcatenator.test_matrix",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:222",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Test consistency with unmasked version.  If we ever deprecate"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:938",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:939",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1057",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1058",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebvander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1422",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.chebyshev.chebgauss.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1882",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:655",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:656",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:768",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:769",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermvander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1151",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite.hermgauss.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1595",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermeder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:648",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermeder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:649",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermeint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:761",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermeint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:762",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermevander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1143",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.hermite_e.hermegauss.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1588",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.lagder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:650",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.lagder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:651",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.lagint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:766",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.lagint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:767",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.lagvander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1149",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.laguerre.laggauss.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1548",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.legder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:675",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.legder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:676",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.legint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:794",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.legint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:795",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.legvander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1161",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.legendre.leggauss.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1556",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polynomial.polyder.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:520",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polynomial.polyder.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:521",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polynomial.polyint.cnt",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:630",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "cnt = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polynomial.polyint.iaxis",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:631",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "iaxis = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polynomial.polyvander.ideg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:1096",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "ideg = pu._deprecate_as_int(...)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polyutils._deprecate_as_int",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:720",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Like `operator.index`, but emits a deprecation warning when passed a float ~ Raises ------ TypeError : if x is a non-integral float or non-numeric DeprecationWarning : if x is an integral float"
+  },
+  {
+    "qualified_name": "numpy.polynomial.polyutils._deprecate_as_int::x",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:746",
+    "scope": "parameter",
+    "param_name": "x",
+    "message": null,
+    "raw_evidence": "warnings.warn('In future, this will raise TypeError, as {...} will need to be an integer not just an integral float.', category=DeprecationWarning) conditioned on param 'x' (if ix == x)"
+  },
+  {
+    "qualified_name": "numpy.polynomial.tests.test_polynomial.TestIntegral.test_polyint",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/tests/test_polynomial.py:311",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_random.TestRandomDist.test_random_integers_deprecated",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_random.py:353",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_randomstate.TestRandomDist.test_random_integers_deprecated",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_randomstate.py:541",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_smoke.TestDefaultRNG.test_default_is_pcg64",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_smoke.py:804",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# a deprecation cycle to move to a different function."
+  },
+  {
+    "qualified_name": "numpy.testing._private.utils.assert_warns",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:1726",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Examples -------- >>> import warnings >>> def deprecated_func(num): ... warnings.warn(\"Please upgrade\", DeprecationWarning) ... return num*num >>> with np.testing.assert_warns(DeprecationWarning): ... assert deprecated_func(4) == 16 >>> # or passing a func >>> ret = np.testing.assert_warns(DeprecationWarning, deprecated_func, 4) >>> assert ret == 16"
+  },
+  {
+    "qualified_name": "numpy.testing._private.utils.suppress_warnings",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:2004",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "with np.testing.suppress_warnings() as sup: sup.filter(DeprecationWarning, \"Some text\") sup.filter(module=np.ma.core) log = sup.record(FutureWarning, \"Does this occur?\") command_giving_warnings() # The FutureWarning was given once, the filtered warnings were # ignored. All other warnings abide outside settings (may be # printed/error) assert_(len(log) == 1) assert_(len(sup.log) == 1) # also stored in log attribute"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestWarns.test_warn_wrong_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:832",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestWarns.test_warn_wrong_warning.f",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:828",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('yo', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.tests.test_public_api.test_api_importable",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:443",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Note that if a PRIVATE_BUT_PRESENT_MODULES entry goes missing, it may simply need to be removed from the list (deprecation may or may not be needed - apply common sense). | warnings.warn('always', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.tests.test_public_api.test_all_modules_are_expected",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:342",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# suppressing warnings from deprecated modules"
+  }
+]

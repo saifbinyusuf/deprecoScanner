@@ -60,3 +60,9 @@ data/raw/llm-dep-api/*
 # External cloned repos (keep directory, ignore contents)
 external/*
 !external/.gitkeep
+
+# Historical benchmark library source trees (unpacked, keep stubs and gitkeep)
+data/benchmark_libs/*
+!data/benchmark_libs/.gitkeep
+!data/benchmark_libs/stubs/
+!data/benchmark_libs/stubs/**

@@ -348,6 +348,32 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
                     )
                 )
 
+    def visit_Assign(self, node: ast.Assign) -> None:
+        """Captures functional deprecation wrapping via assignment (e.g. name = np.deprecate(...))."""
+        if isinstance(node.value, ast.Call):
+            func_name = _flatten_ast_attr(node.value.func)
+            if self.DEPRECATION_PATTERN.search(func_name) or func_name.endswith("deprecate"):
+                for target in node.targets:
+                    if isinstance(target, ast.Name):
+                        qname = self._current_qualified_name(target.id)
+                        msg = None
+                        for kw in node.value.keywords:
+                            if kw.arg == "message" and isinstance(kw.value, ast.Constant):
+                                msg = str(kw.value.value)
+                        self.candidates.append(
+                            DeprecationCandidate(
+                                qualified_name=qname,
+                                origin="decorator",
+                                location=f"{self.filename}:{node.lineno}",
+                                raw_evidence=f"{target.id} = {func_name}(...)",
+                                line=node.lineno,
+                                scope="function",
+                                function_name=qname,
+                                message=msg,
+                            )
+                        )
+        self.generic_visit(node)
+
 
 class FunctionWarningVisitor(ast.NodeVisitor):
     """

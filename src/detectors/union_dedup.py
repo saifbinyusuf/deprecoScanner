@@ -68,13 +68,18 @@ def _extract_file_path(location: str) -> str:
 def _is_symbol_compatible(sym1: str, sym2: str) -> bool:
     """
     Determines if two symbol strings refer to the same target API,
-    accommodating fully-qualified names vs partially-qualified names.
+    accommodating fully-qualified names vs partially-qualified names,
+    base-class inheritance (NDFrame for DataFrame/Series), and
+    intermediate internal submodules (e.g. numpy.alltrue vs numpy.core.fromnumeric.alltrue,
+    or scipy.integrate.cumtrapz vs scipy.integrate._quadrature.cumtrapz).
+
     Guards against cross-class method collisions (e.g. DataFrame.iteritems vs Series.iteritems)
     by requiring class qualification for class methods.
     """
     if sym1 == sym2:
         return True
 
+    # Suffix matching (e.g. DataFrame.iteritems and pandas.DataFrame.iteritems)
     if sym1.endswith(f".{sym2}") or sym2.endswith(f".{sym1}"):
         longer, shorter = (sym1, sym2) if len(sym1) > len(sym2) else (sym2, sym1)
         if "." not in shorter:
@@ -83,6 +88,38 @@ def _is_symbol_compatible(sym1: str, sym2: str) -> bool:
             if len(parts) >= 2 and parts[-2][0].isupper():
                 return False
         return True
+
+    p1 = sym1.split(".")
+    p2 = sym2.split(".")
+
+    # Same root library (e.g. both pandas.* or both numpy.* or both scipy.*)
+    if p1[0] == p2[0]:
+        # Case 1: Class methods (e.g. pandas.DataFrame.iteritems vs pandas.core.frame.DataFrame.iteritems)
+        if len(p1) >= 2 and p1[-2][0].isupper() and len(p2) >= 2 and p2[-2][0].isupper():
+            cls1, meth1 = p1[-2], p1[-1]
+            cls2, meth2 = p2[-2], p2[-1]
+            if meth1 == meth2:
+                if cls1 == cls2:
+                    return True
+                # Pandas base class inheritance: NDFrame is the canonical base for DataFrame and Series
+                if p1[0] == "pandas":
+                    if (cls1 in ("DataFrame", "Series") and cls2 == "NDFrame") or (cls2 in ("DataFrame", "Series") and cls1 == "NDFrame"):
+                        return True
+            return False
+
+        # Case 2: Submodule re-exports / internal paths
+        # (e.g. scipy.integrate.cumtrapz vs scipy.integrate._quadrature.cumtrapz)
+        if p1[-1] == p2[-1]:
+            # Same terminal function name
+            if len(p1) >= 3 and len(p2) >= 3:
+                sub1 = p1[1]
+                sub2 = p2[1]
+                if sub1 == sub2 or (sub1 in ("misc", "special") and sub2 in ("misc", "special")):
+                    return True
+            # Top-level module function re-export (e.g. numpy.alltrue vs numpy.core.fromnumeric.alltrue)
+            if len(p1) == 2 or len(p2) == 2:
+                if not (len(p1) >= 2 and p1[-2][0].isupper()) and not (len(p2) >= 2 and p2[-2][0].isupper()):
+                    return True
 
     return False
 
