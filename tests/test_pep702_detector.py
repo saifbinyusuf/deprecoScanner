@@ -63,18 +63,21 @@ def test_griffe_extraction_stdlib_and_typing_extensions():
 
     # Check candidate properties
     cand_foo = by_name["old_foo"]
-    assert cand_foo.origin == "pep702"
+    assert cand_foo.origin == "pep702:griffe"
+    assert "pep702" in cand_foo.origins
     assert cand_foo.line == 5
     assert "use new_foo() instead" in cand_foo.raw_evidence
     assert cand_foo.scope == "function"
 
     cand_calc = by_name["old_calc"]
-    assert cand_calc.origin == "pep702"
+    assert cand_calc.origin == "pep702:griffe"
+    assert "pep702" in cand_calc.origins
     assert cand_calc.line == 9
     assert "use new_calc() instead" in cand_calc.raw_evidence
 
     cand_proc = by_name["DataProcessor.process_data"]
-    assert cand_proc.origin == "pep702"
+    assert cand_proc.origin == "pep702:griffe"
+    assert "pep702" in cand_proc.origins
     assert cand_proc.line == 14
     assert "use compute() instead" in cand_proc.raw_evidence
 
@@ -92,6 +95,8 @@ class LegacyModel:
     assert len(candidates) == 1
     c = candidates[0]
     assert c.qualified_name == "LegacyModel"
+    assert c.origin == "pep702:griffe"
+    assert "pep702" in c.origins
     assert c.scope == "class"
     assert "LegacyModel is deprecated" in c.raw_evidence
 
@@ -110,7 +115,8 @@ def test_mypy_diagnostics():
         assert "DataProcessor.process_data" in names
 
         for c in candidates:
-            assert c.origin == "pep702"
+            assert c.origin == "pep702:mypy"
+            assert "pep702" in c.origins
             assert "mypy [deprecated]" in c.raw_evidence
     finally:
         p.unlink(missing_ok=True)
@@ -130,7 +136,8 @@ def test_pyright_diagnostics():
         assert "DataProcessor.process_data" in names
 
         for c in candidates:
-            assert c.origin == "pep702"
+            assert c.origin == "pep702:pyright"
+            assert "pep702" in c.origins
             assert "pyright [reportDeprecated]" in c.raw_evidence
     finally:
         p.unlink(missing_ok=True)

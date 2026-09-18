@@ -78,10 +78,11 @@ def _collect_griffe_members(
             results.append(
                 DeprecationCandidate(
                     qualified_name=qname,
-                    origin="pep702",
+                    origin="pep702:griffe",
                     location=f"{filepath}:{lineno}",
                     raw_evidence=f"@warnings.deprecated({msg!r})",
                     line=lineno,
+                    origins={"pep702", "pep702:griffe"},
                     scope=scope,
                     param_name=None,
                     function_name=qname,
@@ -197,10 +198,11 @@ def detect_pep702_via_mypy(
                     candidates.append(
                         DeprecationCandidate(
                             qualified_name=symbol,
-                            origin="pep702",
+                            origin="pep702:mypy",
                             location=f"{file_loc}:{lineno}",
                             raw_evidence=evidence,
                             line=lineno,
+                            origins={"pep702", "pep702:mypy"},
                             scope="function",
                             param_name=None,
                             function_name=symbol,
@@ -285,10 +287,11 @@ def detect_pep702_via_pyright(
                     candidates.append(
                         DeprecationCandidate(
                             qualified_name=symbol,
-                            origin="pep702",
+                            origin="pep702:pyright",
                             location=f"{p}:{lineno}",
                             raw_evidence=evidence,
                             line=lineno,
+                            origins={"pep702", "pep702:pyright"},
                             scope="function",
                             param_name=None,
                             function_name=symbol,
