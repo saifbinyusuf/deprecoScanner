@@ -177,6 +177,14 @@ def test_side_by_side_consistency():
         assert "use compute() instead" in griffe_msgs["DataProcessor.process_data"]
         assert "use compute() instead" in mypy_msgs["DataProcessor.process_data"]
         assert "use compute() instead" in pyright_msgs["DataProcessor.process_data"]
+
+        # Exact normalized reason message match via candidate.message field
+        g_clean = {c.qualified_name: c.message for c in griffe_cands}
+        m_clean = {c.qualified_name: c.message for c in mypy_cands}
+        p_clean = {c.qualified_name: c.message for c in pyright_cands}
+        assert g_clean["old_foo"] == m_clean["old_foo"] == p_clean["old_foo"] == "use new_foo() instead"
+        assert g_clean["old_calc"] == m_clean["old_calc"] == p_clean["old_calc"] == "use new_calc() instead"
+        assert g_clean["DataProcessor.process_data"] == m_clean["DataProcessor.process_data"] == p_clean["DataProcessor.process_data"] == "use compute() instead"
     finally:
         p.unlink(missing_ok=True)
 

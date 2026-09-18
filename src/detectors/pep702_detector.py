@@ -85,6 +85,7 @@ def _collect_griffe_members(
                     scope=scope,
                     param_name=None,
                     function_name=qname,
+                    message=msg,
                 )
             )
 
@@ -203,6 +204,7 @@ def detect_pep702_via_mypy(
                             scope="function",
                             param_name=None,
                             function_name=symbol,
+                            message=msg if msg else None,
                         )
                     )
 
@@ -290,6 +292,7 @@ def detect_pep702_via_pyright(
                             scope="function",
                             param_name=None,
                             function_name=symbol,
+                            message=clean_msg if clean_msg else None,
                         )
                     )
 

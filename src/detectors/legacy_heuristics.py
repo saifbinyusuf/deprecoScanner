@@ -29,6 +29,7 @@ class DeprecationCandidate:
     scope: str = "function"  # "function" or "parameter"
     param_name: Optional[str] = None
     function_name: Optional[str] = None
+    message: Optional[str] = None
 
     def __post_init__(self) -> None:
         if not self.origins and self.origin:
