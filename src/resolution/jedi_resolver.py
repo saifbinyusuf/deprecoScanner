@@ -7,9 +7,11 @@ and matches them against the Stage 1 historical deprecation catalog.
 
 from __future__ import annotations
 
+import ast
 import logging
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
+import textwrap
 from typing import Any, Collection, Dict, List, Optional, Set
 
 import jedi
@@ -47,6 +49,38 @@ class ResolvedCallSite:
     description: str
     matched_catalog_symbol: Optional[str] = None
     is_deprecated: bool = False
+
+
+@dataclass(frozen=True)
+class LowConfidenceCandidate:
+    """
+    Represents a candidate call site that could not be confidently resolved by Jedi.
+    Preserved for recall accounting rather than silently dropped.
+    """
+
+    call_site_snippet: str
+    callee_name: str
+    line: int
+    column: int
+    failure_reason: str  # e.g., "empty_goto", "unresolved_receiver", "dynamic_dispatch", "ambiguous_definitions", "syntax_error", "jedi_exception"
+    file_path: Optional[str] = None
+    matched_catalog_symbol: Optional[str] = None
+    details: Optional[str] = None
+    sample_id: Optional[str] = None
+
+
+@dataclass(frozen=True)
+class Stage2Result:
+    """Container for Stage 2 call-site resolution across a client unit of code."""
+
+    resolved_deprecated: List[ResolvedCallSite] = field(default_factory=list)
+    resolved_benign: List[ResolvedCallSite] = field(default_factory=list)
+    low_confidence: List[LowConfidenceCandidate] = field(default_factory=list)
+
+    @property
+    def total_candidates(self) -> int:
+        return len(self.resolved_deprecated) + len(self.low_confidence)
+
 
 
 def get_clean_sys_path(extra_paths: Optional[List[str]] = None) -> List[str]:
@@ -145,6 +179,14 @@ class JediResolver:
 
         self.catalog_symbols: Set[str] = set(catalog_symbols or [])
 
+        # Index projects by library for fast targeted lookup
+        self.projects_by_lib: Dict[str, List[jedi.Project]] = {"numpy": [], "pandas": [], "scipy": []}
+        for p in self.projects:
+            p_str = " ".join(str(x) for x in (getattr(p, "_sys_path", []) or [])) + " " + str(getattr(p, "path", ""))
+            for lib in ["numpy", "pandas", "scipy"]:
+                if lib in p_str.lower():
+                    self.projects_by_lib[lib].append(p)
+
     def set_catalog_symbols(self, symbols: Collection[str]) -> None:
         self.catalog_symbols = set(symbols)
 
@@ -154,14 +196,19 @@ class JediResolver:
         line: int,
         column: int,
         path: Optional[str] = None,
+        library_hint: Optional[str] = None,
     ) -> Optional[ResolvedCallSite]:
         """
         Resolves a call site at (line, column) in the provided code snippet.
         Line is 1-indexed, column is 0-indexed (matching Jedi convention).
         """
+        target_projects = self.projects
+        if library_hint and library_hint.lower() in self.projects_by_lib and self.projects_by_lib[library_hint.lower()]:
+            target_projects = self.projects_by_lib[library_hint.lower()]
+
         best_unmatched: Optional[ResolvedCallSite] = None
 
-        for proj in self.projects:
+        for proj in target_projects:
             defs = []
             try:
                 script = jedi.Script(code, project=proj, path=path)
@@ -216,6 +263,213 @@ class JediResolver:
 
         return best_unmatched
 
+    def resolve_with_diagnostics(
+        self,
+        code: str,
+        line: int,
+        column: int,
+        receiver_name: Optional[str] = None,
+        path: Optional[str] = None,
+        library_hint: Optional[str] = None,
+    ) -> tuple[Optional[ResolvedCallSite], Optional[str], Optional[str]]:
+        """
+        Attempts to resolve a call site. If resolution succeeds, returns (site, None, None).
+        If resolution fails or is ambiguous, returns (None, failure_reason, details).
+        """
+        site = self.resolve(code, line, column, path=path, library_hint=library_hint)
+        if site is not None:
+            return site, None, None
+
+        target_projects = self.projects
+        if library_hint and library_hint.lower() in self.projects_by_lib and self.projects_by_lib[library_hint.lower()]:
+            target_projects = self.projects_by_lib[library_hint.lower()]
+
+        # Diagnose failure reason
+        for proj in target_projects:
+            try:
+                script = jedi.Script(code, project=proj, path=path)
+                defs = script.goto(line, column)
+                if not defs:
+                    defs = script.infer(line, column)
+                if len(defs) > 1:
+                    mods = {getattr(d, "module_name", None) for d in defs if getattr(d, "module_name", None)}
+                    if len(mods) > 1:
+                        return None, "ambiguous_definitions", f"Multiple definitions across modules: {mods}"
+            except Exception as e:
+                return None, "jedi_exception", str(e)
+
+        if receiver_name:
+            return None, "unresolved_receiver", f"Receiver '{receiver_name}' could not be statically resolved"
+
+        return None, "empty_goto", "Jedi script.goto returned no definitions"
+
+
+    def analyze_client_snippet(
+        self,
+        code: str,
+        file_path: Optional[str] = None,
+        sample_id: Optional[str] = None,
+        preamble: Optional[str] = None,
+        library_hint: Optional[str] = None,
+    ) -> Stage2Result:
+        """
+        Analyzes a client code snippet or file for deprecated API call sites.
+        Extracts call sites, attempts Jedi resolution, and bins unresolved candidates
+        into the low_confidence bucket with explicit failure reasons.
+        """
+        dedented_code = textwrap.dedent(code)
+        lines = dedented_code.splitlines()
+
+        try:
+            tree = ast.parse(dedented_code)
+        except SyntaxError as e:
+            return Stage2Result(
+                resolved_deprecated=[],
+                resolved_benign=[],
+                low_confidence=[
+                    LowConfidenceCandidate(
+                        call_site_snippet=lines[0].strip() if lines else code[:80],
+                        callee_name="<syntax_error>",
+                        line=getattr(e, "lineno", 1) or 1,
+                        column=getattr(e, "offset", 0) or 0,
+                        failure_reason="syntax_error",
+                        file_path=file_path,
+                        details=str(e),
+                        sample_id=sample_id,
+                    )
+                ],
+            )
+
+        catalog_callee_names = {sym.split(".")[-1] for sym in self.catalog_symbols} if self.catalog_symbols else set()
+
+        resolved_deprecated: List[ResolvedCallSite] = []
+        resolved_benign: List[ResolvedCallSite] = []
+        low_confidence: List[LowConfidenceCandidate] = []
+
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+
+            callee_name = None
+            line = getattr(node.func, "lineno", getattr(node, "lineno", 1))
+            col = getattr(node.func, "col_offset", getattr(node, "col_offset", 0))
+            receiver_name = None
+
+            if isinstance(node.func, ast.Name):
+                callee_name = node.func.id
+                col = node.func.col_offset
+            elif isinstance(node.func, ast.Attribute):
+                callee_name = node.func.attr
+                receiver_name = getattr(node.func.value, "id", getattr(node.func.value, "attr", None))
+                line_text = lines[line - 1] if 0 <= line - 1 < len(lines) else ""
+                end_col = getattr(node.func, "end_col_offset", len(line_text))
+                found_col = line_text.rfind(callee_name, 0, end_col)
+                col = found_col if found_col != -1 else node.func.col_offset
+            elif isinstance(node.func, ast.Call) and getattr(node.func.func, "id", "") == "getattr":
+                line_text = lines[line - 1] if 0 <= line - 1 < len(lines) else ""
+                dynamic_name = "<dynamic>"
+                if len(node.func.args) >= 2 and isinstance(node.func.args[1], ast.Constant):
+                    dynamic_name = str(node.func.args[1].value)
+
+                matched_sym = None
+                for sym in self.catalog_symbols:
+                    if sym == dynamic_name or sym.endswith("." + dynamic_name):
+                        matched_sym = sym
+                        break
+
+                if not self.catalog_symbols or dynamic_name in catalog_callee_names or matched_sym:
+                    low_confidence.append(
+                        LowConfidenceCandidate(
+                            call_site_snippet=line_text.strip(),
+                            callee_name=dynamic_name,
+                            line=line,
+                            column=col,
+                            failure_reason="dynamic_dispatch",
+                            file_path=file_path,
+                            matched_catalog_symbol=matched_sym,
+                            details="Dynamic invocation via getattr",
+                            sample_id=sample_id,
+                        )
+                    )
+                continue
+            else:
+                continue
+
+            if self.catalog_symbols and callee_name not in catalog_callee_names:
+                continue
+
+            # Candidate match in catalog (deterministic sort)
+            candidate_matches = [
+                sym for sym in sorted(self.catalog_symbols)
+                if sym == callee_name or sym.endswith("." + callee_name)
+            ]
+            matched_catalog_cand = None
+            if candidate_matches:
+                if receiver_name and "df" in receiver_name.lower():
+                    df_cands = [s for s in candidate_matches if "dataframe" in s.lower()]
+                    matched_catalog_cand = df_cands[0] if df_cands else candidate_matches[0]
+                elif receiver_name and "series" in receiver_name.lower():
+                    s_cands = [s for s in candidate_matches if "series" in s.lower()]
+                    matched_catalog_cand = s_cands[0] if s_cands else candidate_matches[0]
+                else:
+                    matched_catalog_cand = candidate_matches[0]
+
+
+            line_text = lines[line - 1] if 0 <= line - 1 < len(lines) else ""
+            snippet = line_text.strip()
+
+            # Determine library hint
+            call_lib_hint = library_hint
+            if not call_lib_hint and matched_catalog_cand:
+                prefix = matched_catalog_cand.split(".")[0].lower()
+                if prefix in ("numpy", "pandas", "scipy"):
+                    call_lib_hint = prefix
+
+            site, reason, details = self.resolve_with_diagnostics(
+                dedented_code, line, col, receiver_name=receiver_name, path=file_path, library_hint=call_lib_hint
+            )
+
+            if site is None and preamble:
+                preamble_lines = preamble.strip().splitlines()
+                preamble_code = preamble.strip() + "\n" + dedented_code
+                p_line = line + len(preamble_lines)
+                p_site, p_reason, p_details = self.resolve_with_diagnostics(
+                    preamble_code, p_line, col, receiver_name=receiver_name, path=file_path, library_hint=call_lib_hint
+                )
+                if p_site is not None:
+                    site = p_site
+                    reason = None
+                    details = None
+                else:
+                    reason = p_reason
+                    details = p_details
+
+            if site is not None:
+                if site.is_deprecated:
+                    resolved_deprecated.append(site)
+                else:
+                    resolved_benign.append(site)
+            else:
+                low_confidence.append(
+                    LowConfidenceCandidate(
+                        call_site_snippet=snippet,
+                        callee_name=callee_name,
+                        line=line,
+                        column=col,
+                        failure_reason=reason or "empty_goto",
+                        file_path=file_path,
+                        matched_catalog_symbol=matched_catalog_cand,
+                        details=details,
+                        sample_id=sample_id,
+                    )
+                )
+
+        return Stage2Result(
+            resolved_deprecated=resolved_deprecated,
+            resolved_benign=resolved_benign,
+            low_confidence=low_confidence,
+        )
+
 
 def resolve_call_site(
     code: str,
@@ -227,3 +481,4 @@ def resolve_call_site(
     """Functional convenience wrapper for resolving a call site."""
     resolver = JediResolver(project=project, catalog_symbols=catalog_symbols)
     return resolver.resolve(code, line, column)
+

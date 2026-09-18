@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-09-18T12:02:49Z",
+  "total_samples": 5875,
+  "elapsed_seconds": 314.17,
+  "per_library": {
+    "numpy": {
+      "samples_analyzed": 3555,
+      "resolved_deprecated_calls": 424,
+      "resolved_benign_calls": 2651,
+      "low_confidence_calls": 5039,
+      "reasons": {
+        "empty_goto": 1387,
+        "unresolved_receiver": 3620,
+        "syntax_error": 32
+      }
+    },
+    "scipy": {
+      "samples_analyzed": 2182,
+      "resolved_deprecated_calls": 1302,
+      "resolved_benign_calls": 920,
+      "low_confidence_calls": 4137,
+      "reasons": {
+        "unresolved_receiver": 3266,
+        "empty_goto": 839,
+        "syntax_error": 32
+      }
+    },
+    "pandas": {
+      "samples_analyzed": 138,
+      "resolved_deprecated_calls": 89,
+      "resolved_benign_calls": 18,
+      "low_confidence_calls": 360,
+      "reasons": {
+        "unresolved_receiver": 300,
+        "empty_goto": 60
+      }
+    }
+  },
+  "overall_reasons": {
+    "empty_goto": 2286,
+    "unresolved_receiver": 7186,
+    "syntax_error": 64
+  },
+  "bucket_samples": {
+    "empty_goto": [
+      {
+        "call_site_snippet": "assert_equal(np.product(x, axis=0), product(x, axis=0))",
+        "callee_name": "product",
+        "line": 11,
+        "column": 40,
+        "failure_reason": "empty_goto",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Jedi script.goto returned no definitions",
+        "sample_id": "numpy_0"
+      },
+      {
+        "call_site_snippet": "assert_equal(np.product(x, 0), product(x, 0))",
+        "callee_name": "product",
+        "line": 12,
+        "column": 35,
+        "failure_reason": "empty_goto",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Jedi script.goto returned no definitions",
+        "sample_id": "numpy_0"
+      },
+      {
+        "call_site_snippet": "assert_equal(np.product(filled(xm, 1), axis=0), product(xm, axis=0))",
+        "callee_name": "product",
+        "line": 13,
+        "column": 52,
+        "failure_reason": "empty_goto",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Jedi script.goto returned no definitions",
+        "sample_id": "numpy_0"
+      },
+      {
+        "call_site_snippet": "assert_equal(np.product(x, 1), product(x, 1))",
+        "callee_name": "product",
+        "line": 20,
+        "column": 39,
+        "failure_reason": "empty_goto",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Jedi script.goto returned no definitions",
+        "sample_id": "numpy_0"
+      },
+      {
+        "call_site_snippet": "assert_(eq(np.product(x, axis=0), product(x, axis=0)))",
+        "callee_name": "product",
+        "line": 11,
+        "column": 38,
+        "failure_reason": "empty_goto",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Jedi script.goto returned no definitions",
+        "sample_id": "numpy_3"
+      }
+    ],
+    "unresolved_receiver": [
+      {
+        "call_site_snippet": "return numpy.product(inputs)",
+        "callee_name": "product",
+        "line": 2,
+        "column": 17,
+        "failure_reason": "unresolved_receiver",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Receiver 'numpy' could not be statically resolved",
+        "sample_id": "numpy_5"
+      },
+      {
+        "call_site_snippet": "c = int(numpy.product(sequence_shape))",
+        "callee_name": "product",
+        "line": 10,
+        "column": 18,
+        "failure_reason": "unresolved_receiver",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Receiver 'numpy' could not be statically resolved",
+        "sample_id": "numpy_6"
+      },
+      {
+        "call_site_snippet": "self.N = numpy.product(self.shape)",
+        "callee_name": "product",
+        "line": 4,
+        "column": 19,
+        "failure_reason": "unresolved_receiver",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Receiver 'numpy' could not be statically resolved",
+        "sample_id": "numpy_8"
+      },
+      {
+        "call_site_snippet": "coarse_dim = numpy.product(coarse_shape)",
+        "callee_name": "product",
+        "line": 5,
+        "column": 23,
+        "failure_reason": "unresolved_receiver",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Receiver 'numpy' could not be statically resolved",
+        "sample_id": "numpy_10"
+      },
+      {
+        "call_site_snippet": "coarse_dim = numpy.product(coarse_shape)",
+        "callee_name": "product",
+        "line": 4,
+        "column": 23,
+        "failure_reason": "unresolved_receiver",
+        "file_path": null,
+        "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+        "details": "Receiver 'numpy' could not be statically resolved",
+        "sample_id": "numpy_9"
+      }
+    ],
+    "syntax_error": [
+      {
+        "call_site_snippet": "def \u4e58\u6cd5(*args,  **kwargs):",
+        "callee_name": "<syntax_error>",
+        "line": 1,
+        "column": 1,
+        "failure_reason": "syntax_error",
+        "file_path": null,
+        "matched_catalog_symbol": null,
+        "details": "unexpected indent (<unknown>, line 1)",
+        "sample_id": "numpy_84"
+      },
+      {
+        "call_site_snippet": "def reshape(self, *shape):",
+        "callee_name": "<syntax_error>",
+        "line": 1,
+        "column": 1,
+        "failure_reason": "syntax_error",
+        "file_path": null,
+        "matched_catalog_symbol": null,
+        "details": "unexpected indent (<unknown>, line 1)",
+        "sample_id": "numpy_91"
+      },
+      {
+        "call_site_snippet": "def __init__(self, slowmodel, ebins, parameters, filename, modelname='rebinnedmodel'):",
+        "callee_name": "<syntax_error>",
+        "line": 1,
+        "column": 1,
+        "failure_reason": "syntax_error",
+        "file_path": null,
+        "matched_catalog_symbol": null,
+        "details": "unexpected indent (<unknown>, line 1)",
+        "sample_id": "numpy_133"
+      },
+      {
+        "call_site_snippet": "def size_from(self, n=1):",
+        "callee_name": "<syntax_error>",
+        "line": 1,
+        "column": 1,
+        "failure_reason": "syntax_error",
+        "file_path": null,
+        "matched_catalog_symbol": null,
+        "details": "unexpected indent (<unknown>, line 1)",
+        "sample_id": "numpy_170"
+      },
+      {
+        "call_site_snippet": "def reshape(self, shape):",
+        "callee_name": "<syntax_error>",
+        "line": 1,
+        "column": 1,
+        "failure_reason": "syntax_error",
+        "file_path": null,
+        "matched_catalog_symbol": null,
+        "details": "unexpected indent (<unknown>, line 1)",
+        "sample_id": "numpy_214"
+      }
+    ]
+  }
+}

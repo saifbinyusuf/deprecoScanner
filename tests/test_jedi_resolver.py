@@ -141,3 +141,90 @@ def combinations(n, k):
     assert "comb" in res.name
     assert res.is_deprecated is True
     assert res.matched_catalog_symbol == "scipy.misc.comb"
+
+
+# =========================================================================
+# Task 3.2: Low-Confidence Bucket & Failure Logging Tests
+# =========================================================================
+
+
+def test_low_confidence_unresolved_receiver(resolver: JediResolver):
+    """Task 3.2: Untyped receiver yields unresolved_receiver in low_confidence."""
+    code = """import pandas as pd
+
+def iterate(df):
+    for k, v in df.iteritems():
+        pass
+"""
+    result = resolver.analyze_client_snippet(code)
+    assert len(result.resolved_deprecated) == 0
+    assert len(result.low_confidence) == 1
+
+    lc = result.low_confidence[0]
+    assert lc.callee_name == "iteritems"
+    assert lc.failure_reason == "unresolved_receiver"
+    assert lc.matched_catalog_symbol == "pandas.DataFrame.iteritems"
+    assert "df.iteritems()" in lc.call_site_snippet
+
+
+def test_low_confidence_empty_goto_unbound_name(resolver: JediResolver):
+    """Task 3.2: Unbound name without import yields empty_goto in low_confidence."""
+    code = """def compute(x):
+    return alltrue(x)
+"""
+    result = resolver.analyze_client_snippet(code)
+    assert len(result.resolved_deprecated) == 0
+    assert len(result.low_confidence) == 1
+
+    lc = result.low_confidence[0]
+    assert lc.callee_name == "alltrue"
+    assert lc.failure_reason == "empty_goto"
+    assert lc.matched_catalog_symbol == "numpy.alltrue"
+
+
+def test_low_confidence_dynamic_dispatch(resolver: JediResolver):
+    """Task 3.2: Dynamic getattr invocation yields dynamic_dispatch in low_confidence."""
+    code = """import numpy as np
+
+def compute(arr):
+    fn = getattr(np, "alltrue")
+    return fn(arr)
+"""
+    # Also test direct getattr invocation
+    code_direct = """import numpy as np
+
+def compute(arr):
+    return getattr(np, "alltrue")(arr)
+"""
+    result = resolver.analyze_client_snippet(code_direct)
+    assert len(result.low_confidence) >= 1
+    lc = [c for c in result.low_confidence if c.failure_reason == "dynamic_dispatch"][0]
+    assert lc.callee_name == "alltrue"
+    assert lc.matched_catalog_symbol == "numpy.alltrue"
+
+
+def test_low_confidence_syntax_error(resolver: JediResolver):
+    """Task 3.2: Malformed syntax yields syntax_error in low_confidence."""
+    code = """def broken(:
+    return 1
+"""
+    result = resolver.analyze_client_snippet(code)
+    assert len(result.low_confidence) == 1
+    assert result.low_confidence[0].failure_reason == "syntax_error"
+
+
+def test_stage2_resolves_deprecated_and_benign_in_single_snippet(resolver: JediResolver):
+    """Task 3.2: Cleanly separates resolved deprecated, resolved benign, and low confidence."""
+    code = """import numpy as np
+
+def process(arr):
+    a = np.alltrue(arr)
+    b = np.zeros((2, 2))
+    return a, b
+"""
+    # Add np.zeros to catalog as non-deprecated check: zeros is NOT in BENCHMARK_TARGETS
+    result = resolver.analyze_client_snippet(code)
+    assert len(result.resolved_deprecated) == 1
+    assert result.resolved_deprecated[0].matched_catalog_symbol == "numpy.alltrue"
+    assert len(result.low_confidence) == 0
+
