@@ -130,3 +130,147 @@ def regular_dep(y):
     assert len(param_cands) == 1
     assert param_cands[0].param_name == "old_kw"
     assert param_cands[0].scope == "parameter"
+
+
+def test_deprecate_kwarg_does_not_fire_whole_function_heuristic():
+    """
+    Interaction verification required by human review:
+    @deprecate_kwarg on a function taking **kwargs must NOT trigger Task 2.1's
+    whole-function decorator heuristic. It must emit ONLY a parameter-scoped
+    candidate and keep the whole-function matcher silent.
+    """
+    code = """
+@deprecate_kwarg("old_arg", "new_arg")
+def transform(data, **kwargs):
+    return data
+"""
+    all_candidates = detect_legacy_deprecations(code, filename="test_kwarg_dec.py")
+    assert len(all_candidates) == 1, f"Expected exactly 1 candidate, got {len(all_candidates)}"
+
+    cand = all_candidates[0]
+    assert cand.scope == "parameter", f"Expected 'parameter' scope, got '{cand.scope}'"
+    assert cand.param_name == "old_arg"
+    assert cand.function_name == "transform"
+    assert cand.qualified_name == "transform::old_arg"
+
+    # Confirm Task 2.1 whole-function decorator matcher stayed completely silent
+    function_cands = [c for c in all_candidates if c.scope == "function"]
+    assert len(function_cands) == 0, f"Expected 0 function-scoped candidates, got {function_cands}"
+
+
+def test_deprecate_kwarg_with_keyword_arguments():
+    """Verify @deprecate_kwarg with keyword arguments (old_arg_name=...) is scoped to parameter."""
+    code = """
+@deprecate_kwarg(FutureWarning, old_arg_name="cols", new_arg_name="columns")
+def select(columns=None, **kwargs):
+    return columns
+"""
+    all_candidates = detect_legacy_deprecations(code, filename="test_kw_arg.py")
+    assert len(all_candidates) == 1
+
+    cand = all_candidates[0]
+    assert cand.scope == "parameter"
+    assert cand.param_name == "cols"
+    assert cand.qualified_name == "select::cols"
+
+    function_cands = [c for c in all_candidates if c.scope == "function"]
+    assert len(function_cands) == 0
+
+
+def test_warning_in_else_branch_is_parameter_scoped():
+    """
+    Verify warnings inside an `else:` branch of an if-statement checking a parameter
+    are correctly scoped to that parameter and do not misattribute to the whole function.
+    """
+    code = """
+import warnings
+
+def query(table, fast=False):
+    if fast:
+        return table
+    else:
+        warnings.warn("fast=False is deprecated; use fast=True", FutureWarning)
+        return table
+"""
+    all_candidates = detect_legacy_deprecations(code, filename="test_else.py")
+    assert len(all_candidates) == 1
+
+    cand = all_candidates[0]
+    assert cand.scope == "parameter"
+    assert cand.param_name == "fast"
+    assert cand.function_name == "query"
+    assert cand.qualified_name == "query::fast"
+    assert "else: not (fast)" in cand.raw_evidence
+
+    function_cands = [c for c in all_candidates if c.scope == "function"]
+    assert len(function_cands) == 0
+
+
+def test_multi_parameter_condition():
+    """
+    Verify warnings conditioned on multiple parameters (e.g. if p1 and p2)
+    implicate each referenced parameter without silently picking only one or
+    collapsing into a whole-function deprecation.
+    """
+    code = """
+import warnings
+
+def combine(a, b, flag1=False, flag2=False):
+    if flag1 and flag2:
+        warnings.warn("Combining flag1 and flag2 is deprecated", DeprecationWarning)
+    return a + b
+"""
+    all_candidates = detect_legacy_deprecations(code, filename="test_multi.py")
+    assert len(all_candidates) == 2, f"Expected 2 candidates, got {len(all_candidates)}"
+
+    params = {c.param_name for c in all_candidates}
+    assert params == {"flag1", "flag2"}
+    for c in all_candidates:
+        assert c.scope == "parameter"
+        assert c.function_name == "combine"
+
+    function_cands = [c for c in all_candidates if c.scope == "function"]
+    assert len(function_cands) == 0
+
+
+def test_real_pandas_file_spot_check():
+    """
+    Real-world spot-check on installed pandas source:
+    pandas.core.resample.Resampler.interpolate deprecates the 'inplace' parameter
+    via `if "inplace" in kwargs: warnings.warn(...)`.
+    """
+    from pathlib import Path
+    import pandas
+    from src.detectors.parameter_detector import detect_parameter_deprecations_from_file
+
+    resample_path = Path(pandas.__file__).parent / "core" / "resample.py"
+    candidates = detect_parameter_deprecations_from_file(resample_path, package_prefix="pandas")
+
+    inplace_cands = [c for c in candidates if c.param_name == "inplace" and "interpolate" in c.qualified_name]
+    assert len(inplace_cands) >= 1, f"Expected to find pandas.Resampler.interpolate::inplace, got: {candidates}"
+    cand = inplace_cands[0]
+    assert cand.scope == "parameter"
+    assert cand.param_name == "inplace"
+    assert "pandas.Resampler.interpolate" in cand.qualified_name
+
+
+def test_real_scipy_file_spot_check():
+    """
+    Real-world spot-check on installed scipy source:
+    scipy.linalg._decomp_qr.qr deprecates the 'lwork' keyword argument
+    via `if lwork is not _NoValue: ... else: warnings.warn(...)`.
+    """
+    from pathlib import Path
+    import scipy
+    from src.detectors.parameter_detector import detect_parameter_deprecations_from_file
+
+    decomp_path = Path(scipy.__file__).parent / "linalg" / "_decomp_qr.py"
+    candidates = detect_parameter_deprecations_from_file(decomp_path, package_prefix="scipy")
+
+    lwork_cands = [c for c in candidates if c.param_name == "lwork"]
+    assert len(lwork_cands) >= 1, f"Expected to find scipy.qr::lwork, got: {candidates}"
+    cand = lwork_cands[0]
+    assert cand.scope == "parameter"
+    assert cand.param_name == "lwork"
+    assert "scipy.qr" in cand.qualified_name
+

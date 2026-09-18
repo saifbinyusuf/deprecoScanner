@@ -13,7 +13,7 @@ import ast
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Optional, Set, Union
+from typing import List, Optional, Set, Tuple, Union
 
 
 @dataclass
@@ -61,8 +61,6 @@ def _extract_string_value(node: ast.AST) -> str:
     """Extracts string content from Constant, Str, or formatted values."""
     if isinstance(node, ast.Constant) and isinstance(node.value, str):
         return node.value
-    elif hasattr(ast, "Str") and isinstance(node, ast.Str):  # Python < 3.8 back-compat
-        return getattr(node, "s", "")
     elif isinstance(node, ast.JoinedStr):
         parts = []
         for part in node.values:
@@ -83,6 +81,7 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
     """
 
     DEPRECATION_PATTERN = re.compile(r"(?i)deprecat")
+    PARAM_DECORATOR_PATTERN = re.compile(r"(?i)(deprecat.*(kwarg|param|arg)|(kwarg|param|arg).*deprecat)")
     WARNING_CATEGORIES = {"DeprecationWarning", "PendingDeprecationWarning", "FutureWarning"}
 
     def __init__(self, filename: str = "<string>", package_prefix: str = "") -> None:
@@ -141,6 +140,10 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
         if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
             for a in getattr(node.args, "posonlyargs", []) + getattr(node.args, "args", []) + getattr(node.args, "kwonlyargs", []):
                 param_names.add(a.arg)
+            if node.args.vararg:
+                param_names.add(node.args.vararg.arg)
+            if node.args.kwarg:
+                param_names.add(node.args.kwarg.arg)
 
         for dec in node.decorator_list:
             dec_id = ""
@@ -153,44 +156,63 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
                 dec_id = _flatten_ast_attr(dec)
             elif isinstance(dec, ast.Call):
                 dec_id = _flatten_ast_attr(dec.func)
-                # Extract first string argument if present (e.g. deprecation message or kwarg name)
-                for arg in dec.args:
-                    val = _extract_string_value(arg)
-                    if val:
-                        args_repr = f"({val!r})"
-                        if any(k in dec_id.lower() for k in ("kwarg", "arg", "param")) and val in param_names:
+                # 1. Check keyword arguments for parameter name
+                for kw in dec.keywords:
+                    if kw.arg in ("old_arg_name", "old_arg", "old_name", "param", "param_name", "arg_name", "name", "kwarg"):
+                        val = _extract_string_value(kw.value)
+                        if val:
                             dec_param = val
-                        break
+                            args_repr = f"({kw.arg}={val!r})"
+                            break
 
-            if dec_id and self.DEPRECATION_PATTERN.search(dec_id):
+                # 2. Check positional arguments for parameter name or message
+                if not dec_param:
+                    for arg in dec.args:
+                        val = _extract_string_value(arg)
+                        if val:
+                            args_repr = f"({val!r})"
+                            dec_param = val
+                            break
+
+            if not dec_id:
+                continue
+
+            is_param_dec = bool(self.PARAM_DECORATOR_PATTERN.search(dec_id))
+            is_func_dec = bool(self.DEPRECATION_PATTERN.search(dec_id))
+
+            if is_param_dec:
+                # This decorator specifically deprecates a parameter or kwarg.
+                # It MUST NEVER be emitted as a whole-function deprecation.
                 evidence = f"@{dec_id}{args_repr}"
-                if dec_param:
-                    evidence += f" (parameter: '{dec_param}')"
-                    self.candidates.append(
-                        DeprecationCandidate(
-                            qualified_name=f"{qname}::{dec_param}",
-                            origin="decorator",
-                            location=f"{self.filename}:{node.lineno}",
-                            raw_evidence=evidence,
-                            line=node.lineno,
-                            scope="parameter",
-                            param_name=dec_param,
-                            function_name=qname,
-                        )
+                target_param = dec_param or "kwarg"
+                evidence += f" (parameter: '{target_param}')"
+                self.candidates.append(
+                    DeprecationCandidate(
+                        qualified_name=f"{qname}::{target_param}",
+                        origin="decorator",
+                        location=f"{self.filename}:{node.lineno}",
+                        raw_evidence=evidence,
+                        line=node.lineno,
+                        scope="parameter",
+                        param_name=target_param,
+                        function_name=qname,
                     )
-                else:
-                    self.candidates.append(
-                        DeprecationCandidate(
-                            qualified_name=qname,
-                            origin="decorator",
-                            location=f"{self.filename}:{node.lineno}",
-                            raw_evidence=evidence,
-                            line=node.lineno,
-                            scope="function",
-                            param_name=None,
-                            function_name=qname,
-                        )
+                )
+            elif is_func_dec:
+                # Whole-function deprecation decorator (e.g. @deprecated, @deprecate)
+                evidence = f"@{dec_id}{args_repr}"
+                self.candidates.append(
+                    DeprecationCandidate(
+                        qualified_name=qname,
+                        origin="decorator",
+                        location=f"{self.filename}:{node.lineno}",
+                        raw_evidence=evidence,
+                        line=node.lineno,
+                        scope="function",
+                        param_name=None,
+                        function_name=qname,
                     )
+                )
 
     def _check_docstring(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef], qname: str) -> None:
         doc = ast.get_docstring(node)
@@ -271,23 +293,28 @@ class FunctionWarningVisitor(ast.NodeVisitor):
     """
     Walks a function's body statements while tracking enclosing `ast.If` conditions.
     Determines if a warnings.warn call is conditioned on a parameter (parameter-level)
-    or unconditional (function-level).
+    or unconditional (function-level). Handles both if-branches and else-branches,
+    as well as multi-parameter conditions.
     """
 
     def __init__(self, param_names: Set[str], kwarg_names: Set[str]) -> None:
         self.param_names = param_names
         self.kwarg_names = kwarg_names
-        self.if_stack: List[ast.expr] = []
+        self.if_stack: List[Tuple[ast.expr, bool]] = []  # (cond_expr, is_if_branch)
         self.warning_calls: List[Tuple[ast.Call, str, str, Optional[str], Optional[str]]] = []
         # list of (call_node, warn_msg, warning_cat, conditioned_param, condition_repr)
 
     def visit_If(self, node: ast.If) -> None:
-        self.if_stack.append(node.test)
+        self.if_stack.append((node.test, True))
         for stmt in node.body:
             self.visit(stmt)
         self.if_stack.pop()
-        for stmt in node.orelse:
-            self.visit(stmt)
+
+        if node.orelse:
+            self.if_stack.append((node.test, False))
+            for stmt in node.orelse:
+                self.visit(stmt)
+            self.if_stack.pop()
 
     def visit_FunctionDef(self, node: ast.FunctionDef) -> None:
         # Stop at nested function boundary
@@ -328,39 +355,45 @@ class FunctionWarningVisitor(ast.NodeVisitor):
         is_dep_message = bool(warn_msg and LegacyHeuristicsVisitor.DEPRECATION_PATTERN.search(warn_msg))
 
         if is_dep_warning or is_dep_message:
-            conditioned_param: Optional[str] = None
+            conditioned_params: List[str] = []
             condition_repr: Optional[str] = None
 
-            for cond in reversed(self.if_stack):
+            for cond_expr, is_if_branch in reversed(self.if_stack):
                 cond_code = ""
                 try:
-                    cond_code = ast.unparse(cond)
+                    cond_code = ast.unparse(cond_expr)
                 except Exception:
                     pass
 
-                # Check if condition references a function parameter
-                for child in ast.walk(cond):
+                branch_repr = cond_code if is_if_branch else f"else: not ({cond_code})"
+
+                # Harvest all parameters referenced in this condition
+                params_in_cond: List[str] = []
+                for child in ast.walk(cond_expr):
                     if isinstance(child, ast.Name) and child.id in self.param_names:
                         if child.id in self.kwarg_names:
                             # e.g., if "param" in kwargs:
-                            for sub in ast.walk(cond):
+                            for sub in ast.walk(cond_expr):
                                 if isinstance(sub, ast.Constant) and isinstance(sub.value, str):
-                                    conditioned_param = sub.value
-                                    condition_repr = cond_code
-                                    break
+                                    if sub.value not in params_in_cond:
+                                        params_in_cond.append(sub.value)
                         else:
-                            conditioned_param = child.id
-                            condition_repr = cond_code
-                            break
+                            if child.id not in params_in_cond:
+                                params_in_cond.append(child.id)
                     elif isinstance(child, ast.Constant) and isinstance(child.value, str):
-                        if child.value in self.param_names:
-                            conditioned_param = child.value
-                            condition_repr = cond_code
-                            break
-                if conditioned_param:
+                        if child.value in self.param_names and child.value not in params_in_cond:
+                            params_in_cond.append(child.value)
+
+                if params_in_cond:
+                    conditioned_params = params_in_cond
+                    condition_repr = branch_repr
                     break
 
-            self.warning_calls.append((node, warn_msg, warning_cat, conditioned_param, condition_repr))
+            if conditioned_params:
+                for p in conditioned_params:
+                    self.warning_calls.append((node, warn_msg, warning_cat, p, condition_repr))
+            else:
+                self.warning_calls.append((node, warn_msg, warning_cat, None, None))
 
         self.generic_visit(node)
 
