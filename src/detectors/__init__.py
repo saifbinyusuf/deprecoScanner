@@ -13,6 +13,13 @@ from src.detectors.parameter_detector import (
     detect_parameter_deprecations,
     detect_parameter_deprecations_from_file,
 )
+from src.detectors.pep702_detector import (
+    detect_pep702_via_griffe,
+    detect_pep702_via_mypy,
+    detect_pep702_via_pyright,
+    detect_pep702_via_typechecker,
+    detect_pep702_deprecations,
+)
 
 __all__ = [
     "DeprecationCandidate",
@@ -22,5 +29,9 @@ __all__ = [
     "detect_comment_deprecations_from_file",
     "detect_parameter_deprecations",
     "detect_parameter_deprecations_from_file",
+    "detect_pep702_via_griffe",
+    "detect_pep702_via_mypy",
+    "detect_pep702_via_pyright",
+    "detect_pep702_via_typechecker",
+    "detect_pep702_deprecations",
 ]
-
