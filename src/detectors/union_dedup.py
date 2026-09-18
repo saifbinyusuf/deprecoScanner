@@ -68,13 +68,22 @@ def _extract_file_path(location: str) -> str:
 def _is_symbol_compatible(sym1: str, sym2: str) -> bool:
     """
     Determines if two symbol strings refer to the same target API,
-    accommodating fully-qualified names vs bare/partial call-site names.
-    E.g. 'pandas.DataFrame.applymap' matches 'DataFrame.applymap' or 'applymap'.
+    accommodating fully-qualified names vs partially-qualified names.
+    Guards against cross-class method collisions (e.g. DataFrame.iteritems vs Series.iteritems)
+    by requiring class qualification for class methods.
     """
     if sym1 == sym2:
         return True
+
     if sym1.endswith(f".{sym2}") or sym2.endswith(f".{sym1}"):
+        longer, shorter = (sym1, sym2) if len(sym1) > len(sym2) else (sym2, sym1)
+        if "." not in shorter:
+            parts = longer.split(".")
+            # If the immediate parent is a Class (starts with uppercase), reject bare method match
+            if len(parts) >= 2 and parts[-2][0].isupper():
+                return False
         return True
+
     return False
 
 

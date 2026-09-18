@@ -317,3 +317,54 @@ def test_disjunctive_parameter_conditions_remain_distinct():
     assert len(merged) == 2
     params = {c.param_name for c in merged}
     assert params == {"learning_rate", "optimizer"}
+
+
+def test_class_method_collision_guard_dataframe_vs_series_iteritems():
+    """
+    Directly tests collision protection for the real Pandas benchmark pair:
+    'pandas.DataFrame.iteritems' vs 'pandas.Series.iteritems'.
+    Verifies that suffix matching cannot cross-collide between distinct classes,
+    and bare method names ('iteritems') cannot falsely match class methods.
+    """
+    from src.detectors.union_dedup import _is_symbol_compatible
+
+    # 1. Matching class-qualified partials is permitted
+    assert _is_symbol_compatible("pandas.DataFrame.iteritems", "DataFrame.iteritems") is True
+    assert _is_symbol_compatible("pandas.Series.iteritems", "Series.iteritems") is True
+
+    # 2. Cross-class methods MUST NOT match
+    assert _is_symbol_compatible("pandas.DataFrame.iteritems", "pandas.Series.iteritems") is False
+    assert _is_symbol_compatible("pandas.DataFrame.iteritems", "Series.iteritems") is False
+    assert _is_symbol_compatible("pandas.Series.iteritems", "DataFrame.iteritems") is False
+
+    # 3. Bare method names MUST NOT match class methods (collision guard)
+    assert _is_symbol_compatible("pandas.DataFrame.iteritems", "iteritems") is False
+    assert _is_symbol_compatible("pandas.Series.iteritems", "iteritems") is False
+    assert _is_symbol_compatible("pandas.DataFrame.pad", "pad") is False
+    assert _is_symbol_compatible("pandas.Series.pad", "pad") is False
+
+    # 4. In reconcile_client_invocations: two calls on the same line for DataFrame vs Series
+    # must NEVER cross-collapse into one record
+    df_inv = ClientInvocation(
+        client_file="/client/script.py",
+        line=10,
+        target_symbol="pandas.DataFrame.iteritems",
+        origins={"matched:stage1"},
+        raw_evidence="df.iteritems()",
+    )
+    series_cand = DeprecationCandidate(
+        qualified_name="Series.iteritems",
+        origin="pep702:mypy",
+        location="/client/script.py:10",
+        raw_evidence="mypy [deprecated]: Series.iteritems is deprecated",
+        line=10,
+        origins={"pep702", "pep702:mypy"},
+    )
+
+    reconciled = reconcile_client_invocations([df_inv], [series_cand])
+    # Must produce 2 records (no false merge between DataFrame and Series)
+    assert len(reconciled) == 2
+    symbols = {r.target_symbol for r in reconciled}
+    assert "pandas.DataFrame.iteritems" in symbols
+    assert "Series.iteritems" in symbols
+
