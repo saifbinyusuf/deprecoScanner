@@ -82,14 +82,64 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
 
     DEPRECATION_PATTERN = re.compile(r"(?i)deprecat")
     PARAM_DECORATOR_PATTERN = re.compile(r"(?i)(deprecat.*(kwarg|param|arg)|(kwarg|param|arg).*deprecat)")
-    WARNING_CATEGORY_PATTERN = re.compile(r"(?i)(deprecat|future|pendingdeprecat|pandas\d*warning)")
-    WARNING_CATEGORIES = {"DeprecationWarning", "PendingDeprecationWarning", "FutureWarning"}
+    STD_DEPRECATION_WARNINGS = {"DeprecationWarning", "PendingDeprecationWarning", "FutureWarning"}
+    WARNING_CATEGORY_PATTERN = re.compile(r"(?i)(deprecat|future|pendingdeprecat)")
+
+    COMMON_WARNING_MODULES = (
+        "pandas.errors",
+        "pandas",
+        "scipy",
+        "scipy._lib.deprecation",
+        "numpy.exceptions",
+        "numpy",
+    )
 
     @classmethod
-    def is_deprecation_warning_category(cls, cat_name: str) -> bool:
-        """Checks if a warning category name matches known deprecation warning categories or patterns."""
+    def is_deprecation_warning_category(cls, cat_name: str, local_warning_classes: Optional[Set[str]] = None) -> bool:
+        """
+        Universally checks if a warning category is or subclasses a deprecation warning:
+        1. Exact match against standard library deprecation warnings.
+        2. Local AST-defined warning class inheriting directly/transitively from DeprecationWarning/FutureWarning.
+        3. Dynamic runtime introspection: issubclass(cls, (DeprecationWarning, FutureWarning)) for imported symbols.
+        4. Name-based lexical fallback for unimported external classes: matches 'deprecat' or 'future'.
+        """
         if not cat_name:
             return False
+
+        # 1. Standard library deprecation warnings
+        if cat_name in cls.STD_DEPRECATION_WARNINGS:
+            return True
+
+        # 2. Local AST-defined warning subclasses
+        if local_warning_classes and cat_name in local_warning_classes:
+            return True
+
+        # 3. Dynamic runtime subclass check if symbol is in sys.modules, common libraries, or builtins
+        try:
+            import sys
+            import importlib
+
+            # Check already loaded modules
+            for mod in list(sys.modules.values()):
+                if mod and hasattr(mod, cat_name):
+                    obj = getattr(mod, cat_name)
+                    if isinstance(obj, type) and issubclass(obj, (DeprecationWarning, FutureWarning)):
+                        return True
+
+            # Check known library exception modules if available
+            for mod_name in cls.COMMON_WARNING_MODULES:
+                try:
+                    mod = importlib.import_module(mod_name)
+                    if hasattr(mod, cat_name):
+                        obj = getattr(mod, cat_name)
+                        if isinstance(obj, type) and issubclass(obj, (DeprecationWarning, FutureWarning)):
+                            return True
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+        # 4. Lexical pattern fallback (e.g. ScipyDeprecationWarning, PytestDeprecationWarning)
         return bool(cls.WARNING_CATEGORY_PATTERN.search(cat_name))
 
     def __init__(self, filename: str = "<string>", package_prefix: str = "") -> None:
@@ -97,6 +147,7 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
         self.package_prefix = package_prefix
         self.scope_stack: List[str] = []
         self.candidates: List[DeprecationCandidate] = []
+        self.local_warning_classes: Set[str] = set()
 
     def _current_qualified_name(self, name: str) -> str:
         parts = []
@@ -108,6 +159,17 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
 
     def visit_ClassDef(self, node: ast.ClassDef) -> None:
         qname = self._current_qualified_name(node.name)
+
+        # Track if this class defines a custom deprecation warning subclass
+        for base in node.bases:
+            base_name = _flatten_ast_attr(base)
+            if (
+                base_name in self.STD_DEPRECATION_WARNINGS
+                or base_name in self.local_warning_classes
+                or self.is_deprecation_warning_category(base_name, self.local_warning_classes)
+            ):
+                self.local_warning_classes.add(node.name)
+                break
 
         # 1. Docstring heuristic on class
         self._check_docstring(node, qname)
@@ -267,7 +329,11 @@ class LegacyHeuristicsVisitor(ast.NodeVisitor):
             kwarg_names.add(node.args.kwarg.arg)
             param_names.add(node.args.kwarg.arg)
 
-        warning_visitor = FunctionWarningVisitor(param_names=param_names, kwarg_names=kwarg_names)
+        warning_visitor = FunctionWarningVisitor(
+            param_names=param_names,
+            kwarg_names=kwarg_names,
+            local_warning_classes=self.local_warning_classes,
+        )
         for stmt in node.body:
             warning_visitor.visit(stmt)
 
@@ -314,9 +380,15 @@ class FunctionWarningVisitor(ast.NodeVisitor):
     and differentiates AND vs OR conditions.
     """
 
-    def __init__(self, param_names: Set[str], kwarg_names: Set[str]) -> None:
+    def __init__(
+        self,
+        param_names: Set[str],
+        kwarg_names: Set[str],
+        local_warning_classes: Optional[Set[str]] = None,
+    ) -> None:
         self.param_names = param_names
         self.kwarg_names = kwarg_names
+        self.local_warning_classes = local_warning_classes or set()
         self.if_stack: List[Tuple[ast.expr, bool]] = []  # (cond_expr, is_if_branch)
         self.warning_calls: List[Tuple[ast.Call, str, str, Optional[str], Optional[str]]] = []
         # list of (call_node, warn_msg, warning_cat, conditioned_param, condition_repr)
@@ -353,9 +425,9 @@ class FunctionWarningVisitor(ast.NodeVisitor):
         warning_cat = ""
         warn_msg = ""
         for arg_child in ast.walk(node):
-            if isinstance(arg_child, ast.Name) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.id):
+            if isinstance(arg_child, ast.Name) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.id, self.local_warning_classes):
                 warning_cat = arg_child.id
-            elif isinstance(arg_child, ast.Attribute) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.attr):
+            elif isinstance(arg_child, ast.Attribute) and LegacyHeuristicsVisitor.is_deprecation_warning_category(arg_child.attr, self.local_warning_classes):
                 warning_cat = arg_child.attr
 
         if node.args:
@@ -365,10 +437,10 @@ class FunctionWarningVisitor(ast.NodeVisitor):
                 warn_msg = _extract_string_value(kw.value)
             elif kw.arg == "category":
                 cat_val = _flatten_ast_attr(kw.value)
-                if LegacyHeuristicsVisitor.is_deprecation_warning_category(cat_val):
+                if LegacyHeuristicsVisitor.is_deprecation_warning_category(cat_val, self.local_warning_classes):
                     warning_cat = cat_val
 
-        is_dep_warning = bool(warning_cat and LegacyHeuristicsVisitor.is_deprecation_warning_category(warning_cat))
+        is_dep_warning = bool(warning_cat and LegacyHeuristicsVisitor.is_deprecation_warning_category(warning_cat, self.local_warning_classes))
         is_dep_message = bool(warn_msg and LegacyHeuristicsVisitor.DEPRECATION_PATTERN.search(warn_msg))
 
         if is_dep_warning or is_dep_message:

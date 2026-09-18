@@ -126,3 +126,29 @@ def regular_function(x):
 """
     candidates = detect_legacy_deprecations(code, filename="clean.py")
     assert len(candidates) == 0
+
+
+def test_custom_warning_subclasses_detected():
+    """
+    Verify that ANY subclass of DeprecationWarning or FutureWarning is recognized,
+    even with an arbitrary name not containing 'deprecat' or 'future', both direct
+    and transitive.
+    """
+    code = """
+import warnings
+
+class ObsoleteAlert(DeprecationWarning):
+    pass
+
+class SubAlert(ObsoleteAlert):
+    pass
+
+def custom_warn_func(x):
+    warnings.warn("something changed", SubAlert)
+    return x
+"""
+    candidates = detect_legacy_deprecations(code, filename="custom_warn.py")
+    assert len(candidates) == 1, f"Expected 1 candidate, got {len(candidates)}: {candidates}"
+    assert candidates[0].qualified_name == "custom_warn_func"
+    assert candidates[0].origin == "warning"
+    assert "SubAlert" in candidates[0].raw_evidence
