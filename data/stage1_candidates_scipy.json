@@ -1,0 +1,2161 @@
+[
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.Deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:43",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Unique type for deprecated parameters."
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.lazy_xp_function",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:65",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Default: True. static_argnums : Deprecated; ignored static_argnames : Deprecated; ignored"
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.lazy_xp_function::static_argnums",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
+    "scope": "parameter",
+    "param_name": "static_argnums",
+    "message": null,
+    "raw_evidence": "warnings.warn('The `static_argnums` and `static_argnames` parameters are deprecated and ignored. They will be removed in a future version.', category=DeprecationWarning) conditioned on param 'static_argnums' (if static_argnums is not DEPRECATED or static_argnames is not DEPRECATED)"
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.lazy_xp_function::static_argnames",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
+    "scope": "parameter",
+    "param_name": "static_argnames",
+    "message": null,
+    "raw_evidence": "warnings.warn('The `static_argnums` and `static_argnames` parameters are deprecated and ignored. They will be removed in a future version.', category=DeprecationWarning) conditioned on param 'static_argnames' (if static_argnums is not DEPRECATED or static_argnames is not DEPRECATED)"
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.patch_lazy_xp_functions",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:267",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Parameters ---------- request : pytest.FixtureRequest Pytest fixture, as acquired by the test itself or by one of its fixtures. monkeypatch : pytest.MonkeyPatch Deprecated xp : array_namespace Array namespace to be tested."
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.patch_lazy_xp_functions::monkeypatch",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:354",
+    "scope": "parameter",
+    "param_name": "monkeypatch",
+    "message": null,
+    "raw_evidence": "warnings.warn('The `monkeypatch` parameter is deprecated and will be removed in a future version. Use `patch_lazy_xp_function` as a context manager instead.', category=DeprecationWarning) conditioned on param 'monkeypatch' (if monkeypatch is not None)"
+  },
+  {
+    "qualified_name": "scipy._external.array_api_extra.testing.patch_lazy_xp_functions.revert_on_exit",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:433",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# deprecated monkeypatch when not used as a context manager."
+  },
+  {
+    "qualified_name": "scipy._lib._util._transition_to_rng",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:142",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "- If the function is called with both `random_state` and `rng`, the decorator raises an error. - If `random_state` is provided as a keyword argument, the decorator passes `random_state` to the function's `rng` argument as a keyword. If `end_version` is specified, the decorator will emit a `DeprecationWarning` about the deprecation of keyword `random_state`. - If `random_state` is provided as a positional argument, the decorator passes `random_state` to the function's `rng` argument by position. If `end_version` is specified, the decorator will emit a `FutureWarning` about the changing interpretation of the argument. - If `rng` is provided as a keyword argument, the decorator validates `rng` using `numpy.random.default_rng` before passing it to the function. - If `end_version` is specified and neither `random_state` nor `rng` is provided by the user, the decorator checks whether `np.random.seed` has been used to set the global seed. If so, it emits a `FutureWarning`, noting that usage of `numpy.random.seed` will eventually have no effect. Either way, the decorator calls the function without explicitly passing the `rng` argument. ~ After the deprecation period, the decorator can be removed, and the function can simply validate the `rng` argument by calling `np.random.default_rng(rng)`. ~ * A `FutureWarning` is emitted when the PRNG argument is used by position. It indicates that the \"Hinsen principle\" (same code yielding different results in two versions of the software) will be violated, unless positional use is deprecated. Specifically: ~ We suggest that projects consider deprecating positional use of `random_state`/`rng` (i.e., change their function signatures to ``def my_func(..., *, rng=None)``); that might not make sense for all projects, so this SPEC does not make that recommendation, neither does this decorator enforce it. ~ Parameters ---------- old_name : str The old name of the PRNG argument (e.g. `seed` or `random_state`). position_num : int, optional The (0-indexed) position of the old PRNG argument (if accepted by position). Maintainers are welcome to eliminate this argument and use, for example, `inspect`, if preferred. end_version : str, optional The full version number of the library when the behavior described in `DeprecationWarning`s and `FutureWarning`s will take effect. If left unspecified, no warnings will be emitted by the decorator. replace_doc : bool, default: True Whether the decorator should replace the documentation for parameter `rng` with `_rng_desc` (defined above), which documents both new `rng` keyword behavior and typical legacy `random_state`/`seed` behavior. If True, manually replace the first paragraph of the function's old `random_state`/`seed` documentation with the desired *final* `rng` documentation; this way, no changes to documentation are needed when the decorator is removed. Documentation of `rng` after the first blank line is preserved. Use False if the function's old `random_state`/`seed` behavior does not match that described by `_rng_desc`."
+  },
+  {
+    "qualified_name": "scipy._lib._util._transition_to_rng.decorator.wrapper",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:261",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib._util._rename_parameter",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:832",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "After decoration, the function behaves as follows: If only the new parameter is passed into the function, behave as usual. If only the old parameter is passed into the function (as a keyword), raise a DeprecationWarning if `dep_version` is provided, and behave as usual otherwise. If both old and new parameters are passed into the function, raise a DeprecationWarning if `dep_version` is provided, and raise the appropriate TypeError (function got multiple values for argument). ~ Parameters ---------- old_name : str Old name of parameter new_name : str New name of parameter dep_version : str, optional Version of SciPy in which old parameter was deprecated in the format 'X.Y.Z'. If supplied, the deprecation message will indicate that support for the old parameter will be removed in version 'X.Y+2.Z'"
+  },
+  {
+    "qualified_name": "scipy._lib._util._rename_parameter.decorator.wrapper",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:876",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib._util._deprecate_dtypes",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:1041",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "A temporary helper for deprecating non-LAPACK dtypes. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._sub_module_deprecation",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:15",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Helper function for deprecating modules that are public but were intended to be private. ~ Parameters ---------- sub_package : str Subpackage the module belongs to eg. stats module : str Public but intended private module to deprecate private_modules : list Private replacement(s) for `module`; should contain the content of ``all``, possibly spread over several modules. all : list ``__all__`` belonging to `module` attribute : str The attribute in `module` being accessed correct_module : str, optional Module in `sub_package` that `attribute` should be imported from. Default is that `attribute` should be imported from ``scipy.sub_package``. dep_version : str, optional Version in which deprecated attributes will be removed. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:81",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecate a function by emitting a warning on use."
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecated.wrap::fun",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:85",
+    "scope": "parameter",
+    "param_name": "fun",
+    "message": null,
+    "raw_evidence": "warnings.warn('Trying to deprecate class {...}') conditioned on param 'fun' (if isinstance(fun, type))"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecated.wrap.call",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:92",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._DeprecationHelperStr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:101",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Helper class used by deprecate_cython_api"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._DeprecationHelperStr.__eq__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:115",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation.deprecate_cython_api",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:120",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Deprecate an exported cdef function in a public Cython API module. ~ Only functions can be deprecated; typedefs etc. cannot. ~ Parameters ---------- module : module Public Cython API module (e.g. scipy.linalg.cython_blas). routine_name : str Name of the routine to deprecate. May also be a fused-type routine (in which case its all specializations are deprecated). new_name : str New name to include in the deprecation warning message message : str Additional text in the deprecation warning message ~ >>> from scipy._lib.deprecation import deprecate_cython_api >>> import scipy.linalg.cython_blas as mod >>> deprecate_cython_api(mod, \"dgemm\", \"dgemm_new\", ... message=\"Deprecated in Scipy 1.5.0\") >>> del deprecate_cython_api, mod ~ After this, Cython modules that use the deprecated function emit a deprecation warning when they are imported."
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecate_positional_args",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:184",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Parameters ---------- func : callable, default=None Function to check arguments on. version : callable, default=None The version when positional arguments will result in error. deprecated_args : set of str, optional Arguments to deprecate - whether passed by position or keyword. custom_message : str, optional Custom message to add to deprecation warning and documentation."
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecate_positional_args._inner_deprecate_positional_args.warn_deprecated_args",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:226",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.deprecation._deprecate_positional_args._inner_deprecate_positional_args.inner_f",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:233",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=warn_deprecated_args) | warnings.warn('You are passing as positional arguments: {...}. Please change your invocation to use keyword arguments. From SciPy {...}, passing these as positional arguments will result in an error.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test__util.TestRenameParameter.test_old_keyword_deprecated",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:263",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # but use of old keyword results in DeprecationWarning"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test__util.TestRenameParameter.old_keyword_deprecated",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:230",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Example method/function for which keyword `old` is deprecated"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_deprecation.test_cython_api_deprecation",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_deprecation.py:8",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_doccer.test_unindent",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:46",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_doccer.test_unindent_dict",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:54",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_doccer.test_docformat",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:63",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_doccer.test_decorator",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:78",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_doccer.test_inherit_docstring_from",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:119",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_public_api.test_all_modules_are_expected",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:205",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_public_api.test_all_modules_are_expected_2",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:257",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_public_api.test_api_importable",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:268",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Check that all submodules listed higher up in this file can be imported Note that if a PRIVATE_BUT_PRESENT_MODULES entry goes missing, it may simply need to be removed from the list (deprecation may or may not be needed - apply common sense). | warnings.warn('always', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy._lib.tests.test_public_api.test_private_but_present_deprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:413",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# gh-18279, gh-17572, gh-17771 noted that deprecation warnings"
+  },
+  {
+    "qualified_name": "scipy.conftest.warnings_errors_and_rng::test",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/conftest.py:655",
+    "scope": "parameter",
+    "param_name": "test",
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning) conditioned on param 'test' (if else: not (test and test.name in legit))"
+  },
+  {
+    "qualified_name": "scipy.constants._codata._check_obsolete::key",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/constants/_codata.py:2125",
+    "scope": "parameter",
+    "param_name": "key",
+    "message": null,
+    "raw_evidence": "warnings.warn(\"Constant '{...}' is not in current {...} data set\", category=ConstantWarning) conditioned on param 'key' (if key in _obsolete_constants and key not in _aliases)"
+  },
+  {
+    "qualified_name": "scipy.interpolate._interpolate.lagrange",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:27",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated and will be removed in SciPy 1.20.0. Use `scipy.interpolate.BarycentricInterpolator` instead. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate._interpolate.interp2d",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:140",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Class for 2D interpolation (deprecated and removed)."
+  },
+  {
+    "qualified_name": "scipy.interpolate._pade.pade",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_pade.py:11",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated and will be removed in SciPy 1.20.0. Use `mpmath.pade` instead. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate._polyint.approximate_taylor_polynomial",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_polyint.py:465",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated and will be removed in SciPy 1.20.0. Use the following code instead: | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate.tests.test_interpolate.TestLagrange.test_lagrange",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:851",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate.tests.test_interpolate.test_complex",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:1041",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Complex-valued data deprecated"
+  },
+  {
+    "qualified_name": "scipy.interpolate.tests.test_pade.test_pade_trivial",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_pade.py:10",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate.tests.test_polyint.TestTaylor.test_exponential",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_polyint.py:337",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.interpolate.tests.test_rgi.TestInterpN.test_complex_pchip",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_rgi.py:1072",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Complex-valued data deprecated for pchip"
+  },
+  {
+    "qualified_name": "scipy.io._fast_matrix_market.mmread",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:301",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 The default value for `spmatrix` is changing to False in v1.20. That means the default return value will be a sparse array. Unless you use * instead of @, ** for matrix power, or you depend on 2D shapes from e.g. ``A.sum(axis=0)`` it may not matter to you. See :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.io._fast_matrix_market.mmread::spmatrix",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:391",
+    "scope": "parameter",
+    "param_name": "spmatrix",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'spmatrix' (if spmatrix is _NoValue)"
+  },
+  {
+    "qualified_name": "scipy.io._harwell_boeing.hb.hb_read",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:466",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 The default value for `spmatrix` is changing to False in v1.20. That means the default return value will be a sparse array. Unless you use * instead of @, ** for matrix power, or you depend on 2D shapes from e.g. ``A.sum(axis=0)``, it may not matter to you. See :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.io._harwell_boeing.hb.hb_read::spmatrix",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:533",
+    "scope": "parameter",
+    "param_name": "spmatrix",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'spmatrix' (if spmatrix is _NoValue)"
+  },
+  {
+    "qualified_name": "scipy.io._mmio.mmread",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:86",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 The default value for `spmatrix` is changing to False in v1.20. That means the default return value will be a sparse array. Unless you use * instead of @, ** for matrix power, or you depend on 2D shapes from e.g. ``A.sum(axis=0)`` it may not matter to you. See :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.io._mmio.MMFile.read",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:569",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 The default value for `spmatrix` is changing to False in v1.20. That means the default return value will be a sparse array. Unless you use * instead of @, ** for matrix power, or you depend on 2D shapes from e.g. ``A.sum(axis=0)`` it may not matter to you. See :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.io._mmio.MMFile.read::spmatrix",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:613",
+    "scope": "parameter",
+    "param_name": "spmatrix",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'spmatrix' (if spmatrix is _NoValue)"
+  },
+  {
+    "qualified_name": "scipy.io.matlab._mio.loadmat",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:82",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 The default value for `spmatrix` is changing to False in v1.20. That means the default return value will be a sparse array. Unless you use * instead of @, ** for matrix power, or you depend on 2D shapes from e.g. ``A.sum(axis=0)``, it may not matter to you. See :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.io.matlab._mio.loadmat::spmatrix",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:257",
+    "scope": "parameter",
+    "param_name": "spmatrix",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'spmatrix' (if spmatrix is _NoValue)"
+  },
+  {
+    "qualified_name": "scipy.io.matlab.tests.test_mio.test_deprecation",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/tests/test_mio.py:1388",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.linalg._decomp_qr.qr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:32",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This keyword is deprecated as well as no longer in use and will be removed in 1.20.0."
+  },
+  {
+    "qualified_name": "scipy.linalg._decomp_qr.qr::lwork",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:176",
+    "scope": "parameter",
+    "param_name": "lwork",
+    "message": null,
+    "raw_evidence": "warnings.warn('scipy.linalg: the `lwork` keyword is deprecated and no longer in use as of SciPy 1.18.0 and will be removed in SciPy 1.20.0', category=DeprecationWarning) conditioned on param 'lwork' (if else: not (lwork is not None and lwork != -1 and (lwork <= M)))"
+  },
+  {
+    "qualified_name": "scipy.linalg._special_matrices.hankel::c",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
+    "scope": "parameter",
+    "param_name": "c",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'c' (if c.ndim > 1 or r.ndim > 1)"
+  },
+  {
+    "qualified_name": "scipy.linalg._special_matrices.hankel::r",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
+    "scope": "parameter",
+    "param_name": "r",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'r' (if c.ndim > 1 or r.ndim > 1)"
+  },
+  {
+    "qualified_name": "scipy.linalg.tests.test_decomp.TestQR.test_lwork",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_decomp.py:2011",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.linalg.tests.test_deprecations.test_deprecations",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_deprecations.py:221",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.linalg.tests.test_special_matrices.test_batch::f",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_special_matrices.py:612",
+    "scope": "parameter",
+    "param_name": "f",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'f' (if f in {hankel})"
+  },
+  {
+    "qualified_name": "scipy.odr._models._MultilinearModel",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:82",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._models.polynomial",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:122",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._models._ExponentialModel",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:188",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._models._UnilinearModel",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:260",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._models._QuadraticModel",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:298",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.OdrWarning",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:53",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.OdrError",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:68",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.OdrStop",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:83",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.Data",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:202",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.RealData",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:320",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.Model",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:461",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.Output",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:578",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr._odrpack.ODR",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:661",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 `scipy.odr` is deprecated and will be removed in SciPy 1.19.0. Please use `pypi.org/project/odrpack/ <https://pypi.org/project/odrpack/>`_ instead."
+  },
+  {
+    "qualified_name": "scipy.odr.models.__getattr__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/models.py:25",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.odr.odrpack.__getattr__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/odrpack.py:26",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize._linprog.linprog",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog.py:178",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "The legacy methods are deprecated and will be removed in SciPy 1.11.0. callback : callable, optional If a callback function is provided, it will be called at least once per iteration of the algorithm. The callback function must accept a single `scipy.optimize.OptimizeResult` consisting of the following fields: | warnings.warn(\"`method='{...}'` is deprecated and will be removed in SciPy 1.11.0. Please use one of the HiGHS solvers (e.g. `method='highs'`) in new code.\", category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize._linprog_doc._linprog_ip_doc",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:761",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.9.0 `method='interior-point'` will be removed in SciPy 1.11.0. It is replaced by `method='highs'` because the latter is faster and more robust."
+  },
+  {
+    "qualified_name": "scipy.optimize._linprog_doc._linprog_rs_doc",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1092",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.9.0 `method='revised simplex'` will be removed in SciPy 1.11.0. It is replaced by `method='highs'` because the latter is faster and more robust."
+  },
+  {
+    "qualified_name": "scipy.optimize._linprog_doc._linprog_simplex_doc",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1278",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.9.0 `method='simplex'` will be removed in SciPy 1.11.0. It is replaced by `method='highs'` because the latter is faster and more robust."
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test__differential_evolution.TestDifferentialEvolutionSolver.test_matrix_linear_constraint",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__differential_evolution.py:1026",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test__linprog_clean_inputs.test_inconsistent_dimensions",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:124",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test__linprog_clean_inputs.test_bad_bounds",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:259",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test_linprog.test_deprecation",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:297",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test_linprog.LinprogCommonTests.test_invalid_inputs",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:491",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test_lsq_linear.BaseMixin.test_np_matrix",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_lsq_linear.py:98",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.optimize.tests.test_minimize_constrained.test_bug_11886",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_minimize_constrained.py:708",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.signal._spectral_py.lombscargle::kwarg",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
+    "scope": "parameter",
+    "param_name": "kwarg",
+    "message": null,
+    "raw_evidence": "@_deprecate_positional_args (parameter: 'kwarg')"
+  },
+  {
+    "qualified_name": "scipy.signal._spectral_py.lombscargle",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 The `precenter` argument is deprecated and will be removed in SciPy 1.19.0. The functionality can be substituted by passing ``y - y.mean()`` to `y`."
+  },
+  {
+    "qualified_name": "scipy.signal._spectral_py.lombscargle::precenter",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:266",
+    "scope": "parameter",
+    "param_name": "precenter",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'precenter' (if precenter is not _NoValue)"
+  },
+  {
+    "qualified_name": "scipy.signal.tests.test_spectral.TestLombscargle.test_precenter_deprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/tests/test_spectral.py:1554",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# test that precenter deprecation warning is raised"
+  },
+  {
+    "qualified_name": "scipy.sparse._bsr.isspmatrix_bsr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:623",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._bsr.bsr_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:778",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.diags_array",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:319",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Up until SciPy 1.19, the default behavior will be to return an array with an inexact (floating point) data type. In particular, integer input will be converted to double precision floating point. This behavior is deprecated, and in SciPy 1.19, the default behavior will be changed to return an array with the same data type as the input diagonals. To adopt this behavior before version 1.19, use ``dtype=None``."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.diags_array::dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:440",
+    "scope": "parameter",
+    "param_name": "dtype",
+    "message": null,
+    "raw_evidence": "warnings.warn('Input has data type {...}, but the output has been cast to {...}.  In the future, the output data type will match the input. To avoid this warning, set the `dtype` parameter to `None` to have the output dtype match the input, or set it to the desired output data type.', category=future_dtype) conditioned on param 'dtype' (if dtype != future_dtype)"
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.diags",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:479",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Up until SciPy 1.19, the default behavior will be to return a matrix with an inexact (floating point) data type. In particular, integer input will be converted to double precision floating point. This behavior is deprecated, and in SciPy 1.19, the default behavior will be changed to return a matrix with the same data type as the input diagonals. To adopt this behavior before version 1.19, use `dtype=None`."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kron",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:761",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "For the case where no input arrays are sparse, this function is switching to returning a sparse array instead of sparse matrix. Control the sparse return class by making at least one input sparse, e.g., ``kron(coo_matrix(A), B)``, or ``kron(coo_array(A), B)``. That removes any deprecation warnings as well. For more general information about sparrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`. Handling of this no sparse input case will change no earlier than v1.20."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kron::A",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
+    "scope": "parameter",
+    "param_name": "A",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'A' (if else: not (isinstance(A, spmatrix) or isinstance(B, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kron::B",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
+    "scope": "parameter",
+    "param_name": "B",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'B' (if else: not (isinstance(A, spmatrix) or isinstance(B, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kronsum",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:908",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "For the case where no input arrays are sparse, this function is switching to returning a sparse array instead of sparse matrix. Control the sparse return class by making at least one input sparse, e.g., ``kronsum(coo_matrix(A), B)``, or ``kronsum(coo_array(A), B)``. That removes any deprecation warnings as well. For more general information about sparrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`. Handling of this no sparse input case will change no earlier than v1.20."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kronsum::A",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
+    "scope": "parameter",
+    "param_name": "A",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'A' (if else: not (isinstance(A, spmatrix) or isinstance(B, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.kronsum::B",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
+    "scope": "parameter",
+    "param_name": "B",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'B' (if else: not (isinstance(A, spmatrix) or isinstance(B, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.bmat",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1203",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Note: `block_array` is preferred over ``bmat``. They are the same function except that ``bmat`` returns a deprecated sparse matrix when none of the inputs are sparse arrays."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.block_diag",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1410",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "For the case where no input arrays are sparse, this function is switching to returning a sparse array instead of sparse matrix. Control the sparse return class by making at least one input sparse, e.g., ``block_diag([coo_matrix(A), B])``, or ``block_diag([coo_array(A), B])``. That removes any deprecation warnings as well. For more general information about sparrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`. Handling of this no sparse input case will change no earlier than v1.20."
+  },
+  {
+    "qualified_name": "scipy.sparse._construct.block_diag::mats",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1485",
+    "scope": "parameter",
+    "param_name": "mats",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'mats' (if else: not (any((isinstance(a, spmatrix) for a in mats))))"
+  },
+  {
+    "qualified_name": "scipy.sparse._coo.isspmatrix_coo",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1658",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._coo.coo_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1811",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._csc.isspmatrix_csc",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:152",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._csc.csc_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:292",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._csr.isspmatrix_csr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:297",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._csr.csr_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:465",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._dia.isspmatrix_dia",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:480",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._dia.dia_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:621",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._dok.isspmatrix_dok",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:638",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._dok.dok_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:733",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._extract.tril",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:48",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "For the case where no input arrays are sparse, this function is switching to returning a sparse array instead of sparse matrix. Control the sparse return class by making at least one input sparse, e.g., ``tril(coo_matrix(A))``, or ``tril(coo_array(A))``. That removes any deprecation warnings as well. For more general information about sparrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`. Handling of this no sparse input case will change no earlier than v1.20."
+  },
+  {
+    "qualified_name": "scipy.sparse._extract.tril::A",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:133",
+    "scope": "parameter",
+    "param_name": "A",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'A' (if else: not (isinstance(A, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._extract.triu",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:148",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "For the case where no input arrays are sparse, this function is switching to returning a sparse array instead of sparse matrix. Control the sparse return class by making at least one input sparse, e.g., ``triu(coo_matrix(A))``, or ``triu(coo_array(A))``. That removes any deprecation warnings as well. For more general information about sparrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`. Handling of this no sparse input case will change no earlier than v1.20."
+  },
+  {
+    "qualified_name": "scipy.sparse._extract.triu::A",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:234",
+    "scope": "parameter",
+    "param_name": "A",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'A' (if else: not (isinstance(A, spmatrix)))"
+  },
+  {
+    "qualified_name": "scipy.sparse._lil.isspmatrix_lil",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:490",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._lil.lil_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:598",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._matrix.spmatrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_matrix.py:1",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "SciPy sparse is shifting from a sparse matrix interface to a sparse array interface. In the next few releases we expect to deprecate the sparse matrix interface. For documentation of the matrix interface, see the :ref:`spmatrix interface docs <spmatrix_api>`. For guidance on converting existing code to sparse arrays, see :ref:`Migration from spmatrix to sparray <migration_to_sparray>`."
+  },
+  {
+    "qualified_name": "scipy.sparse._sputils.matrix",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_sputils.py:574",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Numpy versions of these functions raise deprecation warnings, the ; # Wrappers for NumPy types that are deprecated"
+  },
+  {
+    "qualified_name": "scipy.sparse.csgraph.tests.test_traversal.test_return_type",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/csgraph/tests/test_traversal.py:84",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning) | warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._interface.LinearOperator._shared_matvec::x",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_interface.py:338",
+    "scope": "parameter",
+    "param_name": "x",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'x' (if (column_vector := (x.shape == (inner_dim, 1))))"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.iterative.gmres::callback+callback_type",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/iterative.py:692",
+    "scope": "parameter",
+    "param_name": "callback+callback_type",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'callback+callback_type' (if callback is not None and callback_type is None)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.do_solve",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:55",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.TestGCROTMK.test_arnoldi",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:86",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.TestGCROTMK.test_cornercase",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:108",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.TestGCROTMK.test_nans",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:134",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.TestGCROTMK.test_truncate",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:146",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_gcrotmk.TestGCROTMK.test_denormals",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:184",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_iterative.test_maxiter::case",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_iterative.py:312",
+    "scope": "parameter",
+    "param_name": "case",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'case' (if case.solver == gmres)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.do_solve",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:53",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_arnoldi",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:114",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_cornercase",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:136",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_nans",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:163",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_breakdown_with_outer_v",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:178",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_breakdown_underdetermined",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:201",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg._isolve.tests.test_lgmres.TestLGMRES.test_denormals",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:223",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg.tests.test_interface.TestLinearOperator.test_matvec",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:92",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg.tests.test_interface.TestAsLinearOperator.test_basic",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:787",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg.tests.test_interface.test_batch::batch_x",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:1230",
+    "scope": "parameter",
+    "param_name": "batch_x",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'batch_x' (if else: not (batch_x))"
+  },
+  {
+    "qualified_name": "scipy.sparse.linalg.tests.test_matfuncs.TestExpM.test_matrix_input",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_matfuncs.py:546",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning) | warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.tests.test_base._TestCommon.test_sum_dtype_pair_of_dtypes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_base.py:1090",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.sparse.tests.test_construct.test_diags_int_to_float64",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_construct.py:942",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "scipy.spatial._kdtree.minkowski_distance_p",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:17",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated in favor of `scipy.spatial.distance.minkowski` and will be removed in SciPy 1.20.0. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.spatial._kdtree.minkowski_distance",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:79",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated in favor of `scipy.spatial.distance.minkowski` and will be removed in SciPy 1.20.0. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.spatial._kdtree.KDTree.sparse_distance_matrix",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:886",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "All new code using scipy sparse should use sparse array types 'dok_array' or 'coo_array'. The default value of `output_type` will be deprecated at v1.19 and switch from 'dok_matrix' to 'dok_array' in v1.21. The values 'dok_matrix' and 'coo_matrix' continue to work, but will go away eventually."
+  },
+  {
+    "qualified_name": "scipy.spatial._kdtree.distance_matrix",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:962",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.18.0 This function is deprecated in favor of `scipy.spatial.distance.cdist` and will be removed in SciPy 1.20.0. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.spatial.tests.test_distance.test_Xdist_deprecated_args",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_distance.py:1986",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# testing both cdist and pdist deprecated warnings"
+  },
+  {
+    "qualified_name": "scipy.spatial.tests.test_qhull.TestUtilities.test_find_simplex",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_qhull.py:194",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_bdtr.TestBdtr.test_inf",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:30",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_bdtr.TestBdtrc.test_inf",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:60",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_bdtr.TestBdtri.test_inf",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:99",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_cython_special.test_cython_api",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_cython_special.py:360",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_legendre.TestLegendreFunctions.test_array_inputs_lxn",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:778",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_legendre.TestLegendreFunctions.test_array_inputs_clxmn",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:823",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.special.tests.test_nan_inputs.test_nan_inputs",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_nan_inputs.py:52",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "scipy.stats._distribution_infrastructure.make_distribution",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_distribution_infrastructure.py:3850",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "__make_distribution_version__ : str A string containing the version number of SciPy in which this interface is defined. The preferred interface may change in future SciPy versions, in which case support for an old interface version may be deprecated and eventually removed. parameters : dict or tuple If a dictionary, each key is the name of a parameter, and the corresponding value is either a dictionary or tuple. If the value is a dictionary, it may have the following items, with default values used for entries which aren't present."
+  },
+  {
+    "qualified_name": "scipy.stats._morestats.anderson",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2370",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 The tuple-unpacking behavior of the return object and attributes ``critical_values``, ``significance_level``, and ``fit_result`` are deprecated. Beginning in SciPy 1.19.0, these features will no longer be available, and the object returned will have attributes ``statistic`` and ``pvalue``."
+  },
+  {
+    "qualified_name": "scipy.stats._morestats.anderson::method",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2606",
+    "scope": "parameter",
+    "param_name": "method",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'method' (if method is None)"
+  },
+  {
+    "qualified_name": "scipy.stats._morestats.anderson_ksamp",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2759",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17.0 Use parameter `variant` instead. variant : {'midrank', 'right', 'continuous'} Variant of Anderson-Darling test to be computed. ``'midrank'`` is applicable to both continuous and discrete populations. ``'discrete'`` and ``'continuous'`` perform alternative versions of the test for discrete and continuous populations, respectively. When `variant` is specified, the return object will not be unpackable as a tuple, and only attributes ``statistic`` and ``pvalue`` will be present. method : PermutationMethod, optional Defines the method used to compute the p-value. If `method` is an instance of `PermutationMethod`, the p-value is computed using `scipy.stats.permutation_test` with the provided configuration options and other appropriate settings. Otherwise, the p-value is interpolated from tabulated values. ~ .. deprecated:: 1.17.0 Present only when `variant` is unspecified."
+  },
+  {
+    "qualified_name": "scipy.stats._multicomp.dunnett",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_multicomp.py:191",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `random_state` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `random_state` keyword will emit warnings. Following a deprecation period, the `random_state` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.QMCEngine",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:802",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.Halton",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1117",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.LatinHypercube",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1286",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.Sobol",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1608",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.PoissonDisk",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1960",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.MultivariateNormalQMC",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2310",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._qmc.MultinomialQMC",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2484",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `seed` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `seed` keyword will emit warnings. Following a deprecation period, the `seed` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats._resampling.PermutationMethod.random_state",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2303",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# warnings.warn(_rs_deprecation, DeprecationWarning, stacklevel=2)"
+  },
+  {
+    "qualified_name": "scipy.stats._resampling.PermutationMethod.__init__",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2319",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "#               DeprecationWarning, stacklevel=2)"
+  },
+  {
+    "qualified_name": "scipy.stats._resampling.BootstrapMethod.random_state",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2394",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# warnings.warn(_rs_deprecation, DeprecationWarning, stacklevel=2)"
+  },
+  {
+    "qualified_name": "scipy.stats._resampling.BootstrapMethod.__init__",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2411",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "#               DeprecationWarning, stacklevel=2)"
+  },
+  {
+    "qualified_name": "scipy.stats._sensitivity_analysis.sobol_indices",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_sensitivity_analysis.py:245",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "As part of the `SPEC-007 <https://scientific-python.org/specs/spec-0007/>`_ transition from use of `numpy.random.RandomState` to `numpy.random.Generator`, this keyword was changed from `random_state` to `rng`. For an interim period, both keywords will continue to work, although only one may be specified at a time. After the interim period, function calls using the `random_state` keyword will emit warnings. Following a deprecation period, the `random_state` keyword will be removed."
+  },
+  {
+    "qualified_name": "scipy.stats.tests.test_morestats.TestAndersonMethod.test_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:402",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "scipy.stats.tests.test_morestats.TestAndersonMethod.test_interpolate_saturation",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:461",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  }
+]

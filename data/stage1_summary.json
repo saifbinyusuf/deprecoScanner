@@ -1,0 +1,374 @@
+{
+  "numpy": {
+    "library": "numpy",
+    "files_scanned": 407,
+    "raw_detector_counts": {
+      "decorator": 10,
+      "warning": 149,
+      "docstring": 36,
+      "comment": 47,
+      "parameter": 20,
+      "pep702:griffe": 0
+    },
+    "total_raw_hits": 262,
+    "surviving_unique_candidates": 203,
+    "origin_frequencies_in_catalog": {
+      "warning": 126,
+      "docstring": 36,
+      "comment": 47,
+      "decorator": 10
+    },
+    "multi_origin_overlap_distribution": {
+      "1": 187,
+      "2": 16,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "coverage_gaps_count": 0,
+    "coverage_gaps": [],
+    "benchmark_targets": [
+      {
+        "target_api": "numpy.alltrue",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "numpy.product",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "numpy.cumproduct",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      }
+    ]
+  },
+  "scipy": {
+    "library": "scipy",
+    "files_scanned": 988,
+    "raw_detector_counts": {
+      "decorator": 1,
+      "warning": 114,
+      "docstring": 79,
+      "comment": 15,
+      "parameter": 29,
+      "pep702:griffe": 0
+    },
+    "total_raw_hits": 238,
+    "surviving_unique_candidates": 179,
+    "origin_frequencies_in_catalog": {
+      "docstring": 79,
+      "warning": 97,
+      "comment": 13,
+      "decorator": 1
+    },
+    "multi_origin_overlap_distribution": {
+      "1": 168,
+      "2": 11,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "coverage_gaps_count": 0,
+    "coverage_gaps": [],
+    "benchmark_targets": [
+      {
+        "target_api": "scipy.misc.logsumexp",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.misc.comb",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.integrate.cumtrapz",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.integrate.simps",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.integrate.trapz",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.interpolate.interp2d",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.linalg.pinv2",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.misc.factorial",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.stats.itemfreq",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.signal.hanning",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.special.sph_jn",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.stats.betai",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.stats.chisqprob",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.misc.face",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.misc.factorial2",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.special.sph_yn",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.special.errprint",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "scipy.stats.rvs_ratio_uniforms",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      }
+    ]
+  },
+  "pandas": {
+    "library": "pandas",
+    "files_scanned": 1421,
+    "raw_detector_counts": {
+      "decorator": 41,
+      "warning": 346,
+      "docstring": 77,
+      "comment": 42,
+      "parameter": 92,
+      "pep702:griffe": 0
+    },
+    "total_raw_hits": 598,
+    "surviving_unique_candidates": 398,
+    "origin_frequencies_in_catalog": {
+      "warning": 248,
+      "docstring": 77,
+      "decorator": 41,
+      "comment": 42
+    },
+    "multi_origin_overlap_distribution": {
+      "1": 388,
+      "2": 10,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "coverage_gaps_count": 0,
+    "coverage_gaps": [],
+    "benchmark_targets": [
+      {
+        "target_api": "pandas.io.formats.style.Styler.render",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.swapaxes",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.applymap",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.pad",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.Series.iteritems",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.iteritems",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.select",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.first",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.DataFrame.last",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      },
+      {
+        "target_api": "pandas.Series.pad",
+        "matched_symbol": null,
+        "status": "NOT_IN_CURRENT_TREE",
+        "origins": [],
+        "multi_origin": false,
+        "location": null,
+        "evidence_snippet": "Removed or refactored in modern library version"
+      }
+    ]
+  }
+}

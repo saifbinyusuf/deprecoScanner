@@ -1,0 +1,2454 @@
+[
+  {
+    "qualified_name": "numpy.__getattr__::attr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/__init__.py:755",
+    "scope": "parameter",
+    "param_name": "attr",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future `np.{...}` will be defined as the corresponding NumPy scalar.', category=FutureWarning) conditioned on param 'attr' (if attr in __future_scalars__)"
+  },
+  {
+    "qualified_name": "numpy._core._exceptions._display_as_base",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/_exceptions.py:16",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Classes decorated with this decorator are subject to removal without a deprecation warning."
+  },
+  {
+    "qualified_name": "numpy._core._internal._commastring",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/_internal.py:199",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Passing in a parenthesized single number for repeats is deprecated; pass either a single number or indicate a tuple with a comma, like \"(2,)\".', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.arrayprint._make_options_dict::legacy",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/arrayprint.py:82",
+    "scope": "parameter",
+    "param_name": "legacy",
+    "message": null,
+    "raw_evidence": "warnings.warn('Passing `legacy={...}` is deprecated.', category=FutureWarning) conditioned on param 'legacy' (if legacy == False)"
+  },
+  {
+    "qualified_name": "numpy._core.defchararray.chararray",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/defchararray.py:405",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 ``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype instead."
+  },
+  {
+    "qualified_name": "numpy._core.defchararray.array",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/defchararray.py:1221",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 ``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype instead."
+  },
+  {
+    "qualified_name": "numpy._core.defchararray.asarray",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/defchararray.py:1368",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 ``chararray`` is deprecated. Use an ``ndarray`` with a string or bytes dtype instead."
+  },
+  {
+    "qualified_name": "numpy._core.fromnumeric.diagonal",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:1709",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "In NumPy 1.7 and 1.8, it continues to return a copy of the diagonal, but depending on this fact is deprecated. Writing to the resulting array continues to work as it used to, but a FutureWarning is issued."
+  },
+  {
+    "qualified_name": "numpy._core.records._deprecate_shape_0_as_None::shape",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/records.py:559",
+    "scope": "parameter",
+    "param_name": "shape",
+    "message": null,
+    "raw_evidence": "warnings.warn('Passing `shape=0` to have the shape be inferred is deprecated, and in future will be equivalent to `shape=(0,)`. To infer the shape and suppress this warning, pass `shape=None` instead.', category=FutureWarning) conditioned on param 'shape' (if shape == 0)"
+  },
+  {
+    "qualified_name": "numpy._core.records.fromrecords",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/records.py:739",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('fromrecords expected a list of tuples, may have received a list of lists instead. In the future that will raise an error', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_array_coercion.TestScalarDiscovery.test_pyscalar_subclasses",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py:344",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "NumPy arrays are read/write which means that anything but invariant behaviour is on thin ice. However, we currently are happy to discover subclasses of Python float, int, complex the same as the base classes. This should potentially be deprecated."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_array_coercion.TestTimeScalars.test_coercion_generic_timedelta_convert_to_number",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py:441",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_array_coercion.TestTimeScalars.test_coercion_assignment_datetime",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py:463",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "#       cast, or by deprecating the first part."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_array_coercion.TestArrayLikes.test_bad_array_like_attributes",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py:750",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# but shapely made use of it, so it will require a deprecation."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_array_coercion.TestArrayLikes.test_bad_array_like_attributes.BadInterface",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py:750",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# but shapely made use of it, so it will require a deprecation."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_casting_unittests.TestCasting.test_time_to_time::to_dt",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_casting_unittests.py:466",
+    "scope": "parameter",
+    "param_name": "to_dt",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'to_dt' (if to_dt == np.dtype('M8'))"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_conversion_utils.StringConverterTestCase._check",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_conversion_utils.py:31",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Takes valid non-deprecated inputs for converters, runs converters on inputs, checks correctness of outputs, warnings and errors"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_cython.test_is_timedelta64_object",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_cython.py:89",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_cython.test_is_datetime64_object",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_cython.py:114",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_compare_generic_nat",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:209",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_scalar_construction",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:270",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_np_int_construction::unit",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:411",
+    "scope": "parameter",
+    "param_name": "unit",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message) conditioned on param 'unit' (if else: not (unit != 'generic'))"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_scalar_construction",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:424",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_nat_format",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:536",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_array_with_nats",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:887",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_add",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1472",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_subtract",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1552",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_generic_timedelta_floor_divide",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1691",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_floor_div_precision",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1726",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_generic_timedelta_divmod",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1778",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_divide",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:1867",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_arange",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:2335",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_datetime_hash_nat",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:3018",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_datetime.TestDateTime.test_timedelta_hash_generic",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py:3075",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=generic_unit_deprecation_message)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestBasic",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:22",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestWhitespace",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:144",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestChar",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:158",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestComparisons",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:165",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestComparisonsMixed1",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:212",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestComparisonsMixed2",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:221",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestInformation",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:230",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestMethods",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:372",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.TestOperations",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:708",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_defchararray.test_empty_indexing",
+    "origin": "decorator",
+    "origins": [
+      "decorator"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py:874",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "@ignore_charray_deprecation"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations._DeprecationTestCase.assert_deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:39",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Test if DeprecationWarnings are given and raised. ~ This first checks if the function when called gives `num` DeprecationWarnings, after that it tries to raise these DeprecationWarnings and compares them with `exceptions`. The exceptions can be different for cases where this code path is simply not anticipated and the exception is replaced. ~ Parameters ---------- function : callable The function to test num : int Number of DeprecationWarnings to expect. This should normally be 1. ignore_others : bool Whether warnings of the wrong type should be ignored (note that the message is not checked) function_fails : bool If the function would normally fail, setting this will check for warnings inside a try/except block. exceptions : Exception or tuple of Exceptions Exception to expect when turning the warnings into an error. The default checks for DeprecationWarnings. If exceptions is empty the function is expected to run successfully. args : tuple Arguments for `function` kwargs : dict Keyword arguments for `function`"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations._DeprecationTestCase.assert_not_deprecated",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:117",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "self.assert_deprecated(function, num=0, ignore_others=True, exceptions=tuple(), args=args, kwargs=kwargs)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTestDeprecated.test_assert_deprecated.foo",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:141",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('foo', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.test_future_scalar_attributes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:192",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestDeprecatedViewDtypePropertySetter.test_view_dtype_property_setter_recarray_subclass.MyRecArray.dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:308",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestRemovedGlobals",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:205",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Not a deprecation, but the large error was added to aid those who missed ; # the previous deprecation, and should be removed similarly to one"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestRemovedGlobals.test_attributeerror_includes_info",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:206",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# the previous deprecation, and should be removed similarly to one ; # Not a deprecation, but the large error was added to aid those who missed"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestDeprecatedDTypeAliases.test_a_dtype_alias",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:224",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in 2.0, removed in 2.5, 2025-12"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestDTypeAlignBool",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:325",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 2.4, 2025-07 ; # NOTE: As you can see, finalizing this deprecation breaks some (very) old"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestFlatiterIndexing0dBoolIndex",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:352",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 2.4, 2025-07"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestFlatiterIndexingFloatIndex",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:370",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in NumPy 2.4, 2025-07"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestWarningUtilityDeprecations",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:391",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in NumPy 2.4, 2025-08"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTooManyArgsExtremum",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:410",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 2.4, 2025-08, gh-27639"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTypenameDeprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:419",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in Numpy 2.5, 2026-02"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTypenameDeprecation.test_typename_emits_deprecation_warning",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:419",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in Numpy 2.5, 2026-02"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestRoundDeprecation",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:426",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in NumPy 2.5, 2026-02"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestRoundDeprecation.test_round_emits_deprecation_warning_array",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:426",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in NumPy 2.5, 2026-02"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestDeprecatedGenericTimedelta",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:437",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 2.5, 2025-11"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTriDeprecationWithNonInteger",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:475",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in NumPy 2.5, 2026-03"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTriDeprecationWithNonInteger.test_tri",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:475",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation in NumPy 2.5, 2026-03"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_deprecations.TestTakeOutDtype",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py:503",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in Numpy 2.5, 2026-01"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_dtype.TestRecord.test_parenthesized_single_number",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py:482",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_dtype.TestDtypeAttributes.test_zero_stride",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py:1160",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_dtype.test_result_type_integers_and_unitless_timedelta64",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py:2032",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_dtype.TestRecord.test_mutate",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py:301",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# NOTE: Mutating should be deprecated, but new API added to replace it."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_dtype.TestRecord.test_mutate_error",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py:323",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# NOTE: Mutating should be deprecated, but new API added to replace it."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestMultiIndexingAutomated.test_multidim",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:1238",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning) | warnings.warn('error', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestFlatiterIndexing.test_flatiter_indexing_boolean",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:1501",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestFlatiterIndexing.test_flatiter_indexing_not_supported_newaxis_mutlidimensional_float",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:1553",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestFlatiterIndexing.test_flatiter_indexing_boolean_assign",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:1609",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestFlatiterIndexing.test_flatiter_indexing_not_supported_newaxis_mutlid_float_assign",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:1676",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_indexing.TestIndexing.test_character_assignment",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py:592",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# (the character special dtype case, should be deprecated probably)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_memmap.TestMemmap.test_ufunc_return_ndarray",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_memmap.py:162",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestAttributes.test_attributes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:337",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestAttributes.test_set_stridesattr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:426",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestAttributes.test_set_stridesattr.make_array",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:402",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestAttributes.test_set_stridesattr.set_strides",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:416",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestArrayCreationCopyArgument.test___array__copy_arg",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:9476",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestArrayAttributeDeletion.test_multiarray_writable_attributes_deletion",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:9622",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestFlags.test_writeable_from_c_data",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:200",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Also see that this is deprecated to change from python."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestFlags.test_readonly_flag_protocols",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:244",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Delete _warn_on_write after deprecation and simplify"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestArange.test_arange_booleans",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:10611",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Arguably, much or all of this could be deprecated/removed."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestArange.test_dtype_attribute_ignored",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:10664",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Until 2.3 this would raise a DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_multiarray.TestArange.test_dtype_attribute_ignored.dt",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py:10664",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Until 2.3 this would raise a DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_nditer.test_iter_writemasked_broadcast_error",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_nditer.py:3126",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# case and should simply be deprecated."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_numeric.TestNonzero.test_count_nonzero_axis_all_dtypes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_numeric.py:1789",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_numerictypes.TestIsSubDType.test_nondtype_nonscalartype",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_numerictypes.py:388",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# See gh-14619 and gh-9505 which introduced the deprecation to fix"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_records.TestFromrecords.test_recarray_conflict_fields",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_records.py:289",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_records.TestRecord.test_assign_dtype_attribute",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_records.py:516",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_regression.TestRegression.test_noncontiguous_fill",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_regression.py:117",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_regression.TestRegression.test_reshape_zero_size",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_regression.py:659",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_regression.TestRegression.test_alignment_update",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_regression.py:1872",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_regression.TestRegression.test_load_ufunc_pickle",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_regression.py:2564",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# despite np.core being deprecated."
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_scalarmath.check_ufunc_scalar_equivalence",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarmath.py:108",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_scalarmath.TestConversion.test_scalar_comparison_to_none",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarmath.py:587",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_shape_base.TestConcatenate.test_dtype_with_promotion",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_shape_base.py:449",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Note that U0 and S0 should be deprecated eventually and changed to"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_stringdtype.test_view_distinct_instance",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_stringdtype.py:2586",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_ufunc.test_ufunc_types",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_ufunc.py:2887",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy._core.tests.test_ufunc.TestUfunc.test_scalar_equal",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_core/tests/test_ufunc.py:2549",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Scalar comparisons should always work, without deprecation warnings."
+  },
+  {
+    "qualified_name": "numpy._globals._NoValueType",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_globals.py:32",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "- A new keyword is added to a function, and that function forwards its inputs to another function or method which can be defined outside of NumPy. For example, ``np.std(x)`` calls ``x.std``, so when a ``keepdims`` keyword was added that could only be forwarded if the user explicitly specified ``keepdims``; downstream array libraries may not have added the same keyword, so adding ``x.std(..., keepdims=keepdims)`` unconditionally could have broken previously working code. - A keyword is being deprecated, and a deprecation warning must only be emitted when the keyword is used."
+  },
+  {
+    "qualified_name": "numpy._typing._nbit_base.NBitBase",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_typing/_nbit_base.py:9",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.3 Use ``@typing.overload`` or a ``TypeVar`` with a scalar-type as upper bound, instead."
+  },
+  {
+    "qualified_name": "numpy._typing._nbit_base.NBitBase.__init_subclass__",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_typing/_nbit_base.py:54",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecated in NumPy 2.3, 2025-05-01"
+  },
+  {
+    "qualified_name": "numpy._utils._rename_parameter",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_utils/__init__.py:41",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "After decoration, the function behaves as follows: If only the new parameter is passed into the function, behave as usual. If only the old parameter is passed into the function (as a keyword), raise a DeprecationWarning if `dep_version` is provided, and behave as usual otherwise. If both old and new parameters are passed into the function, raise a DeprecationWarning if `dep_version` is provided, and raise the appropriate TypeError (function got multiple values for argument). ~ Parameters ---------- old_names : list of str Old names of parameters new_name : list of str New names of parameters dep_version : str, optional Version of NumPy in which old parameter was deprecated in the format 'X.Y.Z'. If supplied, the deprecation message will indicate that support for the old parameter will be removed in version 'X.Y+2.Z'"
+  },
+  {
+    "qualified_name": "numpy._utils._rename_parameter.decorator.wrapper",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/_utils/__init__.py:87",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.char.__getattr__::name",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/char/__init__.py:11",
+    "scope": "parameter",
+    "param_name": "name",
+    "message": null,
+    "raw_evidence": "warnings.warn('The chararray class is deprecated and will be removed in a future release. Use an ndarray with a string or bytes dtype instead.', category=DeprecationWarning) conditioned on param 'name' (if name in __DEPRECATED)"
+  },
+  {
+    "qualified_name": "numpy.conftest.warnings_errors_and_rng",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/conftest.py:171",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Filter out the wall of DeprecationWarnings. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.core._utils._raise_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/core/_utils.py:10",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('{...} is deprecated and has been renamed to {...}. The numpy._core namespace contains private NumPy internals and its use is discouraged, as NumPy internals can change without warning in any release. In practice, most real-world usage of numpy.core is to access functionality in the public NumPy API. If that is the case, use the public NumPy API. If not, you are using NumPy internals. If you would still like to access an internal attribute, use {...}.{...}.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.exceptions.ModuleDeprecationWarning",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/exceptions.py:58",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Module deprecation warning. ~ The nose tester turns ordinary Deprecation warnings into test failures. That makes it hard to deprecate whole modules, because they get imported by default. So this is a special Deprecation warning that the nose tester will let pass without making tests fail."
+  },
+  {
+    "qualified_name": "numpy.exceptions.VisibleDeprecationWarning",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/exceptions.py:75",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Visible deprecation warning. ~ By default, python will not show deprecation warnings, so this class can be used when a very visible warning is helpful, for example because the usage is most likely a user bug."
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft._cook_nd_args::axes",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:722",
+    "scope": "parameter",
+    "param_name": "axes",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'axes' (if axes is None)"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft._cook_nd_args::s",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:735",
+    "scope": "parameter",
+    "param_name": "s",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 's' (if None in s)"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.fftn",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:756",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.ifftn",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:888",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.fft2",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1020",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.ifft2",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1145",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.rfftn",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1267",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.rfft2",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1394",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.irfftn",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1474",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.fft._pocketfft.irfft2",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/fft/_pocketfft.py:1613",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.0 ~ .. deprecated:: 2.0 ~ `s` must contain only ``int`` s, not ``None`` values. ``None`` values currently mean that the default value for ``n`` is used in the corresponding 1-D transform, but this behaviour is deprecated. ~ .. deprecated:: 2.0"
+  },
+  {
+    "qualified_name": "numpy.lib.__getattr__",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/__init__.py:62",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Warn for deprecated/removed aliases"
+  },
+  {
+    "qualified_name": "numpy.lib._function_base_impl.rot90",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:258",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib._npyio_impl.genfromtxt::dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py:2358",
+    "scope": "parameter",
+    "param_name": "dtype",
+    "message": null,
+    "raw_evidence": "warnings.warn('Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.', category=VisibleDeprecationWarning) conditioned on param 'dtype' (if dtype is None)"
+  },
+  {
+    "qualified_name": "numpy.lib._polynomial_impl.poly1d.__init__::c_or_r",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_polynomial_impl.py:1258",
+    "scope": "parameter",
+    "param_name": "c_or_r",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'c_or_r' (if set(c_or_r.__dict__) - set(self.__dict__))"
+  },
+  {
+    "qualified_name": "numpy.lib._polynomial_impl.poly1d.__init__::self",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_polynomial_impl.py:1258",
+    "scope": "parameter",
+    "param_name": "self",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) conditioned on param 'self' (if set(c_or_r.__dict__) - set(self.__dict__))"
+  },
+  {
+    "qualified_name": "numpy.lib._shape_base_impl.expand_dims",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_shape_base_impl.py:514",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.13.0 Passing an axis where ``axis > a.ndim`` will be treated as ``axis == a.ndim``, and passing ``axis < -a.ndim - 1`` will be treated as ``axis == 0``. This behavior is deprecated."
+  },
+  {
+    "qualified_name": "numpy.lib._stride_tricks_impl.broadcast_arrays",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_stride_tricks_impl.py:589",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 1.17 The output is currently marked so that if written to, a deprecation warning will be emitted. A future version will set the ``writable`` flag False so writing to it will raise an error."
+  },
+  {
+    "qualified_name": "numpy.lib._twodim_base_impl.tri",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_twodim_base_impl.py:464",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Cannot convert {...} safely to an integer. This will raise an error in future versions (Deprecated NumPy 2.5)', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib._twodim_base_impl.triu_indices::k",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_twodim_base_impl.py:1169",
+    "scope": "parameter",
+    "param_name": "k",
+    "message": null,
+    "raw_evidence": "warnings.warn('Cannot convert {...} safely to an integer. This will raise an error in future versions (Deprecated NumPy 2.5)', category=DeprecationWarning) conditioned on param 'k' (if not isinstance(k, type(k - 1)))"
+  },
+  {
+    "qualified_name": "numpy.lib._type_check_impl.typename",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_type_check_impl.py:581",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 `numpy.typename` is deprecated. Use `numpy.dtype.name` instead. | warnings.warn('numpy.typename is deprecated. Use numpy.dtype.name instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib._ufunclike_impl.fix",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_ufunclike_impl.py:19",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 `numpy.fix` is deprecated. Use `numpy.trunc` instead, which is faster and follows the Array API standard. | warnings.warn('numpy.fix is deprecated. Use numpy.trunc instead, which is faster and follows the Array API standard.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib._user_array_impl.container.__init_subclass__",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/_user_array_impl.py:57",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('The numpy.lib.user_array.container class is deprecated and will be removed in a future version.', category=DeprecationWarning) | # Deprecated in NumPy 2.4, 2025-11-24"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_function_base.TestRot90.test_noninteger_k_deprecation_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_function_base.py:155",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_header",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:1458",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_auto_dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:1473",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_commented_header",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:1526",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_autonames_and_usecols",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:1571",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_converters_with_usecols_and_names",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:1592",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_autostrip",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:2066",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_comments_is_none",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:2196",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_latin1",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:2216",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_utf8_byte_encoding",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:2251",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_io.TestFromTxt.test_utf8_file_nodtype_unicode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py:2305",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('always', category=VisibleDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_nanfunctions.TestNanFunctions_Median.test_allnans",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_nanfunctions.py:949",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_stride_tricks.test_writeable",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_stride_tricks.py:602",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning) | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_ufunclike.TestFixDeprecation",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_ufunclike.py:105",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Test that numpy.fix emits a DeprecationWarning."
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_ufunclike.TestFixDeprecation.test_fix_emits_deprecation_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_ufunclike.py:110",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_ufunclike.TestFixDeprecation.test_fix_scalar_emits_deprecation_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_ufunclike.py:114",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.lib.tests.test_ufunclike.TestFixDeprecation.test_fix_with_out_emits_deprecation_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/lib/tests/test_ufunclike.py:120",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.linalg._linalg.qr",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/linalg/_linalg.py:977",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "The options 'reduced', 'complete, and 'raw' are new in numpy 1.8, see the notes for more information. The default is 'reduced', and to maintain backward compatibility with earlier versions of numpy both it and the old default 'full' can be omitted. Note that array h returned in 'raw' mode is transposed for calling Fortran. The 'economic' mode is deprecated. The modes 'full' and 'economic' may be passed using only the first letter for backwards compatibility, but all others must be spelled out. See the Notes for more explanation. ~ Returns ------- Q : ndarray of float or complex, optional A matrix with orthonormal columns. When mode = 'complete' the result is an orthogonal/unitary matrix depending on whether or not a is real/complex. The determinant may be either +/- 1 in that case. In case the number of dimensions in the input array is greater than 2 then a stack of the matrices with above properties is returned. R : ndarray of float or complex, optional The upper-triangular matrix or a stack of upper-triangular matrices if the number of dimensions in the input array is greater than 2. (h, tau) : ndarrays of np.double or np.cdouble, optional The array h contains the Householder reflectors that generate q along with r. The tau array contains scaling factors for the reflectors. In the deprecated 'economic' mode only h is returned. ~ New 'reduced', 'complete', and 'raw' options for mode were added in NumPy 1.8.0 and the old option 'full' was made an alias of 'reduced'. In addition the options 'full' and 'economic' were deprecated. Because 'full' was the previous default and 'reduced' is the new default, backward compatibility can be maintained by letting `mode` default. The 'raw' option was added so that LAPACK routines that can multiply arrays by q using the Householder reflectors can be used. Note that in this case the returned arrays are of type np.double or np.cdouble and the h array is transposed to be FORTRAN compatible. No routines using the 'raw' return are currently exposed by numpy, but some are available in lapack_lite and just await the necessary work."
+  },
+  {
+    "qualified_name": "numpy.linalg._linalg.qr::mode",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/linalg/_linalg.py:1117",
+    "scope": "parameter",
+    "param_name": "mode",
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) conditioned on param 'mode' (if mode in ('f', 'full')) | warnings.warn('', category=DeprecationWarning) conditioned on param 'mode' (if mode in ('e', 'economic'))"
+  },
+  {
+    "qualified_name": "numpy.linalg.tests.test_deprecations.test_qr_mode_full_future_warning",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/linalg/tests/test_deprecations.py:9",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "In numpy 1.8 the mode options 'full' and 'economic' in linalg.qr were deprecated. The release date will probably be sometime in the summer of 2013. | warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core._deprecate_argsort_axis::arr",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:113",
+    "scope": "parameter",
+    "param_name": "arr",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future the default for argsort will be axis=-1, not the current None, to match its documentation and np.argsort. Explicitly pass -1 or None to silence this warning.', category=MaskedArrayFutureWarning) conditioned on param 'arr' (if else: not (arr.ndim <= 1))"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.dtype",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:3497",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Setting the dtype on a MaskedArray has been deprecated in NumPy 2.5.\\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)', category=DeprecationWarning) | # DEPRECATED 2026-02-06, NumPy 2.5"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.fill_value",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:3845",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Non-scalar arrays for the fill value are deprecated. Use arrays with scalar values instead. The filled function still supports any array as `fill_value`.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedArray.resize",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:4825",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "This method is difficult to implement safely and may be deprecated in future releases of NumPy."
+  },
+  {
+    "qualified_name": "numpy.ma.core.MaskedConstant.__format__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:6811",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('Format strings passed to MaskedConstant are ignored, but in future may error or produce different behavior', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.core._extrema_operation.reduce::axis+target",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:6970",
+    "scope": "parameter",
+    "param_name": "axis+target",
+    "message": null,
+    "raw_evidence": "warnings.warn('In the future the default for ma.{...}.reduce will be axis=0, not the current None, to match np.{...}.reduce. Explicitly pass 0 or None to silence this warning.', category=MaskedArrayFutureWarning) conditioned on param 'axis+target' (if axis is np._NoValue and target.ndim > 1)"
+  },
+  {
+    "qualified_name": "numpy.ma.core.round_",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/core.py:8160",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.5 `numpy.ma.round_` is deprecated. Use `numpy.ma.round` instead. | warnings.warn('numpy.ma.round_ is deprecated. Use numpy.ma.round instead.', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.mask_rows::axis",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/extras.py:1169",
+    "scope": "parameter",
+    "param_name": "axis",
+    "message": null,
+    "raw_evidence": "warnings.warn('The axis argument has always been ignored, in future passing it will raise TypeError', category=DeprecationWarning) conditioned on param 'axis' (if axis is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.mask_cols::axis",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/extras.py:1219",
+    "scope": "parameter",
+    "param_name": "axis",
+    "message": null,
+    "raw_evidence": "warnings.warn('The axis argument has always been ignored, in future passing it will raise TypeError', category=DeprecationWarning) conditioned on param 'axis' (if axis is not np._NoValue)"
+  },
+  {
+    "qualified_name": "numpy.ma.extras.corrcoef",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/extras.py:1675",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Parameters ---------- x : array_like A 1-D or 2-D array containing multiple variables and observations. Each row of `x` represents a variable, and each column a single observation of all those variables. Also see `rowvar` below. y : array_like, optional An additional set of variables and observations. `y` has the same shape as `x`. rowvar : bool, optional If `rowvar` is True (default), then each row represents a variable, with observations in the columns. Otherwise, the relationship is transposed: each column represents a variable, while the rows contain observations. allow_masked : bool, optional If True, masked values are propagated pair-wise: if a value is masked in `x`, the corresponding value is masked in `y`. If False, raises an exception. Because `bias` is deprecated, this argument needs to be treated as keyword only to avoid a warning."
+  },
+  {
+    "qualified_name": "numpy.ma.extras.MAxisConcatenator.makemat",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/extras.py:1754",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# deprecate that class. In preparation, we use the unmasked version"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArray.test_format",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:613",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=FutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArray.test_oddfeatures_3",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:851",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('ignore', category=MaskedArrayFutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayAttributes.test_assign_dtype",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:2250",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayAttributes.test_assign_dtype.assign",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:2259",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayInPlaceArithmetic.test_inplace_division_scalar_type",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:3261",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayInPlaceArithmetic.test_inplace_division_array_type",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:3298",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.test_mask_shape_assignment_does_not_break_masked",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:5995",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_core.TestMaskedArrayArithmetic.test_eq_with_None",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py:2036",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Deprecation is in place for arrays, and when it happens this"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestArgsort._test_base",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_deprecations.py:22",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=MaskedArrayFutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestMinimumMaximum.test_axis_default",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_deprecations.py:52",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=MaskedArrayFutureWarning)"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_deprecations.TestDtypeSet.test_deprecated_dtype_set",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_deprecations.py:70",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # gh-31192: setting dtype on a MaskedArray should emit DeprecationWarning"
+  },
+  {
+    "qualified_name": "numpy.ma.tests.test_extras.TestCompressFunctions.test_mask_row_cols_axis_deprecation",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/ma/tests/test_extras.py:744",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # Test deprecation of the axis argument to `mask_rows` and `mask_cols`"
+  },
+  {
+    "qualified_name": "numpy.matrixlib.defmatrix.matrix.__new__",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/matrixlib/defmatrix.py:120",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.', category=PendingDeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.matrixlib.tests.test_masked_matrix.TestConcatenator.test_matrix",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_masked_matrix.py:231",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# Test consistency with unmasked version.  If we ever deprecate"
+  },
+  {
+    "qualified_name": "numpy.polynomial.tests.test_classes.test_truediv",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_classes.py:337",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_random.TestRandomDist.test_random_integers",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_random.py:338",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_random.TestRandomDist.test_random_integers_max_int",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_random.py:351",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_random.TestRandomDist.test_random_integers_deprecated",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_random.py:360",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_randomstate.TestRandomDist.test_random_integers",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_randomstate.py:497",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_randomstate.TestRandomDist.test_random_integers_max_int",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_randomstate.py:534",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_randomstate.TestRandomDist.test_random_integers_deprecated",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_randomstate.py:548",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.random.tests.test_smoke.TestDefaultRNG.test_default_is_pcg64",
+    "origin": "comment",
+    "origins": [
+      "comment"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/random/tests/test_smoke.py:867",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "# a deprecation cycle to move to a different function."
+  },
+  {
+    "qualified_name": "numpy.testing._private.utils.assert_warns",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/_private/utils.py:2000",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.4 ~ This is deprecated. Use `warnings.catch_warnings` or ``pytest.warns`` instead. ~ Examples -------- >>> import warnings >>> def deprecated_func(num): ... warnings.warn(\"Please upgrade\", DeprecationWarning) ... return num*num >>> with np.testing.assert_warns(DeprecationWarning): ... assert deprecated_func(4) == 16 >>> # or passing a func >>> ret = np.testing.assert_warns(DeprecationWarning, deprecated_func, 4) >>> assert ret == 16 | warnings.warn('NumPy warning suppression and assertion utilities are deprecated. Use warnings.catch_warnings, warnings.filterwarnings, pytest.warns, or pytest.filterwarnings instead. (Deprecated NumPy 2.4)', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing._private.utils.suppress_warnings",
+    "origin": "docstring",
+    "origins": [
+      "docstring"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/_private/utils.py:2291",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": ".. deprecated:: 2.4 ~ This is deprecated. Use `warnings.filterwarnings` or ``pytest.filterwarnings`` instead. ~ with np.testing.suppress_warnings() as sup: sup.filter(DeprecationWarning, \"Some text\") sup.filter(module=np.ma.core) log = sup.record(FutureWarning, \"Does this occur?\") command_giving_warnings() # The FutureWarning was given once, the filtered warnings were # ignored. All other warnings abide outside settings (may be # printed/error) assert_(len(log) == 1) assert_(len(sup.log) == 1) # also stored in log attribute"
+  },
+  {
+    "qualified_name": "numpy.testing._private.utils.suppress_warnings.__init__::_warn",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/_private/utils.py:2372",
+    "scope": "parameter",
+    "param_name": "_warn",
+    "message": null,
+    "raw_evidence": "warnings.warn('NumPy warning suppression and assertion utilities are deprecated. Use warnings.catch_warnings, warnings.filterwarnings, pytest.warns, or pytest.filterwarnings instead. (Deprecated NumPy 2.4)', category=DeprecationWarning) conditioned on param '_warn' (if _warn)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestEqual.test_nat_items",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:435",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestWarns.test_warn_wrong_warning",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1215",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('error', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestWarns.test_warn_wrong_warning.f",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1211",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('yo', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.TestAssertAllclose.test_timedelta",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1345",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.test_suppress_warnings_module",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1808",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # NOTE(seberg): We test for the DeprecationWarning mainly because on"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.test_suppress_warnings_type",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1861",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # NOTE(seberg): We test for the DeprecationWarning mainly because on"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.test_suppress_warnings_decorate_no_record",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1898",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # NOTE(seberg): We test for the DeprecationWarning mainly because on"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.test_suppress_warnings_record",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1922",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # NOTE(seberg): We test for the DeprecationWarning mainly because on"
+  },
+  {
+    "qualified_name": "numpy.testing.tests.test_utils.test_suppress_warnings_forwarding",
+    "origin": "warning",
+    "origins": [
+      "comment",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py:1972",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning) | # NOTE(seberg): We test for the DeprecationWarning mainly because on"
+  },
+  {
+    "qualified_name": "numpy.tests.test_public_api.test_api_importable",
+    "origin": "warning",
+    "origins": [
+      "docstring",
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/tests/test_public_api.py:295",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "Note that if a PRIVATE_BUT_PRESENT_MODULES entry goes missing, it may simply need to be removed from the list (deprecation may or may not be needed - apply common sense). | warnings.warn('always', category=DeprecationWarning)"
+  },
+  {
+    "qualified_name": "numpy.typing.__getattr__::name",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/typing/__init__.py:201",
+    "scope": "parameter",
+    "param_name": "name",
+    "message": null,
+    "raw_evidence": "warnings.warn('`NBitBase` is deprecated and will be removed from numpy.typing in the future. Use `@typing.overload` or a `TypeVar` with a scalar-type as upper bound, instead. (deprecated in NumPy 2.3)', category=DeprecationWarning) conditioned on param 'name' (if name == 'NBitBase')"
+  },
+  {
+    "qualified_name": "numpy.typing.mypy_plugin.plugin",
+    "origin": "warning",
+    "origins": [
+      "warning"
+    ],
+    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/numpy/typing/mypy_plugin.py:198",
+    "scope": "function",
+    "param_name": null,
+    "message": null,
+    "raw_evidence": "warnings.warn('', category=DeprecationWarning)"
+  }
+]
