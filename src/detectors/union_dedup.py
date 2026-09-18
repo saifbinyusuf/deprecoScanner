@@ -114,7 +114,7 @@ def _is_symbol_compatible(sym1: str, sym2: str) -> bool:
             if len(p1) >= 3 and len(p2) >= 3:
                 sub1 = p1[1]
                 sub2 = p2[1]
-                if sub1 == sub2 or (sub1 in ("misc", "special") and sub2 in ("misc", "special")):
+                if sub1 == sub2:
                     return True
             # Top-level module function re-export (e.g. numpy.alltrue vs numpy.core.fromnumeric.alltrue)
             if len(p1) == 2 or len(p2) == 2:

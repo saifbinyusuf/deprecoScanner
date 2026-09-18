@@ -72,18 +72,17 @@ ALL_DIAGNOSTIC_REASONS = [
 def build_reconstructed_preamble(sample: Dict[str, Any]) -> str:
     """
     Reconstructs an import preamble using the sample's alias dict, reference dict,
-    and library-wide conventions to recover from isolated function extraction.
+    and explicit module imports, strictly avoiding wildcard imports ('from ... import *')
+    to prevent symbol hijacking and spurious false-positive resolution.
     """
     imports = [
         "import numpy",
         "import numpy as np",
-        "from numpy import *",
         "import scipy",
         "import scipy.misc",
-        "from scipy.misc import *",
+        "import scipy.special",
         "import pandas",
         "import pandas as pd",
-        "from pandas import *",
         "from pandas.io.formats.style import Styler",
     ]
     alias_dict = sample.get("alias dict") or {}
