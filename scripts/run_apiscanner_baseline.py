@@ -2,13 +2,14 @@
 """
 scripts/run_apiscanner_baseline.py - Controlled Single-Snapshot APIScanner Baseline Comparison.
 
-Downloads and extracts the exact versions evaluated in the APIScanner paper (ICSE 2021, arXiv:2102.09251):
+Downloads and extracts contemporaneous single-version snapshots chosen to approximate
+APIScanner's original early-2021 evaluation era (since arXiv:2102.09251 does not record version pins):
 - NumPy: 1.20.0 (Jan 2021)
 - Pandas: 1.2.0 (Dec 2020)
 - SciPy: 1.6.0 (Dec 2020) & 1.5.4 (Nov 2020)
 
-Runs DeprecoScanner Stage 1 multi-detector stack against these exact single-version snapshots,
-and compares candidates directly against APIScanner's reported numbers and bundled outputs.
+Runs DeprecoScanner Stage 1 multi-detector stack against these contemporaneous single-version snapshots,
+and compares candidates directly against APIScanner's reported numbers (Table I) and bundled outputs.
 """
 
 from __future__ import annotations
