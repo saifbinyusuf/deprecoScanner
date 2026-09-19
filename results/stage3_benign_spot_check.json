@@ -1,0 +1,288 @@
+{
+  "total_spot_checked": 40,
+  "clean_count": 40,
+  "latent_deprecated_flagged": 0,
+  "clean_rate_pct": 100.0,
+  "samples": [
+    {
+      "sample_id": "numpy_1130",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_422",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2787",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2540",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2362",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_1361",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_1057",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_930",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_679",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_478",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_462",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_985",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2325",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2439",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_1946",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_435",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2162",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_659",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_2339",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_902",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_2812",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_271",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_1841",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_685",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_3321",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2810",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_1807",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2297",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_3291",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_1055",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_977",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_182",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_1010",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_3507",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_3351",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_2700",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "numpy_573",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_1003",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    },
+    {
+      "sample_id": "numpy_1240",
+      "library": "numpy",
+      "is_deprecated_usage": false,
+      "confidence": 0.95,
+      "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+    },
+    {
+      "sample_id": "scipy_170",
+      "library": "scipy",
+      "is_deprecated_usage": false,
+      "confidence": 1.0,
+      "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+    }
+  ]
+}

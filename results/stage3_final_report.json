@@ -1,0 +1,537 @@
+{
+  "evaluation_stage": "Stage 3: LLM Verification (Phase 4)",
+  "primary_model": "gemini-3.5-flash-lite",
+  "validation_model": "gemini-3.1-pro-preview",
+  "prompt_version": "v1.1",
+  "total_candidates_verified": 2932,
+  "semantic_verdicts": {
+    "verified_deprecated_count": 2274,
+    "verified_deprecated_pct": 77.56,
+    "rejected_benign_or_anomaly_count": 658,
+    "rejected_benign_or_anomaly_pct": 22.44
+  },
+  "by_stage2_status": {
+    "low_confidence": {
+      "total": 399,
+      "deprecated": 226,
+      "benign": 173
+    },
+    "resolved_deprecated": {
+      "total": 2533,
+      "deprecated": 2048,
+      "benign": 485
+    }
+  },
+  "by_library": {
+    "numpy": {
+      "total": 1113,
+      "deprecated": 950,
+      "benign": 163
+    },
+    "pandas": {
+      "total": 214,
+      "deprecated": 134,
+      "benign": 80
+    },
+    "scipy": {
+      "total": 1605,
+      "deprecated": 1190,
+      "benign": 415
+    }
+  },
+  "validation_subsample": {
+    "total_evaluated": 150,
+    "agreed_count": 138,
+    "disagreed_count": 12,
+    "raw_concordance_pct": 92.0,
+    "cohens_kappa": 0.7506,
+    "contingency_table": {
+      "both_deprecated": 114,
+      "primary_deprecated_val_benign": 9,
+      "primary_benign_val_deprecated": 3,
+      "both_benign": 24
+    },
+    "disagreements": [
+      {
+        "candidate_id": "pandas_120_lc_1_56_79",
+        "sample_id": "pandas_120",
+        "target_api": "pandas.io.formats.style.Styler.render",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The enclosing context explicitly imports Styler from pandas and checks pandas_version to fall back to the deprecated render method for pandas versions older than 1.4.0.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The receiver is definitively a pandas Styler object, but the call to `render()` is guarded by a version check ensuring it is only executed on pandas versions < 1.4.0, making it a benign fallback.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "pandas_32_res_2_9_8",
+        "sample_id": "pandas_32",
+        "target_api": "pandas.DataFrame.swapaxes",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 0.99,
+        "primary_rationale": "The receiver psdf is a pyspark.pandas dataframe created via ps.from_pandas(pdf), not a native pandas DataFrame.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site explicitly invokes `swapaxes` on `pdf`, which is instantiated as a `pandas.DataFrame`, confirming the active use of the deprecated pandas API.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "pandas_87_res_1_5_8",
+        "sample_id": "pandas_87",
+        "target_api": "pandas.core.generic.NDFrame.first",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The call pdf.first('1D') is invoked on a pandas DataFrame which executes the pandas API, but the companion psdf.first('1D') and subsequent calls target pyspark.pandas (ps), meaning the test compares pandas against a wrapper library where the pandas method itself is called as a reference, not as a primary production usage of the deprecated pandas API.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site directly invokes the deprecated `first` method on a pandas DataFrame (`pdf`), which inherits from `NDFrame`.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "pandas_125_res_1_14_4",
+        "sample_id": "pandas_125",
+        "target_api": "pandas.core.generic.NDFrame.pad",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The call pdf.pad() invokes the deprecated pandas API, but kdf.pad() invokes a Koalas (pyspark.pandas) method wrapper which is not the pandas target library API.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site invokes `pad()` on `pdf`, which is explicitly instantiated as a `pandas.DataFrame`, confirming the use of the deprecated `pandas.DataFrame.pad` API.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_247_lc_1_3_22",
+        "sample_id": "scipy_247",
+        "target_api": "scipy.misc.comb",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.9,
+        "primary_rationale": "The receiver 'sps' is commonly used as an alias for scipy.special, and combined with scipy.misc.comb, it invokes the deprecated scipy.misc API.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 0.95,
+        "validation_rationale": "The receiver 'sps' is a standard alias for 'scipy.special', which is the recommended replacement for the deprecated 'scipy.misc.comb', indicating this is the updated API.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_248_lc_2_17_19",
+        "sample_id": "scipy_248",
+        "target_api": "scipy.misc.comb",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.95,
+        "primary_rationale": "The receiver 'sps' in scipy.misc is commonly used as an alias for scipy.special, indicating a call to the deprecated scipy.misc.comb wrapper.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 0.95,
+        "validation_rationale": "The receiver 'sps' is a standard alias for 'scipy.special', meaning the call is to the recommended replacement 'scipy.special.comb' rather than the deprecated 'scipy.misc.comb'.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_677_lc_17_31_51",
+        "sample_id": "scipy_677",
+        "target_api": "scipy.misc.logsumexp",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.9,
+        "primary_rationale": "The call to scipy_special.logsumexp performs log-sum-exp calculations typical of scipy.special, indicating a reference to the deprecated scipy.misc.logsumexp function.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 0.99,
+        "validation_rationale": "The receiver 'scipy_special' strongly implies an alias for 'scipy.special', indicating the code is using the recommended replacement 'scipy.special.logsumexp' rather than the deprecated 'scipy.misc.logsumexp'.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_668_lc_0_21_18",
+        "sample_id": "scipy_668",
+        "target_api": "scipy.misc.logsumexp",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.95,
+        "primary_rationale": "The enclosing docstring explicitly mentions scipy.special.logsumexp, indicating the code is interacting with SciPy's special functions module via the unimported or dynamically referenced 'special' receiver.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site invokes the recommended replacement 'scipy.special.logsumexp' rather than the deprecated 'scipy.misc.logsumexp'.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_142_lc_0_24_51",
+        "sample_id": "scipy_142",
+        "target_api": "scipy.misc.comb",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.95,
+        "primary_rationale": "The receiver `sc` is used to invoke `comb` with mathematical arguments typical of scipy's combinatorial functions, strongly implying the deprecated scipy.misc.comb API.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 0.85,
+        "validation_rationale": "The receiver 'sc' is highly likely an alias for 'scipy.special' (the recommended replacement module) rather than 'scipy.misc', making this a false match for the deprecated scipy.misc.comb.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_661_lc_1_6_28",
+        "sample_id": "scipy_661",
+        "target_api": "scipy.misc.logsumexp",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.9,
+        "primary_rationale": "The receiver 'sp' is commonly used as an alias for scipy, and the invocation of 'logsumexp' matches the deprecated scipy.misc.logsumexp API.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 0.85,
+        "validation_rationale": "The receiver 'sp' is highly likely an alias for 'scipy.special' (the recommended replacement), as 'scipy.misc' is rarely aliased to 'sp' and 'scipy.logsumexp' does not exist directly in the top-level namespace.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_1303_res_0_28_4",
+        "sample_id": "scipy_1303",
+        "target_api": "scipy.linalg._basic.pinv",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The code directly invokes scipy.linalg.pinv(covmat) in an active execution path without using the rtol or atol parameters.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site invokes scipy.linalg.pinv without using the deprecated 'cond' or 'rcond' parameters, making this a false positive.",
+        "agreement": false,
+        "cached": true
+      },
+      {
+        "candidate_id": "scipy_1269_res_0_19_4",
+        "sample_id": "scipy_1269",
+        "target_api": "scipy.linalg._basic.pinv",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The code directly invokes scipy.linalg.pinv inside an active fallback branch without using the deprecated rtol or atol parameters.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site invokes `scipy.linalg.pinv` without using the deprecated `cond` or `rcond` parameters, making the static analysis flag a false positive.",
+        "agreement": false,
+        "cached": true
+      }
+    ]
+  },
+  "benign_spot_check": {
+    "total_spot_checked": 40,
+    "clean_count": 40,
+    "latent_deprecated_flagged": 0,
+    "clean_rate_pct": 100.0,
+    "samples": [
+      {
+        "sample_id": "numpy_1130",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_422",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2787",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2540",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2362",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_1361",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_1057",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_930",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_679",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_478",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_462",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_985",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2325",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2439",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_1946",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_435",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2162",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_659",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_2339",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_902",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_2812",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_271",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_1841",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_685",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_3321",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2810",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_1807",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2297",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_3291",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_1055",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_977",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_182",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_1010",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_3507",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_3351",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_2700",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "numpy_573",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_1003",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      },
+      {
+        "sample_id": "numpy_1240",
+        "library": "numpy",
+        "is_deprecated_usage": false,
+        "confidence": 0.95,
+        "rationale": "The call site snippet contains a generic placeholder that does not correspond to an actual invocation of numpy.general_audit."
+      },
+      {
+        "sample_id": "scipy_170",
+        "library": "scipy",
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
+      }
+    ]
+  },
+  "run_telemetry": {
+    "api_calls": 2,
+    "cache_hits": 2970,
+    "cache_hit_rate_pct": 99.93,
+    "total_db_records": 2316,
+    "prompt_tokens": 2085,
+    "candidate_tokens": 107,
+    "total_tokens": 2192,
+    "estimated_primary_cost_usd": 0.0003,
+    "estimated_validation_cost_usd": 0.2644,
+    "estimated_total_cost_usd": 0.2646
+  }
+}

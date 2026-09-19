@@ -17,6 +17,7 @@ import logging
 import os
 from pathlib import Path
 import random
+import threading
 import time
 from typing import Any, Dict, Optional, Tuple
 import urllib.error
@@ -88,6 +89,8 @@ class GeminiClient:
         self.max_retries = max_retries
         self.min_interval_seconds = min_interval_seconds
         self._last_call_time = 0.0
+        self._rate_lock = threading.Lock()
+        self._metrics_lock = threading.Lock()
 
         # Run-level tracking metrics
         self.total_api_calls = 0
@@ -122,7 +125,8 @@ class GeminiClient:
         )
 
         if cached_entry is not None:
-            self.total_cache_hits += 1
+            with self._metrics_lock:
+                self.total_cache_hits += 1
             resp_data = cached_entry["response"]
             return {
                 "decision": VerificationDecision(**resp_data),
@@ -136,14 +140,16 @@ class GeminiClient:
 
         # 2. Cache miss -> Call Gemini REST API
         raw_response, usage = self._call_gemini_api(prompt=prompt, model=model_name)
-        self.total_api_calls += 1
 
         prompt_tokens = usage.get("promptTokenCount", 0)
         candidate_tokens = usage.get("candidatesTokenCount", 0)
         total_tokens = usage.get("totalTokenCount", 0)
 
-        self.total_prompt_tokens += prompt_tokens
-        self.total_candidate_tokens += candidate_tokens
+        with self._metrics_lock:
+            self.total_api_calls += 1
+            self.total_prompt_tokens += prompt_tokens
+            self.total_candidate_tokens += candidate_tokens
+
 
         # Validate structured JSON output with Pydantic
         try:
@@ -204,11 +210,13 @@ class GeminiClient:
         body_bytes = json.dumps(payload).encode("utf-8")
 
         for attempt in range(self.max_retries):
-            # Enforce minimum interval between calls
-            now = time.time()
-            elapsed = now - self._last_call_time
-            if elapsed < self.min_interval_seconds:
-                time.sleep(self.min_interval_seconds - elapsed)
+            # Enforce minimum interval between calls under rate lock
+            with self._rate_lock:
+                now = time.time()
+                elapsed = now - self._last_call_time
+                if elapsed < self.min_interval_seconds:
+                    time.sleep(self.min_interval_seconds - elapsed)
+                self._last_call_time = time.time()
 
             req = urllib.request.Request(
                 url=url,
@@ -218,9 +226,9 @@ class GeminiClient:
             )
 
             try:
-                self._last_call_time = time.time()
                 with urllib.request.urlopen(req, timeout=30) as resp:
                     resp_data = json.loads(resp.read().decode("utf-8"))
+
 
                 # Extract text parts
                 candidates = resp_data.get("candidates", [])
