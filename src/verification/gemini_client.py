@@ -41,7 +41,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 load_dotenv(dotenv_path=REPO_ROOT / ".env")
 
 DEFAULT_PRIMARY_MODEL = "gemini-3.5-flash-lite"
-DEFAULT_VALIDATION_MODEL = "gemini-pro-latest"
+DEFAULT_VALIDATION_MODEL = "gemini-3.1-pro-preview"
 
 GEMINI_API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 

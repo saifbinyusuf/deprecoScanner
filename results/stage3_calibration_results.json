@@ -1,10 +1,11 @@
 {
-  "prompt_version": "v1.0",
+  "prompt_version": "v1.1",
   "primary_model": "gemini-3.5-flash-lite",
-  "samples": [
+  "pinned_validation_model": "gemini-3.1-pro-preview",
+  "candidates": [
     {
       "sample_id": "scipy_0",
-      "role": "True Positive (scipy.misc.comb)",
+      "role": "True Positive: scipy.misc.comb",
       "target_api": "scipy.misc.comb",
       "mode": "confirmation",
       "call_site": "real_pairs += scipy.misc.comb(count, 2)",
@@ -12,74 +13,99 @@
       "decision": {
         "is_deprecated_usage": true,
         "confidence": 1.0,
-        "rationale": "The code directly invokes scipy.misc.comb in active calculation logic without any conditional version checks or fallback guards."
+        "rationale": "The code directly invokes scipy.misc.comb in an active computation loop without any fallback guards or wrappers."
       },
       "cached": false,
+      "cache_key": "80185f98a18923483ed04a7032fec096fa0018da45bbe963c9a990511813b0df",
       "tokens": {
-        "prompt": 1140,
-        "candidate": 53,
-        "total": 1193
-      },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.0.0 Use `scipy.special.comb` instead.",
-        "warning": "Importing `comb` from scipy.misc is deprecated in scipy 1.0.0. Use `scipy.special.comb` instead.",
-        "recommended_replacement": "scipy.special.comb",
-        "source_location": "scipy/misc/__init__.py:76 (scipy-1.2.3)"
+        "prompt": 1221,
+        "candidate": 52,
+        "total": 1273
       }
     },
     {
-      "sample_id": "numpy_0",
-      "role": "True Positive (numpy.product)",
+      "sample_id": "numpy_0_call_a",
+      "role": "True Positive (Call A): np.product (prefixed invocation)",
       "target_api": "numpy.product",
       "mode": "confirmation",
-      "call_site": "assert_equal(np.product(x, axis=0), product(x, axis=0))",
+      "call_site": "np.product(x, axis=0)",
       "line": 11,
       "decision": {
         "is_deprecated_usage": true,
         "confidence": 1.0,
-        "rationale": "The code directly invokes the deprecated numpy.product function in an active unit test assertion."
+        "rationale": "The code actively invokes the deprecated numpy.product function via np.product(x, axis=0) in a test method."
       },
       "cached": false,
+      "cache_key": "8c8497165bf838b7d35181dc62ddaecfafb80c3df97629af30b189948c0934a9",
       "tokens": {
-        "prompt": 942,
-        "candidate": 48,
-        "total": 990
-      },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.25.0 Use `prod` instead.",
-        "warning": "`product` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `prod` instead.",
-        "recommended_replacement": "numpy.prod",
-        "source_location": "numpy/core/fromnumeric.py:3144 (numpy-1.26.4)"
+        "prompt": 1010,
+        "candidate": 57,
+        "total": 1067
       }
     },
     {
-      "sample_id": "pandas_70",
-      "role": "True Positive (pandas.DataFrame.iteritems)",
+      "sample_id": "numpy_0_call_b",
+      "role": "Low-Confidence (Call B): product(...) (bare invocation on same line)",
+      "target_api": "numpy.product",
+      "mode": "inference",
+      "call_site": "product(x, axis=0)",
+      "line": 11,
+      "decision": {
+        "is_deprecated_usage": true,
+        "confidence": 0.95,
+        "rationale": "The call site directly compares numpy.product(x, axis=0) with product(x, axis=0) in a test method, confirming it invokes the deprecated numpy.product function."
+      },
+      "cached": false,
+      "cache_key": "003511d270d45c465c606646bbb7aa3de30ff90a202f3a636bb07a7d356ed7f5",
+      "tokens": {
+        "prompt": 1056,
+        "candidate": 71,
+        "total": 1127
+      }
+    },
+    {
+      "sample_id": "pandas_70_pdf",
+      "role": "True Positive: pdf.iteritems() (native pandas DataFrame)",
       "target_api": "pandas.DataFrame.iteritems",
       "mode": "confirmation",
-      "call_site": "for (p_name, p_items), (k_name, k_items) in zip(pdf.iteritems(), psdf.iteritems()):",
+      "call_site": "pdf.iteritems()",
       "line": 9,
       "decision": {
         "is_deprecated_usage": true,
         "confidence": 1.0,
-        "rationale": "The code directly invokes the deprecated pandas DataFrame.iteritems() method within an active test case."
+        "rationale": "The code directly invokes the deprecated pandas DataFrame iteritems method on a pandas DataFrame object (pdf)."
       },
       "cached": false,
+      "cache_key": "d06061d5521ca7b2bc5b058d1e60dcc2af68e96aa012df0b929d18f32a40fab5",
       "tokens": {
-        "prompt": 682,
-        "candidate": 49,
-        "total": 731
+        "prompt": 735,
+        "candidate": 50,
+        "total": 785
+      }
+    },
+    {
+      "sample_id": "pandas_70_psdf",
+      "role": "Third-Party Lookalike: psdf.iteritems() (pyspark.pandas wrapper object)",
+      "target_api": "pandas.DataFrame.iteritems",
+      "mode": "inference",
+      "call_site": "psdf.iteritems()",
+      "line": 9,
+      "decision": {
+        "is_deprecated_usage": false,
+        "confidence": 1.0,
+        "rationale": "The receiver psdf is a PySpark pandas DataFrame created via ps.from_pandas(pdf), not a native pandas DataFrame, so pandas.DataFrame.iteritems is not being invoked."
       },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.5.0 Please use .items instead.",
-        "warning": "DataFrame.iteritems is deprecated and will be removed in a future version. Use .items instead.",
-        "recommended_replacement": "pandas.DataFrame.items",
-        "source_location": "pandas/core/frame.py:1358 (pandas-1.5.3)"
+      "cached": false,
+      "cache_key": "01bacab7131088cddc1f6e00283e50f443216054d5fdaf345a2a734b428d288a",
+      "tokens": {
+        "prompt": 786,
+        "candidate": 68,
+        "total": 854
       }
     },
     {
       "sample_id": "scipy_1560",
-      "role": "GT Label Anomaly / Third-Party Lookalike (mpmath.factorial)",
+      "role": "GT Label Anomaly: mpmath.factorial (3rd-party lookalike)",
       "target_api": "scipy.misc.factorial",
       "mode": "confirmation",
       "call_site": "from mpmath import mpf, factorial, findroot, fsum, power, exp, quad",
@@ -87,49 +113,39 @@
       "decision": {
         "is_deprecated_usage": false,
         "confidence": 1.0,
-        "rationale": "The call site imports factorial from the mpmath library, not scipy.misc.factorial."
+        "rationale": "The code imports factorial from the mpmath library rather than scipy.misc, making the static analysis flag a false positive."
       },
-      "cached": true,
+      "cached": false,
+      "cache_key": "7e993629a2018b81635090b5ede8e5230f8d00e4885fb06189a5bb1a026c6255",
       "tokens": {
-        "prompt": 1353,
-        "candidate": 49,
-        "total": 1402
-      },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.0.0 Use `scipy.special.factorial` instead.",
-        "warning": "Importing `factorial` from scipy.misc is deprecated in scipy 1.0.0. Use `scipy.special.factorial` instead.",
-        "recommended_replacement": "scipy.special.factorial",
-        "source_location": "scipy/misc/__init__.py:78 (scipy-1.2.3)"
+        "prompt": 1434,
+        "candidate": 55,
+        "total": 1489
       }
     },
     {
       "sample_id": "scipy_577",
-      "role": "Inactive Fallback Guard (scipy.misc.logsumexp inside hasattr)",
+      "role": "Fallback Guard: hasattr(scipy.misc, 'logsumexp')",
       "target_api": "scipy.misc.logsumexp",
       "mode": "confirmation",
       "call_site": "return scipy.misc.logsumexp( *args, **kwargs )",
       "line": 4,
       "decision": {
         "is_deprecated_usage": true,
-        "confidence": 1.0,
-        "rationale": "The code directly invokes scipy.misc.logsumexp inside a conditional check, which is an active call to the deprecated API."
+        "confidence": 0.95,
+        "rationale": "The code explicitly accesses and invokes the deprecated scipy.misc.logsumexp within a compatibility check branch."
       },
       "cached": false,
+      "cache_key": "04425c949abe520ddc5cd0511cc246cb6e0874d3ebca51e8c98cf69353a1932e",
       "tokens": {
-        "prompt": 631,
-        "candidate": 57,
-        "total": 688
-      },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.0.0 Use `scipy.special.logsumexp` instead.",
-        "warning": "Importing `logsumexp` from scipy.misc is deprecated in scipy 1.0.0. Use `scipy.special.logsumexp` instead.",
-        "recommended_replacement": "scipy.special.logsumexp",
-        "source_location": "scipy/misc/__init__.py:77 (scipy-1.2.3)"
+        "prompt": 712,
+        "candidate": 53,
+        "total": 765
       }
     },
     {
       "sample_id": "pandas_0",
-      "role": "Low-Confidence Untyped Receiver (Styler.render chained call)",
+      "role": "Receiver Type Inference: es.render() via Styler(empty_df)",
       "target_api": "pandas.io.formats.style.Styler.render",
       "mode": "inference",
       "call_site": "es.render()",
@@ -137,38 +153,53 @@
       "decision": {
         "is_deprecated_usage": true,
         "confidence": 1.0,
-        "rationale": "The receiver es is explicitly instantiated as a Styler object via Styler(empty_df) on line 3, confirming that es.render() is a genuine invocation of the deprecated Styler.render method."
+        "rationale": "The receiver es is explicitly initialized as a pandas Styler object via Styler(empty_df) and invokes the deprecated render method."
       },
-      "cached": true,
+      "cached": false,
+      "cache_key": "f3c9fb17661c75f0b3daf048050ec1697626b845b1829f2e5e5cb477855bd885",
       "tokens": {
-        "prompt": 629,
-        "candidate": 74,
-        "total": 703
+        "prompt": 742,
+        "candidate": 58,
+        "total": 800
+      }
+    },
+    {
+      "sample_id": "ambiguous_records_iteritems",
+      "role": "Ambiguous Untyped Parameter: records.iteritems() (Confidence < 1.0 check)",
+      "target_api": "pandas.DataFrame.iteritems",
+      "mode": "inference",
+      "call_site": "for k, v in records.iteritems():",
+      "line": 4,
+      "decision": {
+        "is_deprecated_usage": true,
+        "confidence": 0.85,
+        "rationale": "The parameter named records is iterated over using iteriteritems, which strongly indicates it is expected to be a pandas DataFrame given the domain context of metric serialization."
       },
-      "evidence": {
-        "docstring": ".. deprecated:: 1.4.0 Please use Styler.to_html instead.",
-        "warning": "Styler.render is deprecated in pandas 1.4.0 and will be removed in a future version. Use Styler.to_html instead.",
-        "recommended_replacement": "pandas.io.formats.style.Styler.to_html",
-        "source_location": "pandas/io/formats/style.py:393 (pandas-1.5.3)"
+      "cached": false,
+      "cache_key": "aa9f8f6034055b6f5e16eb1bfd36700529d62f36a695828d2e36e752a3ece630",
+      "tokens": {
+        "prompt": 681,
+        "candidate": 62,
+        "total": 743
       }
     }
   ],
   "pass1_metrics": {
-    "total_requests": 6,
-    "api_calls": 4,
-    "cache_hits": 2,
-    "cache_hit_rate_pct": 33.33,
-    "prompt_tokens": 3395,
-    "candidate_tokens": 207,
-    "total_tokens": 3602
+    "total_requests": 9,
+    "api_calls": 9,
+    "cache_hits": 0,
+    "cache_hit_rate_pct": 0.0,
+    "prompt_tokens": 8377,
+    "candidate_tokens": 526,
+    "total_tokens": 8903
   },
   "pass2_cumulative_metrics": {
-    "total_requests": 12,
-    "api_calls": 4,
-    "cache_hits": 8,
-    "cache_hit_rate_pct": 66.67,
-    "prompt_tokens": 3395,
-    "candidate_tokens": 207,
-    "total_tokens": 3602
+    "total_requests": 18,
+    "api_calls": 9,
+    "cache_hits": 9,
+    "cache_hit_rate_pct": 50.0,
+    "prompt_tokens": 8377,
+    "candidate_tokens": 526,
+    "total_tokens": 8903
   }
 }

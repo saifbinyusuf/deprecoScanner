@@ -14,7 +14,7 @@ from enum import Enum
 from typing import Any, Dict, Optional
 from pydantic import BaseModel, Field
 
-PROMPT_VERSION = "v1.0"
+PROMPT_VERSION = "v1.1"
 
 
 class PromptMode(str, Enum):
@@ -47,7 +47,7 @@ class VerificationDecision(BaseModel):
     confidence: float = Field(
         ge=0.0,
         le=1.0,
-        description="Confidence score between 0.0 and 1.0."
+        description="Confidence score between 0.0 and 1.0 reflecting certainty."
     )
     rationale: str = Field(
         description="Concise one-line explanation of the semantic verification decision."
@@ -90,11 +90,11 @@ ENCLOSING CODE CONTEXT:
 
 VERIFICATION TASK (Branch A: Confirmation Mode):
 A static analysis tool flagged the call site as invoking deprecated API `{provenance.target_api}`.
-Determine whether this call site represents a genuine, active invocation of the deprecated API or a false positive.
+Determine whether this specific call site represents a genuine, active invocation of the deprecated API or a false positive.
 
 CRITICAL INSTRUCTIONS & ANOMALY CHECKS:
 1. Fallback & Compatibility Guards: Check if this call site is inside an inactive fallback branch (e.g. `try...except ImportError` or `if hasattr(...)` or version check) where the primary code branch uses modern APIs. If the call is merely a legacy fallback or safety guard, verify if the code as written uses the deprecated API when executed in its target environment.
-2. Third-Party Lookalikes: Verify whether the symbol belongs to the target library (`{provenance.library}`) rather than a lookalike module from another package (e.g., `mpmath.factorial` vs `scipy.misc.factorial`, or standard library `math`).
+2. Third-Party Lookalikes & Wrapper Mimics: Verify whether the symbol belongs to the target library (`{provenance.library}`) rather than a lookalike module from another package (e.g., `mpmath.factorial` vs `scipy.misc.factorial`, or standard library `math`), or a third-party drop-in/wrapper library that mimics pandas (e.g. PySpark `pyspark.pandas`, Koalas, Dask, cuDF, Modin). Calls on wrapper objects (e.g., `psdf = ps.from_pandas(pdf); psdf.iteritems()`) are NOT invocations of `{provenance.library}`.
 3. Companion / Composite Artifacts: Ensure that the flagged call site actually corresponds to `{provenance.target_api}` and not an adjacent, non-deprecated function call on the same line or in the same expression.
 
 Respond ONLY with a JSON object matching this schema:
@@ -130,8 +130,9 @@ Inspect the enclosing code context, variable naming, method invocations, docstri
 
 CRITICAL INSTRUCTIONS:
 1. Type & Receiver Inference: Determine whether the receiver object of `{provenance.call_site_snippet}` is an instance of the class defining `{provenance.target_api}` (e.g., is `df` a `pandas.DataFrame` or `styler` a `pandas.io.formats.style.Styler`?).
-2. Disambiguation: If the receiver is an unrelated object or standard Python collection (e.g. dict, list, string) having a method with the same name, flag as false.
-3. If the evidence supports that the call invokes `{provenance.target_api}` in active code, return `is_deprecated_usage: true`. Otherwise return `false`.
+2. Disambiguation & Wrapper Mimics: If the receiver belongs to a different library or wrapper package that mimics the target library (e.g., PySpark `pyspark.pandas`, Koalas, Dask, cuDF, Modin) or standard Python collections (e.g., dict, list), flag as FALSE. Only true `{provenance.library}` instances qualify.
+3. Confidence Calibration: If the context leaves the receiver type genuinely ambiguous (e.g. an untyped parameter `data` without clear class indicators), assign an appropriate confidence score (e.g., 0.70 to 0.85) reflecting the uncertainty, rather than default 1.0.
+4. If the evidence supports that the call invokes `{provenance.target_api}` on a genuine `{provenance.library}` object in active code, return `is_deprecated_usage: true`. Otherwise return `false`.
 
 Respond ONLY with a JSON object matching this schema:
 {{

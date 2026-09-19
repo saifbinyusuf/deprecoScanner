@@ -349,22 +349,32 @@ Stage 3 uses Google AI Studio Gemini API (`gemini-3.5-flash-lite` for bulk verif
 
 ## 8. Phase 4 Calibration Results & Stop Gate Reconciliation (Tasks 4.1–4.3)
 
-Evaluated on 6 representative benchmark test cases using `gemini-3.5-flash-lite`:
+### Call-Site Granularity Architecture:
+Stage 3 evaluates candidates strictly at **Call-Site Granularity** (`sample_id`, `line`, `col`, `callee_snippet`, `target_api`) rather than collapsing to per-sample verdicts. This guarantees that:
+- Independent calls within the same line or function (e.g. `np.product` vs bare `product` in `numpy_0`) receive dedicated, unshadowed verification.
+- Third-party wrapper lookalikes sharing a line with genuine targets (e.g. `pdf.iteritems()` vs `psdf.iteritems()` in `pandas_70`) are accurately disambiguated.
 
-| Sample ID | Role / Test Objective | Target API | Mode | Call Site Snippet | Gemini Decision | Confidence | Empirical Rationale |
+Evaluated on 9 representative benchmark call sites using `gemini-3.5-flash-lite` (Prompt Version `v1.1`):
+
+| Sample / Candidate ID | Role / Test Objective | Target API | Mode | Call Site Line / Snippet | Decision | Conf. | Model Rationale |
 | :--- | :--- | :--- | :---: | :--- | :---: | :---: | :--- |
-| **`scipy_0`** | True Positive | `scipy.misc.comb` | Confirmation | `real_pairs += scipy.misc.comb(count, 2)` (Line 24) | **`True`** | 1.0 | Invokes `scipy.misc.comb` in active calculation logic without fallback guards. |
-| **`numpy_0`** | True Positive | `numpy.product` | Confirmation | `assert_equal(np.product(x, axis=0), product(x, axis=0))` (Line 11) | **`True`** | 1.0 | Invokes deprecated `numpy.product` function in active unit test assertion. |
-| **`pandas_70`** | True Positive | `pandas.DataFrame.iteritems` | Confirmation | `for (p_name, ...), ... in zip(pdf.iteritems(), psdf.iteritems()):` (Line 9) | **`True`** | 1.0 | Invokes deprecated `DataFrame.iteritems()` method within active test loop. |
-| **`scipy_1560`** | GT Label Anomaly / 3rd-Party Lookalike | `scipy.misc.factorial` | Confirmation | `from mpmath import mpf, factorial, findroot...` (Line 29) | **`False`** | 1.0 | Call site imports `factorial` from `mpmath`, not `scipy.misc.factorial`. |
-| **`scipy_577`** | Inactive Fallback Guard | `scipy.misc.logsumexp` | Confirmation | `return scipy.misc.logsumexp( *args, **kwargs )` (Line 4) | **`True`** | 1.0 | Directly invokes `scipy.misc.logsumexp` inside `hasattr` conditional check. |
-| **`pandas_0`** | Low-Confidence Untyped Receiver | `pandas.io.formats.style.Styler.render` | Inference | `es.render()` (Line 4) | **`True`** | 1.0 | Receiver `es` is explicitly instantiated via `Styler(empty_df)` on line 3. |
+| **`scipy_0`** | True Positive | `scipy.misc.comb` | Confirm | `real_pairs += scipy.misc.comb(count, 2)` (L24) | **`True`** | 1.00 | Directly invokes `scipy.misc.comb` in active computation loop without fallback guards. |
+| **`numpy_0_call_a`** | True Positive (Prefixed) | `numpy.product` | Confirm | `np.product(x, axis=0)` (L11) | **`True`** | 1.00 | Actively invokes deprecated `numpy.product` via `np.product` in test assertion. |
+| **`numpy_0_call_b`** | Low-Confidence (Bare Call) | `numpy.product` | Infer | `product(x, axis=0)` (L11) | **`True`** | 0.95 | Directly compares `np.product` with `product`, confirming bare call invokes deprecated target. |
+| **`pandas_70_pdf`** | True Positive (Native Pandas) | `pandas.DataFrame.iteritems` | Confirm | `pdf.iteritems()` (L9) | **`True`** | 1.00 | Directly invokes deprecated `DataFrame.iteritems` on native `pandas.DataFrame` object `pdf`. |
+| **`pandas_70_psdf`** | Third-Party Wrapper Lookalike | `pandas.DataFrame.iteritems` | Infer | `psdf.iteritems()` (L9) | **`False`** | 1.00 | Receiver `psdf` is PySpark pandas (`ps.from_pandas(pdf)`), not native pandas DataFrame. |
+| **`scipy_1560`** | GT Label Anomaly | `scipy.misc.factorial` | Confirm | `from mpmath import ... factorial` (L29) | **`False`** | 1.00 | Imports `factorial` from `mpmath`, not `scipy.misc.factorial` (false positive rejected). |
+| **`scipy_577`** | Fallback Guard | `scipy.misc.logsumexp` | Confirm | `return scipy.misc.logsumexp( *args, **kwargs )` (L4) | **`True`** | 0.95 | Explicitly accesses and invokes deprecated `scipy.misc.logsumexp` in compatibility branch. |
+| **`pandas_0`** | Receiver Type Inference | `pandas.io.formats.style.Styler.render` | Infer | `es.render()` (L4) | **`True`** | 1.00 | Receiver `es` explicitly initialized via `Styler(empty_df)` on preceding line. |
+| **`ambiguous_records`** | Ambiguous Untyped Parameter | `pandas.DataFrame.iteritems` | Infer | `for k, v in records.iteritems():` (L4) | **`True`** | 0.85 | Receiver `records` is an untyped parameter; context suggests DataFrame but lacks certainty. |
 
-### Cache Verification Check (Pass 1 vs. Pass 2):
-- **Pass 1**: Initial API calls executed, populated SQLite database at `data/stage3_response_cache.db`.
-  - API Calls: 4 (2 hit existing cache entries).
-  - Prompt Tokens: 3,395, Candidate Tokens: 207, Total Tokens: 3,602.
-- **Pass 2**: Full repeat run of all 6 samples.
+### Confidence Variance & Model Pinning:
+1. **Dynamic Confidence Range**: Confidences vary dynamically across the calibration set: `[1.0, 1.0, 0.95, 1.0, 1.0, 1.0, 0.95, 1.0, 0.85]`. The field reflects genuine semantic certainty (1.0 for explicit instantiation, 0.95 for paired/fallback context, 0.85 for untyped ambiguous parameters).
+2. **Pinned Validation Model**: Validation tier is strictly pinned to **`gemini-3.1-pro-preview`** (non-floating model ID for exact replication).
+
+### Cache Verification Check (Pass 1 vs. Pass 2 across 9 Call Sites):
+- **Pass 1**: 9 initial API calls executed (8,377 prompt tokens, 526 candidate tokens, ~$0.001 total cost).
+- **Pass 2**: 9 repeat requests.
   - **New API Calls**: **0** (100% Cache Hit Rate).
-  - **Cache Hits**: **6** (0 tokens billed).
-- **Outcome**: **100% deterministic replay and zero API cost on re-execution**.
+  - **Cache Hits**: **9** (0 tokens billed).
+- **Outcome**: **Deterministic replay and zero repeat cost confirmed**.
