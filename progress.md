@@ -320,19 +320,23 @@ Investigation of outliers revealed three distinct flavors of ground-truth datase
 ## 6. Repository State & Test Suite Reconciliation
 
 - **Current Git Head**: Clean working tree on `main`.
-- **Test Suite Reconciliation (62 / 62 Tests Passing)**:
+- **Test Suite Reconciliation (65 / 65 Tests Passing)**:
   - 54 tests from Tasks 1.1–3.2 baseline.
   - +1 test in `tests/test_jedi_resolver.py`: `test_normalize_snippet_indentation_mixed_tabs_spaces`.
   - +2 tests in `tests/test_union_dedup.py`: `test_all_31_benchmark_target_pairs_are_mutually_exclusive` and `test_benchmark_targets_and_replacements_are_mutually_exclusive`.
-  - +5 tests in `tests/test_stage3_verifier.py`: prompt formatting (confirmation/inference), JSON schema validation, evidence retriever grounding, compound cache hashing and version invalidation.
-  - **Total**: $54 + 1 + 2 + 5 = \mathbf{62}$ unit tests passing green (`pytest tests/ -v`).
+  - +5 tests in `tests/test_stage3_verifier.py` (baseline calibration stack): prompt formatting (confirmation/inference), JSON schema validation, evidence retriever grounding, compound cache hashing and version invalidation.
+  - +3 tests in `tests/test_stage3_verifier.py` (call-site granularity & prompt hardening regression tests):
+    1. `test_call_site_splitting_numpy_0`: Asserts multi-call line 11 in `numpy_0` splits into two independent candidates: resolved `np.product` (prefixed) and low-confidence bare `product` (`empty_goto`), preserving distinct column offsets.
+    2. `test_pyspark_wrapper_disambiguation_pandas_70`: Asserts multi-call line 9 in `pandas_70` splits into resolved `pdf.iteritems()` (native pandas) and low-confidence `psdf.iteritems()` (unresolved receiver), and verifies prompt v1.1 instructs rejection of third-party wrapper objects (`pyspark.pandas`, `dask`, etc.).
+    3. `test_confidence_calibration_instruction_and_sub_one_support`: Asserts prompt v1.1 instructs confidence calibration (< 1.0) on ambiguous untyped receivers and that `VerificationDecision` validates sub-1.0 confidence floats.
+  - **Total**: $54 + 1 + 2 + 5 + 3 = \mathbf{65}$ unit tests passing green (`pytest tests/ -v` in 19.58s).
 
 ---
 
 ## 7. Phase 4: Stage 3 — LLM Verification Architecture (Tasks 4.1 to 4.3 Completed)
 
 ### Target Design & Execution Summary:
-Stage 3 uses Google AI Studio Gemini API (`gemini-3.5-flash-lite` for bulk verification, `gemini-pro-latest` for dual-model validation) to semantically audit candidates. The stack provides:
+Stage 3 uses Google AI Studio Gemini API (`gemini-3.5-flash-lite` for bulk verification, `gemini-3.1-pro-preview` for dual-model validation) to semantically audit candidates. The stack provides:
 1. **Provenance-Branching Prompts (`src/verification/verifier_prompt.py`)**:
    - **Branch A (Confirmation Mode)**: For `resolved_deprecated` candidates; explicitly checks for compatibility fallback branches, composite-row artifacts, and third-party lookalikes.
    - **Branch B (Type Inference Mode)**: For `low_confidence` candidates; inspects surrounding usage, method calls, and docstrings to infer receiver types that static analysis could not resolve.
@@ -343,7 +347,7 @@ Stage 3 uses Google AI Studio Gemini API (`gemini-3.5-flash-lite` for bulk verif
    - Isolates models and automatically invalidates on prompt revision without manual DB pruning.
 4. **Resilient REST Client (`src/verification/gemini_client.py`)**:
    - Direct HTTP POST to Google AI Studio v1beta endpoint with structured JSON mode and Pydantic validation.
-   - Rate pacing (~300 RPM) and exponential backoff on HTTP 429/503.
+   - Rate pacing and exponential backoff with jitter on HTTP 429/503.
 
 ---
 
@@ -368,9 +372,13 @@ Evaluated on 9 representative benchmark call sites using `gemini-3.5-flash-lite`
 | **`pandas_0`** | Receiver Type Inference | `pandas.io.formats.style.Styler.render` | Infer | `es.render()` (L4) | **`True`** | 1.00 | Receiver `es` explicitly initialized via `Styler(empty_df)` on preceding line. |
 | **`ambiguous_records`** | Ambiguous Untyped Parameter | `pandas.DataFrame.iteritems` | Infer | `for k, v in records.iteritems():` (L4) | **`True`** | 0.85 | Receiver `records` is an untyped parameter; context suggests DataFrame but lacks certainty. |
 
-### Confidence Variance & Model Pinning:
+### Confidence Variance & Model Selection:
 1. **Dynamic Confidence Range**: Confidences vary dynamically across the calibration set: `[1.0, 1.0, 0.95, 1.0, 1.0, 1.0, 0.95, 1.0, 0.85]`. The field reflects genuine semantic certainty (1.0 for explicit instantiation, 0.95 for paired/fallback context, 0.85 for untyped ambiguous parameters).
-2. **Pinned Validation Model**: Validation tier is strictly pinned to **`gemini-3.1-pro-preview`** (non-floating model ID for exact replication).
+2. **Pinned Validation Model & Methodology Caveat**:
+   - **Empirical Status**: Testing live endpoints via the Google AI Studio REST API confirmed that `gemini-2.5-pro` is sunset/unavailable for new users (returning `HTTP 404: "This model models/gemini-2.5-pro is no longer available to new users. Please update your code to use models/gemini-3.1-pro-preview for the latest features"`). The floating alias `gemini-pro-latest` was rejected to adhere strictly to non-floating model pinning.
+   - **Selected Model**: `gemini-3.1-pro-preview` (pinned exact model ID).
+   - **Methodology Note on Preview Lifecycle**: Because `gemini-3.1-pro-preview` is a preview-tier model, it carries inherent lifecycle risks (behavioral shifts across versions and lack of long-term deprecation guarantees compared to stable releases). For scientific reproducibility, all prompts, complete responses, and SHA-256 compound keys are permanently committed to `data/stage3_response_cache.db` and `results/stage3_predictions.jsonl`.
+   - **Published Quotas & Rate Limits**: The project API key operates under `X-Gemini-Service-Tier: standard` (Pay-as-you-go). Published quotas for Pro preview models on this tier are 360 RPM and 4,000,000 TPM. The validation subsample batch (150 calls) paced at ~30 RPM will execute safely in ~5 minutes with zero rate-limit contention.
 
 ### Cache Verification Check (Pass 1 vs. Pass 2 across 9 Call Sites):
 - **Pass 1**: 9 initial API calls executed (8,377 prompt tokens, 526 candidate tokens, ~$0.001 total cost).
@@ -378,3 +386,33 @@ Evaluated on 9 representative benchmark call sites using `gemini-3.5-flash-lite`
   - **New API Calls**: **0** (100% Cache Hit Rate).
   - **Cache Hits**: **9** (0 tokens billed).
 - **Outcome**: **Deterministic replay and zero repeat cost confirmed**.
+
+---
+
+## 9. Exact Benchmark Candidate Call-Site Census (Task 4.4 Pre-Flight Census)
+
+Prior estimates used approximate figures (~650 target low-confidence candidates, ~3,180 total call sites). An automated, exact integer census across all 5,875 benchmark samples was executed via `scripts/count_exact_call_sites.py` (8 parallel workers, 548.9s wall time) and recorded to `results/stage3_exact_call_site_census.json`:
+
+### Exact Candidate Call-Site Census Breakdown:
+
+| Benchmark Library | Total Samples | Resolved Deprecated Call Sites | Target-Matching Low-Conf Call Sites | Grand Total Candidate Call Sites | All Low-Conf Call Sites (Diagnostic) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **NumPy** | 3,555 | 1,022 | 91 | **1,113** | 3,439 |
+| **SciPy** | 2,182 | 1,321 | 284 | **1,605** | 3,749 |
+| **Pandas** | 138 | 190 | 24 | **214** | 232 |
+| **TOTAL** | **5,875** | **2,533** | **399** | **2,932** | **7,420** |
+
+### Key Census Reconciliations:
+1. **Target-Matching Low-Confidence Count**: The exact count of target-matching low-confidence candidates is **399** (not "~650"). The remaining 7,021 low-confidence call sites ($7,420 - 399$) represent non-target calls (builtins, test harness helpers, third-party libraries) that do not match the 31 canonical benchmark target APIs.
+2. **Total Task 4.4 Verification Volume**: Exactly **2,932 candidate call sites** ($2,533 \text{ resolved} + 399 \text{ target low-confidence}$) require LLM verification in Task 4.4 (not 3,180).
+3. **Exact Production Cost Estimate**:
+   - **Primary Model (`gemini-3.5-flash-lite`)**:
+     - 2,932 call sites $\times$ ~930 input tokens = ~2,726,760 tokens @ $0.10 / 1M = **$0.27 USD**
+     - 2,932 call sites $\times$ ~60 output tokens = ~175,920 tokens @ $0.40 / 1M = **$0.07 USD**
+     - **Total Primary Bulk Cost**: **$0.34 USD** (execution time ~12–15 minutes paced at ~200–250 RPM).
+   - **Validation Model (`gemini-3.1-pro-preview`)**:
+     - 150 stratified call sites $\times$ ~930 input tokens = ~139,500 tokens @ $1.25 / 1M = **$0.17 USD**
+     - 150 stratified call sites $\times$ ~60 output tokens = ~9,000 tokens @ $10.00 / 1M = **$0.09 USD**
+     - **Total Validation Cost**: **$0.26 USD** (execution time ~5 minutes paced at ~30 RPM).
+   - **Combined Total Stage 3 LLM Cost**: **~$0.60 USD**.
+

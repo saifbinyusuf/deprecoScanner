@@ -1,0 +1,31 @@
+{
+  "benchmark_samples_total": 5875,
+  "elapsed_seconds": 548.87,
+  "resolved_deprecated_calls": 2533,
+  "target_low_confidence_calls": 399,
+  "exact_candidate_call_sites_total": 2932,
+  "all_low_confidence_calls": 7420,
+  "per_library": {
+    "numpy": {
+      "samples": 3555,
+      "resolved_deprecated_calls": 1022,
+      "target_low_confidence_calls": 91,
+      "total_candidate_calls": 1113,
+      "all_low_confidence_calls": 3439
+    },
+    "scipy": {
+      "samples": 2182,
+      "resolved_deprecated_calls": 1321,
+      "target_low_confidence_calls": 284,
+      "total_candidate_calls": 1605,
+      "all_low_confidence_calls": 3749
+    },
+    "pandas": {
+      "samples": 138,
+      "resolved_deprecated_calls": 190,
+      "target_low_confidence_calls": 24,
+      "total_candidate_calls": 214,
+      "all_low_confidence_calls": 232
+    }
+  }
+}
