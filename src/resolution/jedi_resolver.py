@@ -156,6 +156,50 @@ def match_symbol_against_catalog(
     return None
 
 
+def normalize_snippet_indentation(code: str) -> str:
+    """
+    Normalizes indentation for isolated code snippets extracted from classes or functions.
+    Handles mixed tabs and spaces, and leading space on line 1 that prevents standard
+    textwrap.dedent() from finding a common indentation prefix.
+    """
+    # 1. Standard dedent
+    candidate = textwrap.dedent(code)
+    try:
+        ast.parse(candidate)
+        return candidate
+    except SyntaxError:
+        pass
+
+    # 2. Expand tabs (4 spaces) then dedent
+    candidate = textwrap.dedent(code.expandtabs(4))
+    try:
+        ast.parse(candidate)
+        return candidate
+    except SyntaxError:
+        pass
+
+    # 3. Expand tabs (8 spaces) then dedent
+    candidate = textwrap.dedent(code.expandtabs(8))
+    try:
+        ast.parse(candidate)
+        return candidate
+    except SyntaxError:
+        pass
+
+    # 4. If line 1 has stray leading whitespace (common when extracting ' def func():'),
+    # strip line 1 leading space and expandtabs+dedent
+    lines = code.splitlines()
+    if lines and lines[0].startswith(" "):
+        candidate = textwrap.dedent(("\n".join([lines[0].lstrip()] + lines[1:])).expandtabs(4))
+        try:
+            ast.parse(candidate)
+            return candidate
+        except SyntaxError:
+            pass
+
+    return textwrap.dedent(code)
+
+
 class JediResolver:
     """
     Stage 2 Call-Site Resolver using Jedi.
@@ -303,7 +347,6 @@ class JediResolver:
 
         return None, "empty_goto", "Jedi script.goto returned no definitions"
 
-
     def analyze_client_snippet(
         self,
         code: str,
@@ -317,7 +360,7 @@ class JediResolver:
         Extracts call sites, attempts Jedi resolution, and bins unresolved candidates
         into the low_confidence bucket with explicit failure reasons.
         """
-        dedented_code = textwrap.dedent(code)
+        dedented_code = normalize_snippet_indentation(code)
         lines = dedented_code.splitlines()
 
         try:

@@ -228,3 +228,34 @@ def process(arr):
     assert result.resolved_deprecated[0].matched_catalog_symbol == "numpy.alltrue"
     assert len(result.low_confidence) == 0
 
+
+def test_normalize_snippet_indentation_mixed_tabs_spaces(resolver: JediResolver):
+    """
+    Task 3.2: Verify normalize_snippet_indentation recovers method snippets with
+    leading space on line 1 and tabs in body (the upstream scraping artifact).
+    """
+    from src.resolution.jedi_resolver import normalize_snippet_indentation
+
+    # The exact pattern from numpy_84 and scipy_2069
+    snippet = " def compute(*args):\n\t\timport numpy as np\n\t\treturn np.alltrue(*args)\n"
+    
+    # Raw textwrap.dedent fails on this pattern due to no common prefix
+    import textwrap, ast
+    raw_dedent = textwrap.dedent(snippet)
+    has_raw_syntax_error = False
+    try:
+        ast.parse(raw_dedent)
+    except SyntaxError:
+        has_raw_syntax_error = True
+    assert has_raw_syntax_error is True
+
+    # normalize_snippet_indentation recovers and parses cleanly
+    cleaned = normalize_snippet_indentation(snippet)
+    ast.parse(cleaned)  # must not raise SyntaxError
+
+    # analyze_client_snippet resolves the call site rather than falling back to syntax_error
+    result = resolver.analyze_client_snippet(snippet)
+    assert len(result.resolved_deprecated) == 1
+    assert result.resolved_deprecated[0].matched_catalog_symbol == "numpy.alltrue"
+    assert len(result.low_confidence) == 0
+

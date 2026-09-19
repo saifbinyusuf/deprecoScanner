@@ -368,3 +368,101 @@ def test_class_method_collision_guard_dataframe_vs_series_iteritems():
     assert "pandas.DataFrame.iteritems" in symbols
     assert "Series.iteritems" in symbols
 
+
+def test_all_31_benchmark_target_pairs_are_mutually_exclusive():
+    """
+    Systematic Collision Guard across all 31 Benchmark Target APIs.
+
+    Catches the entire category of symbol-identity / compatibility collisions that have
+    previously produced bugs in _is_symbol_compatible:
+    1. Composite-row false grouping (Task 1.4)
+    2. Cross-class DataFrame vs Series method collisions (Task 2.5)
+    3. Cross-submodule false-equivalence (Task 3.2, e.g. scipy.misc vs scipy.special)
+
+    Asserts that _is_symbol_compatible(s1, s2) returns False for every distinct pair
+    among all 31 canonical benchmark target APIs (930 pairwise tests).
+    """
+    from src.detectors.union_dedup import _is_symbol_compatible
+
+    benchmark_targets = [
+        # NumPy (3)
+        "numpy.alltrue",
+        "numpy.product",
+        "numpy.cumproduct",
+        # SciPy (18)
+        "scipy.misc.logsumexp",
+        "scipy.misc.comb",
+        "scipy.integrate.cumtrapz",
+        "scipy.integrate.simps",
+        "scipy.integrate.trapz",
+        "scipy.interpolate.interp2d",
+        "scipy.linalg.pinv2",
+        "scipy.misc.factorial",
+        "scipy.stats.itemfreq",
+        "scipy.signal.hanning",
+        "scipy.special.sph_jn",
+        "scipy.stats.betai",
+        "scipy.stats.chisqprob",
+        "scipy.misc.face",
+        "scipy.misc.factorial2",
+        "scipy.special.sph_yn",
+        "scipy.special.errprint",
+        "scipy.stats.rvs_ratio_uniforms",
+        # Pandas (10)
+        "pandas.io.formats.style.Styler.render",
+        "pandas.DataFrame.swapaxes",
+        "pandas.DataFrame.applymap",
+        "pandas.DataFrame.pad",
+        "pandas.Series.iteritems",
+        "pandas.DataFrame.iteritems",
+        "pandas.DataFrame.select",
+        "pandas.DataFrame.first",
+        "pandas.DataFrame.last",
+        "pandas.Series.pad",
+    ]
+
+    assert len(benchmark_targets) == 31
+
+    # Every distinct pair must be mutually exclusive (False in both directions)
+    for i, s1 in enumerate(benchmark_targets):
+        for j, s2 in enumerate(benchmark_targets):
+            if i != j:
+                assert not _is_symbol_compatible(s1, s2), (
+                    f"Symbol collision detected between distinct benchmark targets: {s1} and {s2}"
+                )
+
+
+def test_benchmark_targets_and_replacements_are_mutually_exclusive():
+    """
+    Asserts that no benchmark target API is considered compatible with its canonical replacement.
+    Specifically guards against the submodule alias bug (e.g. scipy.misc.comb vs scipy.special.comb)
+    and class method replacement collisions (e.g. DataFrame.iteritems vs DataFrame.items).
+    """
+    from src.detectors.union_dedup import _is_symbol_compatible
+
+    target_replacement_pairs = [
+        ("scipy.misc.comb", "scipy.special.comb"),
+        ("scipy.misc.logsumexp", "scipy.special.logsumexp"),
+        ("scipy.misc.factorial", "scipy.special.factorial"),
+        ("scipy.misc.factorial2", "scipy.special.factorial2"),
+        ("scipy.integrate.cumtrapz", "scipy.integrate.cumulative_trapezoid"),
+        ("scipy.integrate.simps", "scipy.integrate.simpson"),
+        ("scipy.integrate.trapz", "scipy.integrate.trapezoid"),
+        ("scipy.signal.hanning", "scipy.signal.windows.hann"),
+        ("pandas.DataFrame.iteritems", "pandas.DataFrame.items"),
+        ("pandas.Series.iteritems", "pandas.Series.items"),
+        ("pandas.DataFrame.applymap", "pandas.DataFrame.map"),
+        ("pandas.DataFrame.swapaxes", "pandas.DataFrame.transpose"),
+        ("numpy.alltrue", "numpy.all"),
+        ("numpy.product", "numpy.prod"),
+        ("numpy.cumproduct", "numpy.cumprod"),
+    ]
+
+    for target, repl in target_replacement_pairs:
+        assert not _is_symbol_compatible(target, repl), (
+            f"Target API '{target}' falsely matched replacement API '{repl}'!"
+        )
+        assert not _is_symbol_compatible(repl, target), (
+            f"Replacement API '{repl}' falsely matched target API '{target}'!"
+        )
+
