@@ -49,6 +49,9 @@ htmlcov/
 
 # Logs & temp
 *.log
+.env
+.env.*
+*.env
 
 # Large benchmark data & raw downloads
 data/raw/*
