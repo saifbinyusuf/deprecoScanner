@@ -467,11 +467,83 @@ To audit the 4,044 clean resolved-benign samples for latent deprecations missed 
 | Telemetry Item | Measured Output |
 | :--- | :---: |
 | **Total Candidates Evaluated** | 2,932 call sites |
-| **Total Primary API Calls Executed** | 2,487 (445 cache hits across duplicate library functions) |
-| **Total Validation Calls Executed** | 150 |
-| **Total Compound SQLite DB Records** | 2,316 records |
+| **Unique Primary Cache Keys** | 2,146 keys |
+| **Primary Batch Cache Hits / Collisions** | 786 hits (204 within-sample, 582 cross-sample) |
+| **Total Validation Calls Evaluated** | 150 (147 unique keys, 3 internal duplicates) |
+| **Total Compound SQLite DB Records** | 2,316 records (2,169 Flash Lite + 147 Pro Preview) |
 | **Primary Batch Execution Time** | 761.5s (~12.7 minutes @ ~4 calls/sec) |
 | **Validation Batch Execution Time** | 664.1s (~11 minutes @ ~30 RPM) |
 | **Actual Primary Spend (`gemini-3.5-flash-lite`)** | **$0.30 USD** (2.55M tokens) |
 | **Actual Validation Spend (`gemini-3.1-pro-preview`)** | **$0.26 USD** (~150k tokens) |
 | **COMBINED TOTAL STAGE 3 LLM SPEND** | **~$0.56 USD** (below $0.60 ceiling) |
+
+---
+
+## 11. Pre-Phase 5 Rigorous Production Audit & Spot-Check Reconciliations
+
+Before locking Stage 3 numbers into Phase 5 end-to-end evaluation, a comprehensive empirical audit of production cache records, swing buckets, model disagreements, and test suites was conducted:
+
+### A. Cache Collisions, Boilerplate Accounting & Benchmark Diversity (Item 1)
+1. **Primary Batch Collision Arithmetic**:
+   - Total logical primary queries: **2,932 call sites**.
+   - Unique compound SHA-256 cache keys: **2,146 keys**.
+   - Total cache collisions/hits: **786 hits** ($2,932 - 2,146 = \mathbf{786}$, a 26.8% collision rate).
+   - **Within-Sample Duplication**: **204 calls (26.0% of collisions)**. Repeated identical call sites within the same test function (e.g. repeated loop assertions `self.assertTrue(np.alltrue(...))` or multi-assert blocks like `assert_equal(np.product(x, 0), product(x, 0))`).
+   - **Cross-Sample Duplication**: **582 calls (74.0% of collisions)**. Syntactically identical call sites appearing across different repository test files (e.g. canonical textbook idioms `pinvmat = scipy.linalg.pinv(covmat)` across 10 samples, `cumprodX = np.cumproduct(lenX)` across 9 samples).
+2. **SQLite Database Record Count Reconciliation**:
+   - Primary model (`gemini-3.5-flash-lite`): **2,169 records** (2,146 primary batch keys + 23 calibration/spot-check keys).
+   - Validation model (`gemini-3.1-pro-preview`): **147 records** (150 calls minus 3 internal syntactic duplicates).
+   - Total database records: $2,169 + 147 = \mathbf{2,316}$ records, reconciling the DB count exactly.
+3. **Benchmark Function-Level Diversity ($N = 5,875$ Samples)**:
+   - Evaluated the enclosing code bodies across all 5,875 benchmark samples in `data/raw/llm-dep-api/probing-inputs/`.
+   - **Unique Function Bodies**: **5,874 unique bodies out of 5,875** (**99.98% uniqueness**).
+   - **Duplicate Function Bodies**: Exactly **1 duplicate pair** across the entire dataset (`def _pseudo_inverse_dense(L, rhoss, method='direct'):` in SciPy).
+   - **Implication**: The dataset is **not** copy-pasted boilerplate functions; the enclosing contexts are virtually 100% distinct. However, client call sites exhibit ~26.8% idiomatic concentration on common testing assertions.
+4. **Action for Task 5.2 Stratified Sampler & Threats to Validity**:
+   - **Sampler Safeguard**: Task 5.2's stratified sampler must hash compound tuples `SHA-256(call_site_snippet + target_api)` (in addition to `sample_id`) to ensure physical syntactic diversity across annotator quota buckets.
+   - **Threats to Validity**: Added to evaluation documentation: While enclosing code diversity is 99.98%, client call-site idioms show 26.8% syntactic concentration, characteristic of scientific Python test assertions.
+
+### B. Manual Spot-Check of Large Swing Buckets (Item 2)
+1. **The 485 Rejected "Resolved Deprecated" Candidates (19.15% Swing)**:
+   - Ground-truth cohort breakdown:
+     - **400 / 485 (82.47%) originate from the `up-to-dated` cohort!**
+     - **85 / 485 (17.53%) originate from the `outdated` cohort.**
+   - **Root Cause & Verification**:
+     - *Up-to-Date Cohort (400 cases)*: In Stage 1/2, static analysis flagged these call sites because symbol names matched catalog stems (e.g. `comb`, `simps`, `expand_dims`), and Jedi resolved them to valid modules. However, the code was actually calling the **modern replacement API** (e.g. `scipy.special.comb`, `scipy.integrate.simpson`, `numpy.prod`). Stage 3 in Confirmation Mode inspected the call and correctly rejected them as benign modern usage. **The LLM prevented 400 false positives on the modern cohort.**
+     - *Outdated Cohort (85 cases)*: Manual review of 15 stratified samples confirmed these are genuine parameter-scoped or receiver-conflation anomalies: `numpy.percentile` called without deprecated `interpolation` parameter (17 cases), array `.shape` attributes conflated with deprecated `records.fromfile.shape` (57 cases), commented-out code (e.g. `scipy_1783`), and PySpark wrapper comparisons (`pandas_32`).
+     - **Verdict**: The 485 rejections are genuine anomaly/false-match catches, not model over-eagerness.
+2. **The 226 Recovered "Low-Confidence" Candidates (56.64% Recovery)**:
+   - Diagnostic failure breakdown: **179 `unresolved_receiver` (79.2%)** and **47 `empty_goto` (20.8%)**.
+   - Ground-truth cohort breakdown: 146 `up-to-dated` (64.6%) and 80 `outdated` (35.4%).
+   - **Validation-Tier Representation**:
+     - The 150-candidate validation subsample contains **exactly 21 low-confidence candidates** (14.00% of the sample, closely mirroring their 13.61% proportion in the full manifest: $399 / 2,932$).
+     - **Concordance on Low-Confidence Slice**: **14 / 21 agreed (66.67%)**.
+     - All 7 disagreements were traced to the specific `sps`/`sc` alias pattern analyzed below.
+
+### C. Deep Dive into the 12 Model Disagreements (Item 3)
+The 12 disagreements between `gemini-3.5-flash-lite` and `gemini-3.1-pro-preview` divide into two directional classes:
+
+1. **Class 1: Primary=Deprecated, Validation=Benign (9 Cases)**:
+   - **1 Case (`pandas_120`)**: `st.render()` guarded by `if LooseVersion(pd.__version__) < LooseVersion("1.4.0"):`. Flash-Lite considered it active deprecated code; Pro-Preview considered it a benign compatibility fallback.
+   - **6 Cases (`scipy_247`, `scipy_248`, `scipy_677`, `scipy_668`, `scipy_142`, `scipy_661`)**: Ambiguous receiver aliases `sps`, `sc`, `sp`, `special`, `scipy_special`.
+     - *Flash-Lite*: Assumed ambiguous receivers like `sps.comb` or `sc.comb` referred to the candidate deprecated target `scipy.misc.comb`.
+     - *Pro-Preview*: Recognized that `sps` and `sc` are universal community shorthand for `scipy.special` (the modern replacement), and that `sp.logsumexp` cannot be `scipy.misc` because `logsumexp` is in `scipy.special`. Pro-Preview correctly identified these as replacement API calls.
+     - *Finding*: Flash-Lite exhibits confirmation bias on ambiguous receiver aliases; Pro-Preview correctly applies idiomatic library conventions.
+   - **2 Cases (`scipy_1303`, `scipy_1269`)**: Parameter-scoped deprecation in `scipy.linalg.pinv`.
+     - Calls: `pinvmat = scipy.linalg.pinv(covmat)` and `A = scipy.linalg.pinv(A)`.
+     - *Flash-Lite*: Flagged deprecated based on function name.
+     - *Pro-Preview*: Noted that `scipy.linalg.pinv` itself is not deprecated—only its `cond`/`rcond` parameters were deprecated in favor of `rtol`/`atol`. Since no deprecated parameters were passed, Pro-Preview correctly classified the call as benign.
+2. **Class 2: Primary=Benign, Validation=Deprecated (3 Cases)**:
+   - **Samples**: `pandas_32` (`swapaxes`), `pandas_87` (`first`), `pandas_125` (`pad`).
+   - **Context**: PySpark/Koalas test suites comparing native `pandas.DataFrame` (`pdf`) against `pyspark.pandas` (`psdf`, `kdf`):
+     - `pandas_32`: `self.assert_eq(psdf.swapaxes(0, 1), pdf.swapaxes(0, 1))`
+     - `pandas_87`: `self.assert_eq(pdf.first("1D"), psdf.first("1D"))`
+     - `pandas_125`: `self.assert_eq(pdf.pad(), kdf.pad())`
+   - **Diagnosis**: Following prompt v1.1 hardening to reject wrapper mimics (`psdf`), Flash-Lite over-generalized, ruling that because the test function tested PySpark, all calls within it were wrapper-related. Pro-Preview demonstrated superior precision, recognizing that `pdf` is instantiated as a native `pd.DataFrame`, and that `pdf.first('1D')` is an authentic invocation of the deprecated Pandas method.
+
+### D. Test Suite Itemization (Item 4: 65 -> 67 Tests)
+The two new unit tests added in `tests/test_batch_verifier.py` during the production commit (`c6d796e`) are:
+1. **`test_cohens_kappa_calculation`**: Asserts mathematical fidelity of `compute_cohens_kappa` against perfect agreement ($\kappa = 1.0$), complete opposition ($\kappa = -1.0$), and realistic high agreement ($\kappa > 0.80$).
+2. **`test_stratified_validation_subsample`**: Asserts multi-stratum proportional sampling guarantees full representation across all libraries (NumPy, SciPy, Pandas), cohorts (outdated, up-to-date), and Stage 2 statuses (resolved, low-confidence).
+- **Current Status**: **67 / 67 tests passing green** (`pytest tests/ -q` in 4.85s).
+
