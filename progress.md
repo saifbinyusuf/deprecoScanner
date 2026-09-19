@@ -61,9 +61,10 @@ DeprecoScanner is a hybrid static-analysis and LLM-assisted detection system for
    - Historical library snapshots placed in `data/benchmark_libs/` with custom `.pyi` stubs in `data/benchmark_libs/stubs/`.
 2. **Data Pipeline**:
    - Ingested and validated all 5,875 probing snippets across NumPy (3,555), SciPy (2,182), and Pandas (138).
-3. **Task 1.4 Finding (Label Granularity in Composite Rows)**:
-   - Identified that benchmark ground truth annotates at the *row/function level*, while static detectors operate at the *call-site level*.
-   - A single function snippet can contain multiple calls (both deprecated and modern). The evaluation protocol was established to report both call-site and sample-level metrics.
+3. **Task 1.4 Bug Fix: Elimination of Phantom 11th Pandas Target API (Composite Row Double-Counting)**:
+   - Fixed a ground-truth collision bug where composite rows containing multiple calls (e.g. `DataFrame.iteritems` and `Series.iteritems` within the same snippet) caused cross-class symbol leakage and artificially inflated the canonical Pandas target list from 10 to 11.
+   - Corrected the canonical benchmark target total from 32 down to 31 (NumPy: 3, Pandas: 10, SciPy: 18).
+   - Established the mandatory dual-level evaluation protocol (reporting both call-site-level resolver load and sample-level ground-truth target resolution) to handle snippets with multiple distinct call sites.
 
 ---
 
@@ -104,6 +105,14 @@ Across the 8 historical snapshots (6,342 source files scanned):
 ### E. Controlled Single-Snapshot APIScanner Baseline Comparison
 To isolate algorithmic detection efficiency from multi-era longitudinal volume, a controlled single-snapshot run was executed against contemporaneous 2021 releases (`numpy==1.20.0`, `pandas==1.2.0`, `scipy==1.6.0`):
 
+> [!IMPORTANT]
+> **Methodological & Citation Disclosure (Version Provenance)**:
+> The APIScanner publication (ICSE 2021 Companion, arXiv:2102.09251) reports detected vs. actual counts in Table I (39/36 for NumPy, 66/59 for Pandas, 46/49 for SciPy), but **the paper does not record exact library version numbers anywhere in its text or tables**. Furthermore, the bundled repository files (`external/apiscanner-dev/out/commands/pyScripts/output/`) contain 40, 67, and 49 elements respectively—a slight drift (+1, +1, +3) from the published paper.
+> 
+> Therefore, rather than claiming an impossible "exact version pin," our methodology uses **contemporaneous single-version snapshots chosen to approximate APIScanner's original early-2021 evaluation era**. These specific releases (`numpy==1.20.0`, `pandas==1.2.0`, `scipy==1.6.0` & `1.5.4`) were derived from:
+> 1. The paper's submission timestamp (February 18, 2021).
+> 2. The highest `.. deprecated:: X.Y.Z` docstring directives captured inside `apiscanner-dev`'s bundled output files (`1.20.0` in `numpy_deprecated_api_elements_full.txt` line 10; `1.2.0` in `pandas_deprecated_api_elements_full.txt` line 12).
+
 | Library Snapshot | APIScanner Paper Table 1 | APIScanner Bundled Repo Elements | DeprecoScanner Single-Snapshot | DeprecoScanner Function-Scoped | DeprecoScanner Parameter-Scoped |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **NumPy 1.20.0** | 39 / 36 | 40 | **258** | 229 | 29 |
@@ -123,13 +132,95 @@ To isolate algorithmic detection efficiency from multi-era longitudinal volume, 
 
 ## 4. Phase 3: Stage 2 Type Resolution Stack (Tasks 3.1–3.2)
 
-### A. Core Architecture (`src/resolution/jedi_resolver.py`)
+### A. Core Architecture & Edge-Case Evidence (`src/resolution/jedi_resolver.py`)
 - **`JediResolver`**: Maintains a pool of `jedi.Project` instances indexed by library (`numpy`, `pandas`, `scipy`) pointing to historical snapshots and custom stubs, filtering modern virtualenv packages from `sys_path`.
-- **Three Mandatory Task 3.1 Edge Cases Verified**:
-  1. *Aliased imports*: `import numpy as np; np.alltrue(...)` $\to$ `numpy.alltrue` (PASSED).
-  2. *Subclass inheritance & `super()` override*: `class CustomDF(pd.DataFrame): ...` $\to$ `pandas.DataFrame.iteritems` (PASSED).
-  3. *Wildcard imports*: `from numpy import *; alltrue(...)` $\to$ `numpy.alltrue` (PASSED).
 - **Task 3.2 Low-Confidence Bucket**: Unresolved or ambiguous call sites are structured as `LowConfidenceCandidate` objects with failure reasons rather than discarded.
+
+#### Verified Evidence for Task 3.1's Three Mandatory Edge Cases (`tests/test_jedi_resolver.py`):
+The three mandatory edge cases were verified with dedicated unit tests in [`tests/test_jedi_resolver.py`](file:///Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/tests/test_jedi_resolver.py#L44-L113):
+
+1. **Edge Case 1: Aliased Import (`import numpy as np; np.alltrue(...)`)**:
+```python
+def test_edge_case_1_aliased_import(resolver: JediResolver):
+    code = """import numpy as np
+
+def compute(arr):
+    return np.alltrue(arr)
+"""
+    line, col = find_pos(code, "alltrue")
+    res = resolver.resolve(code, line=line, column=col)
+    assert res is not None, "Failed to resolve np.alltrue call site"
+    assert "alltrue" in res.name
+    assert "numpy" in res.qualified_name
+    assert res.is_deprecated is True
+    assert res.matched_catalog_symbol == "numpy.alltrue"
+```
+
+2. **Edge Case 2: Subclass Inheritance & `super()` Override (`class CustomDF(pd.DataFrame)`)**:
+```python
+def test_edge_case_2_subclass_inheritance(resolver: JediResolver):
+    code = """import pandas as pd
+
+class CustomDataFrame(pd.DataFrame):
+    pass
+
+def iterate(df: CustomDataFrame):
+    for k, v in df.iteritems():
+        pass
+"""
+    line, col = find_pos(code, "iteritems")
+    res = resolver.resolve(code, line=line, column=col)
+    assert res is not None, "Failed to resolve df.iteritems on custom subclass"
+    assert res.name == "iteritems"
+    assert "pandas" in res.qualified_name
+    assert res.is_deprecated is True
+    assert res.matched_catalog_symbol == "pandas.DataFrame.iteritems"
+
+
+def test_edge_case_2_subclass_override_with_super(resolver: JediResolver):
+    code = """import pandas as pd
+
+class CustomDataFrame(pd.DataFrame):
+    def iteritems(self):
+        return super().iteritems()
+"""
+    line, col = find_pos(code, "super().iteritems")
+    col += len("super().")
+    res = resolver.resolve(code, line=line, column=col)
+    assert res is not None, "Failed to resolve super().iteritems in subclass override"
+    assert res.name == "iteritems"
+    assert "pandas" in res.qualified_name
+    assert res.is_deprecated is True
+    assert res.matched_catalog_symbol == "pandas.DataFrame.iteritems"
+```
+
+3. **Edge Case 3: Wildcard Import (`from numpy import *; alltrue(...)`)**:
+```python
+def test_edge_case_3_wildcard_import(resolver: JediResolver):
+    code = """from numpy import *
+
+def check_mask(mask):
+    return alltrue(mask)
+"""
+    line, col = find_pos(code, "alltrue")
+    res = resolver.resolve(code, line=line, column=col)
+    assert res is not None, "Failed to resolve wildcard imported alltrue"
+    assert res.name == "alltrue"
+    assert "numpy" in res.qualified_name
+    assert res.is_deprecated is True
+    assert res.matched_catalog_symbol == "numpy.alltrue"
+```
+
+#### Actual Pytest Execution Output:
+```
+$ pytest tests/test_jedi_resolver.py -k "edge_case" -v
+tests/test_jedi_resolver.py::test_edge_case_1_aliased_import PASSED              [ 25%]
+tests/test_jedi_resolver.py::test_edge_case_2_subclass_inheritance PASSED         [ 50%]
+tests/test_jedi_resolver.py::test_edge_case_2_subclass_override_with_super PASSED [ 75%]
+tests/test_jedi_resolver.py::test_edge_case_3_wildcard_import PASSED             [100%]
+
+======================= 4 passed, 8 deselected in 1.63s ========================
+```
 
 ### B. Indentation Normalization (`normalize_snippet_indentation`)
 - **Root Cause**: Upstream scraping extracted class methods with 1 leading space on line 1 (` def foo():`) while method bodies used tabs (`\t\t`). Standard `textwrap.dedent()` found no common whitespace prefix, leaving line 1 indented and causing `ast.parse()` to raise `IndentationError: unexpected indent`.
@@ -159,6 +250,11 @@ To isolate algorithmic detection efficiency from multi-era longitudinal volume, 
 
 ### E. Final Empirical Benchmark Results (5,875 Samples Evaluated)
 
+> [!NOTE]
+> **Unit Disambiguation (Sample-Level vs. Call-Site Counts)**:
+> - **Sample-Level Ground-Truth Accounting ($N = 1,621$ outdated, $N = 4,254$ up-to-date)**: Evaluates whether the specific target API annotated in the ground-truth benchmark row was successfully identified and classified for each of the 5,875 test snippets. This is the primary benchmark evaluation metric for Phases 5 and 6.
+> - **Call-Site Resolver Load ($N = 15,084$ total calls)**: Counts every individual function or method invocation identified in the client ASTs across all 5,875 snippets (e.g., a single snippet such as `numpy_0` contains multiple distinct call sites like `np.product(...)` and `product(...)`). This measures raw resolver throughput and AST parsing workload.
+
 #### 1. Sample-Level Ground-Truth Target Accounting:
 | Cohort | Target Outcome Category | Baseline (Pre-Fix) | Final Production | Net Empirical Impact |
 | :--- | :--- | :---: | :---: | :---: |
@@ -181,6 +277,14 @@ To isolate algorithmic detection efficiency from multi-era longitudinal volume, 
 - **Resolved Benign Calls**: 5,131 (NumPy: 3,713, SciPy: 1,373, Pandas: 45)
 - **Low-Confidence Candidates**: 7,420 (NumPy: 3,439, SciPy: 3,749, Pandas: 232)
 - **Total Calls Processed**: **15,084 calls** across 5,875 snippets.
+
+> [!NOTE]
+> **Reconciliation of Call Count Growth ($14,940 \to 15,084$, +144 Calls)**:
+> In the prior run, 64 snippets failed with `IndentationError` during AST parsing, yielding 0 extracted calls from those snippets. Normalizing indentation via `normalize_snippet_indentation()` unlocked the ASTs of all 64 snippets, parsing an additional **+144 call sites** into the pipeline:
+> - **+36 Deprecated Calls** ($2,497 \to 2,533$)
+> - **+64 Benign Calls** ($5,067 \to 5,131$)
+> - **+44 Low-Confidence Calls** ($7,376 \to 7,420$)
+> - **Total**: $36 + 64 + 44 = \mathbf{144}$ call sites, reconciling $14,940 + 144 = \mathbf{15,084}$.
 
 #### 4. Diagnostic Failure Reason Breakdown ($N = 7,420$ Low-Confidence Calls):
 | Diagnostic Failure Reason | Count | Share | Root Cause |
