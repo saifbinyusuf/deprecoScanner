@@ -51,6 +51,7 @@ htmlcov/
 *.log
 .env
 .env.*
+!.env.example
 *.env
 
 # Large benchmark data & raw downloads
