@@ -49,6 +49,8 @@ class ResolvedCallSite:
     description: str
     matched_catalog_symbol: Optional[str] = None
     is_deprecated: bool = False
+    call_site_snippet: Optional[str] = None
+    client_line: Optional[int] = None
 
 
 @dataclass(frozen=True)
@@ -488,6 +490,20 @@ class JediResolver:
                     details = p_details
 
             if site is not None:
+                site = ResolvedCallSite(
+                    qualified_name=site.qualified_name,
+                    name=site.name,
+                    module_name=site.module_name,
+                    type=site.type,
+                    line=site.line,
+                    column=site.column,
+                    file_path=site.file_path,
+                    description=site.description,
+                    matched_catalog_symbol=site.matched_catalog_symbol,
+                    is_deprecated=site.is_deprecated,
+                    call_site_snippet=snippet,
+                    client_line=line,
+                )
                 if site.is_deprecated:
                     resolved_deprecated.append(site)
                 else:

@@ -75,3 +75,7 @@ data/benchmark_libs/*
 data/apiscanner_baseline/*
 !data/apiscanner_baseline/.gitkeep
 
+# SQLite database caches
+*.db
+data/*.db
+
