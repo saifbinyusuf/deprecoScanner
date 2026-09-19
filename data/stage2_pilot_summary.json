@@ -1,34 +1,33 @@
 {
-  "timestamp": "2026-09-18T15:45:35Z",
+  "timestamp": "2026-09-19T03:21:28Z",
   "total_samples": 5875,
-  "elapsed_seconds": 784.7,
+  "elapsed_seconds": 1034.85,
   "baseline_preamble": {
     "call_counts": {
-      "resolved_deprecated": 1491,
-      "resolved_benign": 3913,
-      "low_confidence": 9536
+      "resolved_deprecated": 1512,
+      "resolved_benign": 3962,
+      "low_confidence": 9610
     },
     "per_library": {
       "numpy": {
         "samples_analyzed": 3555,
         "call_counts": {
-          "resolved_deprecated": 424,
-          "resolved_benign": 2651,
-          "low_confidence": 5039
+          "resolved_deprecated": 425,
+          "resolved_benign": 2691,
+          "low_confidence": 5058
         },
         "reasons": {
-          "unresolved_receiver": 3620,
-          "empty_goto": 1387,
-          "syntax_error": 32,
+          "unresolved_receiver": 3662,
+          "empty_goto": 1396,
+          "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
           "jedi_exception": 0
         },
         "sample_outcomes": {
           "outdated": {
-            "target_resolved_deprecated": 207,
-            "target_in_low_confidence": 351,
-            "target_missed": 9
+            "target_resolved_deprecated": 208,
+            "target_in_low_confidence": 359
           },
           "up_to_dated": {
             "clean_resolved_benign": 2969,
@@ -40,27 +39,27 @@
       "scipy": {
         "samples_analyzed": 2182,
         "call_counts": {
-          "resolved_deprecated": 978,
-          "resolved_benign": 1244,
-          "low_confidence": 4137
+          "resolved_deprecated": 998,
+          "resolved_benign": 1253,
+          "low_confidence": 4192
         },
         "reasons": {
-          "unresolved_receiver": 3266,
-          "empty_goto": 839,
-          "syntax_error": 32,
+          "unresolved_receiver": 3336,
+          "empty_goto": 856,
+          "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
           "jedi_exception": 0
         },
         "sample_outcomes": {
           "outdated": {
-            "target_resolved_deprecated": 476,
-            "target_in_low_confidence": 477,
-            "target_missed": 32
+            "target_resolved_deprecated": 490,
+            "target_in_low_confidence": 483,
+            "target_missed": 12
           },
           "up_to_dated": {
-            "clean_in_low_confidence": 313,
-            "clean_resolved_benign": 883,
+            "clean_in_low_confidence": 314,
+            "clean_resolved_benign": 882,
             "spurious_deprecated_flagged": 1
           }
         }
@@ -74,11 +73,11 @@
         },
         "reasons": {
           "unresolved_receiver": 300,
-          "empty_goto": 60,
+          "empty_goto": 59,
           "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
-          "jedi_exception": 0
+          "jedi_exception": 1
         },
         "sample_outcomes": {
           "outdated": {
@@ -93,27 +92,38 @@
       }
     },
     "reasons": {
-      "unresolved_receiver": 7186,
-      "empty_goto": 2286,
-      "syntax_error": 64,
+      "unresolved_receiver": 7298,
+      "empty_goto": 2311,
+      "syntax_error": 0,
       "dynamic_dispatch": 0,
       "ambiguous_definitions": 0,
-      "jedi_exception": 0
+      "jedi_exception": 1
     },
     "sample_outcomes": {
       "outdated": {
-        "target_resolved_deprecated": 711,
-        "target_in_low_confidence": 869,
-        "target_missed": 41
+        "target_resolved_deprecated": 726,
+        "target_in_low_confidence": 883,
+        "target_missed": 12
       },
       "up_to_dated": {
-        "clean_resolved_benign": 3920,
-        "clean_in_low_confidence": 331,
+        "clean_resolved_benign": 3919,
+        "clean_in_low_confidence": 332,
         "spurious_deprecated_flagged": 3
       }
     },
     "bucket_samples": {
       "unresolved_receiver": [
+        {
+          "call_site_snippet": "c = int(numpy.product(sequence_shape))",
+          "callee_name": "product",
+          "line": 10,
+          "column": 18,
+          "failure_reason": "unresolved_receiver",
+          "file_path": null,
+          "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+          "details": "Receiver 'numpy' could not be statically resolved",
+          "sample_id": "numpy_6"
+        },
         {
           "call_site_snippet": "return numpy.product(inputs)",
           "callee_name": "product",
@@ -124,17 +134,6 @@
           "matched_catalog_symbol": "numpy.core.fromnumeric.product",
           "details": "Receiver 'numpy' could not be statically resolved",
           "sample_id": "numpy_5"
-        },
-        {
-          "call_site_snippet": "self.N = numpy.product(self.shape)",
-          "callee_name": "product",
-          "line": 4,
-          "column": 19,
-          "failure_reason": "unresolved_receiver",
-          "file_path": null,
-          "matched_catalog_symbol": "numpy.core.fromnumeric.product",
-          "details": "Receiver 'numpy' could not be statically resolved",
-          "sample_id": "numpy_8"
         },
         {
           "call_site_snippet": "coarse_dim = numpy.product(coarse_shape)",
@@ -148,17 +147,6 @@
           "sample_id": "numpy_9"
         },
         {
-          "call_site_snippet": "c = int(numpy.product(sequence_shape))",
-          "callee_name": "product",
-          "line": 10,
-          "column": 18,
-          "failure_reason": "unresolved_receiver",
-          "file_path": null,
-          "matched_catalog_symbol": "numpy.core.fromnumeric.product",
-          "details": "Receiver 'numpy' could not be statically resolved",
-          "sample_id": "numpy_6"
-        },
-        {
           "call_site_snippet": "coarse_dim = numpy.product(coarse_shape)",
           "callee_name": "product",
           "line": 5,
@@ -168,6 +156,17 @@
           "matched_catalog_symbol": "numpy.core.fromnumeric.product",
           "details": "Receiver 'numpy' could not be statically resolved",
           "sample_id": "numpy_10"
+        },
+        {
+          "call_site_snippet": "self.N = numpy.product(self.shape)",
+          "callee_name": "product",
+          "line": 4,
+          "column": 19,
+          "failure_reason": "unresolved_receiver",
+          "file_path": null,
+          "matched_catalog_symbol": "numpy.core.fromnumeric.product",
+          "details": "Receiver 'numpy' could not be statically resolved",
+          "sample_id": "numpy_8"
         }
       ],
       "empty_goto": [
@@ -227,95 +226,50 @@
           "sample_id": "numpy_3"
         }
       ],
-      "syntax_error": [
-        {
-          "call_site_snippet": "def \u4e58\u6cd5(*args,  **kwargs):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_84"
-        },
-        {
-          "call_site_snippet": "def reshape(self, *shape):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_91"
-        },
-        {
-          "call_site_snippet": "def __init__(self, slowmodel, ebins, parameters, filename, modelname='rebinnedmodel'):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_133"
-        },
-        {
-          "call_site_snippet": "def size_from(self, n=1):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_170"
-        },
-        {
-          "call_site_snippet": "def reshape(self, shape):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_214"
-        }
-      ],
+      "syntax_error": [],
       "dynamic_dispatch": [],
       "ambiguous_definitions": [],
-      "jedi_exception": []
+      "jedi_exception": [
+        {
+          "call_site_snippet": "avg_daily = float(x_normalised_for_y.diff().abs().mean())",
+          "callee_name": "mean",
+          "line": 21,
+          "column": 54,
+          "failure_reason": "jedi_exception",
+          "file_path": null,
+          "matched_catalog_symbol": "scipy.stats._continuous_distns.frechet_l_gen.mean",
+          "details": "lambda is not named.",
+          "sample_id": "pandas_69"
+        }
+      ]
     }
   },
   "reconstructed_preamble": {
     "call_counts": {
-      "resolved_deprecated": 2497,
-      "resolved_benign": 5067,
-      "low_confidence": 7376
+      "resolved_deprecated": 2533,
+      "resolved_benign": 5131,
+      "low_confidence": 7420
     },
     "per_library": {
       "numpy": {
         "samples_analyzed": 3555,
         "call_counts": {
-          "resolved_deprecated": 1007,
-          "resolved_benign": 3660,
-          "low_confidence": 3447
+          "resolved_deprecated": 1022,
+          "resolved_benign": 3713,
+          "low_confidence": 3439
         },
         "reasons": {
-          "unresolved_receiver": 2150,
-          "empty_goto": 1265,
-          "syntax_error": 32,
+          "unresolved_receiver": 2165,
+          "empty_goto": 1274,
+          "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
           "jedi_exception": 0
         },
         "sample_outcomes": {
           "outdated": {
-            "target_resolved_deprecated": 551,
-            "target_in_low_confidence": 7,
-            "target_missed": 9
+            "target_resolved_deprecated": 560,
+            "target_in_low_confidence": 7
           },
           "up_to_dated": {
             "clean_resolved_benign": 2969,
@@ -327,23 +281,23 @@
       "scipy": {
         "samples_analyzed": 2182,
         "call_counts": {
-          "resolved_deprecated": 1300,
-          "resolved_benign": 1362,
-          "low_confidence": 3697
+          "resolved_deprecated": 1321,
+          "resolved_benign": 1373,
+          "low_confidence": 3749
         },
         "reasons": {
-          "unresolved_receiver": 3253,
-          "empty_goto": 412,
-          "syntax_error": 32,
+          "unresolved_receiver": 3323,
+          "empty_goto": 426,
+          "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
           "jedi_exception": 0
         },
         "sample_outcomes": {
           "outdated": {
-            "target_resolved_deprecated": 633,
-            "target_in_low_confidence": 320,
-            "target_missed": 32
+            "target_resolved_deprecated": 648,
+            "target_in_low_confidence": 325,
+            "target_missed": 12
           },
           "up_to_dated": {
             "clean_resolved_benign": 1007,
@@ -380,18 +334,18 @@
       }
     },
     "reasons": {
-      "unresolved_receiver": 5581,
-      "empty_goto": 1731,
-      "syntax_error": 64,
+      "unresolved_receiver": 5666,
+      "empty_goto": 1754,
+      "syntax_error": 0,
       "dynamic_dispatch": 0,
       "ambiguous_definitions": 0,
       "jedi_exception": 0
     },
     "sample_outcomes": {
       "outdated": {
-        "target_resolved_deprecated": 1252,
-        "target_in_low_confidence": 328,
-        "target_missed": 41
+        "target_resolved_deprecated": 1276,
+        "target_in_low_confidence": 333,
+        "target_missed": 12
       },
       "up_to_dated": {
         "clean_resolved_benign": 4044,
@@ -514,63 +468,7 @@
           "sample_id": "numpy_3"
         }
       ],
-      "syntax_error": [
-        {
-          "call_site_snippet": "def \u4e58\u6cd5(*args,  **kwargs):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_84"
-        },
-        {
-          "call_site_snippet": "def reshape(self, *shape):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_91"
-        },
-        {
-          "call_site_snippet": "def __init__(self, slowmodel, ebins, parameters, filename, modelname='rebinnedmodel'):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_133"
-        },
-        {
-          "call_site_snippet": "def size_from(self, n=1):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_170"
-        },
-        {
-          "call_site_snippet": "def reshape(self, shape):",
-          "callee_name": "<syntax_error>",
-          "line": 1,
-          "column": 1,
-          "failure_reason": "syntax_error",
-          "file_path": null,
-          "matched_catalog_symbol": null,
-          "details": "unexpected indent (<unknown>, line 1)",
-          "sample_id": "numpy_214"
-        }
-      ],
+      "syntax_error": [],
       "dynamic_dispatch": [],
       "ambiguous_definitions": [],
       "jedi_exception": []
