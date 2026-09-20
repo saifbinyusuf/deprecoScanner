@@ -389,5 +389,47 @@
         "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
       }
     ]
+  },
+  "low_confidence_validation_metrics": {
+    "n": 25,
+    "agreed": 23,
+    "concordance_pct": 92.0,
+    "chance_agreement_pe": 0.536,
+    "cohens_kappa": 0.8276,
+    "pabak": 0.84,
+    "sensitivity_pct": 100.0,
+    "specificity_pct": 80.0,
+    "balanced_accuracy_pct": 90.0,
+    "contingency_table": [
+      [
+        15,
+        2
+      ],
+      [
+        0,
+        8
+      ]
+    ]
+  },
+  "composite_validation_metrics": {
+    "n": 129,
+    "agreed": 124,
+    "concordance_pct": 96.12,
+    "chance_agreement_pe": 0.8504,
+    "cohens_kappa": 0.7409,
+    "pabak": 0.9225,
+    "sensitivity_pct": 97.48,
+    "specificity_pct": 80.0,
+    "balanced_accuracy_pct": 88.74,
+    "contingency_table": [
+      [
+        116,
+        2
+      ],
+      [
+        3,
+        8
+      ]
+    ]
   }
 }
