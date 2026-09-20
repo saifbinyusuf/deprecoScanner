@@ -481,7 +481,26 @@ Combining the 104 surviving clean resolved candidates with the 25 representative
 | **Benign (Primary)** | **3** | **8** | **11** (8.53%) |
 | **Marginal Total (Validation)** | **119** (92.25%) | **10** (7.75%) | **129** (100.0%) |
 
-*(Historical note: The post-hoc filtered N=110 subset had 6 low-confidence candidates yielding Po=97.27%, κ=0.5600, PABAK=0.9455, Balanced Accuracy=98.61%).*
+#### 3. Mathematical Reconciliation of Validation Cohorts (150 -> 110 -> 129):
+To eliminate any ambiguity across validation batches, the exact accounting across the filtering rounds is:
+1. **Original Validation Batch ($N = 150$)**: Comprised 129 resolved candidates + 21 low-confidence candidates.
+2. **Filtering Catalog & Replacement Leaks ($N = 110$)**:
+   - 25 non-benchmark catalog calls were eliminated from the resolved slice ($129 - 25 = \mathbf{104}$ resolved candidates surviving).
+   - 15 up-to-date replacement leak calls were eliminated from the low-confidence slice ($21 - 15 = \mathbf{6}$ low-confidence candidates surviving).
+   - Total surviving in-scope validation set: $\mathbf{104 \text{ resolved} + 6 \text{ low-confidence} = 110}$ candidates (contingency matrix: `[[105, 0], [3, 2]]`).
+   - Breaking down the $N = 110$ matrix into its sub-cohorts:
+     - **104 Resolved Candidates**: `[[101, 0], [3, 0]]` (101 Dep-Dep, 0 Dep-Ben, 3 Ben-Dep, 0 Ben-Ben).
+     - **6 Low-Confidence Candidates**: `[[4, 0], [0, 2]]` (4 Dep-Dep, 0 Dep-Ben, 0 Ben-Dep, 2 Ben-Ben).
+     - Sum: `[[101+4, 0+0], [3+0, 0+2]] = [[105, 0], [3, 2]]` ($N = 110$).
+3. **Resizing the Low-Confidence Stratum ($N = 129$)**:
+   - The 6 leftover low-confidence candidates were replaced by the fresh, properly-sized, and stratified sample of **25 low-confidence candidates** (`[[15, 2], [0, 8]]`).
+   - Combining the **104 clean resolved candidates** with the **25 fresh low-confidence candidates**:
+     - `[0][0]` (Dep-Dep): $101 + 15 = \mathbf{116}$
+     - `[0][1]` (Dep-Benign): $0 + 2 = \mathbf{2}$
+     - `[1][0]` (Benign-Dep): $3 + 0 = \mathbf{3}$
+     - `[1][1]` (Benign-Benign): $0 + 8 = \mathbf{8}$
+     - Total: $116 + 2 + 3 + 8 = \mathbf{129}$!
+   - *Note on the number 104*: The 104 resolved validation candidates ($129 - 25 = 104$) is purely a coincidental numerical match with the 104 exact ground-truth matches in the 117-item low-confidence manifest pool ($117 - 13 = 104$). They represent entirely distinct cohorts.
 
 ### C. Latent False-Negative Benign Spot-Check ($N = 40$)
 - **Total Audited**: 40 clean resolved-benign snippets randomly sampled across NumPy, SciPy, and Pandas.
@@ -566,7 +585,7 @@ Comparing each low-confidence candidate's assigned `target_api` directly against
   - Caused by an unconstrained fallback in `extract_stage3_manifest.py` where bare stem matching (`t.split(".")[-1] == callee`) fell back across libraries when no within-library target matched (e.g., standard library `itertools.product` in SciPy samples matched to `numpy.product`, or `DataFrame.iteritems` matched on `Series.iteritems` samples).
   - **Crucial Empirical Discovery**: Gemini Flash-Lite had **ALREADY correctly rejected 10 of these 13 discrepancies as Benign** (`is_deprecated_usage = False`, confidence 0.95–1.00) based on surrounding code context! For example:
     - In `scipy_30` (3 calls): *"The call site uses standard library module itertools.product, not the deprecated numpy.product."* (conf 0.99–1.00)
-    - In `scipy_536`: *"The call it.product refers to itertools.product from the standard library rather than numpy.product from scipy."* (conf 0.95)
+    - In `scipy_536` (Line 27, `scipy_536_lc_1_27_17`): *"The call it.product refers to itertools.product from the standard library rather than numpy.product from scipy."* (conf 0.95)
     - In `numpy_4`: *"The receiver 'new_list' is created via numpy operations, making it a numpy.ndarray rather than pandas.DataFrame.swapaxes."* (conf 0.99)
     - In `numpy_150`: *"The method iteritems is being called on a numpy or custom tensor object rather than a pandas DataFrame."* (conf 0.99)
   - This demonstrates that the LLM verification stage functions exactly as intended: acting as a robust semantic filter that eliminates heuristic false alarms that static analysis cannot resolve.
@@ -574,23 +593,29 @@ Comparing each low-confidence candidate's assigned `target_api` directly against
 ### B. 15-Sample Stratified Manual Spot-Check Table
 A balanced, stratified sample of 15 candidates across NumPy (5), SciPy (5), and Pandas (5) was manually inspected against raw source code:
 
-| # | Sample ID | Lib | Ground Truth Target API | Flagged Call Site (Line) | Code Context Window | Primary Decision (Flash-Lite) | Conf. | Model Rationale Summary | Verified Status |
-| :-: | :--- | :---: | :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| 1 | `numpy_0` | np | `numpy.product` | `product(x, axis=0)` (L11) | `assert_equal(np.product(x, axis=0), product(x, axis=0))` | **`True`** | 1.00 | Bare `product` compared with `np.product` in masked array test. | **True Positive** |
-| 2 | `numpy_3` | np | `numpy.product` | `product(x, 1)` (L20) | `assert_(eq(np.product(x, 1), product(x, 1)))` | **`True`** | 1.00 | Bare call directly invokes deprecated `numpy.product`. | **True Positive** |
-| 3 | `numpy_61` | np | `numpy.product` | `product(xm, axis=0)` (L14) | `self.assertTrue(eq(numpy.product(filled(xm, 1), axis=0), product(xm, axis=0)))` | **`True`** | 0.95 | Enclosing test confirms bare `product` invokes deprecated numpy function. | **True Positive** |
-| 4 | `numpy_77` | np | `numpy.product` | `product(x, 0)` (L12) | `self.assertTrue(eq(np.product(x, 0), product(x, 0)))` | **`True`** | 0.99 | Explicitly invokes `np.product` and bare `product` on arrays. | **True Positive** |
-| 5 | `numpy_216` | np | `numpy.product` | `itertools.product(...)` (L12) | `for selected_conditionals in itertools.product(*conditional_values):` | **`False`** | 1.00 | Invokes stdlib `itertools.product`, not deprecated `numpy.product`. | **Clean Benign** |
-| 6 | `scipy_5` | sp | `scipy.misc.comb` | `misc.comb(...)` (L20) | `L_ts *= misc.comb( thisN, thisCorr ) * (probs[level]**thisCorr)` | **`True`** | 0.95 | Active computation loop invoking deprecated `scipy.misc.comb`. | **True Positive** |
-| 7 | `scipy_52` | sp | `scipy.misc.comb` | `misc.comb(n, k)` (L21) | `pi = (misc.comb(n,i) * misc.comb(N-n, m-i))/m` | **`True`** | 0.95 | Active branch computing combinations via `scipy.misc.comb`. | **True Positive** |
-| 8 | `scipy_536` | sp | `scipy.misc.logsumexp` | `sp.misc.logsumexp(...)` (L25) | `return sp.misc.logsumexp([fn2(nk, row) for nk, row in zip(nks, sums)])` | **`True`** | 0.90 | Invokes deprecated `scipy.misc.logsumexp` via `sp.misc` alias. | **True Positive** |
-| 9 | `scipy_551` | sp | `scipy.misc.logsumexp` | `misc.logsumexp(...)` (L5) | `val += p * misc.logsumexp( xalphas(...) )` | **`True`** | 0.90 | Code invokes `misc.logsumexp` for log-sum-exp calculation. | **True Positive** |
-| 10 | `scipy_578` | sp | `scipy.misc.logsumexp` | `pymbar.utils.logsumexp` (L7) | `ans_no_ne = pymbar.utils.logsumexp(a, b=b, axis=axis)` | **`False`** | 0.95 | Invokes external `pymbar` utility, not `scipy.misc.logsumexp`. | **Clean Benign** |
-| 11 | `pandas_0` | pd | `Styler.render` | `DataFrame(...).style.render()` (L6) | `DataFrame(columns=["a"]).style.render()` | **`True`** | 1.00 | Chained call on `DataFrame.style` actively invokes `Styler.render`. | **True Positive** |
-| 12 | `pandas_32` | pd | `DataFrame.swapaxes` | `psdf.swapaxes(0, 1)` (L7) | `self.assert_eq(psdf.swapaxes(0, 1), pdf.swapaxes(0, 1))` | **`False`** | 0.95 | Receiver `psdf` is PySpark wrapper (`ps.from_pandas`), not pandas. | **Clean Benign** |
-| 13 | `pandas_32` | pd | `DataFrame.swapaxes` | `(pdf + 1).swapaxes(0, 1)` (L11) | `self.assert_eq((psdf + 1).swapaxes(0, 1), (pdf + 1).swapaxes(0, 1))` | **`True`** | 0.95 | Receiver `(pdf + 1)` is native `pandas.DataFrame` calling `swapaxes`. | **True Positive** |
-| 14 | `pandas_33` | pd | `DataFrame.swapaxes` | `kdf.swapaxes(1, 0)` (L8) | `self.assert_eq(kdf.swapaxes(1, 0), pdf.swapaxes(1, 0))` | **`False`** | 0.99 | Receiver `kdf` is Databricks Koalas wrapper (`ks.from_pandas`). | **Clean Benign** |
-| 15 | `pandas_33` | pd | `DataFrame.swapaxes` | `kdf.swapaxes(0, 1)` (L13) | `self.assertRaises(AssertionError, lambda: kdf.swapaxes(0, 1, copy=False))` | **`False`** | 0.95 | Receiver `kdf` is Koalas wrapper; correctly identified as benign. | **Clean Benign** |
+| # | Candidate ID | Sample ID (Line) | Lib | Ground Truth Target API | Flagged Call Site (Line) | Code Context Window | Primary Decision (Flash-Lite) | Conf. | Model Rationale Summary | Verified Status |
+| :-: | :--- | :--- | :---: | :--- | :--- | :--- | :---: | :---: | :--- | :---: |
+| 1 | `numpy_0_lc_0_11_40` | `numpy_0` (L11) | np | `numpy.product` | `product(x, axis=0)` (L11) | `assert_equal(np.product(x, axis=0), product(x, axis=0))` | **`True`** | 1.00 | Bare `product` compared with `np.product` in masked array test. | **True Positive** |
+| 2 | `numpy_3_lc_3_20_37` | `numpy_3` (L20) | np | `numpy.product` | `product(x, 1)` (L20) | `assert_(eq(np.product(x, 1), product(x, 1)))` | **`True`** | 1.00 | Bare call directly invokes deprecated `numpy.product`. | **True Positive** |
+| 3 | `numpy_61_lc_2_14_24` | `numpy_61` (L14) | np | `numpy.product` | `product(xm, axis=0)` (L14) | `self.assertTrue(eq(numpy.product(filled(xm, 1), axis=0), product(xm, axis=0)))` | **`True`** | 0.95 | Enclosing test confirms bare `product` invokes deprecated numpy function. | **True Positive** |
+| 4 | `numpy_77_lc_1_12_42` | `numpy_77` (L12) | np | `numpy.product` | `product(x, 0)` (L12) | `self.assertTrue(eq(np.product(x, 0), product(x, 0)))` | **`True`** | 0.99 | Explicitly invokes `np.product` and bare `product` on arrays. | **True Positive** |
+| 5 | `numpy_216_lc_0_12_43` | `numpy_216` (L12) | np | `numpy.product` | `itertools.product(...)` (L12) | `for selected_conditionals in itertools.product(*conditional_values):` | **`False`** | 1.00 | Invokes stdlib `itertools.product`, not deprecated `numpy.product`. | **Clean Benign** |
+| 6 | `scipy_5_lc_1_20_21` | `scipy_5` (L20) | sp | `scipy.misc.comb` | `misc.comb(...)` (L20) | `L_ts *= misc.comb( thisN, thisCorr ) * (probs[level]**thisCorr)` | **`True`** | 0.95 | Active computation loop invoking deprecated `scipy.misc.comb`. | **True Positive** |
+| 7 | `scipy_52_lc_2_21_69` | `scipy_52` (L21) | sp | `scipy.misc.comb` | `misc.comb(n, k)` (L21) | `pi = (misc.comb(n,i) * misc.comb(N-n, m-i))/m` | **`True`** | 0.95 | Active branch computing combinations via `scipy.misc.comb`. | **True Positive** |
+| 8 | `scipy_536_lc_2_25_23` | `scipy_536` (L25) | sp | `scipy.misc.logsumexp` | `sp.misc.logsumexp(...)` (L25) | `return sp.misc.logsumexp([fn2(nk, row) for nk, row in zip(nks, sums)])` | **`True`** | 0.90 | Invokes deprecated `scipy.misc.logsumexp` via `sp.misc` alias. | **True Positive** |
+| 9 | `scipy_551_lc_0_5_20` | `scipy_551` (L5) | sp | `scipy.misc.logsumexp` | `misc.logsumexp(...)` (L5) | `val += p * misc.logsumexp( xalphas(...) )` | **`True`** | 0.90 | Code invokes `misc.logsumexp` for log-sum-exp calculation. | **True Positive** |
+| 10 | `scipy_578_lc_1_7_33` | `scipy_578` (L7) | sp | `scipy.misc.logsumexp` | `pymbar.utils.logsumexp` (L7) | `ans_no_ne = pymbar.utils.logsumexp(a, b=b, axis=axis)` | **`False`** | 0.95 | Invokes external `pymbar` utility, not `scipy.misc.logsumexp`. | **Clean Benign** |
+| 11 | `pandas_0_lc_0_6_35` | `pandas_0` (L6) | pd | `Styler.render` | `DataFrame(...).style.render()` (L6) | `DataFrame(columns=["a"]).style.render()` | **`True`** | 1.00 | Chained call on `DataFrame.style` actively invokes `Styler.render`. | **True Positive** |
+| 12 | `pandas_32_lc_0_7_24` | `pandas_32` (L7) | pd | `DataFrame.swapaxes` | `psdf.swapaxes(0, 1)` (L7) | `self.assert_eq(psdf.swapaxes(0, 1), pdf.swapaxes(0, 1))` | **`False`** | 0.95 | Receiver `psdf` is PySpark wrapper (`ps.from_pandas`), not pandas. | **Clean Benign** |
+| 13 | `pandas_32_lc_4_11_30` | `pandas_32` (L11) | pd | `DataFrame.swapaxes` | `(pdf + 1).swapaxes(0, 1)` (L11) | `self.assert_eq((psdf + 1).swapaxes(0, 1), (pdf + 1).swapaxes(0, 1))` | **`True`** | 0.95 | Receiver `(pdf + 1)` is native `pandas.DataFrame` calling `swapaxes`. | **True Positive** |
+| 14 | `pandas_33_lc_1_8_23` | `pandas_33` (L8) | pd | `DataFrame.swapaxes` | `kdf.swapaxes(1, 0)` (L8) | `self.assert_eq(kdf.swapaxes(1, 0), pdf.swapaxes(1, 0))` | **`False`** | 0.99 | Receiver `kdf` is Databricks Koalas wrapper (`ks.from_pandas`). | **Clean Benign** |
+| 15 | `pandas_33_lc_5_13_50` | `pandas_33` (L13) | pd | `DataFrame.swapaxes` | `kdf.swapaxes(0, 1)` (L13) | `self.assertRaises(AssertionError, lambda: kdf.swapaxes(0, 1, copy=False))` | **`False`** | 0.95 | Receiver `kdf` is Koalas wrapper; correctly identified as benign. | **Clean Benign** |
+
+*Note on Multi-Call Granularity (`scipy_536`)*:
+Like `numpy_0` and `pandas_32`, sample `scipy_536` contains **two distinct call sites**:
+1. `scipy_536_lc_2_25_23` (Line 25): `return sp.misc.logsumexp(...)` — directly targets the sample's declared ground truth (`scipy.misc.logsumexp`) and was verified as True (**True Positive**, conf 0.90; Spot-Check Row 8 above).
+2. `scipy_536_lc_1_27_17` (Line 27): `yvalues = it.product([0, 1], repeat=D)` — a bare `it.product` call whose callee name `product` fell back to `numpy.product`. Flash-Lite correctly verified this as False (**Clean Benign**, conf 0.95; Discrepancy List above).
+Both candidate call sites received dedicated, independent evaluation under the call-site granularity model.
 
 ### C. Findings and Scientific Defensibility
 1. **Zero Unrecognized False Positives**: In 15/15 inspected cases, every positive classification corresponded genuinely to the target deprecation in the sample. Not a single accidental leaf-name collision (like `itertools.product` or `pymbar.utils.logsumexp`) was mistakenly flagged as deprecated.
