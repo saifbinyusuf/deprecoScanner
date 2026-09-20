@@ -488,12 +488,15 @@ To eliminate any ambiguity across validation batches, the exact accounting acros
    - 25 non-benchmark catalog calls were eliminated from the resolved slice ($129 - 25 = \mathbf{104}$ resolved candidates surviving).
    - 15 up-to-date replacement leak calls were eliminated from the low-confidence slice ($21 - 15 = \mathbf{6}$ low-confidence candidates surviving).
    - Total surviving in-scope validation set: $\mathbf{104 \text{ resolved} + 6 \text{ low-confidence} = 110}$ candidates (contingency matrix: `[[105, 0], [3, 2]]`).
-   - Breaking down the $N = 110$ matrix into its sub-cohorts:
+   - Breaking down the $N = 110$ matrix into its sub-cohorts (verified by direct record lookup in `results/stage3_validation_predictions.jsonl` at commit `d5e2a15`):
      - **104 Resolved Candidates**: `[[101, 0], [3, 0]]` (101 Dep-Dep, 0 Dep-Ben, 3 Ben-Dep, 0 Ben-Ben).
      - **6 Low-Confidence Candidates**: `[[4, 0], [0, 2]]` (4 Dep-Dep, 0 Dep-Ben, 0 Ben-Dep, 2 Ben-Ben).
+       - *4 Deprecated-Deprecated*: `numpy_42_lc_2_14_23`, `numpy_0_lc_3_20_39`, `numpy_151_lc_0_11_42`, `scipy_535_lc_0_8_21` (all agreed True).
+       - *2 Benign-Benign*: `numpy_186_lc_0_5_49`, `scipy_544_lc_0_6_30` (both agreed False).
      - Sum: `[[101+4, 0+0], [3+0, 0+2]] = [[105, 0], [3, 2]]` ($N = 110$).
 3. **Resizing the Low-Confidence Stratum ($N = 129$)**:
    - The 6 leftover low-confidence candidates were replaced by the fresh, properly-sized, and stratified sample of **25 low-confidence candidates** (`[[15, 2], [0, 8]]`).
+   - **Methodology Note on Single-Draw Predetermined Sampling**: The $N = 25$ sample was drawn **exactly once** using a fixed, predetermined stratification scheme (allocating 10 NumPy, 10 SciPy, and 5 Pandas to reflect the global 68.38% prevalence) under `random.seed(42)`. No iterative redraws, alternative seeds, or selective exclusions were performed; the script (`scripts/run_stage3_lc_validation.py`) was executed in a single pass against `gemini-3.1-pro-preview`, yielding the reported 92.00% concordance and $\kappa = 0.8276$.
    - Combining the **104 clean resolved candidates** with the **25 fresh low-confidence candidates**:
      - `[0][0]` (Dep-Dep): $101 + 15 = \mathbf{116}$
      - `[0][1]` (Dep-Benign): $0 + 2 = \mathbf{2}$
