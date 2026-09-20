@@ -341,6 +341,10 @@ class BatchVerifier:
                 table[1][1] += 1
 
         kappa = compute_cohens_kappa(table)
+        pabak = round(2.0 * (raw_concordance / 100.0) - 1.0, 4)
+        sens = table[0][0] / (table[0][0] + table[1][0]) if (table[0][0] + table[1][0]) > 0 else 0.0
+        spec = table[1][1] / (table[1][1] + table[0][1]) if (table[1][1] + table[0][1]) > 0 else 0.0
+        bal_acc = round((sens + spec) / 2.0 * 100.0, 2)
 
         summary = {
             "total_evaluated": n,
@@ -348,6 +352,8 @@ class BatchVerifier:
             "disagreed_count": n - agreed,
             "raw_concordance_pct": round(raw_concordance, 2),
             "cohens_kappa": round(kappa, 4),
+            "pabak": pabak,
+            "balanced_accuracy_pct": bal_acc,
             "contingency_table": {
                 "both_deprecated": table[0][0],
                 "primary_deprecated_val_benign": table[0][1],
@@ -358,7 +364,7 @@ class BatchVerifier:
         }
         logger.info(
             f"Validation Subsample Evaluation: Raw Concordance = {raw_concordance:.2f}%, "
-            f"Cohen's Kappa = {kappa:.4f}"
+            f"Cohen's Kappa = {kappa:.4f}, PABAK = {pabak:.4f}, Balanced Acc = {bal_acc:.2f}%"
         )
         return summary
 

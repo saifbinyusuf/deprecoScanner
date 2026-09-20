@@ -145,9 +145,10 @@ class EvidenceRetriever:
         # 1. Start with canonical replacement if known
         replacement = CANONICAL_REPLACEMENTS.get(qualified_name)
         if not replacement:
-            # Try fuzzy match on suffix
+            # Try symbol compatibility match
+            from src.detectors.union_dedup import _is_symbol_compatible
             for k, v in CANONICAL_REPLACEMENTS.items():
-                if k.endswith("." + qualified_name) or qualified_name.endswith("." + k.split(".")[-1]):
+                if _is_symbol_compatible(k, qualified_name) or _is_symbol_compatible(qualified_name, k):
                     replacement = v
                     break
 

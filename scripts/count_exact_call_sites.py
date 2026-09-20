@@ -23,6 +23,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.detectors.union_dedup import _is_symbol_compatible
+from src.resolution.benchmark_targets import (
+    ALL_BENCHMARK_TARGETS,
+    BENCHMARK_TARGET_APIS,
+    match_benchmark_target,
+)
 from src.resolution.jedi_resolver import JediResolver
 from scripts.run_stage2_pilot import (
     BENCHMARK_TARGETS,
@@ -33,7 +38,7 @@ from scripts.run_stage2_pilot import (
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("count_exact_call_sites")
 
-TARGET_SHORT_NAMES: Set[str] = {t.split(".")[-1] for t in BENCHMARK_TARGETS}
+STAGE2_PILOT_SHORT_NAMES: Set[str] = {t.split(".")[-1] for t in BENCHMARK_TARGETS}
 
 _worker_resolver: Optional[JediResolver] = None
 
@@ -41,17 +46,6 @@ _worker_resolver: Optional[JediResolver] = None
 def _init_worker(catalog_symbols: List[str]):
     global _worker_resolver
     _worker_resolver = JediResolver(catalog_symbols=catalog_symbols)
-
-
-def is_target_candidate(callee_name: str, matched_sym: str | None) -> bool:
-    """Checks if a low-confidence call site is a candidate for a benchmark target API."""
-    if callee_name in TARGET_SHORT_NAMES:
-        return True
-    if matched_sym:
-        for t in BENCHMARK_TARGETS:
-            if _is_symbol_compatible(t, matched_sym):
-                return True
-    return False
 
 
 def _process_sample(args: tuple[str, str, Dict[str, Any]]) -> Dict[str, Any]:
@@ -70,13 +64,20 @@ def _process_sample(args: tuple[str, str, Dict[str, Any]]) -> Dict[str, Any]:
         library_hint=lib,
     )
 
-    resolved_dep_count = len(res.resolved_deprecated)
+    resolved_dep_count = 0
+    for r in res.resolved_deprecated:
+        sym = r.matched_catalog_symbol or r.qualified_name
+        if match_benchmark_target(sym):
+            resolved_dep_count += 1
+
     target_lc_count = 0
     all_lc_count = len(res.low_confidence)
 
-    for lc in res.low_confidence:
-        if is_target_candidate(lc.callee_name, lc.matched_catalog_symbol):
-            target_lc_count += 1
+    category = sample.get("category", "unknown")
+    if category == "outdated":
+        for lc in res.low_confidence:
+            if lc.callee_name in STAGE2_PILOT_SHORT_NAMES:
+                target_lc_count += 1
 
     return {
         "library": lib,

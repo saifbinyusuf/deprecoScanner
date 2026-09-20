@@ -26,6 +26,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.detectors.union_dedup import _is_symbol_compatible
+from src.resolution.benchmark_targets import (
+    ALL_BENCHMARK_TARGETS,
+    BENCHMARK_TARGET_APIS,
+    match_benchmark_target,
+)
 from src.resolution.jedi_resolver import JediResolver
 from src.verification.evidence_retriever import EvidenceRetriever
 from scripts.run_stage2_pilot import (
@@ -37,7 +42,7 @@ from scripts.run_stage2_pilot import (
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("extract_stage3_manifest")
 
-TARGET_SHORT_NAMES: Set[str] = {t.split(".")[-1] for t in BENCHMARK_TARGETS}
+STAGE2_PILOT_SHORT_NAMES: Set[str] = {t.split(".")[-1] for t in BENCHMARK_TARGETS}
 
 _worker_resolver: Optional[JediResolver] = None
 _worker_evidence: Optional[EvidenceRetriever] = None
@@ -49,32 +54,6 @@ def _init_worker(catalog_symbols: List[str]):
     _worker_evidence = EvidenceRetriever()
 
 
-def match_canonical_target(sym: Optional[str], callee: str, lib: str) -> str:
-    """Associates a candidate call with the appropriate canonical benchmark target API."""
-    if sym:
-        for t in BENCHMARK_TARGETS:
-            if _is_symbol_compatible(t, sym):
-                return t
-    short_matches = [t for t in BENCHMARK_TARGETS if t.split(".")[-1] == callee and t.startswith(lib)]
-    if short_matches:
-        return short_matches[0]
-    # Fallback to any matching target
-    all_matches = [t for t in BENCHMARK_TARGETS if t.split(".")[-1] == callee]
-    if all_matches:
-        return all_matches[0]
-    return sym or callee
-
-
-def is_target_candidate(callee_name: str, matched_sym: str | None) -> bool:
-    if callee_name in TARGET_SHORT_NAMES:
-        return True
-    if matched_sym:
-        for t in BENCHMARK_TARGETS:
-            if _is_symbol_compatible(t, matched_sym):
-                return True
-    return False
-
-
 def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> List[Dict[str, Any]]:
     global _worker_resolver, _worker_evidence
     if _worker_resolver is None or _worker_evidence is None:
@@ -83,7 +62,7 @@ def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> Li
     lib, sample_id, sample_idx, sample = args
     code = sample.get("function", "")
     preamble = build_reconstructed_preamble(sample)
-    label = sample.get("label", "unknown")  # outdated vs up-to-date cohort
+    category = sample.get("category", "unknown")  # outdated vs up-to-dated cohort
 
     res = _worker_resolver.analyze_client_snippet(
         code=code,
@@ -95,9 +74,12 @@ def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> Li
     candidates = []
 
     # 1. Resolved Deprecated Candidates (Confirmation Mode)
+    # Strictly filtered against the 31 canonical benchmark targets using match_benchmark_target
     for idx, r in enumerate(res.resolved_deprecated):
         sym = r.matched_catalog_symbol or r.qualified_name
-        target_api = match_canonical_target(sym, sym.split(".")[-1], lib)
+        target_api = match_benchmark_target(sym)
+        if target_api is None:
+            continue
         ev = _worker_evidence.get_evidence(target_api)
         candidates.append(
             {
@@ -105,7 +87,7 @@ def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> Li
                 "sample_id": sample_id,
                 "sample_idx": sample_idx,
                 "library": lib,
-                "cohort": label,
+                "cohort": category,
                 "stage2_status": "resolved_deprecated",
                 "mode": "confirmation",
                 "target_api": target_api,
@@ -122,10 +104,27 @@ def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> Li
             }
         )
 
-    # 2. Target Low-Confidence Candidates (Inference Mode)
-    for idx, lc in enumerate(res.low_confidence):
-        if is_target_candidate(lc.callee_name, lc.matched_catalog_symbol):
-            target_api = match_canonical_target(lc.matched_catalog_symbol, lc.callee_name, lib)
+    # 2. Target Low-Confidence Candidates (Inference Mode - Outdated Cohort Only)
+    # The low-confidence recovery tier is only conceptually valid for the outdated cohort,
+    # where genuine missed deprecations occur. Up-to-date samples by definition use clean/replacement APIs;
+    # any callee-stem matches in up-to-date code are modern replacement calls or unrelated methods.
+    if category == "outdated":
+        for idx, lc in enumerate(res.low_confidence):
+            if lc.callee_name not in STAGE2_PILOT_SHORT_NAMES:
+                continue
+            target_api = match_benchmark_target(lc.matched_catalog_symbol)
+            if not target_api:
+                for t in BENCHMARK_TARGETS:
+                    if t.split(".")[-1] == lc.callee_name and t.startswith(lib):
+                        target_api = t
+                        break
+            if not target_api:
+                for t in BENCHMARK_TARGETS:
+                    if t.split(".")[-1] == lc.callee_name:
+                        target_api = t
+                        break
+            if not target_api:
+                continue
             ev = _worker_evidence.get_evidence(target_api)
             candidates.append(
                 {
@@ -133,7 +132,7 @@ def _extract_sample_candidates(args: tuple[str, str, int, Dict[str, Any]]) -> Li
                     "sample_id": sample_id,
                     "sample_idx": sample_idx,
                     "library": lib,
-                    "cohort": label,
+                    "cohort": category,
                     "stage2_status": "low_confidence",
                     "mode": "inference",
                     "target_api": target_api,
@@ -198,17 +197,17 @@ def main():
     logger.info(f"Per-library totals: {by_lib}")
     logger.info(f"Grand total candidate call sites: {len(all_candidates)}")
 
-    assert len(all_candidates) == 2932, f"Expected 2932 candidates, got {len(all_candidates)}"
-    assert resolved_count == 2533, f"Expected 2533 resolved candidates, got {resolved_count}"
-    assert lc_count == 399, f"Expected 399 low-confidence candidates, got {lc_count}"
-    assert by_lib == {"numpy": 1113, "scipy": 1605, "pandas": 214}, f"Per-lib mismatch: {by_lib}"
+    assert len(all_candidates) == 1981, f"Expected 1981 candidates, got {len(all_candidates)}"
+    assert resolved_count == 1864, f"Expected 1864 resolved candidates, got {resolved_count}"
+    assert lc_count == 117, f"Expected 117 low-confidence candidates, got {lc_count}"
+    assert by_lib == {"numpy": 910, "scipy": 929, "pandas": 142}, f"Per-lib mismatch: {by_lib}"
 
     out_file = REPO_ROOT / "data" / "stage3_candidates_manifest.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(all_candidates, f, indent=2)
 
-    logger.info(f"Successfully saved manifest with exactly 2,932 candidates to {out_file}")
+    logger.info(f"Successfully saved manifest with exactly 1,981 candidates to {out_file}")
 
 
 if __name__ == "__main__":

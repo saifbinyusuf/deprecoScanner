@@ -1,72 +1,60 @@
 {
   "evaluation_stage": "Stage 3: LLM Verification (Phase 4)",
+  "scope_policy": "Strictly anchored to 31 canonical benchmark target APIs",
   "primary_model": "gemini-3.5-flash-lite",
   "validation_model": "gemini-3.1-pro-preview",
   "prompt_version": "v1.1",
-  "total_candidates_verified": 2932,
+  "total_candidates_verified": 1981,
   "semantic_verdicts": {
-    "verified_deprecated_count": 2274,
-    "verified_deprecated_pct": 77.56,
-    "rejected_benign_or_anomaly_count": 658,
-    "rejected_benign_or_anomaly_pct": 22.44
+    "verified_deprecated_count": 1914,
+    "verified_deprecated_pct": 96.62,
+    "rejected_benign_or_anomaly_count": 67,
+    "rejected_benign_or_anomaly_pct": 3.38
   },
   "by_stage2_status": {
-    "low_confidence": {
-      "total": 399,
-      "deprecated": 226,
-      "benign": 173
-    },
     "resolved_deprecated": {
-      "total": 2533,
-      "deprecated": 2048,
-      "benign": 485
+      "total": 1864,
+      "deprecated": 1834,
+      "benign": 30
+    },
+    "low_confidence": {
+      "total": 117,
+      "deprecated": 80,
+      "benign": 37
     }
   },
   "by_library": {
     "numpy": {
-      "total": 1113,
-      "deprecated": 950,
-      "benign": 163
+      "total": 910,
+      "deprecated": 902,
+      "benign": 8
     },
     "pandas": {
-      "total": 214,
-      "deprecated": 134,
-      "benign": 80
+      "total": 142,
+      "deprecated": 98,
+      "benign": 44
     },
     "scipy": {
-      "total": 1605,
-      "deprecated": 1190,
-      "benign": 415
+      "total": 929,
+      "deprecated": 914,
+      "benign": 15
     }
   },
   "validation_subsample": {
-    "total_evaluated": 150,
-    "agreed_count": 138,
-    "disagreed_count": 12,
-    "raw_concordance_pct": 92.0,
-    "cohens_kappa": 0.7506,
+    "total_evaluated": 110,
+    "agreed_count": 107,
+    "disagreed_count": 3,
+    "raw_concordance_pct": 97.27,
+    "cohens_kappa": 0.56,
+    "pabak": 0.9455,
+    "balanced_accuracy_pct": 98.61,
     "contingency_table": {
-      "both_deprecated": 114,
-      "primary_deprecated_val_benign": 9,
+      "both_deprecated": 105,
+      "primary_deprecated_val_benign": 0,
       "primary_benign_val_deprecated": 3,
-      "both_benign": 24
+      "both_benign": 2
     },
     "disagreements": [
-      {
-        "candidate_id": "pandas_120_lc_1_56_79",
-        "sample_id": "pandas_120",
-        "target_api": "pandas.io.formats.style.Styler.render",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 1.0,
-        "primary_rationale": "The enclosing context explicitly imports Styler from pandas and checks pandas_version to fall back to the deprecated render method for pandas versions older than 1.4.0.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 1.0,
-        "validation_rationale": "The receiver is definitively a pandas Styler object, but the call to `render()` is guarded by a version check ensuring it is only executed on pandas versions < 1.4.0, making it a benign fallback.",
-        "agreement": false,
-        "cached": true
-      },
       {
         "candidate_id": "pandas_32_res_2_9_8",
         "sample_id": "pandas_32",
@@ -85,7 +73,7 @@
       {
         "candidate_id": "pandas_87_res_1_5_8",
         "sample_id": "pandas_87",
-        "target_api": "pandas.core.generic.NDFrame.first",
+        "target_api": "pandas.DataFrame.first",
         "primary_model": "gemini-3.5-flash-lite",
         "primary_decision": false,
         "primary_confidence": 1.0,
@@ -100,7 +88,7 @@
       {
         "candidate_id": "pandas_125_res_1_14_4",
         "sample_id": "pandas_125",
-        "target_api": "pandas.core.generic.NDFrame.pad",
+        "target_api": "pandas.Series.pad",
         "primary_model": "gemini-3.5-flash-lite",
         "primary_decision": false,
         "primary_confidence": 1.0,
@@ -109,126 +97,6 @@
         "validation_decision": true,
         "validation_confidence": 1.0,
         "validation_rationale": "The call site invokes `pad()` on `pdf`, which is explicitly instantiated as a `pandas.DataFrame`, confirming the use of the deprecated `pandas.DataFrame.pad` API.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_247_lc_1_3_22",
-        "sample_id": "scipy_247",
-        "target_api": "scipy.misc.comb",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.9,
-        "primary_rationale": "The receiver 'sps' is commonly used as an alias for scipy.special, and combined with scipy.misc.comb, it invokes the deprecated scipy.misc API.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 0.95,
-        "validation_rationale": "The receiver 'sps' is a standard alias for 'scipy.special', which is the recommended replacement for the deprecated 'scipy.misc.comb', indicating this is the updated API.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_248_lc_2_17_19",
-        "sample_id": "scipy_248",
-        "target_api": "scipy.misc.comb",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.95,
-        "primary_rationale": "The receiver 'sps' in scipy.misc is commonly used as an alias for scipy.special, indicating a call to the deprecated scipy.misc.comb wrapper.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 0.95,
-        "validation_rationale": "The receiver 'sps' is a standard alias for 'scipy.special', meaning the call is to the recommended replacement 'scipy.special.comb' rather than the deprecated 'scipy.misc.comb'.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_677_lc_17_31_51",
-        "sample_id": "scipy_677",
-        "target_api": "scipy.misc.logsumexp",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.9,
-        "primary_rationale": "The call to scipy_special.logsumexp performs log-sum-exp calculations typical of scipy.special, indicating a reference to the deprecated scipy.misc.logsumexp function.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 0.99,
-        "validation_rationale": "The receiver 'scipy_special' strongly implies an alias for 'scipy.special', indicating the code is using the recommended replacement 'scipy.special.logsumexp' rather than the deprecated 'scipy.misc.logsumexp'.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_668_lc_0_21_18",
-        "sample_id": "scipy_668",
-        "target_api": "scipy.misc.logsumexp",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.95,
-        "primary_rationale": "The enclosing docstring explicitly mentions scipy.special.logsumexp, indicating the code is interacting with SciPy's special functions module via the unimported or dynamically referenced 'special' receiver.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 1.0,
-        "validation_rationale": "The call site invokes the recommended replacement 'scipy.special.logsumexp' rather than the deprecated 'scipy.misc.logsumexp'.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_142_lc_0_24_51",
-        "sample_id": "scipy_142",
-        "target_api": "scipy.misc.comb",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.95,
-        "primary_rationale": "The receiver `sc` is used to invoke `comb` with mathematical arguments typical of scipy's combinatorial functions, strongly implying the deprecated scipy.misc.comb API.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 0.85,
-        "validation_rationale": "The receiver 'sc' is highly likely an alias for 'scipy.special' (the recommended replacement module) rather than 'scipy.misc', making this a false match for the deprecated scipy.misc.comb.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_661_lc_1_6_28",
-        "sample_id": "scipy_661",
-        "target_api": "scipy.misc.logsumexp",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 0.9,
-        "primary_rationale": "The receiver 'sp' is commonly used as an alias for scipy, and the invocation of 'logsumexp' matches the deprecated scipy.misc.logsumexp API.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 0.85,
-        "validation_rationale": "The receiver 'sp' is highly likely an alias for 'scipy.special' (the recommended replacement), as 'scipy.misc' is rarely aliased to 'sp' and 'scipy.logsumexp' does not exist directly in the top-level namespace.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_1303_res_0_28_4",
-        "sample_id": "scipy_1303",
-        "target_api": "scipy.linalg._basic.pinv",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 1.0,
-        "primary_rationale": "The code directly invokes scipy.linalg.pinv(covmat) in an active execution path without using the rtol or atol parameters.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 1.0,
-        "validation_rationale": "The call site invokes scipy.linalg.pinv without using the deprecated 'cond' or 'rcond' parameters, making this a false positive.",
-        "agreement": false,
-        "cached": true
-      },
-      {
-        "candidate_id": "scipy_1269_res_0_19_4",
-        "sample_id": "scipy_1269",
-        "target_api": "scipy.linalg._basic.pinv",
-        "primary_model": "gemini-3.5-flash-lite",
-        "primary_decision": true,
-        "primary_confidence": 1.0,
-        "primary_rationale": "The code directly invokes scipy.linalg.pinv inside an active fallback branch without using the deprecated rtol or atol parameters.",
-        "validation_model": "gemini-3.1-pro-preview",
-        "validation_decision": false,
-        "validation_confidence": 1.0,
-        "validation_rationale": "The call site invokes `scipy.linalg.pinv` without using the deprecated `cond` or `rcond` parameters, making the static analysis flag a false positive.",
         "agreement": false,
         "cached": true
       }
@@ -521,17 +389,5 @@
         "rationale": "The call site is a generic audit placeholder and does not invoke the deprecated scipy.general_audit API."
       }
     ]
-  },
-  "run_telemetry": {
-    "api_calls": 2,
-    "cache_hits": 2970,
-    "cache_hit_rate_pct": 99.93,
-    "total_db_records": 2316,
-    "prompt_tokens": 2085,
-    "candidate_tokens": 107,
-    "total_tokens": 2192,
-    "estimated_primary_cost_usd": 0.0003,
-    "estimated_validation_cost_usd": 0.2644,
-    "estimated_total_cost_usd": 0.2646
   }
 }

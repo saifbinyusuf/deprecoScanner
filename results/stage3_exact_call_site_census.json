@@ -1,30 +1,30 @@
 {
   "benchmark_samples_total": 5875,
-  "elapsed_seconds": 548.87,
-  "resolved_deprecated_calls": 2533,
-  "target_low_confidence_calls": 399,
-  "exact_candidate_call_sites_total": 2932,
+  "elapsed_seconds": 495.56,
+  "resolved_deprecated_calls": 1864,
+  "target_low_confidence_calls": 117,
+  "exact_candidate_call_sites_total": 1981,
   "all_low_confidence_calls": 7420,
   "per_library": {
     "numpy": {
       "samples": 3555,
-      "resolved_deprecated_calls": 1022,
-      "target_low_confidence_calls": 91,
-      "total_candidate_calls": 1113,
+      "resolved_deprecated_calls": 863,
+      "target_low_confidence_calls": 47,
+      "total_candidate_calls": 910,
       "all_low_confidence_calls": 3439
     },
     "scipy": {
       "samples": 2182,
-      "resolved_deprecated_calls": 1321,
-      "target_low_confidence_calls": 284,
-      "total_candidate_calls": 1605,
+      "resolved_deprecated_calls": 881,
+      "target_low_confidence_calls": 48,
+      "total_candidate_calls": 929,
       "all_low_confidence_calls": 3749
     },
     "pandas": {
       "samples": 138,
-      "resolved_deprecated_calls": 190,
-      "target_low_confidence_calls": 24,
-      "total_candidate_calls": 214,
+      "resolved_deprecated_calls": 120,
+      "target_low_confidence_calls": 22,
+      "total_candidate_calls": 142,
       "all_low_confidence_calls": 232
     }
   }
