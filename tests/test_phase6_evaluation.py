@@ -43,28 +43,30 @@ def test_dual_recall_and_confusion_matrix_accounting(evaluation_report):
     """Asserts mathematical consistency of dual recall and confusion matrices for both configurations."""
     for config_key in ["config_a_ast_heuristics", "config_b_full_pipeline"]:
         metrics = evaluation_report["overall_metrics"][config_key]
-        tp = metrics["tp"]
-        fp = metrics["fp"]
-        fn_cond = metrics["fn_conditional"]
-        fn_e2e = metrics["fn_end_to_end"]
-        tn = metrics["tn"]
+        cond = metrics["candidate_conditional"]
+        e2e = metrics["end_to_end"]
 
-        # Assert precision formula
-        expected_prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-        assert metrics["precision"] == pytest.approx(expected_prec, abs=1e-4)
+        # Assert candidate-conditional metrics consistency
+        tp_c, fp_c, fn_c, tn_c = cond["tp"], cond["fp"], cond["fn"], cond["tn"]
+        expected_prec_c = tp_c / (tp_c + fp_c) if (tp_c + fp_c) > 0 else 0.0
+        expected_rec_c = tp_c / (tp_c + fn_c) if (tp_c + fn_c) > 0 else 0.0
+        assert cond["precision"] == pytest.approx(expected_prec_c, abs=1e-4)
+        assert cond["recall"] == pytest.approx(expected_rec_c, abs=1e-4)
+        assert metrics["recall_conditional"] == pytest.approx(expected_rec_c, abs=1e-4)
 
-        # Assert candidate-conditional recall
-        expected_rec_cond = tp / (tp + fn_cond) if (tp + fn_cond) > 0 else 0.0
-        assert metrics["recall_conditional"] == pytest.approx(expected_rec_cond, abs=1e-4)
-
-        # Assert end-to-end recall includes the 8 pre-labeled pipeline misses
-        assert fn_e2e == fn_cond + 8
-        expected_rec_e2e = tp / (tp + fn_e2e) if (tp + fn_e2e) > 0 else 0.0
-        assert metrics["recall_end_to_end"] == pytest.approx(expected_rec_e2e, abs=1e-4)
+        # Assert end-to-end metrics consistency (driven by actual per-item predictions on all 150 items)
+        tp_e, fp_e, fn_e, tn_e = e2e["tp"], e2e["fp"], e2e["fn"], e2e["tn"]
+        assert tp_e + fp_e + fn_e + tn_e == 150
+        expected_prec_e = tp_e / (tp_e + fp_e) if (tp_e + fp_e) > 0 else 0.0
+        expected_rec_e = tp_e / (tp_e + fn_e) if (tp_e + fn_e) > 0 else 0.0
+        assert e2e["precision"] == pytest.approx(expected_prec_e, abs=1e-4)
+        assert e2e["recall"] == pytest.approx(expected_rec_e, abs=1e-4)
+        assert metrics["precision"] == pytest.approx(expected_prec_e, abs=1e-4)
+        assert metrics["recall_end_to_end"] == pytest.approx(expected_rec_e, abs=1e-4)
 
         # Assert F1 formulas
-        if metrics["precision"] + metrics["recall_end_to_end"] > 0:
-            expected_f1_e2e = 2 * metrics["precision"] * metrics["recall_end_to_end"] / (metrics["precision"] + metrics["recall_end_to_end"])
+        if expected_prec_e + expected_rec_e > 0:
+            expected_f1_e2e = 2 * expected_prec_e * expected_rec_e / (expected_prec_e + expected_rec_e)
             assert metrics["f1_end_to_end"] == pytest.approx(expected_f1_e2e, abs=1e-4)
 
 

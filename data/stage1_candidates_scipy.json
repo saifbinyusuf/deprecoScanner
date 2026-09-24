@@ -5,7 +5,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:43",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:43",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -17,7 +17,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:65",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:65",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -29,7 +29,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
     "scope": "parameter",
     "param_name": "static_argnums",
     "message": null,
@@ -41,7 +41,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:214",
     "scope": "parameter",
     "param_name": "static_argnames",
     "message": null,
@@ -53,7 +53,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:267",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:267",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -65,7 +65,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:354",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:354",
     "scope": "parameter",
     "param_name": "monkeypatch",
     "message": null,
@@ -77,7 +77,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:433",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_external/array_api_extra/testing.py:433",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -89,7 +89,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:142",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:142",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -101,7 +101,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:261",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:261",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -113,7 +113,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:832",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:832",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -125,7 +125,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:876",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:876",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -138,7 +138,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:1041",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/_util.py:1041",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -151,7 +151,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:15",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:15",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -163,7 +163,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:81",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:81",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -175,7 +175,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:85",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:85",
     "scope": "parameter",
     "param_name": "fun",
     "message": null,
@@ -187,7 +187,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:92",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:92",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -199,7 +199,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:101",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:101",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -211,7 +211,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:115",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:115",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -223,7 +223,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:120",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:120",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -235,7 +235,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:184",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:184",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -247,7 +247,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:226",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:226",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -259,7 +259,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:233",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/deprecation.py:233",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -272,7 +272,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:263",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:263",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -284,7 +284,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:230",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test__util.py:230",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -296,7 +296,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_deprecation.py:8",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_deprecation.py:8",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -308,7 +308,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:46",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:46",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -320,7 +320,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:54",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:54",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -332,7 +332,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:63",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:63",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -344,7 +344,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:78",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:78",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -356,7 +356,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:119",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_doccer.py:119",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -368,7 +368,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:205",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:205",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -380,7 +380,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:257",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:257",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -393,7 +393,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:268",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:268",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -405,7 +405,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:413",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/_lib/tests/test_public_api.py:413",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -417,7 +417,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/conftest.py:655",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/conftest.py:655",
     "scope": "parameter",
     "param_name": "test",
     "message": null,
@@ -429,7 +429,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/constants/_codata.py:2125",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/constants/_codata.py:2125",
     "scope": "parameter",
     "param_name": "key",
     "message": null,
@@ -442,7 +442,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:27",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:27",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -454,7 +454,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:140",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/_interpolate.py:140",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -467,7 +467,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_pade.py:11",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/_pade.py:11",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -480,7 +480,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/_polyint.py:465",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/_polyint.py:465",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -492,7 +492,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:851",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:851",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -504,7 +504,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:1041",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_interpolate.py:1041",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -516,7 +516,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_pade.py:10",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_pade.py:10",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -528,7 +528,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_polyint.py:337",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_polyint.py:337",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -540,7 +540,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_rgi.py:1072",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/interpolate/tests/test_rgi.py:1072",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -552,7 +552,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:301",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:301",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -564,7 +564,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:391",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_fast_matrix_market/__init__.py:391",
     "scope": "parameter",
     "param_name": "spmatrix",
     "message": null,
@@ -576,7 +576,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:466",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:466",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -588,7 +588,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:533",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_harwell_boeing/hb.py:533",
     "scope": "parameter",
     "param_name": "spmatrix",
     "message": null,
@@ -600,7 +600,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:86",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:86",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -612,7 +612,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:569",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:569",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -624,7 +624,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:613",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/_mmio.py:613",
     "scope": "parameter",
     "param_name": "spmatrix",
     "message": null,
@@ -636,7 +636,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:82",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:82",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -648,7 +648,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:257",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/matlab/_mio.py:257",
     "scope": "parameter",
     "param_name": "spmatrix",
     "message": null,
@@ -660,7 +660,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/io/matlab/tests/test_mio.py:1388",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/io/matlab/tests/test_mio.py:1388",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -672,7 +672,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:32",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:32",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -684,7 +684,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:176",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/_decomp_qr.py:176",
     "scope": "parameter",
     "param_name": "lwork",
     "message": null,
@@ -696,7 +696,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
     "scope": "parameter",
     "param_name": "c",
     "message": null,
@@ -708,7 +708,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/_special_matrices.py:218",
     "scope": "parameter",
     "param_name": "r",
     "message": null,
@@ -720,7 +720,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_decomp.py:2011",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_decomp.py:2011",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -732,7 +732,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_deprecations.py:221",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_deprecations.py:221",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -744,7 +744,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_special_matrices.py:612",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/linalg/tests/test_special_matrices.py:612",
     "scope": "parameter",
     "param_name": "f",
     "message": null,
@@ -756,7 +756,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:82",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_models.py:82",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -768,7 +768,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:122",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_models.py:122",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -780,7 +780,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:188",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_models.py:188",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -792,7 +792,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:260",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_models.py:260",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -804,7 +804,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_models.py:298",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_models.py:298",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -816,7 +816,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:53",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:53",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -828,7 +828,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:68",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:68",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -840,7 +840,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:83",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:83",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -852,7 +852,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:202",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:202",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -864,7 +864,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:320",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:320",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -876,7 +876,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:461",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:461",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -888,7 +888,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:578",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:578",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -900,7 +900,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:661",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/_odrpack.py:661",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -912,7 +912,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/models.py:25",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/models.py:25",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -924,7 +924,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/odr/odrpack.py:26",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/odr/odrpack.py:26",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -937,7 +937,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog.py:178",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/_linprog.py:178",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -949,7 +949,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:761",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:761",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -961,7 +961,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1092",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1092",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -973,7 +973,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1278",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/_linprog_doc.py:1278",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -985,7 +985,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__differential_evolution.py:1026",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__differential_evolution.py:1026",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -997,7 +997,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:124",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:124",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1009,7 +1009,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:259",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test__linprog_clean_inputs.py:259",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1021,7 +1021,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:297",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:297",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1033,7 +1033,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:491",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_linprog.py:491",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1045,7 +1045,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_lsq_linear.py:98",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_lsq_linear.py:98",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1057,7 +1057,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_minimize_constrained.py:708",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/optimize/tests/test_minimize_constrained.py:708",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1069,7 +1069,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
     "scope": "parameter",
     "param_name": "kwarg",
     "message": null,
@@ -1081,7 +1081,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:20",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1093,7 +1093,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:266",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/signal/_spectral_py.py:266",
     "scope": "parameter",
     "param_name": "precenter",
     "message": null,
@@ -1105,7 +1105,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/signal/tests/test_spectral.py:1554",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/signal/tests/test_spectral.py:1554",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1117,7 +1117,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:623",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:623",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1129,7 +1129,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:778",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_bsr.py:778",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1141,7 +1141,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:319",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:319",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1153,7 +1153,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:440",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:440",
     "scope": "parameter",
     "param_name": "dtype",
     "message": null,
@@ -1165,7 +1165,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:479",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:479",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1177,7 +1177,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:761",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:761",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1189,7 +1189,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
     "scope": "parameter",
     "param_name": "A",
     "message": null,
@@ -1201,7 +1201,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:840",
     "scope": "parameter",
     "param_name": "B",
     "message": null,
@@ -1213,7 +1213,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:908",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:908",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1225,7 +1225,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
     "scope": "parameter",
     "param_name": "A",
     "message": null,
@@ -1237,7 +1237,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:982",
     "scope": "parameter",
     "param_name": "B",
     "message": null,
@@ -1249,7 +1249,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1203",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1203",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1261,7 +1261,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1410",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1410",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1273,7 +1273,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1485",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_construct.py:1485",
     "scope": "parameter",
     "param_name": "mats",
     "message": null,
@@ -1285,7 +1285,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1658",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1658",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1297,7 +1297,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1811",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_coo.py:1811",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1309,7 +1309,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:152",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:152",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1321,7 +1321,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:292",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_csc.py:292",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1333,7 +1333,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:297",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:297",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1345,7 +1345,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:465",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_csr.py:465",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1357,7 +1357,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:480",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:480",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1369,7 +1369,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:621",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_dia.py:621",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1381,7 +1381,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:638",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:638",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1393,7 +1393,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:733",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_dok.py:733",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1405,7 +1405,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:48",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:48",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1417,7 +1417,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:133",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:133",
     "scope": "parameter",
     "param_name": "A",
     "message": null,
@@ -1429,7 +1429,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:148",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:148",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1441,7 +1441,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:234",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_extract.py:234",
     "scope": "parameter",
     "param_name": "A",
     "message": null,
@@ -1453,7 +1453,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:490",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:490",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1465,7 +1465,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:598",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_lil.py:598",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1477,7 +1477,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_matrix.py:1",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_matrix.py:1",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1489,7 +1489,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/_sputils.py:574",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/_sputils.py:574",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1501,7 +1501,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/csgraph/tests/test_traversal.py:84",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/csgraph/tests/test_traversal.py:84",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1513,7 +1513,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_interface.py:338",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_interface.py:338",
     "scope": "parameter",
     "param_name": "x",
     "message": null,
@@ -1525,7 +1525,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/iterative.py:692",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/iterative.py:692",
     "scope": "parameter",
     "param_name": "callback+callback_type",
     "message": null,
@@ -1537,7 +1537,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:55",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:55",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1549,7 +1549,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:86",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:86",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1561,7 +1561,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:108",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:108",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1573,7 +1573,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:134",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:134",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1585,7 +1585,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:146",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:146",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1597,7 +1597,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:184",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py:184",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1609,7 +1609,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_iterative.py:312",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_iterative.py:312",
     "scope": "parameter",
     "param_name": "case",
     "message": null,
@@ -1621,7 +1621,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:53",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:53",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1633,7 +1633,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:114",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:114",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1645,7 +1645,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:136",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:136",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1657,7 +1657,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:163",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:163",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1669,7 +1669,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:178",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:178",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1681,7 +1681,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:201",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:201",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1693,7 +1693,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:223",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/_isolve/tests/test_lgmres.py:223",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1705,7 +1705,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:92",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:92",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1717,7 +1717,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:787",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:787",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1729,7 +1729,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:1230",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_interface.py:1230",
     "scope": "parameter",
     "param_name": "batch_x",
     "message": null,
@@ -1741,7 +1741,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_matfuncs.py:546",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/linalg/tests/test_matfuncs.py:546",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1753,7 +1753,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_base.py:1090",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_base.py:1090",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1765,7 +1765,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_construct.py:942",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/sparse/tests/test_construct.py:942",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1778,7 +1778,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:17",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:17",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1791,7 +1791,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:79",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:79",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1803,7 +1803,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:886",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:886",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1816,7 +1816,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:962",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/_kdtree.py:962",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1828,7 +1828,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_distance.py:1986",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_distance.py:1986",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1840,7 +1840,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_qhull.py:194",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/spatial/tests/test_qhull.py:194",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1852,7 +1852,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:30",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:30",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1864,7 +1864,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:60",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:60",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1876,7 +1876,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:99",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_bdtr.py:99",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1888,7 +1888,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_cython_special.py:360",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_cython_special.py:360",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1900,7 +1900,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:778",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:778",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1912,7 +1912,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:823",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_legendre.py:823",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1924,7 +1924,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/special/tests/test_nan_inputs.py:52",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/special/tests/test_nan_inputs.py:52",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1936,7 +1936,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_distribution_infrastructure.py:3850",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_distribution_infrastructure.py:3850",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1948,7 +1948,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2370",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2370",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1960,7 +1960,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2606",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2606",
     "scope": "parameter",
     "param_name": "method",
     "message": null,
@@ -1972,7 +1972,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2759",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_morestats.py:2759",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1984,7 +1984,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_multicomp.py:191",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_multicomp.py:191",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1996,7 +1996,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:802",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:802",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2008,7 +2008,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1117",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1117",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2020,7 +2020,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1286",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1286",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2032,7 +2032,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1608",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1608",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2044,7 +2044,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1960",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:1960",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2056,7 +2056,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2310",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2310",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2068,7 +2068,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2484",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_qmc.py:2484",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2080,7 +2080,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2303",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2303",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2092,7 +2092,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2319",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2319",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2104,7 +2104,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2394",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2394",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2116,7 +2116,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2411",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_resampling.py:2411",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2128,7 +2128,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/_sensitivity_analysis.py:245",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/_sensitivity_analysis.py:245",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2140,7 +2140,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:402",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:402",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2152,7 +2152,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:461",
+    "location": "./.venv/lib/python3.13/site-packages/scipy/stats/tests/test_morestats.py:461",
     "scope": "function",
     "param_name": null,
     "message": null,

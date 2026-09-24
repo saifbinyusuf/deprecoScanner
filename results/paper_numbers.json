@@ -1,0 +1,834 @@
+{
+  "metadata": {
+    "total_benchmark_items": 150,
+    "total_corpus_snippets": 5875,
+    "corpus_outdated_count": 1621,
+    "corpus_uptodate_count": 4254,
+    "num_canonical_targets_scanned": 31,
+    "num_active_targets_in_benchmark": 30,
+    "active_targets_positive_coverage": "30 of 31 (pandas.DataFrame.pad had 0 positive instances in raw corpus)",
+    "primary_label_set": "v2_adjudicated",
+    "sensitivity_label_set": "v1_frozen"
+  },
+  "table_2_benchmark_strata": {
+    "candidate_positives": {
+      "count": 100,
+      "sampled_default": "True",
+      "overrides": 2,
+      "v1_dep": 98,
+      "v1_ben": 2,
+      "v2_dep": 97,
+      "v2_ben": 3
+    },
+    "pipeline_misses": {
+      "count": 8,
+      "sampled_default": "True",
+      "overrides": 0,
+      "v1_dep": 8,
+      "v1_ben": 0,
+      "v2_dep": 8,
+      "v2_ben": 0
+    },
+    "label_anomalies": {
+      "count": 2,
+      "sampled_default": "False",
+      "overrides": 0,
+      "v1_dep": 0,
+      "v1_ben": 2,
+      "v2_dep": 0,
+      "v2_ben": 2
+    },
+    "hard_negatives": {
+      "count": 40,
+      "sampled_default": "False",
+      "overrides": 1,
+      "v1_dep": 1,
+      "v1_ben": 39,
+      "v2_dep": 1,
+      "v2_ben": 39
+    },
+    "total": {
+      "count": 150,
+      "sampled_default_dep": 108,
+      "sampled_default_ben": 42,
+      "overrides": 3,
+      "override_rate_pct": 2.14,
+      "v1_dep": 107,
+      "v1_ben": 43,
+      "v2_dep": 106,
+      "v2_ben": 44
+    },
+    "second_pass_blind_test_retest": {
+      "n": 30,
+      "concordance_pct": 100.0,
+      "cohen_kappa": 1.0,
+      "pabak": 1.0
+    }
+  },
+  "table_3_headline_primary_v2": {
+    "end_to_end_n150": {
+      "config_a": {
+        "tp": 106,
+        "fp": 24,
+        "tn": 20,
+        "fn": 0,
+        "precision_pct": 81.54,
+        "precision_ci": [
+          74.6,
+          87.9
+        ],
+        "recall_pct": 100.0,
+        "recall_ci": [
+          96.6,
+          100.0
+        ],
+        "specificity_pct": 45.45,
+        "specificity_ci": [
+          30.4,
+          60.4
+        ],
+        "f1": 0.8983,
+        "f1_ci": [
+          0.8547,
+          0.9356
+        ]
+      },
+      "baseline_a_prime": {
+        "tp": 106,
+        "fp": 8,
+        "tn": 36,
+        "fn": 0,
+        "precision_pct": 92.98,
+        "precision_ci": [
+          86.6,
+          96.9
+        ],
+        "recall_pct": 100.0,
+        "recall_ci": [
+          96.6,
+          100.0
+        ],
+        "specificity_pct": 81.82,
+        "specificity_ci": [
+          67.3,
+          91.8
+        ],
+        "f1": 0.9636,
+        "f1_ci": [
+          0.9339,
+          0.9841
+        ]
+      },
+      "config_b": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 44,
+        "fn": 18,
+        "precision_pct": 100.0,
+        "precision_ci": [
+          95.9,
+          100.0
+        ],
+        "recall_pct": 83.02,
+        "recall_ci": [
+          75.7,
+          89.9
+        ],
+        "specificity_pct": 100.0,
+        "specificity_ci": [
+          92.0,
+          100.0
+        ],
+        "f1": 0.9072,
+        "f1_ci": [
+          0.8617,
+          0.9469
+        ]
+      },
+      "config_c": {
+        "tp": 90,
+        "fp": 12,
+        "tn": 32,
+        "fn": 16,
+        "precision_pct": 88.24,
+        "precision_ci": [
+          81.6,
+          94.1
+        ],
+        "recall_pct": 84.91,
+        "recall_ci": [
+          77.8,
+          91.4
+        ],
+        "specificity_pct": 72.73,
+        "specificity_ci": [
+          58.8,
+          85.5
+        ],
+        "f1": 0.8654,
+        "f1_ci": [
+          0.8122,
+          0.9124
+        ]
+      },
+      "baseline_d": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 44,
+        "fn": 18,
+        "precision_pct": 100.0,
+        "precision_ci": [
+          95.9,
+          100.0
+        ],
+        "recall_pct": 83.02,
+        "recall_ci": [
+          75.7,
+          89.9
+        ],
+        "specificity_pct": 100.0,
+        "specificity_ci": [
+          92.0,
+          100.0
+        ],
+        "f1": 0.9072,
+        "f1_ci": [
+          0.8617,
+          0.9469
+        ]
+      }
+    },
+    "candidate_conditional_n142": {
+      "config_a": {
+        "tp": 98,
+        "fp": 24,
+        "tn": 20,
+        "fn": 0,
+        "precision_pct": 80.33,
+        "precision_ci": [
+          73.2,
+          87.2
+        ],
+        "recall_pct": 100.0,
+        "recall_ci": [
+          96.3,
+          100.0
+        ],
+        "f1": 0.8909,
+        "f1_ci": [
+          0.8454,
+          0.9316
+        ]
+      },
+      "baseline_a_prime": {
+        "tp": 98,
+        "fp": 8,
+        "tn": 36,
+        "fn": 0,
+        "precision_pct": 92.45,
+        "precision_ci": [
+          85.7,
+          96.7
+        ],
+        "recall_pct": 100.0,
+        "recall_ci": [
+          96.3,
+          100.0
+        ],
+        "f1": 0.9608,
+        "f1_ci": [
+          0.9286,
+          0.9831
+        ]
+      },
+      "config_b": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 44,
+        "fn": 10,
+        "precision_pct": 100.0,
+        "precision_ci": [
+          95.9,
+          100.0
+        ],
+        "recall_pct": 89.8,
+        "recall_ci": [
+          83.3,
+          95.3
+        ],
+        "f1": 0.9462,
+        "f1_ci": [
+          0.9091,
+          0.9762
+        ]
+      },
+      "config_c": {
+        "tp": 86,
+        "fp": 12,
+        "tn": 32,
+        "fn": 12,
+        "precision_pct": 87.76,
+        "precision_ci": [
+          81.0,
+          93.9
+        ],
+        "recall_pct": 87.76,
+        "recall_ci": [
+          80.8,
+          93.8
+        ],
+        "f1": 0.8776,
+        "f1_ci": [
+          0.8254,
+          0.9224
+        ]
+      },
+      "baseline_d": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 44,
+        "fn": 10,
+        "precision_pct": 100.0,
+        "precision_ci": [
+          95.9,
+          100.0
+        ],
+        "recall_pct": 89.8,
+        "recall_ci": [
+          83.3,
+          95.3
+        ],
+        "f1": 0.9462,
+        "f1_ci": [
+          0.9091,
+          0.9762
+        ]
+      }
+    }
+  },
+  "table_3_headline_sensitivity_v1": {
+    "end_to_end_n150": {
+      "config_a": {
+        "tp": 107,
+        "fp": 23,
+        "tn": 20,
+        "fn": 0,
+        "prec_pct": 82.31,
+        "rec_pct": 100.0,
+        "spec_pct": 46.51,
+        "f1": 0.903
+      },
+      "baseline_a_prime": {
+        "tp": 107,
+        "fp": 8,
+        "tn": 35,
+        "fn": 0,
+        "prec_pct": 93.04,
+        "rec_pct": 100.0,
+        "spec_pct": 81.4,
+        "f1": 0.964
+      },
+      "config_b": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 43,
+        "fn": 19,
+        "prec_pct": 100.0,
+        "rec_pct": 82.24,
+        "spec_pct": 100.0,
+        "f1": 0.9026
+      },
+      "config_c": {
+        "tp": 91,
+        "fp": 11,
+        "tn": 32,
+        "fn": 16,
+        "prec_pct": 89.22,
+        "rec_pct": 85.05,
+        "spec_pct": 74.42,
+        "f1": 0.8708
+      },
+      "baseline_d": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 43,
+        "fn": 19,
+        "prec_pct": 100.0,
+        "rec_pct": 82.24,
+        "spec_pct": 100.0,
+        "f1": 0.9026
+      }
+    },
+    "candidate_conditional_n142": {
+      "config_a": {
+        "tp": 99,
+        "fp": 23,
+        "tn": 20,
+        "fn": 0,
+        "prec_pct": 81.15,
+        "rec_pct": 100.0,
+        "f1": 0.8959
+      },
+      "baseline_a_prime": {
+        "tp": 99,
+        "fp": 8,
+        "tn": 35,
+        "fn": 0,
+        "prec_pct": 92.52,
+        "rec_pct": 100.0,
+        "f1": 0.9612
+      },
+      "config_b": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 43,
+        "fn": 11,
+        "prec_pct": 100.0,
+        "rec_pct": 88.89,
+        "f1": 0.9412
+      },
+      "config_c": {
+        "tp": 87,
+        "fp": 11,
+        "tn": 32,
+        "fn": 12,
+        "prec_pct": 88.78,
+        "rec_pct": 87.88,
+        "f1": 0.8832
+      },
+      "baseline_d": {
+        "tp": 88,
+        "fp": 0,
+        "tn": 43,
+        "fn": 11,
+        "prec_pct": 100.0,
+        "rec_pct": 88.89,
+        "f1": 0.9412
+      }
+    }
+  },
+  "paired_bootstrap_delta_f1": {
+    "v2_primary": {
+      "cand_cond_b_minus_a": {
+        "point_estimate": 0.0553,
+        "point_estimate_exact": 0.05532746823069401,
+        "ci_low": 0.0008,
+        "ci_high": 0.1109,
+        "p_value_two_sided": 0.0487,
+        "p_value_one_sided": 0.0232
+      },
+      "cand_cond_b_minus_c": {
+        "point_estimate": 0.0687,
+        "point_estimate_exact": 0.06868553873162175,
+        "ci_low": 0.0098,
+        "ci_high": 0.1311,
+        "p_value_two_sided": 0.0253,
+        "p_value_one_sided": 0.0109
+      },
+      "cand_cond_a_minus_c": {
+        "point_estimate": 0.0134,
+        "point_estimate_exact": 0.013358070500927743,
+        "ci_low": -0.0383,
+        "ci_high": 0.0669,
+        "p_value_two_sided": 0.6162,
+        "p_value_one_sided": 0.2977
+      },
+      "e2e_b_minus_a": {
+        "point_estimate": 0.0089,
+        "point_estimate_exact": 0.00891141009959806,
+        "ci_low": -0.0514,
+        "ci_high": 0.0686,
+        "p_value_two_sided": 0.7745,
+        "p_value_one_sided": 0.396
+      },
+      "e2e_b_minus_c": {
+        "point_estimate": 0.0418,
+        "point_estimate_exact": 0.0418318794607454,
+        "ci_low": -0.0194,
+        "ci_high": 0.1038,
+        "p_value_two_sided": 0.1855,
+        "p_value_one_sided": 0.0944
+      }
+    },
+    "v1_sensitivity": {
+      "cand_cond_b_minus_a": {
+        "point_estimate": 0.0452,
+        "point_estimate_exact": 0.045248868778280604,
+        "ci_low": -0.0091,
+        "ci_high": 0.1013,
+        "p_value_two_sided": 0.1065,
+        "p_value_one_sided": 0.0539
+      },
+      "cand_cond_b_minus_c": {
+        "point_estimate": 0.0579,
+        "point_estimate_exact": 0.05792773962376818,
+        "ci_low": -0.0009,
+        "ci_high": 0.1192,
+        "p_value_two_sided": 0.0581,
+        "p_value_one_sided": 0.0267
+      },
+      "e2e_b_minus_a": {
+        "point_estimate": -0.0004,
+        "point_estimate_exact": -0.0003894839337877931,
+        "ci_low": -0.0604,
+        "ci_high": 0.059,
+        "p_value_two_sided": 0.9865,
+        "p_value_one_sided": 0.4817
+      }
+    }
+  },
+  "exact_statistical_tests": {
+    "v2_negative_discordance": {
+      "n": 24,
+      "p_value_two_sided": 1.1920928955078125e-07,
+      "p_value_sci": "1.19e-7"
+    },
+    "v2_positive_discordance": {
+      "n": 18,
+      "p_value_two_sided": 7.62939453125e-06,
+      "p_value_sci": "7.63e-6"
+    },
+    "v2_aprime_vs_b_negative_discordance": {
+      "n": 8,
+      "p_value_two_sided": 0.0078125,
+      "p_value_formatted": "0.0078"
+    },
+    "v2_aprime_vs_b_positive_discordance": {
+      "n": 18,
+      "p_value_two_sided": 7.62939453125e-06,
+      "p_value_sci": "7.63e-6"
+    },
+    "v1_negative_discordance": {
+      "n": 23,
+      "p_value_two_sided": 2.384185791015625e-07,
+      "p_value_sci": "2.38e-7"
+    },
+    "v1_positive_discordance": {
+      "n": 19,
+      "p_value_two_sided": 3.814697265625e-06,
+      "p_value_sci": "3.81e-6"
+    }
+  },
+  "table_4_fp_elimination_split": {
+    "total_eliminated_v2": 24,
+    "stage1_static_guards": {
+      "count": 11,
+      "pct": 45.83
+    },
+    "stage2_jedi_type_resolution": {
+      "count": 10,
+      "pct": 41.67
+    },
+    "stage3_llm_verification": {
+      "count": 3,
+      "pct": 12.5,
+      "confirmation_mode_count": 1,
+      "confirmation_mode_bids": [
+        "bench_108"
+      ],
+      "inference_mode_count": 2,
+      "inference_mode_bids": [
+        "bench_058",
+        "bench_139"
+      ]
+    },
+    "total_static_eliminated": 21,
+    "total_static_eliminated_pct": 87.5,
+    "total_eliminated_v1": 23,
+    "v1_stage1_static_guards": {
+      "count": 11,
+      "pct": 47.83
+    },
+    "v1_stage2_jedi_type_resolution": {
+      "count": 10,
+      "pct": 43.48
+    },
+    "v1_stage3_llm_verification": {
+      "count": 2,
+      "pct": 8.7
+    },
+    "v1_total_static_eliminated": 21,
+    "v1_total_static_eliminated_pct": 91.3
+  },
+  "table_5_fn_taxonomy": {
+    "total_fns_v2": 18,
+    "total_fns_v1": 19,
+    "stage_breakdown": {
+      "stage1_upstream_misses": 9,
+      "stage3_llm_rejections": 9
+    },
+    "stage1_plus_2_no_llm_fns": {
+      "total_fn": 14,
+      "stage1_upstream_misses": 9,
+      "stage2_dropped_low_confidence": 5,
+      "dropped_bids": [
+        "bench_009",
+        "bench_057",
+        "bench_099",
+        "bench_144",
+        "bench_147"
+      ],
+      "stage1_miss_details": "4 Cython errprint + 4 preamble rvs_ratio_uniforms + 1 keyword bench_014"
+    },
+    "breakdown": {
+      "stage1_compiled_cython_ast_boundary": {
+        "count": 4,
+        "target": "scipy.special.errprint",
+        "recoverable": false
+      },
+      "stage1_preamble_filter_omission": {
+        "count": 4,
+        "target": "scipy.stats.rvs_ratio_uniforms",
+        "recoverable": true
+      },
+      "stage1_keyword_heuristic_omission": {
+        "count": 1,
+        "target": "numpy.product (bench_014)",
+        "recoverable": true
+      },
+      "stage3_genuine_wrapper_prompt_errors": {
+        "count": 6,
+        "recoverable": true,
+        "bids": [
+          "bench_016",
+          "bench_018",
+          "bench_054",
+          "bench_075",
+          "bench_093",
+          "bench_098"
+        ]
+      },
+      "stage3_inference_duck_typed_misses": {
+        "count": 3,
+        "recoverable": false,
+        "bids": [
+          "bench_009",
+          "bench_057",
+          "bench_144"
+        ]
+      },
+      "v1_wrapper_lookalike_debatable": {
+        "count": 1,
+        "target": "pandas.DataFrame.last (bench_108)",
+        "v1_fn": true,
+        "v2_correct_rejection": true
+      }
+    }
+  },
+  "post_hoc_ablations": {
+    "b_fixed_row": {
+      "description": "Fixes 4 rvs_ratio_uniforms preamble regex + 1 bench_014 keyword filter",
+      "tp_e2e": 93,
+      "fp_e2e": 0,
+      "fn_e2e_v2": 13,
+      "recall_e2e_v2_pct": 87.74,
+      "f1_e2e_v2": 0.9347,
+      "recall_cand_v2_pct": 90.82,
+      "f1_cand_v2": 0.9519
+    },
+    "b_double_prime_upper_bound": {
+      "description": "Analytical upper bound recovering 11 fixable engineering items (4 rvs + 1 bench_014 + 6 wrapper errors)",
+      "tp_e2e": 99,
+      "fp_e2e": 0,
+      "fn_e2e_v2": 7,
+      "recall_e2e_v2_pct": 93.4,
+      "f1_e2e_v2": 0.9659,
+      "recall_e2e_v1_pct": 92.52,
+      "recall_cand_v2_pct": 96.94,
+      "f1_cand_v2": 0.9845,
+      "recall_cand_v1_pct": 95.96
+    }
+  },
+  "prevalence_analysis": {
+    "formula": "PPV(pi) = (Recall * pi) / (Recall * pi + (1 - Specificity) * (1 - pi))",
+    "caveat": "Assumes invariant class-conditional likelihoods. Benchmark negatives are adversarial (lookalikes and collisions).",
+    "prevalence_rows": [
+      {
+        "prevalence_label": "prevalence_1pct",
+        "prevalence_str": "1.0%",
+        "prevalence_rate": 0.01,
+        "ppv_config_b_point_pct": 100.0,
+        "ppv_config_b_lower_bound_pct": 9.44,
+        "ppv_config_a_pct": 1.82,
+        "ppv_config_c_pct": 3.05
+      },
+      {
+        "prevalence_label": "prevalence_5pct",
+        "prevalence_str": "5.0%",
+        "prevalence_rate": 0.05,
+        "ppv_config_b_point_pct": 100.0,
+        "ppv_config_b_lower_bound_pct": 35.2,
+        "ppv_config_a_pct": 8.8,
+        "ppv_config_c_pct": 14.08
+      },
+      {
+        "prevalence_label": "prevalence_10pct",
+        "prevalence_str": "10.0%",
+        "prevalence_rate": 0.1,
+        "ppv_config_b_point_pct": 100.0,
+        "ppv_config_b_lower_bound_pct": 53.42,
+        "ppv_config_a_pct": 16.92,
+        "ppv_config_c_pct": 25.7
+      },
+      {
+        "prevalence_label": "prevalence_20pct",
+        "prevalence_str": "20.0%",
+        "prevalence_rate": 0.2,
+        "ppv_config_b_point_pct": 100.0,
+        "ppv_config_b_lower_bound_pct": 72.07,
+        "ppv_config_a_pct": 31.43,
+        "ppv_config_c_pct": 43.77
+      },
+      {
+        "prevalence_label": "prevalence_50pct",
+        "prevalence_str": "50.0%",
+        "prevalence_rate": 0.5,
+        "ppv_config_b_point_pct": 100.0,
+        "ppv_config_b_lower_bound_pct": 91.17,
+        "ppv_config_a_pct": 64.71,
+        "ppv_config_c_pct": 75.69
+      }
+    ]
+  },
+  "baselines_and_ablations": {
+    "baseline_a_prime_import_aware_ast": {
+      "tp": 106,
+      "fp": 8,
+      "fn": 0,
+      "tn": 36,
+      "prec_pct": 92.98,
+      "rec_pct": 100.0,
+      "f1": 0.9636
+    },
+    "baseline_d_llm_stage1_no_jedi": {
+      "tp": 88,
+      "fp": 0,
+      "fn": 18,
+      "tn": 44,
+      "prec_pct": 100.0,
+      "rec_pct": 83.02,
+      "f1": 0.9072,
+      "benchmark_stage3_calls": 110,
+      "benchmark_call_overhead_mult": 1.1,
+      "token_note": "Bypassing Jedi type resolution on the 150 benchmark items routes all 110 candidates passing Stage 1 directly to Stage 3 (1.10x call volume, ~106.7k tokens vs. 100 calls and 97.0k tokens in Config b) with zero observed accuracy difference on this benchmark."
+    },
+    "stage1_plus_stage2_jedi_only": {
+      "tp": 92,
+      "fp": 1,
+      "fn": 14,
+      "tn": 43,
+      "prec_pct": 98.92,
+      "rec_pct": 86.79,
+      "f1": 0.9246,
+      "fp_note": "The single FP is bench_108, which passed Stage 2 as a resolved candidate and is not verified/rejected because Stage 3 is omitted.",
+      "fn_note": "The 14 FNs comprise 9 Stage 1 misses plus 5 Stage 2 low-confidence candidates dropped without LLM verification."
+    },
+    "ruff_subset_comparators_numpy20": {
+      "evaluated_items": 20,
+      "preamble_description": "Standard 'import numpy as np' injected into snippet header to isolate syntax rules",
+      "ruff": {
+        "tp": 12,
+        "fp": 0,
+        "tn": 8,
+        "fn": 0,
+        "prec_pct": 100.0,
+        "rec_pct": 100.0,
+        "f1": 1.0
+      },
+      "baseline_a_prime": {
+        "tp": 12,
+        "fp": 0,
+        "tn": 8,
+        "fn": 0,
+        "prec_pct": 100.0,
+        "rec_pct": 100.0,
+        "f1": 1.0
+      },
+      "config_b": {
+        "tp": 12,
+        "fp": 0,
+        "tn": 8,
+        "fn": 0,
+        "prec_pct": 100.0,
+        "rec_pct": 100.0,
+        "f1": 1.0
+      },
+      "coverage_limitation": "Ruff covers strictly 3 NumPy targets (NPY003/NPY201); 0 rules for SciPy and Pandas."
+    }
+  },
+  "low_confidence_stratum_117": {
+    "total_candidates": 117,
+    "confirmed_deprecated": 80,
+    "rejected_benign": 37,
+    "confirmation_rate_pct": 68.38,
+    "human_ground_truth_pos": 90,
+    "human_ground_truth_neg": 27,
+    "tp": 80,
+    "fp": 0,
+    "tn": 27,
+    "fn": 10,
+    "precision_pct": 100.0,
+    "recall_pct": 88.89,
+    "f1": 0.9412,
+    "accuracy_pct": 91.45,
+    "blinded_annotation": "Annotated under the receiver rule independently before checking Stage 3 model predictions."
+  },
+  "run_to_run_variance_details": {
+    "decoding_temperature": 0.0,
+    "cache_status": "bypassed_live_api",
+    "repeated_runs": 3,
+    "items_per_run": 150,
+    "total_live_api_calls": 450,
+    "decision_flips": 0,
+    "variance": 0.0,
+    "nondeterminism_caveat": "Greedy decoding produced zero decision flips across 450 live API calls on the 150 benchmark items, but temperature 0.0 is not mathematically guaranteed to be strictly deterministic across hardware configurations or backend updates."
+  },
+  "fresh_13_wrapper_evaluation": {
+    "num_candidates": 13,
+    "source": "Out-of-benchmark wrapper and native candidates",
+    "prompt_version": "v2_receiver_rule",
+    "agreement_pct": 100.0,
+    "correct_verdicts": 13,
+    "errors": 0,
+    "flips": 0
+  },
+  "telemetry_and_cost": {
+    "flash_lite": {
+      "prompt_tokens": 289.9,
+      "candidate_tokens": 16.8,
+      "total_tokens": 306.7
+    },
+    "pro_preview": {
+      "prompt_tokens": 298.1,
+      "candidate_tokens": 32.6,
+      "total_tokens": 330.7
+    },
+    "ungrounded_baseline": {
+      "prompt_tokens": 518.2,
+      "candidate_tokens": 94.6,
+      "total_tokens": 612.8,
+      "token_overhead_multiplier": 2.0
+    },
+    "baseline_d_no_jedi": {
+      "benchmark_stage3_calls": 110,
+      "benchmark_call_overhead_mult": 1.1,
+      "benchmark_token_volume_est": 106700,
+      "config_b_benchmark_stage3_calls": 100,
+      "config_b_benchmark_token_volume": 97023,
+      "derivation_basis": "On the 150 benchmark items, Config (b) evaluates 100 Stage 3 candidates (93 confirmation, 7 inference) consuming 97,023 tokens (970.2 tokens/call). Baseline (d) bypasses Jedi, routing all 110 candidates passing Stage 1 to Stage 3 (110 calls, ~106.7k tokens), a 1.10x call overhead on the benchmark."
+    },
+    "latency": {
+      "stage1_catalog_indexing_8_snapshots_total_seconds": 35.8,
+      "stage2_jedi_resolution_ms_per_call": 57.2,
+      "stage3_cached_replay_ms": 0.05,
+      "stage3_live_api_ms": 400.0
+    }
+  },
+  "practicality_and_reproducibility": {
+    "num_passed_unit_tests": 100,
+    "live_api_calls_variance_test": 450,
+    "decision_flips": 0,
+    "fresh_wrapper_eval_size": 13,
+    "fresh_wrapper_concordance_pct": 100.0
+  }
+}

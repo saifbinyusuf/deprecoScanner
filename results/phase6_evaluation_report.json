@@ -10,24 +10,62 @@
   },
   "overall_metrics": {
     "config_a_ast_heuristics": {
-      "tp": 99,
+      "candidate_conditional": {
+        "tp": 99,
+        "fp": 23,
+        "fn": 0,
+        "tn": 20,
+        "precision": 0.8114754098360656,
+        "recall": 1.0,
+        "f1": 0.8959276018099547
+      },
+      "end_to_end": {
+        "tp": 107,
+        "fp": 23,
+        "fn": 0,
+        "tn": 20,
+        "precision": 0.823076923076923,
+        "recall": 1.0,
+        "f1": 0.9029535864978903
+      },
+      "tp": 107,
       "fp": 23,
       "fn_conditional": 0,
-      "fn_end_to_end": 8,
+      "fn_end_to_end": 0,
       "tn": 20,
-      "precision": 0.8114754098360656,
+      "precision": 0.823076923076923,
+      "precision_conditional": 0.8114754098360656,
       "recall_conditional": 1.0,
       "f1_conditional": 0.8959276018099547,
-      "recall_end_to_end": 0.9252336448598131,
-      "f1_end_to_end": 0.8646288209606987
+      "recall_end_to_end": 1.0,
+      "f1_end_to_end": 0.9029535864978903
     },
     "config_b_full_pipeline": {
+      "candidate_conditional": {
+        "tp": 88,
+        "fp": 0,
+        "fn": 11,
+        "tn": 43,
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1": 0.9411764705882353
+      },
+      "end_to_end": {
+        "tp": 88,
+        "fp": 0,
+        "fn": 19,
+        "tn": 43,
+        "precision": 1.0,
+        "recall": 0.822429906542056,
+        "f1": 0.9025641025641025
+      },
       "tp": 88,
       "fp": 0,
       "fn_conditional": 11,
       "fn_end_to_end": 19,
       "tn": 43,
       "precision": 1.0,
+      "precision_conditional": 1.0,
       "recall_conditional": 0.8888888888888888,
       "f1_conditional": 0.9411764705882353,
       "recall_end_to_end": 0.822429906542056,
@@ -37,24 +75,52 @@
   "per_library_metrics": {
     "numpy": {
       "config_a": {
-        "tp": 12,
-        "fp": 8,
-        "fn_conditional": 0,
-        "fn_end_to_end": 0,
-        "tn": 0,
+        "candidate_conditional": {
+          "tp": 12,
+          "fp": 8,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.7499999999999999
+        },
+        "end_to_end": {
+          "tp": 12,
+          "fp": 8,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.7499999999999999
+        },
         "precision": 0.6,
+        "precision_conditional": 0.6,
         "recall_conditional": 1.0,
         "f1_conditional": 0.7499999999999999,
         "recall_end_to_end": 1.0,
         "f1_end_to_end": 0.7499999999999999
       },
       "config_b": {
-        "tp": 11,
-        "fp": 0,
-        "fn_conditional": 1,
-        "fn_end_to_end": 1,
-        "tn": 8,
+        "candidate_conditional": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 1,
+          "tn": 8,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "end_to_end": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 1,
+          "tn": 8,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
         "precision": 1.0,
+        "precision_conditional": 1.0,
         "recall_conditional": 0.9166666666666666,
         "f1_conditional": 0.9565217391304348,
         "recall_end_to_end": 0.9166666666666666,
@@ -64,24 +130,52 @@
     },
     "scipy": {
       "config_a": {
-        "tp": 61,
-        "fp": 10,
-        "fn_conditional": 0,
-        "fn_end_to_end": 8,
-        "tn": 12,
-        "precision": 0.8591549295774648,
+        "candidate_conditional": {
+          "tp": 61,
+          "fp": 10,
+          "fn": 0,
+          "tn": 12,
+          "precision": 0.8591549295774648,
+          "recall": 1.0,
+          "f1": 0.9242424242424242
+        },
+        "end_to_end": {
+          "tp": 69,
+          "fp": 10,
+          "fn": 0,
+          "tn": 12,
+          "precision": 0.8734177215189873,
+          "recall": 1.0,
+          "f1": 0.9324324324324325
+        },
+        "precision": 0.8734177215189873,
+        "precision_conditional": 0.8591549295774648,
         "recall_conditional": 1.0,
         "f1_conditional": 0.9242424242424242,
-        "recall_end_to_end": 0.8840579710144928,
-        "f1_end_to_end": 0.8714285714285713
+        "recall_end_to_end": 1.0,
+        "f1_end_to_end": 0.9324324324324325
       },
       "config_b": {
-        "tp": 60,
-        "fp": 0,
-        "fn_conditional": 1,
-        "fn_end_to_end": 9,
-        "tn": 22,
+        "candidate_conditional": {
+          "tp": 60,
+          "fp": 0,
+          "fn": 1,
+          "tn": 22,
+          "precision": 1.0,
+          "recall": 0.9836065573770492,
+          "f1": 0.9917355371900827
+        },
+        "end_to_end": {
+          "tp": 60,
+          "fp": 0,
+          "fn": 9,
+          "tn": 22,
+          "precision": 1.0,
+          "recall": 0.8695652173913043,
+          "f1": 0.9302325581395349
+        },
         "precision": 1.0,
+        "precision_conditional": 1.0,
         "recall_conditional": 0.9836065573770492,
         "f1_conditional": 0.9917355371900827,
         "recall_end_to_end": 0.8695652173913043,
@@ -91,24 +185,52 @@
     },
     "pandas": {
       "config_a": {
-        "tp": 26,
-        "fp": 5,
-        "fn_conditional": 0,
-        "fn_end_to_end": 0,
-        "tn": 8,
+        "candidate_conditional": {
+          "tp": 26,
+          "fp": 5,
+          "fn": 0,
+          "tn": 8,
+          "precision": 0.8387096774193549,
+          "recall": 1.0,
+          "f1": 0.9122807017543859
+        },
+        "end_to_end": {
+          "tp": 26,
+          "fp": 5,
+          "fn": 0,
+          "tn": 8,
+          "precision": 0.8387096774193549,
+          "recall": 1.0,
+          "f1": 0.9122807017543859
+        },
         "precision": 0.8387096774193549,
+        "precision_conditional": 0.8387096774193549,
         "recall_conditional": 1.0,
         "f1_conditional": 0.9122807017543859,
         "recall_end_to_end": 1.0,
         "f1_end_to_end": 0.9122807017543859
       },
       "config_b": {
-        "tp": 17,
-        "fp": 0,
-        "fn_conditional": 9,
-        "fn_end_to_end": 9,
-        "tn": 13,
+        "candidate_conditional": {
+          "tp": 17,
+          "fp": 0,
+          "fn": 9,
+          "tn": 13,
+          "precision": 1.0,
+          "recall": 0.6538461538461539,
+          "f1": 0.7906976744186047
+        },
+        "end_to_end": {
+          "tp": 17,
+          "fp": 0,
+          "fn": 9,
+          "tn": 13,
+          "precision": 1.0,
+          "recall": 0.6538461538461539,
+          "f1": 0.7906976744186047
+        },
         "precision": 1.0,
+        "precision_conditional": 1.0,
         "recall_conditional": 0.6538461538461539,
         "f1_conditional": 0.7906976744186047,
         "recall_end_to_end": 0.6538461538461539,
@@ -122,26 +244,20 @@
       "config_a": {
         "tp": 99,
         "fp": 23,
-        "fn_conditional": 0,
-        "fn_end_to_end": 8,
+        "fn": 0,
         "tn": 20,
         "precision": 0.8114754098360656,
-        "recall_conditional": 1.0,
-        "f1_conditional": 0.8959276018099547,
-        "recall_end_to_end": 0.9252336448598131,
-        "f1_end_to_end": 0.8646288209606987
+        "recall": 1.0,
+        "f1": 0.8959276018099547
       },
       "config_b": {
         "tp": 88,
         "fp": 0,
-        "fn_conditional": 11,
-        "fn_end_to_end": 19,
+        "fn": 11,
         "tn": 43,
         "precision": 1.0,
-        "recall_conditional": 0.8888888888888888,
-        "f1_conditional": 0.9411764705882353,
-        "recall_end_to_end": 0.822429906542056,
-        "f1_end_to_end": 0.9025641025641025
+        "recall": 0.8888888888888888,
+        "f1": 0.9411764705882353
       }
     },
     "legacy_comment": {

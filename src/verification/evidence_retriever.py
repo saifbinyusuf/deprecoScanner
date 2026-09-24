@@ -161,9 +161,15 @@ class EvidenceRetriever:
         # 3. Augment with catalog entries if missing
         entries = self._catalog.get(qualified_name, [])
         if not entries:
-            # Try matching by suffix
+            # Try matching by suffix or symbol compatibility
+            from src.detectors.union_dedup import _is_symbol_compatible
             for k, v in self._catalog.items():
-                if k.endswith("." + qualified_name) or qualified_name.endswith("." + k):
+                if (
+                    k.endswith("." + qualified_name)
+                    or qualified_name.endswith("." + k)
+                    or _is_symbol_compatible(k, qualified_name)
+                    or _is_symbol_compatible(qualified_name, k)
+                ):
                     entries = v
                     break
 

@@ -47,21 +47,23 @@ BENCHMARK_TARGET_APIS: Dict[str, List[str]] = {
         "pandas.io.formats.style.Styler.render",
         "pandas.DataFrame.swapaxes",
         "pandas.DataFrame.applymap",
+        "pandas.Series.pad",
         "pandas.DataFrame.pad",
         "pandas.Series.iteritems",
         "pandas.DataFrame.iteritems",
         "pandas.DataFrame.select",
         "pandas.DataFrame.first",
         "pandas.DataFrame.last",
-        "pandas.Series.pad",
     ],
 }
 
-ALL_BENCHMARK_TARGETS: Set[str] = {
+CANONICAL_BENCHMARK_TARGET_LIST: List[str] = [
     target
     for targets in BENCHMARK_TARGET_APIS.values()
     for target in targets
-}
+]
+
+ALL_BENCHMARK_TARGETS: Set[str] = set(CANONICAL_BENCHMARK_TARGET_LIST)
 
 TARGET_SHORT_NAMES: Set[str] = {
     t.split(".")[-1]
@@ -83,7 +85,7 @@ def match_benchmark_target(symbol: Optional[str]) -> Optional[str]:
     if clean_sym in ALL_BENCHMARK_TARGETS:
         return clean_sym
 
-    for target in ALL_BENCHMARK_TARGETS:
+    for target in CANONICAL_BENCHMARK_TARGET_LIST:
         if _is_symbol_compatible(target, clean_sym) or _is_symbol_compatible(clean_sym, target):
             return target
 

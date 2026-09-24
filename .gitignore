@@ -75,7 +75,13 @@ data/benchmark_libs/*
 data/apiscanner_baseline/*
 !data/apiscanner_baseline/.gitkeep
 
-# SQLite database caches
+# SQLite database caches (allow tracked Stage 3 reproduction cache)
 *.db
 data/*.db
+!data/stage3_response_cache.db
+!data/zero_shot_response_cache.db
+
+# Untrack progress notes and local development logs for anonymity
+progress.md
+
 

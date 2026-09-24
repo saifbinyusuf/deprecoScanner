@@ -5,7 +5,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:300",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:300",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -17,7 +17,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:319",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/__init__.py:319",
     "scope": "parameter",
     "param_name": "attr",
     "message": null,
@@ -29,7 +29,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/_globals.py:32",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/_globals.py:32",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -41,7 +41,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/compat/py3k.py:116",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/compat/py3k.py:116",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -53,7 +53,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:160",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:160",
     "scope": "parameter",
     "param_name": "name",
     "message": null,
@@ -65,7 +65,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:158",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/__init__.py:158",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -77,7 +77,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_exceptions.py:17",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_exceptions.py:17",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -90,7 +90,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:356",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:356",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -103,7 +103,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:365",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:365",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -116,7 +116,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:374",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:374",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -129,7 +129,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:383",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_internal.py:383",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -141,7 +141,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/_machar.py:16",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/_machar.py:16",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -153,7 +153,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:562",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:562",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -165,7 +165,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:725",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/arrayprint.py:725",
     "scope": "parameter",
     "param_name": "style",
     "message": null,
@@ -177,7 +177,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:663",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:663",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -189,7 +189,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:780",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:780",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -201,7 +201,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1566",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1566",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -213,7 +213,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1882",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:1882",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -225,7 +225,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:2302",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:2302",
     "scope": "parameter",
     "param_name": "a",
     "message": null,
@@ -237,7 +237,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3798",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3798",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -249,7 +249,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3805",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3805",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -261,7 +261,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3826",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3826",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -273,7 +273,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3833",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3833",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -285,7 +285,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3850",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3850",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -297,7 +297,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -309,7 +309,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3875",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3875",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -321,7 +321,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3882",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3882",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -333,7 +333,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3901",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3901",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -345,7 +345,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3908",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3908",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -357,7 +357,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/getlimits.py:494",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/getlimits.py:494",
     "scope": "parameter",
     "param_name": "dtype",
     "message": null,
@@ -369,7 +369,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:1937",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:1937",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -381,7 +381,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:2010",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/numeric.py:2010",
     "scope": "parameter",
     "param_name": "binwidth+width",
     "message": null,
@@ -394,7 +394,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/numerictypes.py:599",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/numerictypes.py:599",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -406,7 +406,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:578",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:578",
     "scope": "parameter",
     "param_name": "shape",
     "message": null,
@@ -418,7 +418,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:640",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:640",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -430,7 +430,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:754",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:754",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -442,7 +442,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:742",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:742",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -454,7 +454,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:835",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:835",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -466,7 +466,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:902",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/records.py:902",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -478,7 +478,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:328",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:328",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -490,7 +490,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:163",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_api.py:163",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -502,7 +502,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:350",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:350",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -514,7 +514,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:453",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:453",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -526,7 +526,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -538,7 +538,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_array_coercion.py:738",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -550,7 +550,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_arrayprint.py:604",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_arrayprint.py:604",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -562,7 +562,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:27",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:27",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -574,7 +574,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:32",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:32",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -586,7 +586,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:190",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_conversion_utils.py:190",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -599,7 +599,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:306",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:306",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -611,7 +611,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1612",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1612",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -623,7 +623,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1704",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:1704",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -635,7 +635,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:2399",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_datetime.py:2399",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -647,7 +647,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:52",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:52",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -659,7 +659,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:125",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:125",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -671,7 +671,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:141",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:141",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -683,7 +683,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:162",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:162",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -695,7 +695,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:225",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:225",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -707,7 +707,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:232",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:232",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -719,7 +719,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:238",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:238",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -731,7 +731,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:338",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:338",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -743,7 +743,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:356",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:356",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -755,7 +755,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:409",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:409",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -767,7 +767,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:629",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:629",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -780,7 +780,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -792,7 +792,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:683",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:683",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -805,7 +805,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:688",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:688",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -817,7 +817,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:705",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:705",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -829,7 +829,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:760",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:760",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -841,7 +841,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:207",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:207",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -853,7 +853,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:321",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:321",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -865,7 +865,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:542",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:542",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -877,7 +877,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:556",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:556",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -889,7 +889,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:565",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:565",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -901,7 +901,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:593",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:593",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -913,7 +913,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:607",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:607",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -925,7 +925,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -937,7 +937,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:615",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -949,7 +949,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:635",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -961,7 +961,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -973,7 +973,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:657",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -985,7 +985,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:664",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:664",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -997,7 +997,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:673",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:673",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1009,7 +1009,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1021,7 +1021,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:744",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1033,7 +1033,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:773",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:773",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1045,7 +1045,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:774",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:774",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1057,7 +1057,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1069,7 +1069,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:785",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1081,7 +1081,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1093,7 +1093,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_deprecations.py:812",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1105,7 +1105,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:598",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:598",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1117,7 +1117,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:131",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:131",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1129,7 +1129,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:265",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:265",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1141,7 +1141,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:280",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_dtype.py:280",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1153,7 +1153,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1201",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1201",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1165,7 +1165,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1295",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:1295",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1177,7 +1177,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:546",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_indexing.py:546",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1189,7 +1189,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:104",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:104",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1201,7 +1201,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:125",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:125",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1213,7 +1213,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:131",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:131",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1225,7 +1225,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:137",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:137",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1237,7 +1237,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:153",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:153",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1249,7 +1249,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:188",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:188",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1261,7 +1261,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:327",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:327",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1273,7 +1273,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:332",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:332",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1285,7 +1285,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:347",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_longdouble.py:347",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1298,7 +1298,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:175",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:175",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1310,7 +1310,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3655",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3655",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1322,7 +1322,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3683",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:3683",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1334,7 +1334,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5615",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5615",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1346,7 +1346,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5674",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5674",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1358,7 +1358,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5699",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:5699",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1370,7 +1370,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:8772",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:8772",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1382,7 +1382,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:224",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:224",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1394,7 +1394,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:9449",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_multiarray.py:9449",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1406,7 +1406,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nditer.py:2863",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nditer.py:2863",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1418,7 +1418,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nep50_promotions.py:187",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_nep50_promotions.py:187",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1430,7 +1430,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:117",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:117",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1442,7 +1442,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:1309",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:1309",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1454,7 +1454,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3011",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3011",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1466,7 +1466,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3040",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numeric.py:3040",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1478,7 +1478,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:342",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:342",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1490,7 +1490,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:347",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:347",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1502,7 +1502,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:352",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:352",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1514,7 +1514,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:357",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:357",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1526,7 +1526,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:362",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:362",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1538,7 +1538,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:451",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:451",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1550,7 +1550,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:412",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_numerictypes.py:412",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1562,7 +1562,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_records.py:435",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_records.py:435",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1574,7 +1574,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1520",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1520",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1586,7 +1586,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1674",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_regression.py:1674",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1598,7 +1598,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalar_ctors.py:81",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalar_ctors.py:81",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1610,7 +1610,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:103",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:103",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1622,7 +1622,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:487",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:487",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1634,7 +1634,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:593",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:593",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1646,7 +1646,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:689",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_scalarmath.py:689",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1658,7 +1658,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_shape_base.py:404",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_shape_base.py:404",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1670,7 +1670,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:436",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:436",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1682,7 +1682,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:2342",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/tests/test_ufunc.py:2342",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1694,7 +1694,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/command/config.py:448",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/command/config.py:448",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1706,7 +1706,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:101",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:101",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1719,7 +1719,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:177",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/exec_command.py:177",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1732,7 +1732,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/misc_util.py:112",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/misc_util.py:112",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1744,7 +1744,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:1648",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:1648",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1756,7 +1756,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:2658",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/system_info.py:2658",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1768,7 +1768,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:71",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:71",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1780,7 +1780,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:86",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:86",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1792,7 +1792,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:209",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/distutils/tests/test_exec_command.py:209",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1804,7 +1804,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:58",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:58",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1816,7 +1816,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:74",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/exceptions.py:74",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1828,7 +1828,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/f2py/_backends/_distutils.py:15",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/f2py/_backends/_distutils.py:15",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1840,7 +1840,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/__init__.py:84",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/__init__.py:84",
     "scope": "parameter",
     "param_name": "attr",
     "message": null,
@@ -1852,7 +1852,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2758",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2758",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1864,7 +1864,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
     "scope": "parameter",
     "param_name": "bias",
     "message": null,
@@ -1876,7 +1876,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:2887",
     "scope": "parameter",
     "param_name": "ddof",
     "message": null,
@@ -1889,7 +1889,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3718",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3718",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1901,7 +1901,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3993",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:3993",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1913,7 +1913,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4293",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4293",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1926,7 +1926,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4578",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:4578",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1938,7 +1938,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:5489",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/function_base.py:5489",
     "scope": "parameter",
     "param_name": "obj",
     "message": null,
@@ -1951,7 +1951,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/index_tricks.py:674",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/index_tricks.py:674",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1963,7 +1963,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1229",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1229",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1975,7 +1975,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1394",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/nanfunctions.py:1394",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1987,7 +1987,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/npyio.py:2345",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/npyio.py:2345",
     "scope": "parameter",
     "param_name": "dtype",
     "message": null,
@@ -1999,7 +1999,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
     "scope": "parameter",
     "param_name": "c_or_r",
     "message": null,
@@ -2011,7 +2011,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/polynomial.py:1235",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -2023,7 +2023,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/shape_base.py:513",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/shape_base.py:513",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2035,7 +2035,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/stride_tricks.py:481",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/stride_tricks.py:481",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2047,7 +2047,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_financial_expired.py:8",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_financial_expired.py:8",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2059,7 +2059,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:509",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:509",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2072,7 +2072,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2263",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2263",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2085,7 +2085,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2275",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2275",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2097,7 +2097,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2502",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_function_base.py:2502",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2109,7 +2109,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1447",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1447",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2121,7 +2121,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1461",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1461",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2133,7 +2133,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1514",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1514",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2145,7 +2145,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1557",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1557",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2157,7 +2157,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1578",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:1578",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2169,7 +2169,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2047",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2047",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2181,7 +2181,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2177",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2177",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2193,7 +2193,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2195",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2195",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2205,7 +2205,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2228",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2228",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2217,7 +2217,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2281",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_io.py:2281",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2229,7 +2229,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_stride_tricks.py:586",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_stride_tricks.py:586",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2241,7 +2241,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:28",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:28",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2253,7 +2253,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:33",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:33",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2265,7 +2265,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:39",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:39",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2277,7 +2277,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:48",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:48",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2289,7 +2289,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:57",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:57",
     "scope": "function",
     "param_name": null,
     "message": "This function is\ndeprecated.",
@@ -2301,7 +2301,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:65",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:65",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2313,7 +2313,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:69",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/tests/test_utils.py:69",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2325,7 +2325,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:104",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:104",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2337,7 +2337,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:143",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:143",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2349,7 +2349,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:186",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:186",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2361,7 +2361,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:239",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/lib/utils.py:239",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2373,7 +2373,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:790",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:790",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2385,7 +2385,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:927",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:927",
     "scope": "parameter",
     "param_name": "mode",
     "message": null,
@@ -2397,7 +2397,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:2305",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/linalg/linalg.py:2305",
     "scope": "parameter",
     "param_name": "rcond",
     "message": null,
@@ -2410,7 +2410,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/linalg/tests/test_deprecations.py:8",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/linalg/tests/test_deprecations.py:8",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2422,7 +2422,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:107",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:107",
     "scope": "parameter",
     "param_name": "arr",
     "message": null,
@@ -2434,7 +2434,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:3768",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:3768",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2446,7 +2446,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:4752",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:4752",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2458,7 +2458,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:5576",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:5576",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2471,7 +2471,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6153",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6153",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2483,7 +2483,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6606",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6606",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2495,7 +2495,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6761",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:6761",
     "scope": "parameter",
     "param_name": "axis+target",
     "message": null,
@@ -2507,7 +2507,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:7007",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/core.py:7007",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2519,7 +2519,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1091",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1091",
     "scope": "parameter",
     "param_name": "axis",
     "message": null,
@@ -2531,7 +2531,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1141",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1141",
     "scope": "parameter",
     "param_name": "axis",
     "message": null,
@@ -2543,7 +2543,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1517",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1517",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2555,7 +2555,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
     "scope": "parameter",
     "param_name": "bias",
     "message": null,
@@ -2567,7 +2567,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1568",
     "scope": "parameter",
     "param_name": "ddof",
     "message": null,
@@ -2579,7 +2579,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1623",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/extras.py:1623",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2591,7 +2591,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/mrecords.py:700",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/mrecords.py:700",
     "scope": "parameter",
     "param_name": "delimitor",
     "message": null,
@@ -2603,7 +2603,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:518",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:518",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2615,7 +2615,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:1864",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_core.py:1864",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2627,7 +2627,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:23",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:23",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2639,7 +2639,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:53",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:53",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2651,7 +2651,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:83",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_deprecations.py:83",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2664,7 +2664,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:656",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:656",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2677,7 +2677,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1308",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1308",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2689,7 +2689,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1329",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/ma/tests/test_extras.py:1329",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2701,7 +2701,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/defmatrix.py:117",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/defmatrix.py:117",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2713,7 +2713,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:202",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:202",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2725,7 +2725,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:222",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/matrixlib/tests/test_masked_matrix.py:222",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2737,7 +2737,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:938",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:938",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2749,7 +2749,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:939",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:939",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2761,7 +2761,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1057",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1057",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2773,7 +2773,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1058",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1058",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2785,7 +2785,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1422",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1422",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2797,7 +2797,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1882",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/chebyshev.py:1882",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2809,7 +2809,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:655",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:655",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2821,7 +2821,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:656",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:656",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2833,7 +2833,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:768",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:768",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2845,7 +2845,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:769",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:769",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2857,7 +2857,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1151",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1151",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2869,7 +2869,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1595",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite.py:1595",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2881,7 +2881,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:648",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:648",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2893,7 +2893,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:649",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:649",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2905,7 +2905,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:761",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:761",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2917,7 +2917,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:762",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:762",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2929,7 +2929,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1143",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1143",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2941,7 +2941,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1588",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/hermite_e.py:1588",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2953,7 +2953,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:650",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:650",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2965,7 +2965,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:651",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:651",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2977,7 +2977,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:766",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:766",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2989,7 +2989,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:767",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:767",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3001,7 +3001,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1149",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1149",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3013,7 +3013,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1548",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/laguerre.py:1548",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3025,7 +3025,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:675",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:675",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3037,7 +3037,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:676",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:676",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3049,7 +3049,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:794",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:794",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3061,7 +3061,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:795",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:795",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3073,7 +3073,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1161",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1161",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3085,7 +3085,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1556",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/legendre.py:1556",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3097,7 +3097,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:520",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:520",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3109,7 +3109,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:521",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:521",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3121,7 +3121,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:630",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:630",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3133,7 +3133,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:631",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:631",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3145,7 +3145,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:1096",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polynomial.py:1096",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3157,7 +3157,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:720",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:720",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3169,7 +3169,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:746",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/polyutils.py:746",
     "scope": "parameter",
     "param_name": "x",
     "message": null,
@@ -3181,7 +3181,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/polynomial/tests/test_polynomial.py:311",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/polynomial/tests/test_polynomial.py:311",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3193,7 +3193,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_random.py:353",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_random.py:353",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3205,7 +3205,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_randomstate.py:541",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_randomstate.py:541",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3217,7 +3217,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_smoke.py:804",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/random/tests/test_smoke.py:804",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3229,7 +3229,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:1726",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:1726",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3241,7 +3241,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:2004",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/testing/_private/utils.py:2004",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3253,7 +3253,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:832",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:832",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3265,7 +3265,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:828",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/testing/tests/test_utils.py:828",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3278,7 +3278,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:443",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:443",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3290,7 +3290,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:342",
+    "location": "./data/benchmark_libs/numpy-1.26.4/numpy/tests/test_public_api.py:342",
     "scope": "function",
     "param_name": null,
     "message": null,

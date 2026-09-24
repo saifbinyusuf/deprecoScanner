@@ -38,7 +38,7 @@
           "docstring"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3908",
+        "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3908",
         "evidence_snippet": ".. deprecated:: 1.25.0 ``alltrue`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `all` instead."
       },
       {
@@ -49,7 +49,7 @@
           "docstring"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3833",
+        "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3833",
         "evidence_snippet": ".. deprecated:: 1.25.0 ``product`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `prod` instead."
       },
       {
@@ -60,7 +60,7 @@
           "docstring"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
+        "location": "./data/benchmark_libs/numpy-1.26.4/numpy/core/fromnumeric.py:3857",
         "evidence_snippet": ".. deprecated:: 1.25.0 ``cumproduct`` is deprecated as of NumPy 1.25.0, and will be removed in NumPy 2.0. Please use `cumprod` instead."
       }
     ],
@@ -120,7 +120,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-1.5.3/pandas/io/formats/style.py:393",
+        "location": "./data/benchmark_libs/pandas-1.5.3/pandas/io/formats/style.py:393",
         "evidence_snippet": ".. deprecated:: 1.4.0 ~ Notes ----- This method is deprecated in favour of ``Styler.to_html``. | warnings.warn('this method is deprecated in favour of"
       },
       {
@@ -132,7 +132,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:818",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:818",
         "evidence_snippet": ".. deprecated:: 2.1.0 ``swapaxes`` is deprecated and will be removed. Please use ``transpose`` instead. | warnings.warn(\"'{...}.swapaxes' is deprecate"
       },
       {
@@ -144,7 +144,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/frame.py:10470",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/frame.py:10470",
         "evidence_snippet": ".. deprecated:: 2.1.0 ~ DataFrame.applymap has been deprecated. Use DataFrame.map instead. | warnings.warn('DataFrame.applymap has been deprecated. Us"
       },
       {
@@ -156,7 +156,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:7610",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:7610",
         "evidence_snippet": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffi"
       },
       {
@@ -168,7 +168,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-1.5.3/pandas/core/series.py:1819",
+        "location": "./data/benchmark_libs/pandas-1.5.3/pandas/core/series.py:1819",
         "evidence_snippet": ".. deprecated:: 1.5.0 iteritems is deprecated and will be removed in a future version. Use .items instead. | warnings.warn('iteritems is deprecated an"
       },
       {
@@ -179,7 +179,7 @@
           "warning"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-1.5.3/pandas/core/frame.py:1358",
+        "location": "./data/benchmark_libs/pandas-1.5.3/pandas/core/frame.py:1358",
         "evidence_snippet": "warnings.warn('iteritems is deprecated and will be removed in a future version. Use .items instead.', category=FutureWarning)"
       },
       {
@@ -191,7 +191,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-0.22.0/pandas/core/generic.py:2382",
+        "location": "./data/benchmark_libs/pandas-0.22.0/pandas/core/generic.py:2382",
         "evidence_snippet": "DEPRECATED: use df.loc[df.index.map(crit)] to select via labels | warnings.warn(\"'select' is deprecated and will be removed in a future release. You c"
       },
       {
@@ -203,7 +203,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:9787",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:9787",
         "evidence_snippet": ".. deprecated:: 2.1 :meth:`.first` is deprecated and will be removed in a future version. Please create a mask and filter using `.loc` instead. | warn"
       },
       {
@@ -215,7 +215,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:9870",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:9870",
         "evidence_snippet": ".. deprecated:: 2.1 :meth:`.last` is deprecated and will be removed in a future version. Please create a mask and filter using `.loc` instead. ~ Notes"
       },
       {
@@ -227,7 +227,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:7610",
+        "location": "./data/benchmark_libs/pandas-2.2.3/pandas/core/generic.py:7610",
         "evidence_snippet": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffi"
       }
     ],
@@ -292,7 +292,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:77",
+        "location": "./data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:77",
         "evidence_snippet": "logsumexp = np.deprecate(...)"
       },
       {
@@ -303,7 +303,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:76",
+        "location": "./data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:76",
         "evidence_snippet": "comb = np.deprecate(...)"
       },
       {
@@ -314,7 +314,7 @@
           "warning"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:428",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:428",
         "evidence_snippet": "warnings.warn('', category=DeprecationWarning)"
       },
       {
@@ -325,7 +325,7 @@
           "warning"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:586",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:586",
         "evidence_snippet": "warnings.warn('', category=DeprecationWarning)"
       },
       {
@@ -336,7 +336,7 @@
           "warning"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:162",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/integrate/_quadrature.py:162",
         "evidence_snippet": "warnings.warn('', category=DeprecationWarning)"
       },
       {
@@ -347,7 +347,7 @@
           "docstring"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/interpolate/_interpolate.py:114",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/interpolate/_interpolate.py:114",
         "evidence_snippet": ".. deprecated:: 1.10.0 ~ `interp2d` is deprecated in SciPy 1.10 and will be removed in SciPy 1.14.0."
       },
       {
@@ -359,7 +359,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.7.3/scipy/linalg/basic.py:1349",
+        "location": "./data/benchmark_libs/scipy-1.7.3/scipy/linalg/basic.py:1349",
         "evidence_snippet": "`scipy.linalg.pinv2` is deprecated since SciPy 1.7.0, use `scipy.linalg.pinv` instead for better tolerance control. | warnings.warn('scipy.linalg.pinv"
       },
       {
@@ -370,7 +370,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:78",
+        "location": "./data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:78",
         "evidence_snippet": "factorial = np.deprecate(...)"
       },
       {
@@ -381,7 +381,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.7.3/scipy/stats/stats.py:1712",
+        "location": "./data/benchmark_libs/scipy-1.7.3/scipy/stats/stats.py:1712",
         "evidence_snippet": "@np.deprecate"
       },
       {
@@ -392,7 +392,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.7.3/scipy/signal/windows/windows.py:791",
+        "location": "./data/benchmark_libs/scipy-1.7.3/scipy/signal/windows/windows.py:791",
         "evidence_snippet": "@np.deprecate"
       },
       {
@@ -403,7 +403,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-0.19.1/scipy/special/basic.py:685",
+        "location": "./data/benchmark_libs/scipy-0.19.1/scipy/special/basic.py:685",
         "evidence_snippet": "@np.deprecate"
       },
       {
@@ -415,7 +415,7 @@
           "docstring"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-0.19.1/scipy/stats/mstats_basic.py:328",
+        "location": "./data/benchmark_libs/scipy-0.19.1/scipy/stats/mstats_basic.py:328",
         "evidence_snippet": "@np.deprecate | betai() is deprecated in scipy 0.17.0."
       },
       {
@@ -426,7 +426,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-0.19.1/scipy/stats/stats.py:5222",
+        "location": "./data/benchmark_libs/scipy-0.19.1/scipy/stats/stats.py:5222",
         "evidence_snippet": "@np.deprecate"
       },
       {
@@ -438,7 +438,7 @@
           "docstring"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/misc/_common.py:182",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/misc/_common.py:182",
         "evidence_snippet": "@_deprecated | .. deprecated:: 1.10.0 `face` has been deprecated from `scipy.misc.face` in SciPy 1.10.0 and it will be completely removed in SciPy 1.1"
       },
       {
@@ -449,7 +449,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:79",
+        "location": "./data/benchmark_libs/scipy-1.2.3/scipy/misc/__init__.py:79",
         "evidence_snippet": "factorial2 = np.deprecate(...)"
       },
       {
@@ -460,7 +460,7 @@
           "decorator"
         ],
         "multi_origin": false,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-0.19.1/scipy/special/basic.py:734",
+        "location": "./data/benchmark_libs/scipy-0.19.1/scipy/special/basic.py:734",
         "evidence_snippet": "@np.deprecate"
       },
       {
@@ -481,7 +481,7 @@
           "warning"
         ],
         "multi_origin": true,
-        "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/data/benchmark_libs/scipy-1.12.0/scipy/stats/_rvs_sampling.py:4",
+        "location": "./data/benchmark_libs/scipy-1.12.0/scipy/stats/_rvs_sampling.py:4",
         "evidence_snippet": ".. deprecated:: 1.12.0 `rvs_ratio_uniforms` is deprecated in favour of `scipy.stats.sampling.RatioUniforms` from version 1.12.0 and will be removed in"
       }
     ],

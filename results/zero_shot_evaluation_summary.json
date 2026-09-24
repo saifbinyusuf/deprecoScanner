@@ -1,0 +1,56 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "total_items": 150,
+  "elapsed_seconds": 0.01,
+  "api_calls": 0,
+  "cache_hits": 150,
+  "token_usage": {
+    "total_prompt_tokens": 77729,
+    "total_candidate_tokens": 14188,
+    "total_tokens": 91917,
+    "avg_prompt_tokens_per_request": 518.2,
+    "avg_candidate_tokens_per_request": 94.6,
+    "avg_total_tokens_per_request": 612.8
+  },
+  "overall_metrics": {
+    "tp": 91,
+    "fp": 11,
+    "fn": 16,
+    "tn": 32,
+    "precision": 0.8921568627450981,
+    "recall": 0.8504672897196262,
+    "f1": 0.8708133971291867
+  },
+  "by_library": {
+    "numpy": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total": 20
+    },
+    "scipy": {
+      "tp": 54,
+      "fp": 5,
+      "fn": 15,
+      "tn": 17,
+      "precision": 0.9152542372881356,
+      "recall": 0.782608695652174,
+      "f1": 0.8437499999999999,
+      "total": 91
+    },
+    "pandas": {
+      "tp": 25,
+      "fp": 6,
+      "fn": 1,
+      "tn": 7,
+      "precision": 0.8064516129032258,
+      "recall": 0.9615384615384616,
+      "f1": 0.8771929824561403,
+      "total": 39
+    }
+  }
+}

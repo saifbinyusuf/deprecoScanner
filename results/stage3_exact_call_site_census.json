@@ -1,6 +1,6 @@
 {
   "benchmark_samples_total": 5875,
-  "elapsed_seconds": 495.56,
+  "elapsed_seconds": 412.9,
   "resolved_deprecated_calls": 1864,
   "target_low_confidence_calls": 117,
   "exact_candidate_call_sites_total": 1981,

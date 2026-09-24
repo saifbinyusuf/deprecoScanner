@@ -1,6 +1,5 @@
 {
   "evaluation_stage": "Stage 3: LLM Verification (Phase 4)",
-  "scope_policy": "Strictly anchored to 31 canonical benchmark target APIs",
   "primary_model": "gemini-3.5-flash-lite",
   "validation_model": "gemini-3.1-pro-preview",
   "prompt_version": "v1.1",
@@ -31,74 +30,134 @@
     },
     "pandas": {
       "total": 142,
-      "deprecated": 98,
-      "benign": 44
+      "deprecated": 97,
+      "benign": 45
     },
     "scipy": {
       "total": 929,
-      "deprecated": 914,
-      "benign": 15
+      "deprecated": 915,
+      "benign": 14
     }
   },
   "validation_subsample": {
-    "total_evaluated": 110,
-    "agreed_count": 107,
-    "disagreed_count": 3,
-    "raw_concordance_pct": 97.27,
-    "cohens_kappa": 0.56,
-    "pabak": 0.9455,
-    "balanced_accuracy_pct": 98.61,
+    "total_evaluated": 150,
+    "agreed_count": 143,
+    "disagreed_count": 7,
+    "raw_concordance_pct": 95.33,
+    "cohens_kappa": 0.5116,
+    "pabak": 0.9067,
+    "balanced_accuracy_pct": 87.93,
     "contingency_table": {
-      "both_deprecated": 105,
-      "primary_deprecated_val_benign": 0,
-      "primary_benign_val_deprecated": 3,
-      "both_benign": 2
+      "both_deprecated": 139,
+      "primary_deprecated_val_benign": 1,
+      "primary_benign_val_deprecated": 6,
+      "both_benign": 4
     },
     "disagreements": [
       {
-        "candidate_id": "pandas_32_res_2_9_8",
+        "candidate_id": "pandas_71_lc_0_9_73",
+        "sample_id": "pandas_71",
+        "target_api": "pandas.DataFrame.iteritems",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 1.0,
+        "primary_rationale": "The receiver 'kdf' is instantiated via ks.from_pandas(pdf), making it a Koalas DataFrame (pyspark.pandas) rather than a native pandas DataFrame.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The variable 'pdf' is explicitly instantiated as a pandas DataFrame, making 'pdf.iteritems()' a direct invocation of the deprecated pandas API, even though 'kdf' is a Koalas/PySpark DataFrame.",
+        "agreement": false,
+        "cached": false
+      },
+      {
+        "candidate_id": "pandas_118_res_0_4_8",
+        "sample_id": "pandas_118",
+        "target_api": "pandas.DataFrame.applymap",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 0.95,
+        "primary_rationale": "The call site invokes applymap on a Dask DataFrame (ddf) rather than a pandas DataFrame, which is a separate third-party wrapper library.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site directly invokes `applymap` on a pandas DataFrame (`df`) without any fallback guards, which is a genuine usage of the deprecated API.",
+        "agreement": false,
+        "cached": false
+      },
+      {
+        "candidate_id": "pandas_32_res_0_7_8",
         "sample_id": "pandas_32",
         "target_api": "pandas.DataFrame.swapaxes",
         "primary_model": "gemini-3.5-flash-lite",
         "primary_decision": false,
-        "primary_confidence": 0.99,
-        "primary_rationale": "The receiver psdf is a pyspark.pandas dataframe created via ps.from_pandas(pdf), not a native pandas DataFrame.",
+        "primary_confidence": 0.95,
+        "primary_rationale": "The receiver 'psdf' is initialized via ps.from_pandas(pdf), indicating it is a pyspark.pandas DataFrame wrapper object rather than a genuine pandas DataFrame.",
         "validation_model": "gemini-3.1-pro-preview",
         "validation_decision": true,
         "validation_confidence": 1.0,
-        "validation_rationale": "The call site explicitly invokes `swapaxes` on `pdf`, which is instantiated as a `pandas.DataFrame`, confirming the active use of the deprecated pandas API.",
+        "validation_rationale": "The call site explicitly invokes the deprecated `swapaxes` method on a pandas DataFrame object (`pdf`) within a test case.",
         "agreement": false,
-        "cached": true
+        "cached": false
       },
       {
-        "candidate_id": "pandas_87_res_1_5_8",
-        "sample_id": "pandas_87",
-        "target_api": "pandas.DataFrame.first",
+        "candidate_id": "pandas_118_res_1_6_8",
+        "sample_id": "pandas_118",
+        "target_api": "pandas.DataFrame.applymap",
         "primary_model": "gemini-3.5-flash-lite",
         "primary_decision": false,
         "primary_confidence": 1.0,
-        "primary_rationale": "The call pdf.first('1D') is invoked on a pandas DataFrame which executes the pandas API, but the companion psdf.first('1D') and subsequent calls target pyspark.pandas (ps), meaning the test compares pandas against a wrapper library where the pandas method itself is called as a reference, not as a primary production usage of the deprecated pandas API.",
+        "primary_rationale": "The call site invokes applymap on a Dask DataFrame (ddf) rather than a pandas DataFrame, which is a third-party parallel equivalent wrapper and not pandas.DataFrame.applymap.",
         "validation_model": "gemini-3.1-pro-preview",
         "validation_decision": true,
         "validation_confidence": 1.0,
-        "validation_rationale": "The call site directly invokes the deprecated `first` method on a pandas DataFrame (`pdf`), which inherits from `NDFrame`.",
+        "validation_rationale": "The call site directly invokes `applymap` on a pandas DataFrame object (`df`) without any fallback or version guards, which is a genuine usage of the deprecated API.",
         "agreement": false,
-        "cached": true
+        "cached": false
       },
       {
-        "candidate_id": "pandas_125_res_1_14_4",
-        "sample_id": "pandas_125",
+        "candidate_id": "pandas_65_res_0_9_4",
+        "sample_id": "pandas_65",
         "target_api": "pandas.Series.pad",
         "primary_model": "gemini-3.5-flash-lite",
         "primary_decision": false,
-        "primary_confidence": 1.0,
-        "primary_rationale": "The call pdf.pad() invokes the deprecated pandas API, but kdf.pad() invokes a Koalas (pyspark.pandas) method wrapper which is not the pandas target library API.",
+        "primary_confidence": 0.95,
+        "primary_rationale": "The call is made on a PySpark pandas-API wrapper object (`psser`), not a native `pandas.Series`, and occurs inside a version-conditional test block.",
         "validation_model": "gemini-3.1-pro-preview",
         "validation_decision": true,
         "validation_confidence": 1.0,
-        "validation_rationale": "The call site invokes `pad()` on `pdf`, which is explicitly instantiated as a `pandas.DataFrame`, confirming the use of the deprecated `pandas.DataFrame.pad` API.",
+        "validation_rationale": "The call site explicitly invokes `pad` on `pser`, which is instantiated as a `pandas.Series`, confirming the use of the deprecated API.",
         "agreement": false,
-        "cached": true
+        "cached": false
+      },
+      {
+        "candidate_id": "pandas_33_res_1_8_8",
+        "sample_id": "pandas_33",
+        "target_api": "pandas.DataFrame.swapaxes",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": false,
+        "primary_confidence": 0.99,
+        "primary_rationale": "The receiver kdf is an instance of a Koalas/pyspark.pandas DataFrame rather than a standard pandas DataFrame, so it does not invoke the pandas deprecated API directly.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": true,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call site explicitly invokes `swapaxes` on `pdf`, which is instantiated as a `pandas.DataFrame`, confirming the use of the deprecated pandas API.",
+        "agreement": false,
+        "cached": false
+      },
+      {
+        "candidate_id": "pandas_120_res_2_33_8",
+        "sample_id": "pandas_120",
+        "target_api": "pandas.DataFrame.applymap",
+        "primary_model": "gemini-3.5-flash-lite",
+        "primary_decision": true,
+        "primary_confidence": 0.95,
+        "primary_rationale": "The call site is inside an else branch executed on pandas versions below 2.1.0 where applymap is intentionally invoked as a fallback for the deprecated method.",
+        "validation_model": "gemini-3.1-pro-preview",
+        "validation_decision": false,
+        "validation_confidence": 1.0,
+        "validation_rationale": "The call to `applymap` is safely guarded by a version check and `hasattr` check, serving as a backward-compatibility fallback for older pandas versions while modern versions use the recommended `map`.",
+        "agreement": false,
+        "cached": false
       }
     ]
   },
@@ -390,44 +449,56 @@
       }
     ]
   },
+  "run_telemetry": {
+    "api_calls": 686,
+    "cache_hits": 1335,
+    "cache_hit_rate_pct": 66.06,
+    "total_db_records": 3073,
+    "prompt_tokens": 637913,
+    "candidate_tokens": 36769,
+    "total_tokens": 674682,
+    "estimated_primary_cost_usd": 0.0785,
+    "estimated_validation_cost_usd": 0.2644,
+    "estimated_total_cost_usd": 0.3429
+  },
   "low_confidence_validation_metrics": {
     "n": 25,
-    "agreed": 23,
-    "concordance_pct": 92.0,
-    "chance_agreement_pe": 0.536,
-    "cohens_kappa": 0.8276,
-    "pabak": 0.84,
-    "sensitivity_pct": 100.0,
-    "specificity_pct": 80.0,
-    "balanced_accuracy_pct": 90.0,
+    "agreed": 22,
+    "concordance_pct": 88.0,
+    "chance_agreement_pe": 0.5504,
+    "cohens_kappa": 0.7331,
+    "pabak": 0.76,
+    "sensitivity_pct": 93.75,
+    "specificity_pct": 77.78,
+    "balanced_accuracy_pct": 85.76,
     "contingency_table": [
       [
         15,
         2
       ],
       [
-        0,
-        8
+        1,
+        7
       ]
     ]
   },
   "composite_validation_metrics": {
-    "n": 129,
-    "agreed": 124,
-    "concordance_pct": 96.12,
-    "chance_agreement_pe": 0.8504,
-    "cohens_kappa": 0.7409,
-    "pabak": 0.9225,
-    "sensitivity_pct": 97.48,
-    "specificity_pct": 80.0,
-    "balanced_accuracy_pct": 88.74,
+    "n": 165,
+    "agreed": 156,
+    "concordance_pct": 94.55,
+    "chance_agreement_pe": 0.8598,
+    "cohens_kappa": 0.611,
+    "pabak": 0.8909,
+    "sensitivity_pct": 96.1,
+    "specificity_pct": 72.73,
+    "balanced_accuracy_pct": 84.42,
     "contingency_table": [
       [
-        116,
-        2
+        148,
+        3
       ],
       [
-        3,
+        6,
         8
       ]
     ]

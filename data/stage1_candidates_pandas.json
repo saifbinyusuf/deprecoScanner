@@ -5,7 +5,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:130",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:130",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -17,7 +17,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:596",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:596",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -29,7 +29,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:676",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:676",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -41,7 +41,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:692",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:692",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -53,7 +53,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:703",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:703",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -65,7 +65,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:715",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:715",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -77,7 +77,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_config/config.py:763",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_config/config.py:763",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -89,7 +89,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:860",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:860",
     "scope": "parameter",
     "param_name": "check_datetimelike_compat",
     "message": null,
@@ -101,7 +101,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:860",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:860",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -113,7 +113,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1150",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1150",
     "scope": "parameter",
     "param_name": "check_datetimelike_compat",
     "message": null,
@@ -125,7 +125,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1150",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1150",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -137,7 +137,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1342",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/_testing/asserters.py:1342",
     "scope": "parameter",
     "param_name": "by_blocks",
     "message": null,
@@ -149,7 +149,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/arrow/array.py:1061",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/arrow/array.py:1061",
     "scope": "parameter",
     "param_name": "op+other+self",
     "message": null,
@@ -161,7 +161,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:596",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:596",
     "scope": "parameter",
     "param_name": "dtype",
     "message": null,
@@ -173,7 +173,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:3045",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:3045",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -185,7 +185,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:3102",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/categorical.py:3102",
     "scope": "parameter",
     "param_name": "warn",
     "message": null,
@@ -197,7 +197,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/masked.py:966",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/masked.py:966",
     "scope": "parameter",
     "param_name": "other",
     "message": null,
@@ -209,7 +209,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/numpy_.py:301",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/numpy_.py:301",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -221,7 +221,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/period.py:1182",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/period.py:1182",
     "scope": "parameter",
     "param_name": "right",
     "message": null,
@@ -233,7 +233,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/string_.py:424",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/string_.py:424",
     "scope": "parameter",
     "param_name": "op+other",
     "message": null,
@@ -245,7 +245,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/arrays/string_.py:414",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/arrays/string_.py:414",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -257,7 +257,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:553",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:553",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -269,7 +269,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:557",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:557",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -281,7 +281,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:564",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/computation/expr.py:564",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -293,7 +293,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1268",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1268",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -305,7 +305,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1536",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1536",
     "scope": "parameter",
     "param_name": "arr",
     "message": null,
@@ -317,7 +317,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1558",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/cast.py:1558",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -330,7 +330,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:189",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:189",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -343,7 +343,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:331",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:331",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -356,7 +356,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:436",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:436",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -369,7 +369,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:490",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:490",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -382,7 +382,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:549",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:549",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -395,7 +395,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:925",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:925",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -407,7 +407,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1458",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1458",
     "scope": "parameter",
     "param_name": "arr_or_dtype",
     "message": null,
@@ -419,7 +419,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1884",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1884",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -431,7 +431,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1155",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/common.py:1155",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -443,7 +443,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1056",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1056",
     "scope": "parameter",
     "param_name": "freq",
     "message": null,
@@ -455,7 +455,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1819",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1819",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -467,7 +467,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1819",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/dtypes.py:1819",
     "scope": "parameter",
     "param_name": "other",
     "message": null,
@@ -479,7 +479,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/dtypes/missing.py:529",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/dtypes/missing.py:529",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -491,7 +491,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:725",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:725",
     "scope": "parameter",
     "param_name": "data",
     "message": null,
@@ -504,7 +504,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:907",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:907",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -516,7 +516,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:4075",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:4075",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -528,7 +528,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:5544",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:5544",
     "scope": "parameter",
     "param_name": "exclude+include",
     "message": null,
@@ -540,7 +540,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:5791",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:5791",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -552,7 +552,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:5857",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:5857",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -564,7 +564,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:6354",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:6354",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -576,7 +576,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:6823",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:6823",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -588,7 +588,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:6950",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:6950",
     "scope": "parameter",
     "param_name": "verify_integrity",
     "message": null,
@@ -600,7 +600,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:10613",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:10613",
     "scope": "parameter",
     "param_name": "groupby",
     "message": null,
@@ -612,7 +612,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:11330",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:11330",
     "scope": "parameter",
     "param_name": "future_stack",
     "message": null,
@@ -624,7 +624,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:12496",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:12496",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -636,7 +636,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:13862",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:13862",
     "scope": "parameter",
     "param_name": "all",
     "message": null,
@@ -648,7 +648,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:13993",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:13993",
     "scope": "parameter",
     "param_name": "min",
     "message": null,
@@ -660,7 +660,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14100",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14100",
     "scope": "parameter",
     "param_name": "max",
     "message": null,
@@ -672,7 +672,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14176",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14176",
     "scope": "parameter",
     "param_name": "sum",
     "message": null,
@@ -684,7 +684,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14176",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14176",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -696,7 +696,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14277",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14277",
     "scope": "parameter",
     "param_name": "prod",
     "message": null,
@@ -708,7 +708,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14277",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14277",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -720,7 +720,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14395",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14395",
     "scope": "parameter",
     "param_name": "mean",
     "message": null,
@@ -732,7 +732,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14516",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14516",
     "scope": "parameter",
     "param_name": "median",
     "message": null,
@@ -744,7 +744,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14638",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14638",
     "scope": "parameter",
     "param_name": "sem",
     "message": null,
@@ -756,7 +756,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14638",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14638",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -768,7 +768,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14758",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14758",
     "scope": "parameter",
     "param_name": "var",
     "message": null,
@@ -780,7 +780,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14758",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14758",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -792,7 +792,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14877",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14877",
     "scope": "parameter",
     "param_name": "std",
     "message": null,
@@ -804,7 +804,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:14877",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:14877",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -816,7 +816,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:15000",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:15000",
     "scope": "parameter",
     "param_name": "skew",
     "message": null,
@@ -828,7 +828,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:15120",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:15120",
     "scope": "parameter",
     "param_name": "kurt",
     "message": null,
@@ -840,7 +840,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:16211",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:16211",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -852,7 +852,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/frame.py:16299",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/frame.py:16299",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -864,7 +864,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:402",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:402",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -876,7 +876,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:680",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:680",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -888,7 +888,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:1098",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:1098",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -900,7 +900,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:2312",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:2312",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -912,7 +912,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:2605",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:2605",
     "scope": "parameter",
     "param_name": "date_format",
     "message": null,
@@ -924,7 +924,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:4423",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:4423",
     "scope": "parameter",
     "param_name": "copy",
     "message": null,
@@ -936,7 +936,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:4435",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:4435",
     "scope": "parameter",
     "param_name": "method",
     "message": null,
@@ -948,7 +948,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:4435",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:4435",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -960,7 +960,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:5189",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:5189",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -972,7 +972,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:6349",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:6349",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -984,7 +984,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:6671",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:6671",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -996,7 +996,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:9693",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:9693",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1008,7 +1008,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:10674",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:10674",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1020,7 +1020,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:10856",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:10856",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1032,7 +1032,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/generic.py:10955",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/generic.py:10955",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1045,7 +1045,7 @@
       "docstring",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/groupby/generic.py:3965",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/groupby/generic.py:3965",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1057,7 +1057,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:541",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:541",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -1069,7 +1069,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/groupby/grouper.py:70",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/groupby/grouper.py:70",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1081,7 +1081,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexers/utils.py:334",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexers/utils.py:334",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1093,7 +1093,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexers/utils.py:349",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexers/utils.py:349",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1105,7 +1105,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/accessors.py:217",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/accessors.py:217",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1117,7 +1117,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/accessors.py:500",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/accessors.py:500",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1129,7 +1129,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:63",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:63",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1141,7 +1141,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:109",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:109",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1153,7 +1153,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:185",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/api.py:185",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1165,7 +1165,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py:4430",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/base.py:4430",
     "scope": "parameter",
     "param_name": "other",
     "message": null,
@@ -1177,7 +1177,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/datetimes.py:1024",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/datetimes.py:1024",
     "scope": "parameter",
     "param_name": "label",
     "message": null,
@@ -1189,7 +1189,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/datetimes.py:1147",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/datetimes.py:1147",
     "scope": "parameter",
     "param_name": "time",
     "message": null,
@@ -1201,7 +1201,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexes/frozen.py:71",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexes/frozen.py:71",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1213,7 +1213,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/indexing.py:160",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/indexing.py:160",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1225,7 +1225,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/interchange/from_dataframe.py:108",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/interchange/from_dataframe.py:108",
     "scope": "parameter",
     "param_name": "df",
     "message": null,
@@ -1237,7 +1237,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/interchange/from_dataframe.py:125",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/interchange/from_dataframe.py:125",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1249,7 +1249,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/__init__.py:27",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/__init__.py:27",
     "scope": "parameter",
     "param_name": "name",
     "message": null,
@@ -1261,7 +1261,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/api.py:101",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/api.py:101",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1273,7 +1273,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/api.py:172",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/api.py:172",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1285,7 +1285,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1455",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1455",
     "scope": "parameter",
     "param_name": "fill_value",
     "message": null,
@@ -1297,7 +1297,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1455",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1455",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -1309,7 +1309,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1914",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1914",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -1321,7 +1321,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/resample.py:994",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/resample.py:994",
     "scope": "parameter",
     "param_name": "inplace",
     "message": null,
@@ -1333,7 +1333,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:158",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:158",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1345,7 +1345,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:390",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:390",
     "scope": "parameter",
     "param_name": "copy",
     "message": null,
@@ -1357,7 +1357,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:498",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py:498",
     "scope": "parameter",
     "param_name": "sort",
     "message": null,
@@ -1369,7 +1369,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/merge.py:146",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/merge.py:146",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1381,7 +1381,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/reshape.py:322",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/reshape.py:322",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1393,7 +1393,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/reshape/reshape.py:330",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/reshape/reshape.py:330",
     "scope": "parameter",
     "param_name": "fill_value",
     "message": null,
@@ -1405,7 +1405,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:386",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:386",
     "scope": "parameter",
     "param_name": "copy+data+dtype+index",
     "message": null,
@@ -1417,7 +1417,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:411",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:411",
     "scope": "parameter",
     "param_name": "copy+data",
     "message": null,
@@ -1429,7 +1429,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:481",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:481",
     "scope": "parameter",
     "param_name": "data",
     "message": null,
@@ -1441,7 +1441,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:1487",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:1487",
     "scope": "parameter",
     "param_name": "to_string",
     "message": null,
@@ -1453,7 +1453,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:1613",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:1613",
     "scope": "parameter",
     "param_name": "to_markdown",
     "message": null,
@@ -1465,7 +1465,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:2040",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:2040",
     "scope": "parameter",
     "param_name": "groupby",
     "message": null,
@@ -1477,7 +1477,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:3431",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:3431",
     "scope": "parameter",
     "param_name": "other",
     "message": null,
@@ -1489,7 +1489,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:4231",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:4231",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1501,7 +1501,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:4645",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:4645",
     "scope": "parameter",
     "param_name": "arg",
     "message": null,
@@ -1513,7 +1513,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:5134",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:5134",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1525,7 +1525,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:5240",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:5240",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1537,7 +1537,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:5299",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:5299",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1549,7 +1549,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:5568",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:5568",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1561,7 +1561,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:6519",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:6519",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1573,7 +1573,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:6598",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:6598",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1585,7 +1585,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7632",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7632",
     "scope": "parameter",
     "param_name": "all",
     "message": null,
@@ -1597,7 +1597,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7736",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7736",
     "scope": "parameter",
     "param_name": "min",
     "message": null,
@@ -1609,7 +1609,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7807",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7807",
     "scope": "parameter",
     "param_name": "max",
     "message": null,
@@ -1621,7 +1621,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7878",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7878",
     "scope": "parameter",
     "param_name": "sum",
     "message": null,
@@ -1633,7 +1633,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7878",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7878",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1645,7 +1645,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7979",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7979",
     "scope": "parameter",
     "param_name": "prod",
     "message": null,
@@ -1657,7 +1657,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:7979",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:7979",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1669,7 +1669,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8064",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8064",
     "scope": "parameter",
     "param_name": "mean",
     "message": null,
@@ -1681,7 +1681,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8120",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8120",
     "scope": "parameter",
     "param_name": "median",
     "message": null,
@@ -1693,7 +1693,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8201",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8201",
     "scope": "parameter",
     "param_name": "sem",
     "message": null,
@@ -1705,7 +1705,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8260",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8260",
     "scope": "parameter",
     "param_name": "var",
     "message": null,
@@ -1717,7 +1717,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8260",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8260",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1729,7 +1729,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8347",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8347",
     "scope": "parameter",
     "param_name": "std",
     "message": null,
@@ -1741,7 +1741,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8411",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8411",
     "scope": "parameter",
     "param_name": "skew",
     "message": null,
@@ -1753,7 +1753,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/core/series.py:8456",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/core/series.py:8456",
     "scope": "parameter",
     "param_name": "kurt",
     "message": null,
@@ -1765,7 +1765,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:96",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:96",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1777,7 +1777,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:120",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:120",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1789,7 +1789,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:138",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:138",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1801,7 +1801,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:156",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:156",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1813,7 +1813,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:175",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:175",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1825,7 +1825,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:200",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/errors/__init__.py:200",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1837,7 +1837,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/excel/_util.py:304",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/excel/_util.py:304",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1849,7 +1849,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:80",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:80",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1861,7 +1861,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:170",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:170",
     "scope": "parameter",
     "param_name": "dtype_backend",
     "message": null,
@@ -1873,7 +1873,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:197",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/feather_format.py:197",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1885,7 +1885,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/formats/style.py:2097",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/formats/style.py:2097",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1897,7 +1897,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/formats/style.py:2174",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/formats/style.py:2174",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1909,7 +1909,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/parquet.py:268",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/parquet.py:268",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1921,7 +1921,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/parquet.py:396",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/parquet.py:396",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1933,7 +1933,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/parsers/arrow_parser_wrapper.py:312",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/parsers/arrow_parser_wrapper.py:312",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1945,7 +1945,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/pytables.py:1813",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/pytables.py:1813",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1957,7 +1957,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/io/stata.py:318",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/io/stata.py:318",
     "scope": "parameter",
     "param_name": "dates",
     "message": null,
@@ -1969,7 +1969,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:252",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:252",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1981,7 +1981,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:586",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:586",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -1993,7 +1993,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:1088",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/converter.py:1088",
     "scope": "parameter",
     "param_name": "self",
     "message": null,
@@ -2005,7 +2005,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/timeseries.py:284",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/plotting/_matplotlib/timeseries.py:284",
     "scope": "parameter",
     "param_name": "data",
     "message": null,
@@ -2017,7 +2017,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/api/test_api.py:249",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/api/test_api.py:249",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2029,7 +2029,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/api/test_types.py:60",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/api/test_types.py:60",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2041,7 +2041,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_datetime64.py:2174",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_datetime64.py:2174",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2053,7 +2053,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1080",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1080",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2065,7 +2065,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1194",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1194",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2077,7 +2077,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1208",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arithmetic/test_timedelta64.py:1208",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2089,7 +2089,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_astype.py:127",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_astype.py:127",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2101,7 +2101,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:234",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:234",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2113,7 +2113,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:254",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:254",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2125,7 +2125,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:464",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:464",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2137,7 +2137,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:486",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:486",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2149,7 +2149,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:680",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:680",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2161,7 +2161,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:694",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:694",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2173,7 +2173,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:749",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_constructors.py:749",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2185,7 +2185,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_dtypes.py:101",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_dtypes.py:101",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2197,7 +2197,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_missing.py:35",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/categorical/test_missing.py:35",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2209,7 +2209,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimelike.py:53",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimelike.py:53",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2221,7 +2221,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimes.py:800",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimes.py:800",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2233,7 +2233,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimes.py:829",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/arrays/test_datetimes.py:829",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2246,7 +2246,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/computation/test_eval.py:741",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/computation/test_eval.py:741",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2259,7 +2259,7 @@
       "comment",
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/config/test_config.py:290",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/config/test_config.py:290",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2271,7 +2271,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/config/test_config.py:490",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/config/test_config.py:490",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2283,7 +2283,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_constructors.py:163",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_constructors.py:163",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2295,7 +2295,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:43",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:43",
     "scope": "parameter",
     "param_name": "meth",
     "message": null,
@@ -2307,7 +2307,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:54",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:54",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2319,7 +2319,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:78",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:78",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2331,7 +2331,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:98",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/copy_view/test_copy_deprecation.py:98",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2343,7 +2343,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:208",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:208",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2355,7 +2355,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:238",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:238",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2367,7 +2367,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:254",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:254",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2379,7 +2379,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:276",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:276",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2391,7 +2391,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:287",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:287",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2403,7 +2403,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:300",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:300",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2415,7 +2415,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:456",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:456",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2427,7 +2427,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:494",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:494",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2439,7 +2439,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:806",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_common.py:806",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2451,7 +2451,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:172",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:172",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2463,7 +2463,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:301",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:301",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2475,7 +2475,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:362",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:362",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2487,7 +2487,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:461",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:461",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2499,7 +2499,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:540",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:540",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2511,7 +2511,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:628",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:628",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2523,7 +2523,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:651",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:651",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2535,7 +2535,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:822",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:822",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2547,7 +2547,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:837",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_dtypes.py:837",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2559,7 +2559,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1955",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1955",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2571,7 +2571,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1967",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1967",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2583,7 +2583,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1171",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/dtypes/test_inference.py:1171",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2595,7 +2595,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:138",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:138",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2607,7 +2607,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:145",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:145",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2619,7 +2619,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:161",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:161",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2631,7 +2631,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:169",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/decimal/test_decimal.py:169",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2643,7 +2643,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/test_arrow.py:770",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/test_arrow.py:770",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2655,7 +2655,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/test_arrow.py:3058",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/test_arrow.py:3058",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2667,7 +2667,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/extension/test_categorical.py:81",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/extension/test_categorical.py:81",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2679,7 +2679,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/indexing/test_setitem.py:732",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/indexing/test_setitem.py:732",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2691,7 +2691,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/indexing/test_where.py:154",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/indexing/test_where.py:154",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2703,7 +2703,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_astype.py:735",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_astype.py:735",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2715,7 +2715,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_at_time.py:143",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_at_time.py:143",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2727,7 +2727,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex.py:760",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex.py:760",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2739,7 +2739,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex.py:164",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex.py:164",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2751,7 +2751,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex_like.py:27",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_reindex_like.py:27",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2763,7 +2763,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_set_index.py:554",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_set_index.py:554",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2775,7 +2775,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_shift.py:790",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/methods/test_shift.py:790",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2787,7 +2787,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/test_block_internals.py:51",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/test_block_internals.py:51",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2799,7 +2799,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/test_constructors.py:1785",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/test_constructors.py:1785",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2811,7 +2811,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/test_stack_unstack.py:111",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/test_stack_unstack.py:111",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2823,7 +2823,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/test_stack_unstack.py:171",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/test_stack_unstack.py:171",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2835,7 +2835,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/frame/test_ufunc.py:252",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/frame/test_ufunc.py:252",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2847,7 +2847,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:551",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:551",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2859,7 +2859,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:577",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:577",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2871,7 +2871,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:629",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:629",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2883,7 +2883,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:743",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:743",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2895,7 +2895,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:1041",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:1041",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2907,7 +2907,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:118",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/groupby/test_grouping.py:118",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2919,7 +2919,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/categorical/test_astype.py:69",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/categorical/test_astype.py:69",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2931,7 +2931,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/categorical/test_constructors.py:72",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/categorical/test_constructors.py:72",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2943,7 +2943,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_shift.py:133",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_shift.py:133",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2955,7 +2955,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_snap.py:35",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_snap.py:35",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2967,7 +2967,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_to_frame.py:20",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/methods/test_to_frame.py:20",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2979,7 +2979,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_constructors.py:125",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_constructors.py:125",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -2991,7 +2991,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_date_range.py:814",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/datetimes/test_date_range.py:814",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3003,7 +3003,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/interval/test_astype.py:53",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/interval/test_astype.py:53",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3015,7 +3015,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/interval/test_indexing.py:51",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/interval/test_indexing.py:51",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3027,7 +3027,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/methods/test_shift.py:119",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/methods/test_shift.py:119",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3039,7 +3039,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:89",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:89",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3051,7 +3051,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:157",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:157",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3063,7 +3063,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:520",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:520",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3075,7 +3075,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:556",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:556",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3087,7 +3087,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:574",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_constructors.py:574",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3099,7 +3099,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:188",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:188",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3111,7 +3111,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:216",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:216",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3123,7 +3123,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:242",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/period/test_period_range.py:242",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3135,7 +3135,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_any_index.py:69",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_any_index.py:69",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3147,7 +3147,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_base.py:58",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_base.py:58",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3159,7 +3159,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_common.py:533",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_common.py:533",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3171,7 +3171,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_old_base.py:724",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/test_old_base.py:724",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3183,7 +3183,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_constructors.py:264",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_constructors.py:264",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3195,7 +3195,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_indexing.py:27",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_indexing.py:27",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3207,7 +3207,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_indexing.py:345",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_indexing.py:345",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3219,7 +3219,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_scalar_compat.py:109",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_scalar_compat.py:109",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3231,7 +3231,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_setops.py:49",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_setops.py:49",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3243,7 +3243,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_timedelta_range.py:56",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexes/timedeltas/test_timedelta_range.py:56",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3255,7 +3255,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/indexing/test_loc.py:3369",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/indexing/test_loc.py:3369",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3267,7 +3267,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:56",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:56",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3279,7 +3279,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:65",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:65",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3291,7 +3291,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:80",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:80",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3303,7 +3303,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:89",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/internals/test_api.py:89",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3315,7 +3315,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/internals/test_internals.py:1380",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/internals/test_internals.py:1380",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3327,7 +3327,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_format.py:145",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_format.py:145",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3339,7 +3339,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_to_markdown.py:20",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_to_markdown.py:20",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3351,7 +3351,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_to_string.py:47",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/formats/test_to_string.py:47",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3363,7 +3363,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_json_table_schema.py:465",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_json_table_schema.py:465",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3375,7 +3375,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:816",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:816",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3387,7 +3387,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:870",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:870",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3399,7 +3399,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1033",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1033",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3411,7 +3411,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1148",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1148",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3423,7 +3423,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1187",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1187",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3435,7 +3435,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1220",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1220",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3447,7 +3447,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1374",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1374",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3459,7 +3459,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1641",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/json/test_pandas.py:1641",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3471,7 +3471,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/parser/dtypes/test_categorical.py:336",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/parser/dtypes/test_categorical.py:336",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3483,7 +3483,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/io/test_stata.py:1039",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/io/test_stata.py:1039",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3495,7 +3495,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:420",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:420",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3507,7 +3507,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:446",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:446",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3519,7 +3519,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:2620",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/frame/test_frame.py:2620",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3531,7 +3531,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:334",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:334",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3543,7 +3543,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:452",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:452",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3555,7 +3555,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:753",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:753",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3567,7 +3567,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:792",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:792",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3579,7 +3579,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:874",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:874",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3591,7 +3591,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:1624",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_datetimelike.py:1624",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3603,7 +3603,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_series.py:983",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/plotting/test_series.py:983",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3615,7 +3615,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_base.py:121",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_base.py:121",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3627,7 +3627,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:244",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:244",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3639,7 +3639,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:341",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:341",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3651,7 +3651,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:1213",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:1213",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3663,7 +3663,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:1319",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:1319",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3675,7 +3675,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:2061",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_datetime_index.py:2061",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3687,7 +3687,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/resample/test_period_index.py:48",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/resample/test_period_index.py:48",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3699,7 +3699,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_categorical.py:147",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_categorical.py:147",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3711,7 +3711,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_concat.py:441",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_concat.py:441",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3723,7 +3723,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_dataframe.py:197",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_dataframe.py:197",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3735,7 +3735,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_datetimes.py:77",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/reshape/concat/test_datetimes.py:77",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3747,7 +3747,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:42",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:42",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3759,7 +3759,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:73",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:73",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3771,7 +3771,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:147",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:147",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3783,7 +3783,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:209",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:209",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3795,7 +3795,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:299",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:299",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3807,7 +3807,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:385",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:385",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3819,7 +3819,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:446",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:446",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3831,7 +3831,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:526",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:526",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3843,7 +3843,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:594",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:594",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3855,7 +3855,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:660",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_asfreq.py:660",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3867,7 +3867,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:119",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:119",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3879,7 +3879,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:196",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:196",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3891,7 +3891,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:283",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:283",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3903,7 +3903,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:660",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:660",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3915,7 +3915,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:765",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:765",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3927,7 +3927,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:960",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:960",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3939,7 +3939,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:986",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:986",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3951,7 +3951,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1010",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1010",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3963,7 +3963,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1083",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1083",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3975,7 +3975,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1204",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/period/test_period.py:1204",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3987,7 +3987,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/test_nat.py:626",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/test_nat.py:626",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -3999,7 +3999,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:1220",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:1220",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4011,7 +4011,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:1231",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:1231",
     "scope": "parameter",
     "param_name": "box",
     "message": null,
@@ -4023,7 +4023,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:766",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py:766",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4035,7 +4035,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_constructors.py:89",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_constructors.py:89",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4047,7 +4047,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_timedelta.py:498",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_timedelta.py:498",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4059,7 +4059,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_timedelta.py:691",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timedelta/test_timedelta.py:691",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4071,7 +4071,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_comparisons.py:155",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_comparisons.py:155",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4083,7 +4083,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_constructors.py:338",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_constructors.py:338",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4095,7 +4095,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_constructors.py:344",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_constructors.py:344",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4107,7 +4107,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_timestamp.py:276",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_timestamp.py:276",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4119,7 +4119,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_timestamp.py:321",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/scalar/timestamp/test_timestamp.py:321",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4131,7 +4131,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/accessors/test_cat_accessor.py:207",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/accessors/test_cat_accessor.py:207",
     "scope": "parameter",
     "param_name": "idx",
     "message": null,
@@ -4143,7 +4143,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/accessors/test_dt_accessor.py:197",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/accessors/test_dt_accessor.py:197",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4155,7 +4155,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_getitem.py:319",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_getitem.py:319",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4167,7 +4167,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_getitem.py:284",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_getitem.py:284",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4179,7 +4179,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_setitem.py:1738",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/indexing/test_setitem.py:1738",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4191,7 +4191,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_astype.py:628",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_astype.py:628",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4203,7 +4203,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_astype.py:650",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_astype.py:650",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4215,7 +4215,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_combine_first.py:86",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_combine_first.py:86",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4227,7 +4227,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_map.py:621",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_map.py:621",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4239,7 +4239,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_reindex_like.py:25",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_reindex_like.py:25",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4251,7 +4251,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_reindex_like.py:38",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_reindex_like.py:38",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4263,7 +4263,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_to_frame.py:15",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/methods/test_to_frame.py:15",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4275,7 +4275,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/test_constructors.py:399",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/test_constructors.py:399",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4287,7 +4287,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/series/test_ufunc.py:470",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/series/test_ufunc.py:470",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4299,7 +4299,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/test_algos.py:387",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/test_algos.py:387",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4311,7 +4311,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/test_take.py:303",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/test_take.py:303",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4323,7 +4323,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/tools/test_to_timedelta.py:98",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/tools/test_to_timedelta.py:98",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4335,7 +4335,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/tools/test_to_timedelta.py:214",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/tools/test_to_timedelta.py:214",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4347,7 +4347,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/tslibs/test_to_offset.py:216",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/tslibs/test_to_offset.py:216",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4359,7 +4359,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/tslibs/test_to_offset.py:232",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/tslibs/test_to_offset.py:232",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4371,7 +4371,7 @@
     "origins": [
       "comment"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_almost_equal.py:117",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_almost_equal.py:117",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4383,7 +4383,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_frame_equal.py:408",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_frame_equal.py:408",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4395,7 +4395,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:41",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:41",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4407,7 +4407,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:178",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:178",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4419,7 +4419,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:188",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:188",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4431,7 +4431,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:197",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:197",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4443,7 +4443,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:207",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:207",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4455,7 +4455,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:216",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:216",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4467,7 +4467,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:253",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:253",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4479,7 +4479,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:273",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_assert_produces_warning.py:273",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4491,7 +4491,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:10",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:10",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4503,7 +4503,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:28",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:28",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4515,7 +4515,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:44",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:44",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4527,7 +4527,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:59",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate.py:59",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4539,7 +4539,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:9",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:9",
     "scope": "parameter",
     "param_name": "old",
     "message": null,
@@ -4551,7 +4551,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:17",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:17",
     "scope": "parameter",
     "param_name": "old",
     "message": null,
@@ -4563,7 +4563,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:26",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:26",
     "scope": "parameter",
     "param_name": "old",
     "message": null,
@@ -4575,7 +4575,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:40",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:40",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4587,7 +4587,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:46",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:46",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4599,7 +4599,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:52",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:52",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4611,7 +4611,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:69",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:69",
     "scope": "parameter",
     "param_name": "old",
     "message": null,
@@ -4623,7 +4623,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:74",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_kwarg.py:74",
     "scope": "parameter",
     "param_name": "old",
     "message": null,
@@ -4635,7 +4635,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:18",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:18",
     "scope": "parameter",
     "param_name": "f_add_inputs",
     "message": null,
@@ -4647,7 +4647,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:66",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:66",
     "scope": "parameter",
     "param_name": "kwarg",
     "message": null,
@@ -4659,7 +4659,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:95",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:95",
     "scope": "parameter",
     "param_name": "kwarg",
     "message": null,
@@ -4671,7 +4671,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:123",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:123",
     "scope": "parameter",
     "param_name": "kwarg",
     "message": null,
@@ -4683,7 +4683,7 @@
     "origins": [
       "decorator"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:138",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_deprecate_nonkeyword_arguments.py:138",
     "scope": "parameter",
     "param_name": "kwarg",
     "message": null,
@@ -4695,7 +4695,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/util/test_rewrite_warning.py:39",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/util/test_rewrite_warning.py:39",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4707,7 +4707,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/window/test_groupby.py:644",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/window/test_groupby.py:644",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4719,7 +4719,7 @@
     "origins": [
       "warning"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/tests/window/test_rolling.py:1563",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/tests/window/test_rolling.py:1563",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4731,7 +4731,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:29",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:29",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4743,7 +4743,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:104",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:104",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4755,7 +4755,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:227",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:227",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4767,7 +4767,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:265",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:265",
     "scope": "function",
     "param_name": null,
     "message": null,
@@ -4779,7 +4779,7 @@
     "origins": [
       "docstring"
     ],
-    "location": "/Users/saifullahbinyusuf/Desktop/deprecoScanner/deprecated-api-pilot/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:273",
+    "location": "./.venv/lib/python3.13/site-packages/pandas/util/_decorators.py:273",
     "scope": "function",
     "param_name": null,
     "message": null,

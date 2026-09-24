@@ -15,6 +15,22 @@ import textwrap
 from typing import Any, Collection, Dict, List, Optional, Set
 
 import jedi
+import pickle
+
+try:
+    import parso.cache
+
+    _orig_parso_load_from_fs = parso.cache._load_from_file_system
+
+    def _safe_parso_load_from_fs(*args, **kwargs):
+        try:
+            return _orig_parso_load_from_fs(*args, **kwargs)
+        except Exception:
+            return None
+
+    parso.cache._load_from_file_system = _safe_parso_load_from_fs
+except Exception:
+    pass
 
 from src.detectors.union_dedup import _is_symbol_compatible
 

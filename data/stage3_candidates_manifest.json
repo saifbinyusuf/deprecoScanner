@@ -19554,7 +19554,7 @@
     "call_site_snippet": "self.assert_eq(pser.pad(), psser.pad())",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pser = pd.Series([np.nan, 2, 3, 4, np.nan, 6], name=\"x\")\n        psser = ps.from_pandas(pser)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pser.pad(), psser.pad())\n\n            # Test `inplace=True`\n            pser.pad(inplace=True)\n            psser.pad(inplace=True)\n            self.assert_eq(pser, psser)\n        else:\n            expected = ps.Series([np.nan, 2, 3, 4, 4, 6], name=\"x\")\n            self.assert_eq(expected, psser.pad())\n\n            # Test `inplace=True`\n            psser.pad(inplace=True)\n            self.assert_eq(expected, psser)"
@@ -19574,7 +19574,7 @@
     "call_site_snippet": "pser.pad(inplace=True)",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pser = pd.Series([np.nan, 2, 3, 4, np.nan, 6], name=\"x\")\n        psser = ps.from_pandas(pser)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pser.pad(), psser.pad())\n\n            # Test `inplace=True`\n            pser.pad(inplace=True)\n            psser.pad(inplace=True)\n            self.assert_eq(pser, psser)\n        else:\n            expected = ps.Series([np.nan, 2, 3, 4, 4, 6], name=\"x\")\n            self.assert_eq(expected, psser.pad())\n\n            # Test `inplace=True`\n            psser.pad(inplace=True)\n            self.assert_eq(expected, psser)"
@@ -19594,7 +19594,7 @@
     "call_site_snippet": "self.assert_eq(pser.pad(), kser.pad())",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pser = pd.Series([np.nan, 2, 3, 4, np.nan, 6], name=\"x\")\n        kser = ks.from_pandas(pser)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pser.pad(), kser.pad())\n\n            # Test `inplace=True`\n            pser.pad(inplace=True)\n            kser.pad(inplace=True)\n            self.assert_eq(pser, kser)\n        else:\n            expected = ks.Series([np.nan, 2, 3, 4, 4, 6], name=\"x\")\n            self.assert_eq(expected, kser.pad())\n\n            # Test `inplace=True`\n            kser.pad(inplace=True)\n            self.assert_eq(expected, kser)"
@@ -19614,7 +19614,7 @@
     "call_site_snippet": "pser.pad(inplace=True)",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pser = pd.Series([np.nan, 2, 3, 4, np.nan, 6], name=\"x\")\n        kser = ks.from_pandas(pser)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pser.pad(), kser.pad())\n\n            # Test `inplace=True`\n            pser.pad(inplace=True)\n            kser.pad(inplace=True)\n            self.assert_eq(pser, kser)\n        else:\n            expected = ks.Series([np.nan, 2, 3, 4, 4, 6], name=\"x\")\n            self.assert_eq(expected, kser.pad())\n\n            # Test `inplace=True`\n            kser.pad(inplace=True)\n            self.assert_eq(expected, kser)"
@@ -20934,7 +20934,7 @@
     "call_site_snippet": "self.assert_eq(pdf.pad(), psdf.pad())",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        psdf = ps.from_pandas(pdf)\n\n        self.assert_eq(pdf.pad(), psdf.pad())\n\n        # Test `inplace=True`\n        pdf.pad(inplace=True)\n        psdf.pad(inplace=True)\n        self.assert_eq(pdf, psdf)"
@@ -20954,7 +20954,7 @@
     "call_site_snippet": "pdf.pad(inplace=True)",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        psdf = ps.from_pandas(pdf)\n\n        self.assert_eq(pdf.pad(), psdf.pad())\n\n        # Test `inplace=True`\n        pdf.pad(inplace=True)\n        psdf.pad(inplace=True)\n        self.assert_eq(pdf, psdf)"
@@ -20974,7 +20974,7 @@
     "call_site_snippet": "self.assert_eq(pdf.pad(), psdf.pad())",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        psdf = ps.from_pandas(pdf)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pdf.pad(), psdf.pad())\n\n            # Test `inplace=True`\n            pdf.pad(inplace=True)\n            psdf.pad(inplace=True)\n            self.assert_eq(pdf, psdf)\n        else:\n            expected = ps.DataFrame(\n                {\n                    \"A\": [None, 3, 3, 3],\n                    \"B\": [2.0, 4.0, 4.0, 3.0],\n                    \"C\": [None, None, None, 1],\n                    \"D\": [0, 1, 5, 4],\n                },\n                columns=[\"A\", \"B\", \"C\", \"D\"],\n            )\n            self.assert_eq(expected, psdf.pad())\n\n            # Test `inplace=True`\n            psdf.pad(inplace=True)\n            self.assert_eq(expected, psdf)"
@@ -20994,7 +20994,7 @@
     "call_site_snippet": "pdf.pad(inplace=True)",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        psdf = ps.from_pandas(pdf)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pdf.pad(), psdf.pad())\n\n            # Test `inplace=True`\n            pdf.pad(inplace=True)\n            psdf.pad(inplace=True)\n            self.assert_eq(pdf, psdf)\n        else:\n            expected = ps.DataFrame(\n                {\n                    \"A\": [None, 3, 3, 3],\n                    \"B\": [2.0, 4.0, 4.0, 3.0],\n                    \"C\": [None, None, None, 1],\n                    \"D\": [0, 1, 5, 4],\n                },\n                columns=[\"A\", \"B\", \"C\", \"D\"],\n            )\n            self.assert_eq(expected, psdf.pad())\n\n            # Test `inplace=True`\n            psdf.pad(inplace=True)\n            self.assert_eq(expected, psdf)"
@@ -21014,7 +21014,7 @@
     "call_site_snippet": "self.assert_eq(pdf.pad(), kdf.pad())",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        kdf = ks.from_pandas(pdf)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pdf.pad(), kdf.pad())\n\n            # Test `inplace=True`\n            pdf.pad(inplace=True)\n            kdf.pad(inplace=True)\n            self.assert_eq(pdf, kdf)\n        else:\n            expected = ks.DataFrame(\n                {\n                    \"A\": [None, 3, 3, 3],\n                    \"B\": [2.0, 4.0, 4.0, 3.0],\n                    \"C\": [None, None, None, 1],\n                    \"D\": [0, 1, 5, 4],\n                },\n                columns=[\"A\", \"B\", \"C\", \"D\"],\n            )\n            self.assert_eq(expected, kdf.pad())\n\n            # Test `inplace=True`\n            kdf.pad(inplace=True)\n            self.assert_eq(expected, kdf)"
@@ -21034,7 +21034,7 @@
     "call_site_snippet": "pdf.pad(inplace=True)",
     "failure_reason": null,
     "failure_details": null,
-    "recommended_replacement": "pandas.DataFrame.ffill",
+    "recommended_replacement": "pandas.Series.ffill",
     "evidence_warning": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "evidence_docstring": ".. deprecated:: 2.0 ~ {klass}.pad is deprecated. Use {klass}.ffill instead. | warnings.warn('DataFrame.pad/Series.pad is deprecated. Use DataFrame.ffill/Series.ffill instead', category=FutureWarning)",
     "enclosing_code": "    def test_pad(self):\n        pdf = pd.DataFrame(\n            {\n                \"A\": [None, 3, None, None],\n                \"B\": [2, 4, None, 3],\n                \"C\": [None, None, None, 1],\n                \"D\": [0, 1, 5, 4],\n            },\n            columns=[\"A\", \"B\", \"C\", \"D\"],\n        )\n        kdf = ks.from_pandas(pdf)\n\n        if LooseVersion(pd.__version__) >= LooseVersion(\"1.1\"):\n            self.assert_eq(pdf.pad(), kdf.pad())\n\n            # Test `inplace=True`\n            pdf.pad(inplace=True)\n            kdf.pad(inplace=True)\n            self.assert_eq(pdf, kdf)\n        else:\n            expected = ks.DataFrame(\n                {\n                    \"A\": [None, 3, 3, 3],\n                    \"B\": [2.0, 4.0, 4.0, 3.0],\n                    \"C\": [None, None, None, 1],\n                    \"D\": [0, 1, 5, 4],\n                },\n                columns=[\"A\", \"B\", \"C\", \"D\"],\n            )\n            self.assert_eq(expected, kdf.pad())\n\n            # Test `inplace=True`\n            kdf.pad(inplace=True)\n            self.assert_eq(expected, kdf)"
@@ -23596,7 +23596,7 @@
     "failure_details": null,
     "recommended_replacement": "scipy.special.betainc",
     "evidence_warning": null,
-    "evidence_docstring": null,
+    "evidence_docstring": "@np.deprecate | betai() is deprecated in scipy 0.17.0.",
     "enclosing_code": "def attest_ind(a, b, dim=None):\n    \"\"\" Return the t-test statistics on arrays a and b over the dim axis.\n    Returns both the t statistic as well as the p-value\n    \"\"\"\n#    dim = a.ndim - 1 if dim is None else dim\n    x1, x2 = ma.mean(a, dim), ma.mean(b, dim)\n    v1, v2 = ma.var(a, dim), ma.var(b, dim)\n    n1, n2 = (a.shape[dim], b.shape[dim]) if dim is not None else (a.size, b.size)\n    df = float(n1+n2-2)\n    svar = ((n1-1)*v1+(n2-1)*v2) / df\n    t = (x1-x2)/ma.sqrt(svar*(1.0/n1 + 1.0/n2))\n    if t.ndim == 0:\n        return (t, scipy.stats.betai(0.5*df,0.5,df/(df+t**2)) if t is not ma.masked and df/(df+t**2) <= 1.0 else ma.masked)\n    else:\n        prob = [scipy.stats.betai(0.5*df,0.5,df/(df+tsq)) if tsq is not ma.masked and df/(df+tsq) <= 1.0 else ma.masked  for tsq in t*t]\n        return t, prob"
   },
   {
@@ -23616,7 +23616,7 @@
     "failure_details": null,
     "recommended_replacement": "scipy.special.betainc",
     "evidence_warning": null,
-    "evidence_docstring": null,
+    "evidence_docstring": "@np.deprecate | betai() is deprecated in scipy 0.17.0.",
     "enclosing_code": "def attest_ind(a, b, dim=None):\n    \"\"\" Return the t-test statistics on arrays a and b over the dim axis.\n    Returns both the t statistic as well as the p-value\n    \"\"\"\n#    dim = a.ndim - 1 if dim is None else dim\n    x1, x2 = ma.mean(a, dim), ma.mean(b, dim)\n    v1, v2 = ma.var(a, dim), ma.var(b, dim)\n    n1, n2 = (a.shape[dim], b.shape[dim]) if dim is not None else (a.size, b.size)\n    df = float(n1+n2-2)\n    svar = ((n1-1)*v1+(n2-1)*v2) / df\n    t = (x1-x2)/ma.sqrt(svar*(1.0/n1 + 1.0/n2))\n    if t.ndim == 0:\n        return (t, scipy.stats.betai(0.5*df,0.5,df/(df+t**2)) if t is not ma.masked and df/(df+t**2) <= 1.0 else ma.masked)\n    else:\n        prob = [scipy.stats.betai(0.5*df,0.5,df/(df+tsq)) if tsq is not ma.masked and df/(df+tsq) <= 1.0 else ma.masked  for tsq in t*t]\n        return t, prob"
   },
   {
@@ -23636,7 +23636,7 @@
     "failure_details": null,
     "recommended_replacement": "scipy.special.betainc",
     "evidence_warning": null,
-    "evidence_docstring": null,
+    "evidence_docstring": "@np.deprecate | betai() is deprecated in scipy 0.17.0.",
     "enclosing_code": "def aF_oneway(*args, **kwargs):\n    dim = kwargs.get(\"dim\", None)\n    arrays = args\n    means = [ma.mean(a, dim) for a in arrays]\n    vars = [ma.var(a, dim) for a in arrays]\n    lens = [ma.sum(ma.array(ma.ones(a.shape), mask=ma.asarray(a).mask), dim) for a in arrays]\n    alldata = ma.concatenate(arrays, dim if dim is not None else 0)\n    bign =  ma.sum(ma.array(ma.ones(alldata.shape), mask=alldata.mask), dim)\n    sstot = ma.sum(alldata ** 2, dim) - (ma.sum(alldata, dim) ** 2) / bign\n    ssbn = ma.sum([(ma.sum(a, dim) ** 2) / L for a, L in zip(arrays, lens)], dim)\n#    print ma.sum(alldata, dim) ** 2 / bign, ssbn\n    ssbn -= ma.sum(alldata, dim) ** 2 / bign\n    sswn = sstot - ssbn\n    dfbn = dfnum = float(len(args) - 1.0)\n    dfwn = bign - len(args) # + 1.0\n    F = (ssbn / dfbn) / (sswn / dfwn)\n    if F.ndim == 0 and dfwn.ndim == 0:\n        return (F,scipy.stats.betai(0.5 * dfwn, 0.5 * dfnum, dfwn/float(dfwn+dfnum*F)) if F is not ma.masked and dfwn/float(dfwn+dfnum*F) <= 1.0 \\\n                and dfwn/float(dfwn+dfnum*F) >= 0.0 else ma.masked)\n    else:\n        prob = [scipy.stats.betai(0.5 * dfden, 0.5 * dfnum, dfden/float(dfden+dfnum*f)) if f is not ma.masked and dfden/float(dfden+dfnum*f) <= 1.0 \\\n            and dfden/float(dfden+dfnum*f) >= 0.0 else ma.masked for dfden, f in zip (dfwn, F)]\n        return F, prob"
   },
   {
@@ -23656,7 +23656,7 @@
     "failure_details": null,
     "recommended_replacement": "scipy.special.betainc",
     "evidence_warning": null,
-    "evidence_docstring": null,
+    "evidence_docstring": "@np.deprecate | betai() is deprecated in scipy 0.17.0.",
     "enclosing_code": "def aF_oneway(*args, **kwargs):\n    dim = kwargs.get(\"dim\", None)\n    arrays = args\n    means = [ma.mean(a, dim) for a in arrays]\n    vars = [ma.var(a, dim) for a in arrays]\n    lens = [ma.sum(ma.array(ma.ones(a.shape), mask=ma.asarray(a).mask), dim) for a in arrays]\n    alldata = ma.concatenate(arrays, dim if dim is not None else 0)\n    bign =  ma.sum(ma.array(ma.ones(alldata.shape), mask=alldata.mask), dim)\n    sstot = ma.sum(alldata ** 2, dim) - (ma.sum(alldata, dim) ** 2) / bign\n    ssbn = ma.sum([(ma.sum(a, dim) ** 2) / L for a, L in zip(arrays, lens)], dim)\n#    print ma.sum(alldata, dim) ** 2 / bign, ssbn\n    ssbn -= ma.sum(alldata, dim) ** 2 / bign\n    sswn = sstot - ssbn\n    dfbn = dfnum = float(len(args) - 1.0)\n    dfwn = bign - len(args) # + 1.0\n    F = (ssbn / dfbn) / (sswn / dfwn)\n    if F.ndim == 0 and dfwn.ndim == 0:\n        return (F,scipy.stats.betai(0.5 * dfwn, 0.5 * dfnum, dfwn/float(dfwn+dfnum*F)) if F is not ma.masked and dfwn/float(dfwn+dfnum*F) <= 1.0 \\\n                and dfwn/float(dfwn+dfnum*F) >= 0.0 else ma.masked)\n    else:\n        prob = [scipy.stats.betai(0.5 * dfden, 0.5 * dfnum, dfden/float(dfden+dfnum*f)) if f is not ma.masked and dfden/float(dfden+dfnum*f) <= 1.0 \\\n            and dfden/float(dfden+dfnum*f) >= 0.0 else ma.masked for dfden, f in zip (dfwn, F)]\n        return F, prob"
   },
   {

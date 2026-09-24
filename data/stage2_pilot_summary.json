@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-19T03:21:28Z",
+  "timestamp": "2026-09-24T13:06:07Z",
   "total_samples": 5875,
-  "elapsed_seconds": 1034.85,
+  "elapsed_seconds": 656.41,
   "baseline_preamble": {
     "call_counts": {
       "resolved_deprecated": 1512,
@@ -73,11 +73,11 @@
         },
         "reasons": {
           "unresolved_receiver": 300,
-          "empty_goto": 59,
+          "empty_goto": 60,
           "syntax_error": 0,
           "dynamic_dispatch": 0,
           "ambiguous_definitions": 0,
-          "jedi_exception": 1
+          "jedi_exception": 0
         },
         "sample_outcomes": {
           "outdated": {
@@ -93,11 +93,11 @@
     },
     "reasons": {
       "unresolved_receiver": 7298,
-      "empty_goto": 2311,
+      "empty_goto": 2312,
       "syntax_error": 0,
       "dynamic_dispatch": 0,
       "ambiguous_definitions": 0,
-      "jedi_exception": 1
+      "jedi_exception": 0
     },
     "sample_outcomes": {
       "outdated": {
@@ -229,19 +229,7 @@
       "syntax_error": [],
       "dynamic_dispatch": [],
       "ambiguous_definitions": [],
-      "jedi_exception": [
-        {
-          "call_site_snippet": "avg_daily = float(x_normalised_for_y.diff().abs().mean())",
-          "callee_name": "mean",
-          "line": 21,
-          "column": 54,
-          "failure_reason": "jedi_exception",
-          "file_path": null,
-          "matched_catalog_symbol": "scipy.stats._continuous_distns.frechet_l_gen.mean",
-          "details": "lambda is not named.",
-          "sample_id": "pandas_69"
-        }
-      ]
+      "jedi_exception": []
     }
   },
   "reconstructed_preamble": {
@@ -367,17 +355,6 @@
           "sample_id": "numpy_1"
         },
         {
-          "call_site_snippet": "self.xdens = grid.GridData(new_list.swapaxes(0, 2), lattice=lattice)",
-          "callee_name": "swapaxes",
-          "line": 42,
-          "column": 40,
-          "failure_reason": "unresolved_receiver",
-          "file_path": null,
-          "matched_catalog_symbol": "pandas.DataFrame.swapaxes",
-          "details": "Receiver 'new_list' could not be statically resolved",
-          "sample_id": "numpy_4"
-        },
-        {
           "call_site_snippet": "num_elements = numpy.product(param.get_value().shape)",
           "callee_name": "get_value",
           "line": 4,
@@ -387,6 +364,17 @@
           "matched_catalog_symbol": "pandas.core.frame.DataFrame.get_value",
           "details": "Receiver 'param' could not be statically resolved",
           "sample_id": "numpy_12"
+        },
+        {
+          "call_site_snippet": "self.xdens = grid.GridData(new_list.swapaxes(0, 2), lattice=lattice)",
+          "callee_name": "swapaxes",
+          "line": 42,
+          "column": 40,
+          "failure_reason": "unresolved_receiver",
+          "file_path": null,
+          "matched_catalog_symbol": "pandas.DataFrame.swapaxes",
+          "details": "Receiver 'new_list' could not be statically resolved",
+          "sample_id": "numpy_4"
         },
         {
           "call_site_snippet": "for m, codes in enumerate(itertools.product(*all_codes)):",
