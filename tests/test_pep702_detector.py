@@ -1,5 +1,5 @@
 """
-tests/test_pep702_detector.py - Test suite for Task 2.4 PEP 702 deprecation detection.
+tests/test_pep702_detector.py - Test suite for PEP 702 deprecation detection.
 
 Verifies:
 1. Path B (Griffe + griffe-warnings-deprecated): declaration-site metadata extraction.
@@ -145,7 +145,7 @@ def test_pyright_diagnostics():
 
 def test_side_by_side_consistency():
     """
-    Task 2.4 Gate Requirement:
+    Verification requirement:
     Both Path A (typechecker) and Path B (Griffe) identify the same deprecated symbols
     and extract matching deprecation messages.
     """

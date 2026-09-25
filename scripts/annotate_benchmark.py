@@ -632,7 +632,7 @@ def export_review_markdown(output_path: Optional[Path] = None) -> Path:
         "# Phase 5 Ground-Truth Benchmark Review ($N = 150$)",
         "",
         "This document contains all 150 call-site items in the frozen evaluation benchmark.",
-        "Ground truth `is_deprecated_call` is established under human authority.",
+        "Ground truth `is_deprecated_call` is established under expert manual review.",
         "",
         "## Summary Statistics",
         f"- **Total Benchmark Items**: {len(items)}",

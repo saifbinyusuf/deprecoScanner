@@ -1,5 +1,5 @@
 """
-test_parameter_detector.py - Unit tests for Task 2.3: Hardening Fix #2 (parameter-level deprecation).
+test_parameter_detector.py - Unit tests for parameter-level deprecation detection.
 
 Verifies detection and (function, param)-level scoping for deprecation warnings
 conditioned on function parameters or kwargs.
@@ -11,7 +11,7 @@ from src.detectors.parameter_detector import detect_parameter_deprecations
 
 def test_function_warning_only_when_param_true():
     """
-    Verification test required by Task 2.3:
+    Verification test:
     A function that only warns when param=True must be scoped to (function, param).
     """
     code = """
@@ -134,8 +134,8 @@ def regular_dep(y):
 
 def test_deprecate_kwarg_does_not_fire_whole_function_heuristic():
     """
-    Interaction verification required by human review:
-    @deprecate_kwarg on a function taking **kwargs must NOT trigger Task 2.1's
+    Interaction verification:
+    @deprecate_kwarg on a function taking **kwargs must NOT trigger the
     whole-function decorator heuristic. It must emit ONLY a parameter-scoped
     candidate and keep the whole-function matcher silent.
     """
@@ -153,7 +153,7 @@ def transform(data, **kwargs):
     assert cand.function_name == "transform"
     assert cand.qualified_name == "transform::old_arg"
 
-    # Confirm Task 2.1 whole-function decorator matcher stayed completely silent
+    # Confirm whole-function decorator matcher stayed completely silent
     function_cands = [c for c in all_candidates if c.scope == "function"]
     assert len(function_cands) == 0, f"Expected 0 function-scoped candidates, got {function_cands}"
 
@@ -247,10 +247,10 @@ def combine_or(a, b, old_a=None, old_b=None):
 
 def test_and_condition_order_independence():
     """
-    Verification required by human review:
+    Verification:
     `if flag1 and flag2:` and `if flag2 and flag1:` must produce identical, canonically
     sorted keys (e.g. 'flag1+flag2') and identical param_tuple ('flag1', 'flag2')
-    to eliminate order-dependent deduplication bugs in Task 2.5.
+    to eliminate order-dependent deduplication bugs.
     """
     code_12 = """
 import warnings
@@ -283,7 +283,7 @@ def func_21(x, flag1=False, flag2=False):
 
 def test_deprecated_message_with_argument_words_remains_function_scoped():
     """
-    Verification required by human review:
+    Verification:
     A whole-function @deprecated(...) decorator whose message text happens to mention
     'argument', 'param', or 'kwarg' must NEVER be misclassified as a parameter-scoped deprecation.
     It must stay strictly whole-function scoped.
@@ -305,9 +305,9 @@ def whole_func_arg_message(x):
 
 def test_unconditional_pandas4warning_detected_by_warning_heuristic():
     """
-    Verification required by human review:
+    Verification:
     Subclasses of DeprecationWarning (such as Pandas4Warning) used unconditionally
-    in warnings.warn must be detected by Task 2.1's whole-function warning heuristic,
+    in warnings.warn must be detected by the whole-function warning heuristic,
     even when the warning message does not contain the word 'deprecat'.
     """
     code = """

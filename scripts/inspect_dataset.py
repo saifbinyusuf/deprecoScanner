@@ -192,7 +192,7 @@ def main() -> None:
             print(f"  - 10 distinct deprecated APIs represented on the Outdated side (1-to-1 mapped).")
             print(f"  - {comp_n} up-to-date samples invoke 'DataFrame.loc' (common replacement for 'first', 'last', and 'select').")
             print(f"  - Table sums to {assoc_sum} associations because the {comp_n} shared samples appear across 3 API rows (+{comp_n * 2} associations).")
-            print(f"  - Task 5.2 Sampling Guidance: Treat 'DataFrame.loc' as a single shared replacement stratum with a global sample ID dedup guard to avoid pseudo-replication.")
+            print(f"  - Sampling Guidance: Treat 'DataFrame.loc' as a single shared replacement stratum with a global sample ID dedup guard to avoid pseudo-replication.")
         print()
 
 

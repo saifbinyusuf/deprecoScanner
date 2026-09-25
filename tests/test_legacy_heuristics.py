@@ -1,5 +1,5 @@
 """
-test_legacy_heuristics.py - Unit tests for Task 2.1 legacy heuristics.
+test_legacy_heuristics.py - Unit tests for legacy deprecation heuristics.
 
 Verifies detection of APIScanner's three legacy deprecation heuristics:
 1. Decorator matcher (@deprecated, @deprecate, etc.)

@@ -1,5 +1,5 @@
 """
-scripts/run_stage1_pipeline.py - Task 2.6: Stage 1 End-to-End Execution on NumPy, SciPy, Pandas.
+scripts/run_stage1_pipeline.py - Stage 1 End-to-End Execution on NumPy, SciPy, Pandas.
 
 Executes the full Stage 1 detection and deduplication stack across the installed
 source trees of NumPy, SciPy, and Pandas in the local Python environment.

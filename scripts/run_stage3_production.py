@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-scripts/run_stage3_production.py - Day 2 Full Production Execution (Task 4.4).
+scripts/run_stage3_production.py - Stage 3 Full Production Execution.
 
 Executes:
 1. Primary Bulk Verification across all 2,932 candidate call sites (gemini-3.5-flash-lite).

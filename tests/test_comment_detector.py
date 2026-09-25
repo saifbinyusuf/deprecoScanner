@@ -1,5 +1,5 @@
 """
-test_comment_detector.py - Unit tests for Task 2.2: Hardening Fix #1 (single-line comments).
+test_comment_detector.py - Unit tests for single-line comment deprecation detection.
 
 Verifies detection of bare '# deprecated' comments attached to functions or classes
 using the tokenize module paired with AST node boundaries.

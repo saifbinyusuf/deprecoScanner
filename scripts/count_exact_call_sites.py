@@ -5,7 +5,7 @@ scripts/count_exact_call_sites.py - Fast Exact Benchmark Candidate Call-Site Cen
 Computes the exact integer count of:
 1. Resolved deprecated call sites across the benchmark dataset.
 2. Low-confidence call sites matching canonical benchmark target APIs.
-3. Total candidate call sites to be verified in Stage 3 (Task 4.4).
+3. Total candidate call sites to be verified in Stage 3.
 Uses ProcessPoolExecutor (8 workers) for fast parallel processing.
 """
 

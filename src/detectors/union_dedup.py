@@ -1,5 +1,5 @@
 """
-union_dedup.py - Task 2.5: Union and Deduplication Engine.
+union_dedup.py - Stage 1 Candidate Union and Deduplication Engine.
 
 Implements recall-preserving candidate merging across all Stage 1 sources
 and dual-channel reconciliation at client call sites:

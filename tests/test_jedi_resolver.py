@@ -1,5 +1,5 @@
 """
-tests/test_jedi_resolver.py - Verification for Task 3.1: Jedi Call-Site Resolution.
+tests/test_jedi_resolver.py - Verification for Jedi Call-Site Resolution.
 
 Tests the three mandatory guideline edge cases:
 1. Aliased import (`import numpy as np; np.alltrue(...)`)
@@ -144,12 +144,12 @@ def combinations(n, k):
 
 
 # =========================================================================
-# Task 3.2: Low-Confidence Bucket & Failure Logging Tests
+# Low-Confidence Bucket & Failure Logging Tests
 # =========================================================================
 
 
 def test_low_confidence_unresolved_receiver(resolver: JediResolver):
-    """Task 3.2: Untyped receiver yields unresolved_receiver in low_confidence."""
+    """Untyped receiver yields unresolved_receiver in low_confidence."""
     code = """import pandas as pd
 
 def iterate(df):
@@ -168,7 +168,7 @@ def iterate(df):
 
 
 def test_low_confidence_empty_goto_unbound_name(resolver: JediResolver):
-    """Task 3.2: Unbound name without import yields empty_goto in low_confidence."""
+    """Unbound name without import yields empty_goto in low_confidence."""
     code = """def compute(x):
     return alltrue(x)
 """
@@ -183,7 +183,7 @@ def test_low_confidence_empty_goto_unbound_name(resolver: JediResolver):
 
 
 def test_low_confidence_dynamic_dispatch(resolver: JediResolver):
-    """Task 3.2: Dynamic getattr invocation yields dynamic_dispatch in low_confidence."""
+    """Dynamic getattr invocation yields dynamic_dispatch in low_confidence."""
     code = """import numpy as np
 
 def compute(arr):
@@ -204,7 +204,7 @@ def compute(arr):
 
 
 def test_low_confidence_syntax_error(resolver: JediResolver):
-    """Task 3.2: Malformed syntax yields syntax_error in low_confidence."""
+    """Malformed syntax yields syntax_error in low_confidence."""
     code = """def broken(:
     return 1
 """
@@ -214,7 +214,7 @@ def test_low_confidence_syntax_error(resolver: JediResolver):
 
 
 def test_stage2_resolves_deprecated_and_benign_in_single_snippet(resolver: JediResolver):
-    """Task 3.2: Cleanly separates resolved deprecated, resolved benign, and low confidence."""
+    """Cleanly separates resolved deprecated, resolved benign, and low confidence."""
     code = """import numpy as np
 
 def process(arr):
@@ -231,7 +231,7 @@ def process(arr):
 
 def test_normalize_snippet_indentation_mixed_tabs_spaces(resolver: JediResolver):
     """
-    Task 3.2: Verify normalize_snippet_indentation recovers method snippets with
+    Verify normalize_snippet_indentation recovers method snippets with
     leading space on line 1 and tabs in body (the upstream scraping artifact).
     """
     from src.resolution.jedi_resolver import normalize_snippet_indentation

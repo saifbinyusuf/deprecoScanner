@@ -1,5 +1,5 @@
 """
-pep702_detector.py - Task 2.4: PEP 702 Deprecation Detection.
+pep702_detector.py - PEP 702 Deprecation Detection.
 
 Extracts PEP 702 deprecation metadata via two complementary paths:
 1. Path A (Type Checker Diagnostics): Runs mypy (--show-error-codes --enable-error-code deprecated)

@@ -1,5 +1,5 @@
 """
-tests/test_union_dedup.py - Test suite for Task 2.5 Union and Deduplication Engine.
+tests/test_union_dedup.py - Test suite for Union and Deduplication Engine.
 
 Verifies:
 1. Multi-origin single function deduplication across all Stage 1 sources.
@@ -375,9 +375,9 @@ def test_all_31_benchmark_target_pairs_are_mutually_exclusive():
 
     Catches the entire category of symbol-identity / compatibility collisions that have
     previously produced bugs in _is_symbol_compatible:
-    1. Composite-row false grouping (Task 1.4)
-    2. Cross-class DataFrame vs Series method collisions (Task 2.5)
-    3. Cross-submodule false-equivalence (Task 3.2, e.g. scipy.misc vs scipy.special)
+    1. Composite-row false grouping
+    2. Cross-class DataFrame vs Series method collisions
+    3. Cross-submodule false-equivalence (e.g. scipy.misc vs scipy.special)
 
     Asserts that _is_symbol_compatible(s1, s2) returns False for every distinct pair
     among all 31 canonical benchmark target APIs (930 pairwise tests).
